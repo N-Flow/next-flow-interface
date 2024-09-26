@@ -1,0 +1,23 @@
+{
+  "name": "oflow-plugin-interface",
+  "version": "1.0.0",
+  "description": "",
+
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc",
+    "publish": "npm publish"
+  },
+
+  "keywords": [],
+  "author": "O FLow",
+  "license": "Apache-2.0",
+
+  "devDependencies": {
+    "@types/node": "^22.7.2",
+    "typescript": "^5.6.2"
+  }
+}
