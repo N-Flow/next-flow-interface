@@ -1,5 +1,6 @@
 import {PluginType} from "./PluginType";
 import {ThemeColor} from "../theme/ThemeColor";
+import {OfpApi} from "../api/OfpApi";
 
 export default interface BasePlugin {
   name: string
@@ -8,4 +9,9 @@ export default interface BasePlugin {
   
   type: PluginType
   theme: ThemeColor
+  
+  onLoad: (api: OfpApi) => void
+  onActivate: () => void
+  onDeactivate: () => void
+  onDispose: () => void
 }
