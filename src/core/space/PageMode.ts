@@ -1,5 +1,5 @@
 
-export enum ViewMode {
+export enum PageMode {
   DISPLAY = 'DISPLAY',
   HP_BOX = 'HP_BOX',
   VR = 'VR',
