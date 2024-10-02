@@ -1,10 +1,10 @@
 export enum PluginType {
-  BUTTON,
-  SWITCH,
-  DRAWER,
+  BUTTON = 'BUTTON',
+  SWITCH = 'SWITCH',
+  DRAWER = 'DRAWER',
   
-  CONTENT,
-  WINDOW,
+  CONTENT = 'CONTENT',
+  WINDOW = 'WINDOW',
   
-  SERVICE,
+  SERVICE = 'SERVICE',
 }

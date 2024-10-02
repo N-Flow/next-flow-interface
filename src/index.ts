@@ -8,6 +8,9 @@ import { ThemeBackground } from "./theme/ThemeBackground";
 import { ThemeColor } from "./theme/ThemeColor";
 import { OfpApi } from "./api/OfpApi";
 import SpaceServiceApi from "./api/main/SpaceServiceApi";
+import { ViewMode } from "./core/space/ViewMode";
+import Status from "./core/status/Status";
+import { PageType } from "./core/space/PageType";
 
 export type {
   BasePlugin,
@@ -16,7 +19,8 @@ export type {
   ViewPlugin,
   
   OfpApi,
-  SpaceServiceApi
+  
+  Status,
 }
 
 export {
@@ -25,4 +29,9 @@ export {
   
   ThemeColor,
   ThemeBackground,
+  
+  ViewMode,
+  PageType,
+  
+  SpaceServiceApi,
 }
