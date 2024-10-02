@@ -9,4 +9,6 @@ export default interface Page {
   pid: string
   sid: string
   
+  clientId: string
+  
 }

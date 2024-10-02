@@ -1,5 +1,5 @@
 import {PluginType} from "./PluginType";
-import {ThemeColor} from "../core/theme/ThemeColor";
+import {ThemeColor} from "../interface/core/theme/ThemeColor";
 import {OfpApi} from "../api/OfpApi";
 
 export default interface BasePlugin {

@@ -1,7 +1,10 @@
-import Status from "../../core/status/Status";
+import Page from "../../interface/core/page/Page";
+
 
 export default class SpaceServiceApi {
   
-  static status: Status
+  static page: Page
+  
+  static screen: Screen
 
 }
