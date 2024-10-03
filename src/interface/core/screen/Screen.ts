@@ -5,6 +5,9 @@ import {ScreenSize} from "./ScreenSize";
 import {FocusMode} from "./FocusMode";
 
 export default interface Screen {
+  
+  screenSize: ScreenSize
+  screenScale: number
 
   themeBackground: ThemeBackground
   themeColor: ThemeColor
@@ -12,9 +15,8 @@ export default interface Screen {
   
   shadowAround: boolean
   
-  screenSize: ScreenSize
-  screenScale: number
-  
   focusMode: FocusMode
+  
+  showBabylonConsole: boolean
   
 }
