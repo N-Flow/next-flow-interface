@@ -1,8 +1,8 @@
 
 export default interface Status {
   Authenticated: boolean
-  CRDTSynchronized: boolean
-  CRDTInitialized: boolean
+  DataSynchronized: boolean
+  SyncInitialized: boolean
   RsInitialized: boolean
   AllInitialized: boolean
   Loaded: boolean

@@ -11,6 +11,7 @@ import SpaceServiceApi from "./api/main/SpaceServiceApi";
 import { PageMode } from "./interface/core/page/PageMode";
 import Status from "./interface/core/status/Status";
 import { PageType } from "./interface/core/page/PageType";
+import { StatusChangeCallback } from "./interface/core/status/StatusChangeCallback";
 
 export type {
   BasePlugin,
@@ -21,6 +22,7 @@ export type {
   OfpApi,
   
   Status,
+  StatusChangeCallback,
 }
 
 export {
