@@ -22,6 +22,7 @@ import Meeting from "./interface/core/meeting/Meeting";
 import { ShareMode } from "./interface/core/meeting/ShareMode";
 import { MeetingStatus } from "./interface/core/meeting/MeetingStatus";
 import UserServiceApi from "./api/main/UserServiceApi";
+import { WebsocketStatus } from "./interface/core/sync/WebsocketStatus";
 
 export type {
   BasePlugin,
@@ -60,4 +61,6 @@ export {
   ShareMode,
   
   MeetingStatus,
+  
+  WebsocketStatus,
 }
