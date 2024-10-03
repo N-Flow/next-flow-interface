@@ -28,7 +28,12 @@
 
     "declaration": true,
     "declarationMap": true,
-    "emitDeclarationOnly": false
+    "emitDeclarationOnly": false,
+
+    "paths": {
+      "baseUrl": ".",
+      "yjs": ["../oflow-space/node_modules/yjs"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules", "dist", "assets"]

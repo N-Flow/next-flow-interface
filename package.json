@@ -1,6 +1,6 @@
 {
   "name": "oflow-interface",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,9 +13,9 @@
   "author": "O FLow",
   "license": "Apache-2.0",
   "devDependencies": {
-    "typescript": "^5.6.2",
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "typescript": "^5.6.2"
   },
   "peerDependencies": {
     "@babylonjs/core": "^7.23.0",
@@ -29,11 +29,11 @@
     "@babylonjs/procedural-textures": "^7.23.0",
     "@babylonjs/serializers": "^7.23.0",
     "@babylonjs/viewer": "^7.23.0",
-    "react": "^19.0.0-rc-e56f4ae3-20240830",
-    "react-dom": "^19.0.0-rc-e56f4ae3-20240830",
     "next": "^15.0.0-canary.137",
     "next-intl": "^3.19.1",
     "next-pwa": "^5.6.0",
+    "react": "^19.0.0-rc-e56f4ae3-20240830",
+    "react-dom": "^19.0.0-rc-e56f4ae3-20240830",
     "valtio": "^2.0.0-rc.0",
     "y-websocket": "^2.0.3",
     "yjs": "^13.6.18"

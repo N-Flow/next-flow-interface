@@ -23,6 +23,7 @@ import { ShareMode } from "./interface/core/meeting/ShareMode";
 import { MeetingStatus } from "./interface/core/meeting/MeetingStatus";
 import UserServiceApi from "./api/main/UserServiceApi";
 import { WebsocketStatus } from "./interface/core/sync/WebsocketStatus";
+import { StepChangeListener } from "./interface/core/page/StepChangeListener";
 
 export type {
   BasePlugin,
@@ -38,6 +39,8 @@ export type {
   Meeting,
   
   StatusChangeCallback,
+  
+  StepChangeListener,
 }
 
 export {

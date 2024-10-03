@@ -5,15 +5,6 @@ export default class StatusServiceApi {
   
   static status: Status
   
-  static afterAuthenticatedList: StatusChangeCallback[]
-  static afterDataSynchronizedList: StatusChangeCallback[]
-  static afterSyncInitializedList: StatusChangeCallback[]
-  static afterRsInitializedList: StatusChangeCallback[]
-  static afterAllInitializedList: StatusChangeCallback[]
-  static afterLoadedList: StatusChangeCallback[]
-  static afterRenderedList: StatusChangeCallback[]
-  static afterShownList: StatusChangeCallback[]
-  
   static afterAuthenticated(callback: StatusChangeCallback) {
   }
   
