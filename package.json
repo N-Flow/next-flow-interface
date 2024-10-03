@@ -1,6 +1,6 @@
 {
-  "name": "oflow-plugin-interface",
-  "version": "1.0.0",
+  "name": "oflow-interface",
+  "version": "0.4.1",
   "description": "",
 
   "main": "dist/index.js",

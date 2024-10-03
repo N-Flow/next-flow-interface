@@ -1,5 +1,5 @@
 import BasePlugin from "./BasePlugin";
-import {IconPluginPosition} from "./IconPluginPosition";
+import {IconPluginPosition} from "./position/IconPluginPosition";
 import {FunctionComponent} from "react";
 
 export default interface IconPlugin extends BasePlugin {

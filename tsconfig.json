@@ -2,6 +2,7 @@
   "compilerOptions": {
     /* Target */
     "target": "es5",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "lib": ["dom", "dom.iterable", "esnext"],
 
     /* Modules */
     "module": "esnext",                                /* Specify what module code is generated. */
