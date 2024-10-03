@@ -1,2 +1,2 @@
 
-export type StatusChangeCallback = () => void
+export type StatusChangeCallback = (value: boolean, key: string) => void
