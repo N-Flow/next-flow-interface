@@ -1,6 +1,6 @@
 
 export enum ShareMode {
-  None = 'none',
-  Self = 'self',
-  All = 'all',
+  NONE = 'NONE',
+  SELF = 'SELF',
+  ALL = 'ALL',
 }
