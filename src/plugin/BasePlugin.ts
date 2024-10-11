@@ -14,4 +14,7 @@ export default interface BasePlugin {
   onActivate: () => void
   onDeactivate: () => void
   onDispose: () => void
+  
+  onRender: () => void
+  onEffect: () => void
 }
