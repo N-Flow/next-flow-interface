@@ -17,6 +17,7 @@ import MeetingServiceApi from "./api/main/MeetingServiceApi";
 import { ThemeShape } from "./interface/core/theme/ThemeShape";
 import { FocusMode } from "./interface/core/screen/FocusMode";
 import Screen from "./interface/core/screen/Screen";
+import {ScreenSize} from "./interface/core/screen/ScreenSize";
 import Page from "./interface/core/page/Page";
 import Meeting from "./interface/core/meeting/Meeting";
 import { ShareMode } from "./interface/core/meeting/ShareMode";
@@ -66,4 +67,6 @@ export {
   MeetingStatus,
   
   WebsocketStatus,
+
+  ScreenSize,
 }
