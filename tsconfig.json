@@ -31,7 +31,7 @@
     "emitDeclarationOnly": false,
 
     "paths": {
-      "baseUrl": ".",
+      "baseUrl": ["."],
       "yjs": ["../oflow-space/node_modules/yjs"]
     }
   },
