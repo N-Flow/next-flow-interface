@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     /* Target */
-    "target": "es5",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "target": "es2018",                        /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     "lib": ["dom", "dom.iterable", "esnext"],
 
     /* Modules */

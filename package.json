@@ -1,6 +1,6 @@
 {
   "name": "oflow-interface",
-  "version": "0.4.14",
+  "version": "0.4.15",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -37,5 +37,6 @@
     "valtio": "^2.0.0-rc.0",
     "y-websocket": "^2.0.3",
     "yjs": "^13.6.18"
-  }
+  },
+  "dependencies": {}
 }
