@@ -1,6 +1,6 @@
 {
   "name": "oflow-interface",
-  "version": "0.4.16",
+  "version": "0.4.18",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,25 +18,25 @@
     "typescript": "^5.6.2"
   },
   "peerDependencies": {
-    "@babylonjs/core": "^7.23.0",
-    "@babylonjs/gui": "^7.23.0",
-    "@babylonjs/gui-editor": "^7.23.0",
-    "@babylonjs/inspector": "^7.23.0",
-    "@babylonjs/loaders": "^7.23.0",
-    "@babylonjs/materials": "^7.23.0",
-    "@babylonjs/node-editor": "^7.23.0",
-    "@babylonjs/post-processes": "^7.23.0",
-    "@babylonjs/procedural-textures": "^7.23.0",
-    "@babylonjs/serializers": "^7.23.0",
-    "@babylonjs/viewer": "^7.23.0",
+    "@babylonjs/core": "^7.32.5",
+    "@babylonjs/gui": "^7.32.5",
+    "@babylonjs/gui-editor": "^7.32.5",
+    "@babylonjs/inspector": "^7.32.5",
+    "@babylonjs/loaders": "^7.32.5",
+    "@babylonjs/materials": "^7.32.5",
+    "@babylonjs/node-editor": "^7.32.5",
+    "@babylonjs/post-processes": "^7.32.5",
+    "@babylonjs/procedural-textures": "^7.32.5",
+    "@babylonjs/serializers": "^7.32.5",
+    "@babylonjs/viewer": "^7.32.5",
     "next": "^15.0.0-canary.137",
-    "next-intl": "^3.19.1",
+    "next-intl": "^3.24.0",
     "next-pwa": "^5.6.0",
-    "react": "^19.0.0-rc-e56f4ae3-20240830",
-    "react-dom": "^19.0.0-rc-e56f4ae3-20240830",
+    "react": "^19.0.0-rc-33c7bd9a-20241104",
+    "react-dom": "^19.0.0-rc-33c7bd9a-20241104",
     "valtio": "^2.0.0-rc.0",
     "y-websocket": "^2.0.3",
-    "yjs": "^13.6.18"
+    "yjs": "^13.6.20"
   },
   "dependencies": {}
 }
