@@ -1,8 +1,8 @@
-import {ThemeBackground} from "../theme/ThemeBackground";
-import {ThemeColor} from "../theme/ThemeColor";
-import {ThemeShape} from "../theme/ThemeShape";
-import {ScreenSize} from "./ScreenSize";
-import {FocusMode} from "./FocusMode";
+import {ThemeBackground} from "../theme/theme-background";
+import {ThemeColor} from "../theme/theme-color";
+import {ThemeShape} from "../theme/theme-shape";
+import {ScreenSize} from "./screen-size";
+import {FocusMode} from "./focus-mode";
 
 export default interface Screen {
   

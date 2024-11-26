@@ -1,4 +1,4 @@
-import IconPlugin from "./IconPlugin";
+import IconPlugin from "./icon-plugin";
 import {FunctionComponent} from "react";
 
 export default interface DrawerPlugin extends IconPlugin {
@@ -10,4 +10,7 @@ export default interface DrawerPlugin extends IconPlugin {
   
   onRender: () => void
   onEffect: () => void
+
+  onTitleClick: () => void
+  onTitleContextMenu: () => void
 }

@@ -1,7 +1,7 @@
-import Page from "../../interface/core/page/Page";
-import Screen from "../../interface/core/screen/Screen";
-import {StepChangeListener} from "../../interface/core/page/StepChangeListener";
-import {ScreenSize} from "../../interface/core/screen/ScreenSize";
+import Page from "../../interface/core/page/page";
+import Screen from "../../interface/core/screen/screen";
+import {StepChangeListener} from "../../interface/core/page/step-change-listener";
+import {ScreenSize} from "../../interface/core/screen/screen-size";
 
 
 export default class SpaceServiceApi {

@@ -1,5 +1,5 @@
-import {PageType} from "./PageType";
-import {PageMode} from "./PageMode";
+import {PageType} from "./page-type";
+import {PageMode} from "./page-mode";
 
 export default interface Page {
   

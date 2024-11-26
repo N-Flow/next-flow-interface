@@ -1,5 +1,5 @@
 import {FunctionComponent} from "react";
-import BasePlugin from "./BasePlugin";
+import BasePlugin from "./base-plugin";
 
 export default interface ViewPlugin extends BasePlugin{
   view: FunctionComponent

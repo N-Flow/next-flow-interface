@@ -1,5 +1,5 @@
-import {ShareMode} from "./ShareMode";
-import {MeetingStatus} from "./MeetingStatus";
+import {ShareMode} from "./share-mode";
+import {MeetingStatus} from "./meeting-status";
 
 export default interface Meeting {
   

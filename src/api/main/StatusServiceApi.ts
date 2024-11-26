@@ -1,5 +1,5 @@
-import Status from "../../interface/core/status/Status";
-import {StatusChangeCallback} from "../../interface/core/status/StatusChangeCallback";
+import Status from "../../interface/core/status/status";
+import {StatusChangeCallback} from "../../interface/core/status/status-change-callback";
 
 export default class StatusServiceApi {
   
