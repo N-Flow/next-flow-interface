@@ -1,6 +1,6 @@
 export enum ThemeColor {
-  GREEN = 'green',
-  PURPLE = 'purple',
-  BLUE = 'blue',
-  PINK = 'pink',
+  GREEN = 'GREEN',
+  PURPLE = 'PURPLE',
+  BLUE = 'BLUE',
+  PINK = 'PINK',
 }
