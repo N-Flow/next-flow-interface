@@ -25,48 +25,54 @@ import { MeetingStatus } from "./api/service/main/meeting/interface/meeting-stat
 import UserServiceApi from "./api/service/main/user/user-service-api";
 import { WebsocketStatus } from "./api/service/sync/sync/interface/websocket-status";
 import { StepChangeListener } from "./api/service/main/space/interface/page/step-change-listener";
+import { PluginConfig } from "./api/service/main/plugin/interface/plugin-config";
+import PluginState from "./api/service/main/plugin/interface/plugin-state";
+import AcceptMime from "./api/service/main/file/interface/accept-mime";
+import LocalFileServiceApi from "./api/service/main/file/local-file-service-api";
+import PluginServiceApi from "./api/service/main/plugin/plugin-service-api";
+import PluginConnectorApi from "./api/service/main/plugin/plugin-connector-api";
+import { Locale } from "./api/service/main/internationalization/interface/locale";
+import InternationalizationServiceApi from "./api/service/main/internationalization/internationalization-service-api";
+import { Translator } from "./api/service/main/internationalization/interface/translator";
 
 export type {
   BasePlugin,
   IconPlugin,
   DrawerPlugin,
   ViewPlugin,
-  
   OfpApi,
-  
   Status,
   Screen,
   Page,
   Meeting,
-  
+  PluginConfig,
+  PluginState,
   StatusChangeCallback,
-  
   StepChangeListener,
+  Translator,
 }
 
 export {
-  PluginType,
-  IconPluginPosition,
-  
   SpaceServiceApi,
   StatusServiceApi,
   MeetingServiceApi,
   UserServiceApi,
-  
+  LocalFileServiceApi,
+  PluginServiceApi,
+  PluginConnectorApi,
+  InternationalizationServiceApi,
+  PluginType,
+  IconPluginPosition,
   ThemeColor,
   ThemeBackground,
   ThemeShape,
-  
   FocusMode,
-  
   PageMode,
   PageType,
-  
   ShareMode,
-  
   MeetingStatus,
-  
   WebsocketStatus,
-
   ScreenSize,
+  AcceptMime,
+  Locale,
 }

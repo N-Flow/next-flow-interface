@@ -11,7 +11,7 @@ export default interface BasePlugin {
   type: PluginType
   theme: ThemeColor
   
-  onLoad: (api: OfpApi) => Promise<void>
+  onLoad: () => Promise<void>
   onActivate: () => Promise<void>
   onDeactivate: () => Promise<void>
   onDispose: () => Promise<void>

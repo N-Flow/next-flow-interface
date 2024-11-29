@@ -16,9 +16,6 @@ export default class SpaceServiceApi {
   static removeStepChangeListener(listener: StepChangeListener): void {
   }
   
-  static setScreenSize(size: ScreenSize): void {
-  }
-  
   static isBoxMode(): boolean {
     return false
   }

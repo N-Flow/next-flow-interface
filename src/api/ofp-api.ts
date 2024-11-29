@@ -6,6 +6,7 @@ export interface OfpApi {
 
     main: {
       SpaceService: typeof SpaceServiceApi
+      PluginService: any
     }
 
     sync: {

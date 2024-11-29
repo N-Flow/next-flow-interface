@@ -5,14 +5,6 @@ export default class MeetingServiceApi {
   
   static state: Meeting
 
-  static getMid(): string {
-    return ''
-  }
-
-  static setMid(mid: string) {
-
-  }
-
   // 是否在会议中
   static inMeeting() {
     return false
