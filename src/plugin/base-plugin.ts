@@ -1,8 +1,9 @@
-import {PluginType} from "./plugin-type";
-import {ThemeColor} from "../interface/core/theme/theme-color";
-import {OfpApi} from "../api/OfpApi";
+import {PluginType} from "./enum/plugin-type";
+import {ThemeColor} from "../api/service/main/space/interface/theme/theme-color";
+import {OfpApi} from "../api/ofp-api";
 
 export default interface BasePlugin {
+  id: string
   name: string
   version: string
   description: string
@@ -10,8 +11,9 @@ export default interface BasePlugin {
   type: PluginType
   theme: ThemeColor
   
-  onLoad: (api: OfpApi) => void
-  onActivate: () => void
-  onDeactivate: () => void
-  onDispose: () => void
+  onLoad: (api: OfpApi) => Promise<void>
+  onActivate: () => Promise<void>
+  onDeactivate: () => Promise<void>
+  onDispose: () => Promise<void>
 }
+
