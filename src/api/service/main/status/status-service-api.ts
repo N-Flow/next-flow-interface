@@ -3,7 +3,7 @@ import {StatusChangeCallback} from "./interface/status-change-callback";
 
 export default class StatusServiceApi {
   
-  static status: Status
+  public static status: Status
 
   public static afterAuthenticated(callback: StatusChangeCallback) {
   }

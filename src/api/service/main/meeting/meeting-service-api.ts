@@ -3,7 +3,7 @@ import {ShareMode} from "./interface/share-mode";
 
 export default class MeetingServiceApi {
   
-  static state: Meeting
+  public static state: Meeting
 
   // 是否在会议中
   public static inMeeting() {

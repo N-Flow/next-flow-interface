@@ -6,9 +6,9 @@ import {ScreenSize} from "./interface/screen/screen-size";
 
 export default class SpaceServiceApi {
   
-  static page: Page
+  public static page: Page
   
-  static screen: Screen
+  public static screen: Screen
 
   public static addStepChangeListener(listener: StepChangeListener): void {
   }
