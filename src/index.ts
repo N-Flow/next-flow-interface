@@ -34,6 +34,9 @@ import PluginConnectorApi from "./api/service/main/plugin/plugin-connector-api";
 import { Locale } from "./api/service/main/internationalization/interface/locale";
 import InternationalizationServiceApi from "./api/service/main/internationalization/internationalization-service-api";
 import { Translator } from "./api/service/main/internationalization/interface/translator";
+import { DivProps, SpanProps } from "./api/components/interface/base-types";
+import { RsdButtonProps } from "./api/components/rsd/rsd-button-props";
+import { AnchorProps } from "./api/components/normal/anchor-props";
 
 export type {
   Translator,
@@ -50,6 +53,10 @@ export type {
   DrawerPlugin,
   IconPlugin,
   ViewPlugin,
+  DivProps,
+  SpanProps,
+  AnchorProps,
+  RsdButtonProps,
 }
 
 export {
