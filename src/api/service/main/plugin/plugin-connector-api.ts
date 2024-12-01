@@ -3,9 +3,9 @@ import { OfpApi } from "../../../ofp-api";
 
 export default class PluginConnectorApi {
 
-  static load(plugin: BasePlugin) {
+  public static load(plugin: BasePlugin) {
   }
 
-  static ofpApi: OfpApi
+  public static ofpApi: OfpApi
 
 }

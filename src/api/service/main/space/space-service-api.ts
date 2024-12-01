@@ -6,21 +6,21 @@ import {ScreenSize} from "./interface/screen/screen-size";
 
 export default class SpaceServiceApi {
   
-  static page: Page
+  public static page: Page
   
-  static screen: Screen
-  
-  static addStepChangeListener(listener: StepChangeListener): void {
+  public static screen: Screen
+
+  public static addStepChangeListener(listener: StepChangeListener): void {
   }
   
-  static removeStepChangeListener(listener: StepChangeListener): void {
+  public static removeStepChangeListener(listener: StepChangeListener): void {
   }
   
-  static isBoxMode(): boolean {
+  public static isBoxMode(): boolean {
     return false
   }
   
-  static isDarkTheme(): boolean {
+  public static isDarkTheme(): boolean {
     return false
   }
 
