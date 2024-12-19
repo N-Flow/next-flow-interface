@@ -9,18 +9,19 @@ import React, {FunctionComponent} from "react";
 import {RsdButtonProps} from './components/rsd/rsd-button-props';
 import {AnchorProps} from "./components/normal/anchor-props";
 import RsdInputProps from "./components/rsd/rsd-input-props";
+import * as BabylonCore from '@babylonjs/core'
 
 export interface OfpApi {
 
   services: {
 
     main: {
+      SpaceService: typeof SpaceServiceApi
+      StatusService: typeof StatusServiceApi
       LocalFileService: typeof LocalFileServiceApi
       Internationalization: typeof InternationalizationServiceApi
       MeetingService: typeof MeetingServiceApi
       PluginService: typeof PluginServiceApi
-      SpaceService: typeof SpaceServiceApi
-      StatusService: typeof StatusServiceApi
       UserService: typeof UserServiceApi
     }
 
@@ -50,8 +51,8 @@ export interface OfpApi {
   }
 
   modules: {
+    react: typeof React
+    babylon: typeof BabylonCore
   }
-
-  react: typeof React
   
 }

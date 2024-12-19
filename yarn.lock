@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@babylonjs/core@^7.32.5":
+  version "7.41.0"
+  resolved "https://registry.npmjs.org/@babylonjs/core/-/core-7.41.0.tgz#abf16d9273bc64305cdcf0b65b459c1323bb14be"
+  integrity sha512-DfLzbUbj5zv2PAlovgInKXSA6mp6X6EqlJMy1ObfoCxyVUcsGOizQaYn0IIYi34dYcqE6GrbeEaFceIaRBEWVQ==
+
 "@types/prop-types@*":
   version "15.7.13"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.13.tgz#2af91918ee12d9d32914feb13f5326658461b451"

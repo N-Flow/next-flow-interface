@@ -8,3 +8,7 @@ dist
 # IDE
 .vscode
 .idea
+
+# LOCK
+yarn.lock
+package-lock.json
