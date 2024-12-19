@@ -5,9 +5,10 @@ import InternationalizationServiceApi from "./service/main/internationalization/
 import MeetingServiceApi from "./service/main/meeting/meeting-service-api";
 import StatusServiceApi from './service/main/status/status-service-api';
 import UserServiceApi from './service/main/user/user-service-api';
-import {FunctionComponent} from "react";
+import React, {FunctionComponent} from "react";
 import {RsdButtonProps} from './components/rsd/rsd-button-props';
 import {AnchorProps} from "./components/normal/anchor-props";
+import RsdInputProps from "./components/rsd/rsd-input-props";
 
 export interface OfpApi {
 
@@ -36,12 +37,12 @@ export interface OfpApi {
 
     rsd: {
       RsdButton: FunctionComponent<RsdButtonProps>
+      RsdInput: FunctionComponent<RsdInputProps>
     }
   }
 
   styles: {
     rss: any
-    scrollbar: any
   }
 
   utils: {
@@ -50,5 +51,7 @@ export interface OfpApi {
 
   modules: {
   }
+
+  react: typeof React
   
 }

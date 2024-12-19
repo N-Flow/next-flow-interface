@@ -8,9 +8,9 @@ export default interface DrawerPlugin extends IconPlugin {
   
   drawer: FunctionComponent
   
-  onRender: () => void
-  onEffect: () => void
+  onRender?: () => void
+  onEffect?: () => void
 
-  onTitleClick: () => void
-  onTitleContextMenu: () => void
+  onTitleClick?: () => void
+  onTitleContextMenu?: () => void
 }

@@ -37,6 +37,7 @@ import { Translator } from "./api/service/main/internationalization/interface/tr
 import { DivProps, SpanProps } from "./api/components/interface/base-types";
 import { RsdButtonProps } from "./api/components/rsd/rsd-button-props";
 import { AnchorProps } from "./api/components/normal/anchor-props";
+import RsdInputProps from "./api/components/rsd/rsd-input-props";
 
 export type {
   Translator,
@@ -57,6 +58,7 @@ export type {
   SpanProps,
   AnchorProps,
   RsdButtonProps,
+  RsdInputProps,
 }
 
 export {
