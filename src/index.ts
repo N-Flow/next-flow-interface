@@ -38,7 +38,8 @@ import { DivProps, SpanProps } from "./api/components/interface/base-types";
 import { RsdButtonProps } from "./api/components/rsd/rsd-button-props";
 import { AnchorProps } from "./api/components/normal/anchor-props";
 import RsdInputProps from "./api/components/rsd/rsd-input-props";
-import {RsdTitleProps} from "./api/components/rsd/rsd-title-props";
+import { RsdTitleProps } from "./api/components/rsd/rsd-title-props";
+import { AntCheckboxProps } from "./api/components/ant/ant-checkbox-props"
 
 export type {
   Translator,
@@ -61,6 +62,7 @@ export type {
   RsdButtonProps,
   RsdInputProps,
   RsdTitleProps,
+  AntCheckboxProps,
 }
 
 export {
