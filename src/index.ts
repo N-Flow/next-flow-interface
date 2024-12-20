@@ -38,6 +38,7 @@ import { DivProps, SpanProps } from "./api/components/interface/base-types";
 import { RsdButtonProps } from "./api/components/rsd/rsd-button-props";
 import { AnchorProps } from "./api/components/normal/anchor-props";
 import RsdInputProps from "./api/components/rsd/rsd-input-props";
+import {RsdTitleProps} from "./api/components/rsd/rsd-title-props";
 
 export type {
   Translator,
@@ -59,6 +60,7 @@ export type {
   AnchorProps,
   RsdButtonProps,
   RsdInputProps,
+  RsdTitleProps,
 }
 
 export {

@@ -10,6 +10,7 @@ import {RsdButtonProps} from './components/rsd/rsd-button-props';
 import {AnchorProps} from "./components/normal/anchor-props";
 import RsdInputProps from "./components/rsd/rsd-input-props";
 import * as BabylonCore from '@babylonjs/core'
+import {RsdTitleProps} from "./components/rsd/rsd-title-props";
 
 export interface OfpApi {
 
@@ -39,6 +40,7 @@ export interface OfpApi {
     rsd: {
       RsdButton: FunctionComponent<RsdButtonProps>
       RsdInput: FunctionComponent<RsdInputProps>
+      RsdTitle: FunctionComponent<RsdTitleProps>
     }
   }
 
