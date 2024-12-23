@@ -40,6 +40,8 @@ import { AnchorProps } from "./api/components/normal/anchor-props";
 import RsdInputProps from "./api/components/rsd/rsd-input-props";
 import { RsdTitleProps } from "./api/components/rsd/rsd-title-props";
 import { AntCheckboxProps } from "./api/components/ant/ant-checkbox-props"
+import { AntColorProps } from "./api/components/ant/ant-color-props"
+import { AntNumberProps } from "./api/components/ant/ant-number-props"
 
 export type {
   Translator,
@@ -63,6 +65,8 @@ export type {
   RsdInputProps,
   RsdTitleProps,
   AntCheckboxProps,
+  AntColorProps,
+  AntNumberProps,
 }
 
 export {

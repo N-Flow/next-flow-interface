@@ -12,6 +12,8 @@ import RsdInputProps from "./components/rsd/rsd-input-props";
 import * as BabylonCore from '@babylonjs/core'
 import {RsdTitleProps} from "./components/rsd/rsd-title-props";
 import {AntCheckboxProps} from "./components/ant/ant-checkbox-props";
+import {AntNumberProps} from "./components/ant/ant-number-props";
+import {AntColorProps} from "./components/ant/ant-color-props";
 
 export interface OfpApi {
 
@@ -36,6 +38,8 @@ export interface OfpApi {
 
     ant: {
       AntCheckbox: FunctionComponent<AntCheckboxProps>
+      AntColor: FunctionComponent<AntColorProps>
+      AntNumber: FunctionComponent<AntNumberProps>
     }
 
     normal: {

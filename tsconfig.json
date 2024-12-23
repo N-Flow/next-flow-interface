@@ -32,7 +32,12 @@
 
     "paths": {
       "baseUrl": ["."],
-      "yjs": ["../oflow-space/node_modules/yjs"]
+      "@/*": ["./src/*"],
+      "yjs": ["../oflow-space/node_modules/yjs"],
+      "yjs/*": ["../oflow-space/node_modules/yjs/*"],
+      "antd": ["../oflow-space/node_modules/antd"],
+      "antd/*": ["../oflow-space/node_modules/antd/*"],
+      "@babylonjs/*": ["../oflow-space/node_modules/@babylonjs/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
