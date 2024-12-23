@@ -42,6 +42,7 @@ import { RsdTitleProps } from "./api/components/rsd/rsd-title-props";
 import { AntCheckboxProps } from "./api/components/ant/ant-checkbox-props"
 import { AntColorProps } from "./api/components/ant/ant-color-props"
 import { AntNumberProps } from "./api/components/ant/ant-number-props"
+import { AntSwitchProps } from "./api/components/ant/ant-switch-props"
 
 export type {
   Translator,
@@ -67,6 +68,7 @@ export type {
   AntCheckboxProps,
   AntColorProps,
   AntNumberProps,
+  AntSwitchProps,
 }
 
 export {

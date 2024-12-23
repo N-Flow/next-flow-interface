@@ -14,6 +14,7 @@ import {RsdTitleProps} from "./components/rsd/rsd-title-props";
 import {AntCheckboxProps} from "./components/ant/ant-checkbox-props";
 import {AntNumberProps} from "./components/ant/ant-number-props";
 import {AntColorProps} from "./components/ant/ant-color-props";
+import {AntSwitchProps} from "@/api/components/ant/ant-switch-props";
 
 export interface OfpApi {
 
@@ -40,6 +41,7 @@ export interface OfpApi {
       AntCheckbox: FunctionComponent<AntCheckboxProps>
       AntColor: FunctionComponent<AntColorProps>
       AntNumber: FunctionComponent<AntNumberProps>
+      AntSwitch: FunctionComponent<AntSwitchProps>
     }
 
     normal: {
