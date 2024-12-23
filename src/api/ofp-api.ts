@@ -15,6 +15,10 @@ import {AntCheckboxProps} from "./components/ant/ant-checkbox-props";
 import {AntNumberProps} from "./components/ant/ant-number-props";
 import {AntColorProps} from "./components/ant/ant-color-props";
 import {AntSwitchProps} from "@/api/components/ant/ant-switch-props";
+import {SpanProps} from "@/api/components/interface/base-types";
+import {FileProgressBarProps} from "@/api/components/normal/file-progress-bar-props";
+import {ProgressBarProps} from "@/api/components/normal/progress-bar-props";
+import {UploadButtonAndListProps} from "@/api/components/normal/upload-button-and-list-props";
 
 export interface OfpApi {
 
@@ -46,6 +50,11 @@ export interface OfpApi {
 
     normal: {
       Anchor: FunctionComponent<AnchorProps>
+      DrawerLoading: FunctionComponent<SpanProps>
+      FileProgressBar: FunctionComponent<FileProgressBarProps>
+      FlexGrow: FunctionComponent<{value?: number}>
+      ProgressBar: FunctionComponent<ProgressBarProps>
+      UploadButtonAndList: FunctionComponent<UploadButtonAndListProps>
     }
 
     rsd: {

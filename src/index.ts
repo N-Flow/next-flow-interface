@@ -43,6 +43,9 @@ import { AntCheckboxProps } from "./api/components/ant/ant-checkbox-props"
 import { AntColorProps } from "./api/components/ant/ant-color-props"
 import { AntNumberProps } from "./api/components/ant/ant-number-props"
 import { AntSwitchProps } from "./api/components/ant/ant-switch-props"
+import { FileProgressBarProps } from "@/api/components/normal/file-progress-bar-props";
+import { ProgressBarProps } from "@/api/components/normal/progress-bar-props";
+import { UploadButtonAndListProps } from "@/api/components/normal/upload-button-and-list-props";
 
 export type {
   Translator,
@@ -61,7 +64,6 @@ export type {
   ViewPlugin,
   DivProps,
   SpanProps,
-  AnchorProps,
   RsdButtonProps,
   RsdInputProps,
   RsdTitleProps,
@@ -69,6 +71,10 @@ export type {
   AntColorProps,
   AntNumberProps,
   AntSwitchProps,
+  AnchorProps,
+  FileProgressBarProps,
+  ProgressBarProps,
+  UploadButtonAndListProps,
 }
 
 export {
