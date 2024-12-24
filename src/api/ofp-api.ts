@@ -8,7 +8,7 @@ import UserServiceApi from './service/main/user/user-service-api';
 import React, {FunctionComponent} from "react";
 import {RsdButtonProps} from './components/rsd/rsd-button-props';
 import {AnchorProps} from "./components/normal/anchor-props";
-import RsdInputProps from "./components/rsd/rsd-input-props";
+import {RsdInputProps} from "./components/rsd/rsd-input-props";
 import * as BabylonCore from '@babylonjs/core'
 import {RsdTitleProps} from "./components/rsd/rsd-title-props";
 import {AntCheckboxProps} from "./components/ant/ant-checkbox-props";
@@ -19,6 +19,15 @@ import {SpanProps} from "@/api/components/interface/base-types";
 import {FileProgressBarProps} from "@/api/components/normal/file-progress-bar-props";
 import {ProgressBarProps} from "@/api/components/normal/progress-bar-props";
 import {UploadButtonAndListProps} from "@/api/components/normal/upload-button-and-list-props";
+import {RsdCheckboxProps} from "@/api/components/rsd/rsd-checkbox-props";
+import {RsdColorProps} from "@/api/components/rsd/rsd-color-props";
+import {RsdDropdownProps} from "@/api/components/rsd/rsd-dropdown-props";
+import {RsdFileSelectProps} from "@/api/components/rsd/rsd-file-select-props";
+import {RsdMentionsProps} from "@/api/components/rsd/rsd-mentions-props";
+import {RsdNoneProps} from "@/api/components/rsd/rsd-none-props";
+import {RsdNumberProps} from "@/api/components/rsd/rsd-number-props";
+import {RsdNumberListProps} from "@/api/components/rsd/rsd-number-list-props";
+import {RsdSwitchProps} from "@/api/components/rsd/rsd-switch-props";
 
 export interface OfpApi {
 
@@ -59,7 +68,18 @@ export interface OfpApi {
 
     rsd: {
       RsdButton: FunctionComponent<RsdButtonProps>
+      RsdCheckbox: FunctionComponent<RsdCheckboxProps>
+      RsdColor: FunctionComponent<RsdColorProps>
+      RsdDropdown: FunctionComponent<RsdDropdownProps>
+      RsdFileSelect: FunctionComponent<RsdFileSelectProps>
+      RsdFileSelectButton: FunctionComponent<RsdFileSelectProps>
       RsdInput: FunctionComponent<RsdInputProps>
+      RsdMentions: FunctionComponent<RsdMentionsProps>
+      RsdNone: FunctionComponent<RsdNoneProps>
+      RsdNumber: FunctionComponent<RsdNumberProps>
+      RsdNumberList: FunctionComponent<RsdNumberListProps>
+      RsdSwitch: FunctionComponent<RsdSwitchProps>
+      RsdTextarea: FunctionComponent<RsdInputProps>
       RsdTitle: FunctionComponent<RsdTitleProps>
     }
   }

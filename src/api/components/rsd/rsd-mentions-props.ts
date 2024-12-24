@@ -1,6 +1,6 @@
-import {DivProps} from "../interface/base-types";
+import {DivProps} from "@/api/components/interface/base-types";
 
-export interface RsdInputProps extends DivProps {
+export interface RsdMentionsProps extends DivProps {
   value: string
   onChange: (value: any) => void
   type?: 'text' | 'number' | 'password'
@@ -8,5 +8,4 @@ export interface RsdInputProps extends DivProps {
   className?: string
   theme?: string
   rows?: number
-  maxLength?: number
 }
