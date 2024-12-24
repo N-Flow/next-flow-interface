@@ -6,4 +6,5 @@ export interface RsdSelectableButtonProps extends DivProps {
   label: string
   className?: string
   theme?: string
+  children?: any
 }

@@ -28,6 +28,7 @@ import {RsdNoneProps} from "@/api/components/rsd/rsd-none-props";
 import {RsdNumberProps} from "@/api/components/rsd/rsd-number-props";
 import {RsdNumberListProps} from "@/api/components/rsd/rsd-number-list-props";
 import {RsdSwitchProps} from "@/api/components/rsd/rsd-switch-props";
+import {RsdSelectableButtonProps} from "@/api/components/rsd/rsd-selectable-button-props";
 
 export interface OfpApi {
 
@@ -68,6 +69,7 @@ export interface OfpApi {
 
     rsd: {
       RsdButton: FunctionComponent<RsdButtonProps>
+      RsdSelectableButton: FunctionComponent<RsdSelectableButtonProps>
       RsdCheckbox: FunctionComponent<RsdCheckboxProps>
       RsdColor: FunctionComponent<RsdColorProps>
       RsdDropdown: FunctionComponent<RsdDropdownProps>
