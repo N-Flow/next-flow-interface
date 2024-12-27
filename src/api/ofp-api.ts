@@ -19,6 +19,7 @@ import {SpanProps} from "@/api/components/interface/base-types";
 import {FileProgressBarProps} from "@/api/components/normal/file-progress-bar-props";
 import {ProgressBarProps} from "@/api/components/normal/progress-bar-props";
 import {UploadButtonAndListProps} from "@/api/components/normal/upload-button-and-list-props";
+import {ScrollBarProps} from "@/api/components/normal/scroll-bar-props"
 import {RsdCheckboxProps} from "@/api/components/rsd/rsd-checkbox-props";
 import {RsdColorProps} from "@/api/components/rsd/rsd-color-props";
 import {RsdDropdownProps} from "@/api/components/rsd/rsd-dropdown-props";
@@ -65,6 +66,7 @@ export interface OfpApi {
       FlexGrow: FunctionComponent<{value?: number}>
       ProgressBar: FunctionComponent<ProgressBarProps>
       UploadButtonAndList: FunctionComponent<UploadButtonAndListProps>
+      ScrollBar: FunctionComponent<ScrollBarProps>
     }
 
     rsd: {

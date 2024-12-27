@@ -43,6 +43,7 @@ import { AntSwitchProps } from "./api/components/ant/ant-switch-props"
 import { FileProgressBarProps } from "@/api/components/normal/file-progress-bar-props";
 import { ProgressBarProps } from "@/api/components/normal/progress-bar-props";
 import { UploadButtonAndListProps } from "@/api/components/normal/upload-button-and-list-props";
+import { ScrollBarProps } from "@/api/components/normal/scroll-bar-props"
 import { RsdButtonProps } from "./api/components/rsd/rsd-button-props";
 import { RsdCheckboxProps } from "./api/components/rsd/rsd-checkbox-props"
 import { RsdColorProps } from "./api/components/rsd/rsd-color-props"
@@ -82,6 +83,7 @@ export type {
   FileProgressBarProps,
   ProgressBarProps,
   UploadButtonAndListProps,
+  ScrollBarProps,
   RsdButtonProps,
   RsdCheckboxProps,
   RsdColorProps,
