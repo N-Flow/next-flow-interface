@@ -90,6 +90,7 @@ export interface OfpApi {
 
   styles: {
     rss: any
+    rsbStyles: any
   }
 
   utils: {
