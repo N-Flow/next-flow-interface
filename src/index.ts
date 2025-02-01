@@ -57,6 +57,7 @@ import { RsdNumberProps } from "./api/components/rsd/rsd-number-props";
 import { RsdSelectableButtonProps } from "./api/components/rsd/rsd-selectable-button-props";
 import { RsdSwitchProps } from "./api/components/rsd/rsd-switch-props";
 import { RsdTitleProps } from "./api/components/rsd/rsd-title-props";
+import ToggleDialogApi from "./api/service/view/toggle-dialog-api";
 
 export type {
   Translator,
@@ -122,4 +123,5 @@ export {
   WebsocketStatus,
   IconPluginPosition,
   PluginType,
+  ToggleDialogApi,
 }

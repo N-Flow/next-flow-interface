@@ -30,6 +30,7 @@ import {RsdNumberProps} from "@/api/components/rsd/rsd-number-props";
 import {RsdNumberListProps} from "@/api/components/rsd/rsd-number-list-props";
 import {RsdSwitchProps} from "@/api/components/rsd/rsd-switch-props";
 import {RsdSelectableButtonProps} from "@/api/components/rsd/rsd-selectable-button-props";
+import ToggleDialogApi from "@/api/service/view/toggle-dialog-api";
 
 export interface OfpApi {
 
@@ -48,6 +49,11 @@ export interface OfpApi {
     sync: {
 
     }
+
+    view: {
+      ToggleDialog: typeof ToggleDialogApi
+    }
+
   }
 
   components: {
