@@ -39,6 +39,7 @@ import { AnchorProps } from "./api/components/normal/anchor-props";
 import { AntCheckboxProps } from "./api/components/ant/ant-checkbox-props"
 import { AntColorProps } from "./api/components/ant/ant-color-props"
 import { AntNumberProps } from "./api/components/ant/ant-number-props"
+import { AntSelectProps } from "./api/components/ant/ant-select-props";
 import { AntSwitchProps } from "./api/components/ant/ant-switch-props"
 import { FileProgressBarProps } from "@/api/components/normal/file-progress-bar-props";
 import { ProgressBarProps } from "@/api/components/normal/progress-bar-props";
@@ -80,6 +81,7 @@ export type {
   AntColorProps,
   AntNumberProps,
   AntSwitchProps,
+  AntSelectProps,
   AnchorProps,
   FileProgressBarProps,
   ProgressBarProps,

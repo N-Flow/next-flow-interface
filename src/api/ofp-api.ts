@@ -31,6 +31,7 @@ import {RsdNumberListProps} from "@/api/components/rsd/rsd-number-list-props";
 import {RsdSwitchProps} from "@/api/components/rsd/rsd-switch-props";
 import {RsdSelectableButtonProps} from "@/api/components/rsd/rsd-selectable-button-props";
 import ToggleDialogApi from "@/api/service/view/toggle-dialog-api";
+import {AntSelectProps} from "@/api/components/ant/ant-select-props";
 
 export interface OfpApi {
 
@@ -62,6 +63,7 @@ export interface OfpApi {
       AntCheckbox: FunctionComponent<AntCheckboxProps>
       AntColor: FunctionComponent<AntColorProps>
       AntNumber: FunctionComponent<AntNumberProps>
+      AntSelect: FunctionComponent<AntSelectProps>
       AntSwitch: FunctionComponent<AntSwitchProps>
     }
 
