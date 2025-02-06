@@ -59,6 +59,7 @@ import { RsdSelectableButtonProps } from "./api/components/rsd/rsd-selectable-bu
 import { RsdSwitchProps } from "./api/components/rsd/rsd-switch-props";
 import { RsdTitleProps } from "./api/components/rsd/rsd-title-props";
 import ToggleDialogApi from "./api/service/view/toggle-dialog-api";
+import ThemeProviderProps from "./api/components/ant/ThemeProviderProps";
 
 export type {
   Translator,
@@ -100,6 +101,7 @@ export type {
   RsdSelectableButtonProps,
   RsdSwitchProps,
   RsdTitleProps,
+  ThemeProviderProps,
 }
 
 export {
