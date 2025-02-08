@@ -1,65 +1,41 @@
 import Status from "./interface/status";
 import {StatusChangeCallback} from "./interface/status-change-callback";
 
-export default class StatusServiceApi {
+export default interface StatusServiceApi {
   
-  public static status: Status
+  status: Status
 
-  public static afterAuthenticated(callback: StatusChangeCallback) {
-  }
+  afterAuthenticated(callback: StatusChangeCallback): void
 
-  public static async waitAuthenticated(): Promise<boolean> {
-    return false
-  }
+  waitAuthenticated(): Promise<boolean>
 
-  public static afterDataSynchronized(callback: StatusChangeCallback) {
-  }
+  afterDataSynchronized(callback: StatusChangeCallback): void
   
-  public static async waitDataSynchronized(): Promise<boolean> {
-    return false
-  }
+  waitDataSynchronized(): Promise<boolean>
   
-  public static afterSyncInitialized(callback: StatusChangeCallback) {
-  }
+  afterSyncInitialized(callback: StatusChangeCallback): void
   
-  public static async waitSyncInitialized(): Promise<boolean> {
-    return false
-  }
+  waitSyncInitialized(): Promise<boolean>
 
-  public static afterRsInitialized(callback: StatusChangeCallback) {
-  }
+  afterRsInitialized(callback: StatusChangeCallback): void
   
-  public static async waitRsInitialized(): Promise<boolean> {
-    return false
-  }
+  waitRsInitialized(): Promise<boolean>
   
-  public static afterAllInitialized(callback: StatusChangeCallback) {
-  }
+  afterAllInitialized(callback: StatusChangeCallback): void
   
-  public static async waitAllInitialized(): Promise<boolean> {
-    return false
-  }
+  waitAllInitialized(): Promise<boolean>
   
-  public static afterLoaded(callback: StatusChangeCallback) {
-  }
+  afterLoaded(callback: StatusChangeCallback): void
   
-  public static async waitLoaded(): Promise<boolean> {
-    return false
-  }
+  waitLoaded(): Promise<boolean>
   
-  public static afterRendered(callback: StatusChangeCallback) {
-  }
+  afterRendered(callback: StatusChangeCallback): void
   
-  public static async waitRendered(): Promise<boolean> {
-    return false
-  }
+  waitRendered(): Promise<boolean>
   
-  public static afterShown(callback: StatusChangeCallback) {
-  }
+  afterShown(callback: StatusChangeCallback): void
   
-  public static async waitShown(): Promise<boolean> {
-    return false
-  }
+  waitShown(): Promise<boolean>
   
 }
 

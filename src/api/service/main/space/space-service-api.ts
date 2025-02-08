@@ -1,4 +1,4 @@
-import Page from "./interface/page/page";\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+import Page from "./interface/page/page";
 import Screen from "./interface/screen/screen";
 import {ScreenSize} from "./interface/screen/screen-size";
 
