@@ -7,7 +7,7 @@ import { PluginType } from "./plugin/enum/plugin-type";
 import { ThemeBackground } from "./api/service/main/space/interface/theme/theme-background";
 import { ThemeColor } from "./api/service/main/space/interface/theme/theme-color";
 import { OfpApi } from "./api/ofp-api";
-import SpaceServiceApi from "./api/service/main/space/space-service-api";
+import SpaceServiceApi, { StepChangeSubscriber } from "./api/service/main/space/space-service-api";
 import { PageMode } from "./api/service/main/space/interface/page/page-mode";
 import Status from "./api/service/main/status/interface/status";
 import { PageType } from "./api/service/main/space/interface/page/page-type";
@@ -24,7 +24,6 @@ import { ShareMode } from "./api/service/main/meeting/interface/share-mode";
 import { MeetingStatus } from "./api/service/main/meeting/interface/meeting-status";
 import UserServiceApi from "./api/service/main/user/user-service-api";
 import { WebsocketStatus } from "./api/service/sync/sync/interface/websocket-status";
-import { StepChangeListener } from "./api/service/main/space/interface/page/step-change-listener";
 import { PluginConfig } from "./api/service/main/plugin/interface/plugin-config";
 import PluginState from "./api/service/main/plugin/interface/plugin-state";
 import AcceptMime from "./api/service/main/file/interface/accept-mime";
@@ -66,9 +65,10 @@ export type {
   Meeting,
   PluginConfig,
   PluginState,
+  SpaceServiceApi,
   Page,
-  StepChangeListener,
   Screen,
+  StepChangeSubscriber,
   Status,
   StatusChangeCallback,
   OfpApi,
@@ -121,7 +121,6 @@ export {
   ThemeBackground,
   ThemeColor,
   ThemeShape,
-  SpaceServiceApi,
   StatusServiceApi,
   UserServiceApi,
   WebsocketStatus,

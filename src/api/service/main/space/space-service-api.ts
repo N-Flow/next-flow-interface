@@ -1,27 +1,23 @@
-import Page from "./interface/page/page";
+import Page from "./interface/page/page";\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 import Screen from "./interface/screen/screen";
-import {StepChangeListener} from "./interface/page/step-change-listener";
 import {ScreenSize} from "./interface/screen/screen-size";
 
+export type StepChangeSubscriber = (sid: string, step: any, lastSid: string, lastStep: any) => void
 
-export default class SpaceServiceApi {
+export default interface SpaceServiceApi {
   
-  public static page: Page
+  page: Page
   
-  public static screen: Screen
+  screen: Screen
 
-  public static addStepChangeListener(listener: StepChangeListener): void {
-  }
+  subscribeStepChange(subscriber: StepChangeSubscriber): void
+
+  unsubscribeStepChange(subscriber: StepChangeSubscriber): void
   
-  public static removeStepChangeListener(listener: StepChangeListener): void {
-  }
+  isBoxMode(): boolean
   
-  public static isBoxMode(): boolean {
-    return false
-  }
-  
-  public static isDarkTheme(): boolean {
-    return false
-  }
+  isDarkTheme(): boolean
+
+  setScreenSize(size: ScreenSize): void
 
 }

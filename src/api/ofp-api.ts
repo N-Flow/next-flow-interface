@@ -39,7 +39,7 @@ export interface OfpApi {
   services: {
 
     main: {
-      SpaceService: typeof SpaceServiceApi
+      spaceService: SpaceServiceApi
       StatusService: typeof StatusServiceApi
       LocalFileService: typeof LocalFileServiceApi
       Internationalization: typeof InternationalizationServiceApi
