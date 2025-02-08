@@ -1,30 +1,21 @@
 import {Locale} from "./interface/locale";
 import {Translator} from "./interface/translator";
 
-export default class InternationalizationServiceApi {
-  public static ALL_SUPPORT: Locale[] = [Locale.EN, Locale.ZH]
-  public static DEFAULT_SUPPORT: Locale = Locale.EN
+export default interface InternationalizationServiceApi {
 
-  public static current: Locale
+  ALL_SUPPORT: Locale[]
+  DEFAULT_SUPPORT: Locale
 
-  public static async getTranslator(namespace: string = '', locale: Locale = this.getCurrentLocale()): Promise<Translator> {
-    return {} as any
-  }
+  current: Locale
 
-  public static getCurrentLocale(): Locale {
-    return {} as any
-  }
+  getTranslator(namespace: string, locale: Locale): Promise<Translator>
 
-  public static getLocaleByString(locale: string): Locale {
-    return {} as any
-  }
+  getCurrentLocale(): Locale
 
-  public static async loadMessages(locale: Locale): Promise<any> {
+  getLocaleByString(locale: string): Locale
 
-  }
+  loadMessages(locale: Locale): Promise<any>
 
-  public static clearCache() {
-
-  }
+  clearCache(): void
 
 }

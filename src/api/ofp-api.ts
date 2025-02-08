@@ -42,10 +42,10 @@ export interface OfpApi {
       spaceService: SpaceServiceApi
       statusService: StatusServiceApi
       pluginService: PluginServiceApi
-      InternationalizationService: typeof InternationalizationServiceApi
-      UserService: typeof UserServiceApi
-      LocalFileService: typeof LocalFileServiceApi
-      MeetingService: typeof MeetingServiceApi
+      internationalizationService: InternationalizationServiceApi
+      userService: UserServiceApi
+      localFileService: LocalFileServiceApi
+      meetingService: MeetingServiceApi
     }
 
     sync: {

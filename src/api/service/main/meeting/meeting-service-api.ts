@@ -1,42 +1,29 @@
 import Meeting from "./interface/meeting";
 import {ShareMode} from "./interface/share-mode";
 
-export default class MeetingServiceApi {
+export default interface MeetingServiceApi {
   
-  public static state: Meeting
+  state: Meeting
 
   // 是否在会议中
-  public static inMeeting() {
-    return false
-  }
+  inMeeting(): boolean
 
   // 会议中 且 身份为演讲者
-  public static isPresenter(): boolean {
-    return false
-  }
+  isPresenter(): boolean
 
   // 会议中 且 身份为观众
-  public static isVisitor(): boolean {
-    return false
-  }
+  isVisitor(): boolean
 
   // 会议中 且 身份为观众 且 实际镜头状态为跟随
-  public static isFollowingVisitor(): boolean {
-    return false
-  }
+  isFollowingVisitor(): boolean
 
   // 会议中 且 身份为观众 且 实际镜头状态为不跟随
-  public static isUnfollowingVisitor(): boolean {
-    return false
-  }
+  isUnfollowingVisitor(): boolean
 
   // 设置会议本地配置信息
-  public static setConfigInfo(allFollow: boolean, clickShareMode: ShareMode, cursorShareMode: ShareMode): void {
-  }
+  setConfigInfo(allFollow: boolean, clickShareMode: ShareMode, cursorShareMode: ShareMode): void
 
   // 获取邀请链接
-  public static getInviteLink(): string {
-    return ''
-  }
+  getInviteLink(): string
   
 }

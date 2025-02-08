@@ -59,6 +59,12 @@ import { RsdSwitchProps } from "./api/components/rsd/rsd-switch-props";
 import { RsdTitleProps } from "./api/components/rsd/rsd-title-props";
 import ToggleDialogApi from "./api/service/view/toggle-dialog-api";
 import ThemeProviderProps from "./api/components/ant/ThemeProviderProps";
+import { LocalFileStatus } from "./api/service/main/file/interface/local-file-status.enum";
+import FileLoadInfo from "./api/service/main/file/interface/file-load-info";
+import LocalFileServiceState from "./api/service/main/file/interface/local-file-service-state.interface";
+import UserInfo from "./api/service/main/user/interface/user-info.interface";
+import UserAuth from "./api/service/main/user/interface/user-auth.interface";
+import ModulePreloaderApi from "./api/service/main/preloader/module-preloader-api";
 
 export type {
   OfpApi,
@@ -105,16 +111,21 @@ export type {
   RsdSwitchProps,
   RsdTitleProps,
   ThemeProviderProps,
+  LocalFileServiceApi,
+  InternationalizationServiceApi,
+  LocalFileServiceState,
+  UserAuth,
+  UserInfo,
+  UserServiceApi,
+  MeetingServiceApi,
+  ModulePreloaderApi,
 }
 
 export {
   AcceptMime,
-  LocalFileServiceApi,
   Locale,
-  InternationalizationServiceApi,
   MeetingStatus,
   ShareMode,
-  MeetingServiceApi,
   PageMode,
   PageType,
   FocusMode,
@@ -122,9 +133,10 @@ export {
   ThemeBackground,
   ThemeColor,
   ThemeShape,
-  UserServiceApi,
   WebsocketStatus,
   IconPluginPosition,
   PluginType,
   ToggleDialogApi,
+  LocalFileStatus,
+  FileLoadInfo,
 }
