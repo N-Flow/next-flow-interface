@@ -33,6 +33,8 @@ import {RsdSelectableButtonProps} from "@/api/components/rsd/rsd-selectable-butt
 import ToggleDialogApi from "@/api/service/view/toggle-dialog-api";
 import {AntSelectProps} from "@/api/components/ant/ant-select-props";
 import ThemeProviderProps from "@/api/components/ant/ThemeProviderProps";
+import ModulePreloaderApi from "@/api/service/main/preloader/module-preloader-api";
+import SyncServiceApi from "@/api/service/sync/sync-service-api";
 
 export interface OfpApi {
 
@@ -46,10 +48,11 @@ export interface OfpApi {
       userService: UserServiceApi
       localFileService: LocalFileServiceApi
       meetingService: MeetingServiceApi
+      modulePreloader: ModulePreloaderApi
     }
 
     sync: {
-
+      SyncService: SyncServiceApi
     }
 
     view: {

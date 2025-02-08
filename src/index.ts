@@ -23,7 +23,6 @@ import Meeting from "./api/service/main/meeting/interface/meeting";
 import { ShareMode } from "./api/service/main/meeting/interface/share-mode";
 import { MeetingStatus } from "./api/service/main/meeting/interface/meeting-status";
 import UserServiceApi from "./api/service/main/user/user-service-api";
-import { WebsocketStatus } from "./api/service/sync/sync/interface/websocket-status";
 import { PluginConfig } from "./api/service/main/plugin/interface/plugin-config";
 import PluginState from "./api/service/main/plugin/interface/plugin-state";
 import AcceptMime from "./api/service/main/file/interface/accept-mime";
@@ -65,6 +64,9 @@ import LocalFileServiceState from "./api/service/main/file/interface/local-file-
 import UserInfo from "./api/service/main/user/interface/user-info.interface";
 import UserAuth from "./api/service/main/user/interface/user-auth.interface";
 import ModulePreloaderApi from "./api/service/main/preloader/module-preloader-api";
+import SyncServiceApi from "./api/service/sync/sync-service-api";
+import RvBase from "./api/service/sync/interface/rv-base.interface";
+import RvGlobal from "./api/service/sync/interface/global/rv-global.interface";
 
 export type {
   OfpApi,
@@ -119,6 +121,9 @@ export type {
   UserServiceApi,
   MeetingServiceApi,
   ModulePreloaderApi,
+  SyncServiceApi,
+  RvBase,
+  RvGlobal,
 }
 
 export {
@@ -133,7 +138,6 @@ export {
   ThemeBackground,
   ThemeColor,
   ThemeShape,
-  WebsocketStatus,
   IconPluginPosition,
   PluginType,
   ToggleDialogApi,
