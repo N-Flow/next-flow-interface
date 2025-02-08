@@ -5,11 +5,9 @@ import InternationalizationServiceApi from "./service/main/internationalization/
 import MeetingServiceApi from "./service/main/meeting/meeting-service-api";
 import StatusServiceApi from './service/main/status/status-service-api';
 import UserServiceApi from './service/main/user/user-service-api';
-import React, {FunctionComponent} from "react";
 import {RsdButtonProps} from './components/rsd/rsd-button-props';
 import {AnchorProps} from "./components/normal/anchor-props";
 import {RsdInputProps} from "./components/rsd/rsd-input-props";
-import * as BabylonCore from '@babylonjs/core'
 import {RsdTitleProps} from "./components/rsd/rsd-title-props";
 import {AntCheckboxProps} from "./components/ant/ant-checkbox-props";
 import {AntNumberProps} from "./components/ant/ant-number-props";
@@ -30,11 +28,15 @@ import {RsdNumberProps} from "@/api/components/rsd/rsd-number-props";
 import {RsdNumberListProps} from "@/api/components/rsd/rsd-number-list-props";
 import {RsdSwitchProps} from "@/api/components/rsd/rsd-switch-props";
 import {RsdSelectableButtonProps} from "@/api/components/rsd/rsd-selectable-button-props";
-import ToggleDialogApi from "@/api/service/view/toggle-dialog-api";
 import {AntSelectProps} from "@/api/components/ant/ant-select-props";
+import ToggleDialogApi from "@/api/service/view/toggle-dialog-api";
 import ThemeProviderProps from "@/api/components/ant/ThemeProviderProps";
 import ModulePreloaderApi from "@/api/service/main/preloader/module-preloader-api";
 import SyncServiceApi from "@/api/service/sync/sync-service-api";
+import {clsx} from "clsx";
+import * as BabylonCore from '@babylonjs/core'
+import React, {FunctionComponent} from "react";
+import * as RhineVar from "rhine-var";
 
 export interface OfpApi {
 
@@ -52,7 +54,7 @@ export interface OfpApi {
     }
 
     sync: {
-      SyncService: SyncServiceApi
+      syncService: SyncServiceApi
     }
 
     view: {
@@ -113,6 +115,8 @@ export interface OfpApi {
   modules: {
     react: typeof React
     babylon: typeof BabylonCore
+    clsx: typeof clsx
+    rhineVar: typeof RhineVar
   }
   
 }

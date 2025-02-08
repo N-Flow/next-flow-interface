@@ -37,7 +37,9 @@
       "yjs/*": ["../oflow-space/node_modules/yjs/*"],
       "antd": ["../oflow-space/node_modules/antd"],
       "antd/*": ["../oflow-space/node_modules/antd/*"],
-      "@babylonjs/*": ["../oflow-space/node_modules/@babylonjs/*"]
+      "@babylonjs/*": ["../oflow-space/node_modules/@babylonjs/*"],
+      "clsx": ["../oflow-space/node_modules/clsx"],
+      "rhine-var": ["../oflow-space/node_modules/rhine-var"],
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
