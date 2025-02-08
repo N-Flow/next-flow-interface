@@ -61,6 +61,7 @@ import ToggleDialogApi from "./api/service/view/toggle-dialog-api";
 import ThemeProviderProps from "./api/components/ant/ThemeProviderProps";
 
 export type {
+  OfpApi,
   Translator,
   Meeting,
   PluginConfig,
@@ -72,7 +73,8 @@ export type {
   Status,
   StatusChangeCallback,
   StatusServiceApi,
-  OfpApi,
+  PluginConnectorApi,
+  PluginServiceApi,
   BasePlugin,
   DrawerPlugin,
   IconPlugin,
@@ -113,8 +115,6 @@ export {
   MeetingStatus,
   ShareMode,
   MeetingServiceApi,
-  PluginConnectorApi,
-  PluginServiceApi,
   PageMode,
   PageType,
   FocusMode,

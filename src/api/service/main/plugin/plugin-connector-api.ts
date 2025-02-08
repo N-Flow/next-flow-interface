@@ -1,11 +1,10 @@
 import BasePlugin from "../../../../plugin/base-plugin";
 import { OfpApi } from "../../../ofp-api";
 
-export default class PluginConnectorApi {
+export default interface PluginConnectorApi {
 
-  public static load(plugin: BasePlugin) {
-  }
+  load(plugin: BasePlugin): void
 
-  public static ofpApi: OfpApi
+  getOfpApi(): OfpApi
 
 }
