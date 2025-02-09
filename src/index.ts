@@ -67,6 +67,7 @@ import ModulePreloaderApi from "./api/service/main/preloader/module-preloader-ap
 import SyncServiceApi from "./api/service/sync/sync-service-api";
 import RvBase from "./api/service/sync/interface/rv-base.interface";
 import RvGlobal from "./api/service/sync/interface/global/rv-global.interface";
+import { FlexGrowProps } from "./api/components/normal/flex-grow-props";
 
 export type {
   OfpApi,
@@ -124,6 +125,7 @@ export type {
   SyncServiceApi,
   RvBase,
   RvGlobal,
+  FlexGrowProps,
 }
 
 export {

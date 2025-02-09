@@ -37,6 +37,7 @@ import {clsx} from "clsx";
 import * as BabylonCore from '@babylonjs/core'
 import React, {FunctionComponent} from "react";
 import * as RhineVar from "rhine-var";
+import {FlexGrowProps} from "@/api/components/normal/flex-grow-props";
 
 export interface OfpApi {
 
@@ -78,7 +79,7 @@ export interface OfpApi {
       Anchor: FunctionComponent<AnchorProps>
       DrawerLoading: FunctionComponent<SpanProps>
       FileProgressBar: FunctionComponent<FileProgressBarProps>
-      FlexGrow: FunctionComponent<{value?: number}>
+      FlexGrow: FunctionComponent<FlexGrowProps>
       ProgressBar: FunctionComponent<ProgressBarProps>
       UploadButtonAndList: FunctionComponent<UploadButtonAndListProps>
       ScrollBar: FunctionComponent<ScrollBarProps>
