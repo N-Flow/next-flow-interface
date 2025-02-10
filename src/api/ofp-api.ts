@@ -39,6 +39,7 @@ import ThemeProviderProps from "./components/ant/ThemeProviderProps";
 import ModulePreloaderApi from "./service/main/preloader/module-preloader-api";
 import SyncServiceApi from "./service/sync/sync-service-api";
 import RvGlobalServiceApi from "@/api/service/sync/global/rv-global-service-api";
+import HistoryManagerApi from "./service/sync/history-manager-api";
 
 export interface OfpApi {
 
@@ -57,6 +58,7 @@ export interface OfpApi {
 
     sync: {
       syncService: SyncServiceApi
+      historyManager: HistoryManagerApi
       rvGlobalService: RvGlobalServiceApi
     }
 
