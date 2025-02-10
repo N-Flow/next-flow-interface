@@ -1,3 +1,7 @@
+import React, {FunctionComponent} from "react";
+import * as BabylonCore from '@babylonjs/core'
+import * as RhineVar from "rhine-var";
+import {clsx} from "clsx";
 import SpaceServiceApi from './service/main/space/space-service-api'
 import PluginServiceApi from "./service/main/plugin/plugin-service-api";
 import LocalFileServiceApi from "./service/main/file/local-file-service-api";
@@ -12,32 +16,29 @@ import {RsdTitleProps} from "./components/rsd/rsd-title-props";
 import {AntCheckboxProps} from "./components/ant/ant-checkbox-props";
 import {AntNumberProps} from "./components/ant/ant-number-props";
 import {AntColorProps} from "./components/ant/ant-color-props";
-import {AntSwitchProps} from "@/api/components/ant/ant-switch-props";
-import {SpanProps} from "@/api/components/interface/base-types";
-import {FileProgressBarProps} from "@/api/components/normal/file-progress-bar-props";
-import {ProgressBarProps} from "@/api/components/normal/progress-bar-props";
-import {UploadButtonAndListProps} from "@/api/components/normal/upload-button-and-list-props";
-import {ScrollBarProps} from "@/api/components/normal/scroll-bar-props"
-import {RsdCheckboxProps} from "@/api/components/rsd/rsd-checkbox-props";
-import {RsdColorProps} from "@/api/components/rsd/rsd-color-props";
-import {RsdDropdownProps} from "@/api/components/rsd/rsd-dropdown-props";
-import {RsdFileSelectProps} from "@/api/components/rsd/rsd-file-select-props";
-import {RsdMentionsProps} from "@/api/components/rsd/rsd-mentions-props";
-import {RsdNoneProps} from "@/api/components/rsd/rsd-none-props";
-import {RsdNumberProps} from "@/api/components/rsd/rsd-number-props";
-import {RsdNumberListProps} from "@/api/components/rsd/rsd-number-list-props";
-import {RsdSwitchProps} from "@/api/components/rsd/rsd-switch-props";
-import {RsdSelectableButtonProps} from "@/api/components/rsd/rsd-selectable-button-props";
-import {AntSelectProps} from "@/api/components/ant/ant-select-props";
-import ToggleDialogApi from "@/api/service/view/toggle-dialog-api";
-import ThemeProviderProps from "@/api/components/ant/ThemeProviderProps";
-import ModulePreloaderApi from "@/api/service/main/preloader/module-preloader-api";
-import SyncServiceApi from "@/api/service/sync/sync-service-api";
-import {clsx} from "clsx";
-import * as BabylonCore from '@babylonjs/core'
-import React, {FunctionComponent} from "react";
-import * as RhineVar from "rhine-var";
-import {FlexGrowProps} from "@/api/components/normal/flex-grow-props";
+import {AntSwitchProps} from "./components/ant/ant-switch-props";
+import {SpanProps} from "./components/interface/base-types";
+import {FileProgressBarProps} from "./components/normal/file-progress-bar-props";
+import {ProgressBarProps} from "./components/normal/progress-bar-props";
+import {UploadButtonAndListProps} from "./components/normal/upload-button-and-list-props";
+import {ScrollBarProps} from "./components/normal/scroll-bar-props"
+import {RsdCheckboxProps} from "./components/rsd/rsd-checkbox-props";
+import {RsdColorProps} from "./components/rsd/rsd-color-props";
+import {RsdDropdownProps} from "./components/rsd/rsd-dropdown-props";
+import {RsdFileSelectProps} from "./components/rsd/rsd-file-select-props";
+import {RsdMentionsProps} from "./components/rsd/rsd-mentions-props";
+import {RsdNoneProps} from "./components/rsd/rsd-none-props";
+import {RsdNumberProps} from "./components/rsd/rsd-number-props";
+import {RsdNumberListProps} from "./components/rsd/rsd-number-list-props";
+import {RsdSwitchProps} from "./components/rsd/rsd-switch-props";
+import {RsdSelectableButtonProps} from "./components/rsd/rsd-selectable-button-props";
+import {AntSelectProps} from "./components/ant/ant-select-props";
+import {FlexGrowProps} from "./components/normal/flex-grow-props";
+import ToggleDialogApi from "./service/view/toggle-dialog-api";
+import ThemeProviderProps from "./components/ant/ThemeProviderProps";
+import ModulePreloaderApi from "./service/main/preloader/module-preloader-api";
+import SyncServiceApi from "./service/sync/sync-service-api";
+import RvGlobalServiceApi from "@/api/service/sync/global/rv-global-service-api";
 
 export interface OfpApi {
 
@@ -56,6 +57,7 @@ export interface OfpApi {
 
     sync: {
       syncService: SyncServiceApi
+      rvGlobalService: RvGlobalServiceApi
     }
 
     view: {
