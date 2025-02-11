@@ -1,7 +1,5 @@
 
-export interface PluginConfig {
+export default interface PluginConfig {
   id: string
-  url: string
-  css?: boolean | string
-  debug?: string
+  order?: number
 }

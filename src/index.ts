@@ -23,7 +23,6 @@ import Meeting from "./api/service/main/meeting/interface/meeting";
 import { ShareMode } from "./api/service/main/meeting/interface/share-mode";
 import { MeetingStatus } from "./api/service/main/meeting/interface/meeting-status";
 import UserServiceApi from "./api/service/main/user/user-service-api";
-import { PluginConfig } from "./api/service/main/plugin/interface/plugin-config";
 import PluginState from "./api/service/main/plugin/interface/plugin-state";
 import AcceptMime from "./api/service/main/file/interface/accept-mime";
 import LocalFileServiceApi from "./api/service/main/file/local-file-service-api";
@@ -72,6 +71,8 @@ import RvGlobalServiceApi from "./api/service/sync/global/rv-global-service-api"
 import HistoryManagerApi from "./api/service/sync/history-manager-api";
 import { Operate } from "./api/service/sync/operate.enum";
 import BuiltInPluginConfig from "./api/service/main/plugin/interface/built-in-plugin-config";
+import PluginConfig from "./api/service/main/plugin/interface/plugin-config";
+import ExternalPluginConfig from "./api/service/main/plugin/interface/external-plugin-config";
 
 export type {
   OfpApi,
@@ -133,6 +134,7 @@ export type {
   RvGlobalServiceApi,
   HistoryManagerApi,
   BuiltInPluginConfig,
+  ExternalPluginConfig,
 }
 
 export {
