@@ -15,6 +15,7 @@ export default interface IconPlugin extends BasePlugin {
   icon: FunctionComponent
 
   onEnabledChange?: (value: boolean, e: MouseEvent) => void
+  onIconClick?: (e: MouseEvent) => void
   onIconClickRouter?: (e: MouseEvent) => string
   onIconContextMenu?: (e: MouseEvent) => void
 }
