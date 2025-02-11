@@ -1,7 +1,4 @@
-import React, {FunctionComponent} from "react";
-import * as BabylonCore from '@babylonjs/core'
-import * as RhineVar from "rhine-var";
-import {clsx} from "clsx";
+import type {FunctionComponent} from "react";
 import SpaceServiceApi from './service/main/space/space-service-api'
 import PluginServiceApi from "./service/main/plugin/plugin-service-api";
 import LocalFileServiceApi from "./service/main/file/local-file-service-api";
@@ -114,14 +111,9 @@ export interface OfpApi {
   }
 
   utils: {
-
   }
 
   modules: {
-    react: typeof React
-    babylon: typeof BabylonCore
-    clsx: typeof clsx
-    rhineVar: typeof RhineVar
   }
   
 }
