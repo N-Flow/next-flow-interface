@@ -4,8 +4,6 @@ import BasePlugin from "@/plugin/base-plugin";
 
 export default interface PluginServiceApi {
 
-  configs: PluginConfig[]
-
   plugins: Map<string, PluginState>
 
 

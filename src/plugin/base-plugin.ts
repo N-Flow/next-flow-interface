@@ -1,6 +1,5 @@
 import {PluginType} from "./enum/plugin-type";
-import {ThemeColor} from "../api/service/main/space/interface/theme/theme-color";
-import {OfpApi} from "../api/ofp-api";
+import {ThemeColor} from "@/api/service/main/space/interface/theme/theme-color";
 
 export default interface BasePlugin {
   id: string
