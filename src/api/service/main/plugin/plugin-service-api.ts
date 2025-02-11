@@ -1,6 +1,7 @@
-import {PluginConfig} from "./interface/plugin-config";
 import PluginState from "@/api/service/main/plugin/interface/plugin-state";
 import BasePlugin from "@/plugin/base-plugin";
+import ExternalPluginConfig from "@/api/service/main/plugin/interface/external-plugin-config";
+import BuiltInPluginConfig from "@/api/service/main/plugin/interface/built-in-plugin-config";
 
 export default interface PluginServiceApi {
 
@@ -10,9 +11,11 @@ export default interface PluginServiceApi {
   get(id: string): PluginState | null
 
 
-  add(config: PluginConfig): Promise<void>
+  addExternal(config: ExternalPluginConfig): Promise<void>
 
-  debug(config: PluginConfig): void
+  addBuiltIn(config: BuiltInPluginConfig): void
+
+  debug(config: ExternalPluginConfig): void
 
 
   load(plugin: BasePlugin): Promise<void>
