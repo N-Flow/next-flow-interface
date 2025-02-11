@@ -5,4 +5,5 @@ export default interface PluginState {
   element: HTMLScriptElement
   loaded: boolean
   activated: boolean
+  debug?: boolean
 }
