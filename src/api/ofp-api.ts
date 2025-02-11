@@ -34,7 +34,7 @@ import {RsdSwitchProps} from "./components/rsd/rsd-switch-props";
 import {RsdSelectableButtonProps} from "./components/rsd/rsd-selectable-button-props";
 import {AntSelectProps} from "./components/ant/ant-select-props";
 import {FlexGrowProps} from "./components/normal/flex-grow-props";
-import ToggleDialogApi from "./service/view/toggle-dialog-api";
+import DialogApi from "./service/view/dialog-api";
 import ThemeProviderProps from "./components/ant/ThemeProviderProps";
 import ModulePreloaderApi from "./service/main/preloader/module-preloader-api";
 import SyncServiceApi from "./service/sync/sync-service-api";
@@ -63,7 +63,7 @@ export interface OfpApi {
     }
 
     view: {
-      ToggleDialog: typeof ToggleDialogApi
+      ToggleDialog: typeof DialogApi
     }
 
   }

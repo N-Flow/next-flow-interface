@@ -56,7 +56,7 @@ import { RsdNumberProps } from "./api/components/rsd/rsd-number-props";
 import { RsdSelectableButtonProps } from "./api/components/rsd/rsd-selectable-button-props";
 import { RsdSwitchProps } from "./api/components/rsd/rsd-switch-props";
 import { RsdTitleProps } from "./api/components/rsd/rsd-title-props";
-import ToggleDialogApi from "./api/service/view/toggle-dialog-api";
+import DialogApi from "./api/service/view/dialog-api";
 import ThemeProviderProps from "./api/components/ant/ThemeProviderProps";
 import { LocalFileStatus } from "./api/service/main/file/interface/local-file-status.enum";
 import FileLoadInfo from "./api/service/main/file/interface/file-load-info";
@@ -149,7 +149,7 @@ export {
   ThemeShape,
   IconPluginPosition,
   PluginType,
-  ToggleDialogApi,
+  DialogApi,
   LocalFileStatus,
   FileLoadInfo,
   Operate,

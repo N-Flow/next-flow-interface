@@ -1,3 +1,3 @@
-export default class ToggleDialogApi {
+export default class DialogApi {
   static setTestDialogDisplay = (show: boolean) => {}
 }
