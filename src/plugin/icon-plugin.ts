@@ -14,8 +14,6 @@ export default interface IconPlugin extends BasePlugin {
   
   icon: FunctionComponent
 
-  ow?: number  // 默认顺序权值 同一区域的插件按照order从小到大排序
-
   onEnabledChange?: (value: boolean, e: MouseEvent) => void
   onIconClick?: (e: MouseEvent) => void
   onIconClickRouter?: (e: MouseEvent) => string
