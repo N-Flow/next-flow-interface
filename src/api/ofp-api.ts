@@ -60,7 +60,7 @@ export interface OfpApi {
     }
 
     view: {
-      ToggleDialog: typeof DialogApi
+      Dialog: DialogApi
     }
 
   }
