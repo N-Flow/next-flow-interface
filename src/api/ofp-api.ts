@@ -21,7 +21,7 @@ import {UploadButtonAndListProps} from "./components/normal/upload-button-and-li
 import {ScrollBarProps} from "./components/normal/scroll-bar-props"
 import {RsdCheckboxProps} from "./components/rsd/rsd-checkbox-props";
 import {RsdColorProps} from "./components/rsd/rsd-color-props";
-import {RsdDropdownProps} from "./components/rsd/rsd-dropdown-props";
+import {RsdSelectProps} from "./components/rsd/rsd-select-props";
 import {RsdFileSelectProps} from "./components/rsd/rsd-file-select-props";
 import {RsdMentionsProps} from "./components/rsd/rsd-mentions-props";
 import {RsdNoneProps} from "./components/rsd/rsd-none-props";
@@ -91,7 +91,7 @@ export interface OfpApi {
       RsdSelectableButton: FunctionComponent<RsdSelectableButtonProps>
       RsdCheckbox: FunctionComponent<RsdCheckboxProps>
       RsdColor: FunctionComponent<RsdColorProps>
-      RsdDropdown: FunctionComponent<RsdDropdownProps>
+      RsdSelect: FunctionComponent<RsdSelectProps>
       RsdFileSelect: FunctionComponent<RsdFileSelectProps>
       RsdFileSelectButton: FunctionComponent<RsdFileSelectProps>
       RsdInput: FunctionComponent<RsdInputProps>

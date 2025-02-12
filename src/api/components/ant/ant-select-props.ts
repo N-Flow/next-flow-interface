@@ -2,7 +2,7 @@ import {SelectProps} from "antd";
 
 export interface AntSelectProps extends SelectProps{
   value?: any
-  onChange?: (value: any) => void
+  onChange?: (value: any, option: any) => void
   showSearch?: boolean
   onClick?: (value: any) => void
   className?: string

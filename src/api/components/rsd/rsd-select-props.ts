@@ -1,6 +1,6 @@
 import {DivProps} from "@/api/components/interface/base-types";
 
-export interface RsdDropdownProps extends DivProps {
+export interface RsdSelectProps extends DivProps {
   value: any
   defaultValue?: any
   options: { value: any, label: string }[]
