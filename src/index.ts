@@ -45,7 +45,7 @@ import { ScrollBarProps } from "@/api/components/normal/scroll-bar-props"
 import { RsdButtonProps } from "./api/components/rsd/rsd-button-props";
 import { RsdCheckboxProps } from "./api/components/rsd/rsd-checkbox-props"
 import { RsdColorProps } from "./api/components/rsd/rsd-color-props"
-import { RsdDropdownProps } from "./api/components/rsd/rsd-dropdown-props"
+import { RsdSelectProps } from "./api/components/rsd/rsd-select-props"
 import { RsdFileSelectProps } from "./api/components/rsd/rsd-file-select-props"
 import { RsdInputProps } from "./api/components/rsd/rsd-input-props";
 import { RsdMentionsProps } from "./api/components/rsd/rsd-mentions-props";
@@ -108,7 +108,7 @@ export type {
   RsdButtonProps,
   RsdCheckboxProps,
   RsdColorProps,
-  RsdDropdownProps,
+  RsdSelectProps,
   RsdFileSelectProps,
   RsdInputProps,
   RsdMentionsProps,
