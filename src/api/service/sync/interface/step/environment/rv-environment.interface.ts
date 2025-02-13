@@ -1,36 +1,36 @@
 
 export default interface RvEnvironment {
+  skybox: {
+    background: string
+  }
+  light: {
+    intensity: number
+    diffuseColor: string
+    specularColor: string
+  }
+  ground: {
+    opacityRate: number
+    diffuseColor: string
+    emissiveColor: string
+    enableOnViewerMode: boolean
+    enableOnEditorMode: boolean
+  }
+  shadow: {
+    enable: boolean
+    darkness: number
+    blurOffset: number
+    blurScale: number
+    onlyOnGround: boolean
+    normalBias: number
+  }
   camera: {
-    distanceMax: number
     distanceMin: number
+    distanceMax: number
     fov: number
   }
   fog: {
-    color: string
+    enable: boolean
     density: number
-    enable: boolean
-  }
-  ground: {
-    diffuseColor: string
-    emissiveColor: string
-    enableOnEditorMode: boolean
-    enableOnViewerMode: boolean
-    opacityRate: number
-  }
-  light: {
-    diffuseColor: string
-    intensity: number
-    specularColor: string
-  }
-  shadow: {
-    blurOffset: number
-    blurScale: number
-    darkness: number
-    enable: boolean
-    normalBias: number
-    onlyOnGround: boolean
-  }
-  skybox: {
-    background: string
+    color: string
   }
 }
