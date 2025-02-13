@@ -1,9 +1,13 @@
 
 export default interface RvCamera {
+  enable: boolean
+
+  config: {
+    easy: boolean
+  }
+
   alpha: number
   beta: number
-  easy: boolean
-  enable: boolean
   radius: number
 
   target: {
