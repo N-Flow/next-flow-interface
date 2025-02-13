@@ -75,6 +75,11 @@ import PluginConfig from "./api/service/main/plugin/interface/plugin-config";
 import ExternalPluginConfig from "./api/service/main/plugin/interface/external-plugin-config";
 import RvStep from "./api/service/sync/interface/step/rv-step.interface";
 import RvCamera from "./api/service/sync/interface/step/camera/rv-camera.interface";
+import { UiTheme } from "./api/service/sync/interface/step/configuration/ui-theme";
+import RvConfiguration from "./api/service/sync/interface/step/configuration/rv-configuration.interface";
+import RvAudio from "./api/service/sync/interface/step/configuration/audio-info/rv-audio.interface";
+import RvEnvironment from "./api/service/sync/interface/step/environment/rv-environment.interface";
+import RvVersion from "./api/service/sync/interface/version/rv-version.interface";
 
 export type {
   OfpApi,
@@ -130,15 +135,19 @@ export type {
   MeetingServiceApi,
   ModulePreloaderApi,
   SyncServiceApi,
-  RvBase,
-  RvGlobal,
-  RvStep,
-  RvCamera,
   FlexGrowProps,
   RvGlobalServiceApi,
   HistoryManagerApi,
   BuiltInPluginConfig,
   ExternalPluginConfig,
+  RvBase,
+  RvGlobal,
+  RvStep,
+  RvCamera,
+  RvConfiguration,
+  RvAudio,
+  RvEnvironment,
+  RvVersion,
 }
 
 export {
@@ -159,4 +168,5 @@ export {
   LocalFileStatus,
   FileLoadInfo,
   Operate,
+  UiTheme,
 }
