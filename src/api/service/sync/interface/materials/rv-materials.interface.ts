@@ -1,6 +1,9 @@
-import {RhineVarMap} from "rhine-var"
+import {RhineVarMap, RhineVarArray} from "rhine-var"
 
 export default interface RvMaterials {
-  separate: RhineVarMap<any>
+  separate: {
+    groups: RhineVarArray<any>,
+    ignore: RhineVarArray<any>,
+  }
   templates: RhineVarMap<any>
 }
