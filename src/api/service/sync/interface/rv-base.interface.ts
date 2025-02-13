@@ -5,6 +5,7 @@ import RvMaterials from "@/api/service/sync/interface/materials/rv-materials.int
 import RvFile from "@/api/service/sync/interface/files/rv-file.interface";
 import RvMeetings from "@/api/service/sync/interface/ meetings/rv-meetings.interface";
 import RvModels from "@/api/service/sync/interface/models/rv-models.interface";
+import RvVersion from "@/api/service/sync/interface/version/rv-version.interface";
 
 export default interface RvBase {
 
@@ -18,8 +19,5 @@ export default interface RvBase {
 
   meetings: RvMeetings
 
-  version: {
-    core: number
-    label: string
-  }
+  version: RvVersion
 }
