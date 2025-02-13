@@ -1,10 +1,12 @@
+import type { RhineVarMap } from 'rhine-var';
 import RvGlobal from "./global/rv-global.interface";
+import RvStep from "./step/rv-step.interface";
 
 export default interface RvBase {
 
   global: RvGlobal
   order: string[],
-  steps: any[],
+  steps: RhineVarMap<RvStep>,
 
   files: any[]
   models: any[]
