@@ -5,4 +5,8 @@ export default interface SyncServiceApi {
 
   state: StoredRhineVar<RvBase>
 
+  clientId: number
+
+  generateId(prefix: string): string
+
 }
