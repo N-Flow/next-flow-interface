@@ -73,6 +73,8 @@ import { Operate } from "./api/service/sync/operate.enum";
 import BuiltInPluginConfig from "./api/service/main/plugin/interface/built-in-plugin-config";
 import PluginConfig from "./api/service/main/plugin/interface/plugin-config";
 import ExternalPluginConfig from "./api/service/main/plugin/interface/external-plugin-config";
+import RvStep from "./api/service/sync/interface/step/rv-step.interface";
+import RvCamera from "./api/service/sync/interface/step/camera/rv-camera.interface";
 
 export type {
   OfpApi,
@@ -130,6 +132,8 @@ export type {
   SyncServiceApi,
   RvBase,
   RvGlobal,
+  RvStep,
+  RvCamera,
   FlexGrowProps,
   RvGlobalServiceApi,
   HistoryManagerApi,
