@@ -69,7 +69,6 @@ import RvGlobal from "./api/service/sync/interface/global/rv-global.interface";
 import { FlexGrowProps } from "./api/components/normal/flex-grow-props";
 import RvGlobalServiceApi from "./api/service/sync/global/rv-global-service-api";
 import HistoryManagerApi from "./api/service/sync/history-manager-api";
-import { Operate } from "./api/service/sync/operate.enum";
 import BuiltInPluginConfig from "./api/service/main/plugin/interface/built-in-plugin-config";
 import PluginConfig from "./api/service/main/plugin/interface/plugin-config";
 import ExternalPluginConfig from "./api/service/main/plugin/interface/external-plugin-config";
@@ -176,7 +175,6 @@ export {
   DialogApi,
   LocalFileStatus,
   FileLoadInfo,
-  Operate,
   UiTheme,
   TStepChangeType,
 }

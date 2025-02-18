@@ -1,8 +1,8 @@
 
 export enum TStepChangeType {
-  Step = 'step',
-  Add = 'add',
-  Update = 'update',
-  Delete = 'delete',
-  Sync = 'sync',
+  Step = 'STEP',
+  Add = 'ADD',
+  Update = 'UPDATE',
+  Delete = 'DELETE',
+  Sync = 'SYNC',
 }
