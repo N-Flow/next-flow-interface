@@ -84,6 +84,7 @@ import RvStepServiceApi from "./api/service/sync/step/rv-step-service-api";
 import { TStepChangeType } from "./api/service/target/step/t-step-change-type.enum";
 import TStepServiceApi from "./api/service/target/step/t-step-service-api";
 import { TStepSubscriber } from "./api/service/target/step/t-step-subscriber.type";
+import { UseTStep } from "./api/service/sync/hook/use-t-step.type";
 
 export type {
   OfpApi,
@@ -155,6 +156,7 @@ export type {
   RvStepServiceApi,
   TStepServiceApi,
   TStepSubscriber,
+  UseTStep,
 }
 
 export {
