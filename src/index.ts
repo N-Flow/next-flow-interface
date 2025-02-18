@@ -80,6 +80,10 @@ import RvConfiguration from "./api/service/sync/interface/step/configuration/rv-
 import RvAudio from "./api/service/sync/interface/step/configuration/audio-info/rv-audio.interface";
 import RvEnvironment from "./api/service/sync/interface/step/environment/rv-environment.interface";
 import RvVersion from "./api/service/sync/interface/version/rv-version.interface";
+import RvStepServiceApi from "./api/service/sync/step/rv-step-service-api";
+import { TStepChangeType } from "./api/service/target/step/t-step-change-type.enum";
+import TStepServiceApi from "./api/service/target/step/t-step-service-api";
+import { TStepSubscriber } from "./api/service/target/step/t-step-subscriber.type";
 
 export type {
   OfpApi,
@@ -148,6 +152,9 @@ export type {
   RvAudio,
   RvEnvironment,
   RvVersion,
+  RvStepServiceApi,
+  TStepServiceApi,
+  TStepSubscriber,
 }
 
 export {
@@ -169,4 +176,5 @@ export {
   FileLoadInfo,
   Operate,
   UiTheme,
+  TStepChangeType,
 }

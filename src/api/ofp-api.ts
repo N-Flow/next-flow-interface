@@ -37,6 +37,9 @@ import ModulePreloaderApi from "./service/main/preloader/module-preloader-api";
 import SyncServiceApi from "./service/sync/sync-service-api";
 import RvGlobalServiceApi from "@/api/service/sync/global/rv-global-service-api";
 import HistoryManagerApi from "./service/sync/history-manager-api";
+import {UseTStep} from "@/api/service/sync/hook/use-t-step.type";
+import RvStepServiceApi from "@/api/service/sync/step/rv-step-service-api";
+import TStepServiceApi from "@/api/service/target/step/t-step-service-api";
 
 export interface OfpApi {
 
@@ -57,12 +60,21 @@ export interface OfpApi {
       syncService: SyncServiceApi
       historyManager: HistoryManagerApi
       rvGlobalService: RvGlobalServiceApi
+      rvStepService: RvStepServiceApi
+    }
+
+    target: {
+      tStepService: TStepServiceApi
     }
 
     view: {
       Dialog: DialogApi
     }
 
+  }
+
+  hooks: {
+    useTStep: UseTStep
   }
 
   components: {

@@ -24,7 +24,6 @@ export default interface RvConfiguration {
     hideStep: boolean
     importantStep: boolean
   }
-
   audio: RvAudio
   secondAudio: RvAudio
 }
