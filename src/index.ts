@@ -101,6 +101,9 @@ import MessageServiceApi from "./api/service/main/message/message-service-api";
 import { Message } from "./api/service/main/message/message.class";
 import { MessageType } from "./api/service/main/message/interface/message-type.type";
 import { MessageState } from "./api/service/main/message/interface/message-state.type";
+import DialogController from "./api/service/main/dialog/interface/dialog-controller.interface";
+import DialogServiceApi from "./api/service/main/dialog/dialog-service-api";
+import DialogCreateOptions from "./api/service/main/dialog/interface/dialog-create-options.interface";
 
 export type {
   OfpApi,
@@ -181,6 +184,9 @@ export type {
   MessageServiceApi,
   MessageType,
   MessageState,
+  DialogController,
+  DialogServiceApi,
+  DialogCreateOptions,
 }
 
 export {
