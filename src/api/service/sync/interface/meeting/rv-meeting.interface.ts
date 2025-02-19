@@ -1,7 +1,7 @@
 import {MeetingStatus} from "@/api/service/main/meeting/interface/meeting-status";
 import {ShareMode} from "@/api/service/main/meeting/interface/share-mode";
 
-export default interface RvMeetings {
+export default interface RvMeeting {
   meetingId: string
   status: MeetingStatus
   startTime: number

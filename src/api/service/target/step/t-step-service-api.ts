@@ -1,10 +1,10 @@
 import {StoredRhineVar, YPath} from "rhine-var";
-import RvSteps from "../../sync/interface/steps/rv-steps.interface";
+import RvStep from "../../sync/interface/step/rv-step.interface";
 import {TStepSubscriber} from "@/api/service/target/step/t-step-subscriber.type";
 
 export default interface TStepServiceApi {
 
-  state: StoredRhineVar<RvSteps>
+  state: StoredRhineVar<RvStep>
 
   subscribe(subscriber: TStepSubscriber): () => void
 

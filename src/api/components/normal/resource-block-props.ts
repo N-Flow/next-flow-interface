@@ -1,7 +1,7 @@
 import {MouseEvent} from "react";
 import {DivProps} from "@/api/components/interface/base-types";
 import FileLoadInfo from "@/api/service/main/file/interface/file-load-info";
-import RvFile from "@/api/service/sync/interface/files/rv-file.interface";
+import RvFile from "@/api/service/sync/interface/file/rv-file.interface";
 
 export interface ResourceBlockProps extends DivProps {
   file: RvFile,

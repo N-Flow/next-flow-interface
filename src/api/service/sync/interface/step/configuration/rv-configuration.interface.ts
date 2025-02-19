@@ -1,4 +1,4 @@
-import RvAudio from "@/api/service/sync/interface/steps/configuration/audio-info/rv-audio.interface";
+import RvAudio from "@/api/service/sync/interface/step/configuration/audio-info/rv-audio.interface";
 import {ThemeBackground} from "@/api/service/main/space/interface/theme/theme-background";
 
 export default interface RvConfiguration {
