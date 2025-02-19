@@ -129,7 +129,6 @@ export interface OfpApi {
   }
 
   utils: {
-    convertBytesToHigherUnit: (bn: number) => string
   }
 
   modules: {

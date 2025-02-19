@@ -1,23 +1,23 @@
 import type { RhineVarMap } from 'rhine-var';
 import RvGlobal from "./global/rv-global.interface";
-import RvSteps from "./steps/rv-steps.interface";
-import RvMaterials from "@/api/service/sync/interface/materials/rv-materials.interface";
-import RvFile from "@/api/service/sync/interface/files/rv-file.interface";
-import RvMeetings from "@/api/service/sync/interface/meetings/rv-meetings.interface";
-import RvModels from "@/api/service/sync/interface/models/rv-models.interface";
+import RvStep from "./step/rv-step.interface";
+import RvMaterial from "@/api/service/sync/interface/material/rv-material.interface";
+import RvFile from "@/api/service/sync/interface/file/rv-file.interface";
+import RvMeeting from "@/api/service/sync/interface/meeting/rv-meeting.interface";
+import RvModel from "@/api/service/sync/interface/model/rv-model.interface";
 import RvVersion from "@/api/service/sync/interface/version/rv-version.interface";
 
 export default interface RvBase {
 
   global: RvGlobal
   order: RhineVarMap<string>
-  steps: RhineVarMap<RvSteps>
+  steps: RhineVarMap<RvStep>
 
   files: RvFile
-  models: RvModels
-  materials: RvMaterials
+  models: RvModel
+  materials: RvMaterial
 
-  meetings: RvMeetings
+  meetings: RvMeeting
 
   version: RvVersion
 }

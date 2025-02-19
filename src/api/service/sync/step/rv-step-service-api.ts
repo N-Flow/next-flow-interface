@@ -1,12 +1,12 @@
 import {RecursiveArray, RecursiveMap, RecursiveObject} from "rhine-var";
-import RvSteps from "../interface/steps/rv-steps.interface";
+import RvStep from "../interface/step/rv-step.interface";
 
 export default interface RvStepServiceApi {
 
   order: RecursiveArray<string>
-  steps: RecursiveMap<RvSteps>
+  steps: RecursiveMap<RvStep>
 
-  get(sid: string): RecursiveObject<RvSteps> | undefined
+  get(sid: string): RecursiveObject<RvStep> | undefined
 
   add(from?: string, index?: number): void
 
