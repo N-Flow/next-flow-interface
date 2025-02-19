@@ -42,6 +42,7 @@ import RvStepServiceApi from "@/api/service/sync/step/rv-step-service-api";
 import TStepServiceApi from "@/api/service/target/step/t-step-service-api";
 import {UseStepOptions} from "@/api/hook/use-step-options.type";
 import {AntEmptyProps} from "@/api/components/ant/ant-empty-props";
+import {ResourceBlockProps} from "@/api/components/normal/resource-block-props";
 
 export interface OfpApi {
 
@@ -98,6 +99,7 @@ export interface OfpApi {
       FileProgressBar: FunctionComponent<FileProgressBarProps>
       FlexGrow: FunctionComponent<FlexGrowProps>
       ProgressBar: FunctionComponent<ProgressBarProps>
+      ResourceBlock: FunctionComponent<ResourceBlockProps>
       UploadButtonAndList: FunctionComponent<UploadButtonAndListProps>
       ScrollBar: FunctionComponent<ScrollBarProps>
     }
@@ -127,6 +129,7 @@ export interface OfpApi {
   }
 
   utils: {
+    convertBytesToHigherUnit: (bn: number) => string
   }
 
   modules: {
