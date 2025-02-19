@@ -97,6 +97,10 @@ import PromiseUtils from "./utils/promise-utils";
 import RvUtils from "./utils/rv-utils";
 import TimeUtils from "./utils/time-utils";
 import UrlUtils from "./utils/url-utils";
+import MessageServiceApi from "./api/service/main/message/message-service-api";
+import { Message } from "./api/service/main/message/message.class";
+import { MessageType } from "./api/service/main/message/interface/message-type.type";
+import { MessageState } from "./api/service/main/message/interface/message-state.type";
 
 export type {
   OfpApi,
@@ -174,6 +178,9 @@ export type {
   UseStepOptions,
   StepOptions,
   PluginViewProps,
+  MessageServiceApi,
+  MessageType,
+  MessageState,
 }
 
 export {
@@ -203,4 +210,5 @@ export {
   RvUtils,
   TimeUtils,
   UrlUtils,
+  Message,
 }

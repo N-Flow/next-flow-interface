@@ -1,0 +1,15 @@
+import { MessageType } from "./interface/message-type.type"
+
+export class Message {
+  show: boolean = true
+  height = 20
+  opacity = 0
+
+  constructor(
+    public text: string,
+    public type: MessageType,
+    public duration: number,
+    public id: number,
+  ) {
+  }
+}

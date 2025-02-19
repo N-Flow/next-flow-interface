@@ -43,6 +43,7 @@ import TStepServiceApi from "@/api/service/target/step/t-step-service-api";
 import {UseStepOptions} from "@/api/hook/use-step-options.type";
 import {AntEmptyProps} from "@/api/components/ant/ant-empty-props";
 import {ResourceBlockProps} from "@/api/components/normal/resource-block-props";
+import MessageServiceApi from "@/api/service/main/message/message-service-api";
 
 export interface OfpApi {
 
@@ -57,6 +58,7 @@ export interface OfpApi {
       localFileService: LocalFileServiceApi
       meetingService: MeetingServiceApi
       modulePreloader: ModulePreloaderApi
+      messageService: MessageServiceApi
     }
 
     sync: {
