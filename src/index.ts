@@ -41,6 +41,7 @@ import { AntSwitchProps } from "./api/components/ant/ant-switch-props";
 import { AntEmptyProps } from "./api/components/ant/ant-empty-props";
 import { FileProgressBarProps } from "@/api/components/normal/file-progress-bar-props";
 import { ProgressBarProps } from "@/api/components/normal/progress-bar-props";
+import { ResourceBlockProps } from "@/api/components/normal/resource-block-props"
 import { UploadButtonAndListProps } from "@/api/components/normal/upload-button-and-list-props";
 import { ScrollBarProps } from "@/api/components/normal/scroll-bar-props"
 import { RsdButtonProps } from "./api/components/rsd/rsd-button-props";
@@ -118,6 +119,7 @@ export type {
   AnchorProps,
   FileProgressBarProps,
   ProgressBarProps,
+  ResourceBlockProps,
   UploadButtonAndListProps,
   ScrollBarProps,
   RsdButtonProps,
