@@ -1,4 +1,4 @@
-export default class FileUtils{
+export default class FileUtils {
   static to3n(bn: number) {
     const integerPartLength = Math.floor(bn).toString().length
     const decimalPlaces = integerPartLength <= 1 ? 2 : 1

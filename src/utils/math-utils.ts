@@ -1,6 +1,6 @@
-import NumberUtils from "@/utils/number-utils";
+import NumberUtils from "./number-utils";
 
-export default class MathUtils{
+export default class MathUtils {
   static toDegrees(angle: number) {
     return angle * (180 / Math.PI)
   }

@@ -1,7 +1,7 @@
 // import GlobalMessage from "@/core/main/message/global-message";
 // import InternationalizationService from "@/core/main/internationalization/internationalization-service";
 
-export default class UrlUtils{
+export default class UrlUtils {
   static getParam(name: string): string {
     const reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
     const r = window.location.search.substr(1).match(reg)
