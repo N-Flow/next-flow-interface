@@ -6,4 +6,5 @@ export interface AntEmptyProps extends EmptyProps{
   classNameInner?: string
   image?: ReactNode
   description?: ReactNode
+  children?: ReactNode
 }
