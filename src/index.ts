@@ -2,8 +2,8 @@ import BasePlugin from "./plugin/base-plugin";
 import DrawerPlugin from "./plugin/drawer-plugin";
 import IconPlugin from "./plugin/icon-plugin";
 import ViewPlugin from "./plugin/view-plugin";
-import { IconPluginPosition } from "./plugin/enum/icon-plugin-position";
-import { PluginType } from "./plugin/enum/plugin-type";
+import { IconPluginPosition } from "./plugin/enum/icon-plugin-position.enum";
+import { PluginType } from "./plugin/enum/plugin-type.enum";
 import { ThemeBackground } from "./api/service/main/space/interface/theme/theme-background";
 import { ThemeColor } from "./api/service/main/space/interface/theme/theme-color";
 import { OfpApi } from "./api/ofp-api";
@@ -87,6 +87,7 @@ import { TStepSubscriber } from "./api/service/target/step/t-step-subscriber.typ
 import { UseTStep } from "@/api/hook/use-t-step.type";
 import { UseStepOptions } from "./api/hook/use-step-options.type";
 import { StepOptions } from "./api/service/sync/step/interface/step-options.type";
+import { PluginViewProps } from "./plugin/interface/plugin-view-props.interface";
 
 export type {
   OfpApi,
@@ -163,6 +164,7 @@ export type {
   UseTStep,
   UseStepOptions,
   StepOptions,
+  PluginViewProps,
 }
 
 export {

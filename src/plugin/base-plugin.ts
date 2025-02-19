@@ -1,4 +1,4 @@
-import {PluginType} from "./enum/plugin-type";
+import {PluginType} from "./enum/plugin-type.enum";
 import {ThemeColor} from "@/api/service/main/space/interface/theme/theme-color";
 
 export default interface BasePlugin {
@@ -9,6 +9,8 @@ export default interface BasePlugin {
   
   type: PluginType
   theme: ThemeColor
+
+  data: any
   
   onLoad: () => Promise<void>
   onActivate: () => Promise<void>

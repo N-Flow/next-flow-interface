@@ -1,5 +1,5 @@
 import BasePlugin from "./base-plugin";
-import {IconPluginPosition} from "./enum/icon-plugin-position";
+import {IconPluginPosition} from "./enum/icon-plugin-position.enum";
 import {FunctionComponent} from "react";
 import {ThemeColor} from "@/api/service/main/space/interface/theme/theme-color";
 import {MouseEvent} from "react";
