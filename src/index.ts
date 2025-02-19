@@ -73,12 +73,11 @@ import HistoryManagerApi from "./api/service/sync/history-manager-api";
 import BuiltInPluginConfig from "./api/service/main/plugin/interface/built-in-plugin-config";
 import PluginConfig from "./api/service/main/plugin/interface/plugin-config";
 import ExternalPluginConfig from "./api/service/main/plugin/interface/external-plugin-config";
-import RvStep from "./api/service/sync/interface/step/rv-step.interface";
-import RvCamera from "./api/service/sync/interface/step/camera/rv-camera.interface";
-import { UiTheme } from "./api/service/sync/interface/step/configuration/ui-theme.enum";
-import RvConfiguration from "./api/service/sync/interface/step/configuration/rv-configuration.interface";
-import RvAudio from "./api/service/sync/interface/step/configuration/audio-info/rv-audio.interface";
-import RvEnvironment from "./api/service/sync/interface/step/environment/rv-environment.interface";
+import RvSteps from "./api/service/sync/interface/steps/rv-steps.interface";
+import RvCamera from "@/api/service/sync/interface/steps/camera/rv-camera.interface";
+import RvConfiguration from "./api/service/sync/interface/steps/configuration/rv-configuration.interface";
+import RvAudio from "@/api/service/sync/interface/steps/configuration/audio-info/rv-audio.interface";
+import RvEnvironment from "@/api/service/sync/interface/steps/environment/rv-environment.interface";
 import RvVersion from "./api/service/sync/interface/version/rv-version.interface";
 import RvStepServiceApi from "./api/service/sync/step/rv-step-service-api";
 import { TStepChangeType } from "./api/service/target/step/t-step-change-type.enum";
@@ -150,7 +149,7 @@ export type {
   ExternalPluginConfig,
   RvBase,
   RvGlobal,
-  RvStep,
+  RvSteps,
   RvCamera,
   RvConfiguration,
   RvAudio,
@@ -181,6 +180,5 @@ export {
   DialogApi,
   LocalFileStatus,
   FileLoadInfo,
-  UiTheme,
   TStepChangeType,
 }

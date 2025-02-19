@@ -1,3 +1,4 @@
+import {ThemeBackground} from "@/api/service/main/space/interface/theme/theme-background";
 
 export default interface RvGlobal {
   information: {
@@ -5,6 +6,9 @@ export default interface RvGlobal {
     description: string,
     tags: string,
   },
+  ui: {
+    theme: ThemeBackground
+  }
   playing: {
     auto: boolean,
     loop: boolean,
