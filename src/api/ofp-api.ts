@@ -32,7 +32,7 @@ import {RsdSelectableButtonProps} from "./components/rsd/rsd-selectable-button-p
 import {AntSelectProps} from "./components/ant/ant-select-props";
 import {FlexGrowProps} from "./components/normal/flex-grow-props";
 import DialogApi from "./service/view/dialog-api";
-import ThemeProviderProps from "./components/ant/ThemeProviderProps";
+import ThemeProviderProps from "./components/ant/theme-provider-props";
 import ModulePreloaderApi from "./service/main/preloader/module-preloader-api";
 import SyncServiceApi from "./service/sync/sync-service-api";
 import RvGlobalServiceApi from "@/api/service/sync/global/rv-global-service-api";
@@ -40,6 +40,7 @@ import HistoryManagerApi from "./service/sync/history-manager-api";
 import {UseTStep} from "@/api/service/sync/hook/use-t-step.type";
 import RvStepServiceApi from "@/api/service/sync/step/rv-step-service-api";
 import TStepServiceApi from "@/api/service/target/step/t-step-service-api";
+import {AntEmptyProps} from "@/api/components/ant/ant-empty-props";
 
 export interface OfpApi {
 
@@ -86,6 +87,7 @@ export interface OfpApi {
       AntNumber: FunctionComponent<AntNumberProps>
       AntSelect: FunctionComponent<AntSelectProps>
       AntSwitch: FunctionComponent<AntSwitchProps>
+      AntEmpty: FunctionComponent<AntEmptyProps>
     }
 
     normal: {
