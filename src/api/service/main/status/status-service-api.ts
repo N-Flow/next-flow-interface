@@ -1,39 +1,63 @@
 import Status from "./interface/status";
-import {StatusChangeCallback} from "./interface/status-change-callback";
+import {StatusChangeSubscriber} from "./interface/status-change-subscriber";
 
 export default interface StatusServiceApi {
   
   status: Status
 
-  afterAuthenticated(callback: StatusChangeCallback): void
+
+  subscribeAuthenticated(subscriber: StatusChangeSubscriber): () => void
+
+  unsubscribeAuthenticated(subscriber: StatusChangeSubscriber): void
 
   waitAuthenticated(): Promise<boolean>
 
-  afterDataSynchronized(callback: StatusChangeCallback): void
+
+  subscribeDataSynchronized(subscriber: StatusChangeSubscriber): () => void
+
+  unsubscribeDataSynchronized(subscriber: StatusChangeSubscriber): void
   
   waitDataSynchronized(): Promise<boolean>
+
   
-  afterSyncInitialized(callback: StatusChangeCallback): void
+  subscribeSyncInitialized(subscriber: StatusChangeSubscriber): () => void
+
+  unsubscribeSyncInitialized(subscriber: StatusChangeSubscriber): void
   
   waitSyncInitialized(): Promise<boolean>
 
-  afterRsInitialized(callback: StatusChangeCallback): void
+
+  subscribeRsInitialized(subscriber: StatusChangeSubscriber): () => void
+
+  unsubscribeRsInitialized(subscriber: StatusChangeSubscriber): void
   
   waitRsInitialized(): Promise<boolean>
+
   
-  afterAllInitialized(callback: StatusChangeCallback): void
+  subscribeAllInitialized(subscriber: StatusChangeSubscriber): () => void
+
+  unsubscribeAllInitialized(subscriber: StatusChangeSubscriber): void
   
   waitAllInitialized(): Promise<boolean>
+
   
-  afterLoaded(callback: StatusChangeCallback): void
+  subscribeLoaded(subscriber: StatusChangeSubscriber): () => void
+
+  unsubscribeLoaded(subscriber: StatusChangeSubscriber): void
   
   waitLoaded(): Promise<boolean>
+
   
-  afterRendered(callback: StatusChangeCallback): void
+  subscribeRendered(subscriber: StatusChangeSubscriber): () => void
+
+  unsubscribeRendered(subscriber: StatusChangeSubscriber): void
   
   waitRendered(): Promise<boolean>
+
   
-  afterShown(callback: StatusChangeCallback): void
+  subscribeShown(subscriber: StatusChangeSubscriber): () => void
+
+  unsubscribeShown(subscriber: StatusChangeSubscriber): void
   
   waitShown(): Promise<boolean>
   

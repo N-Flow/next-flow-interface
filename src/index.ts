@@ -11,7 +11,7 @@ import SpaceServiceApi, { StepChangeSubscriber } from "./api/service/main/space/
 import { PageMode } from "./api/service/main/space/interface/page/page-mode";
 import Status from "./api/service/main/status/interface/status";
 import { PageType } from "./api/service/main/space/interface/page/page-type";
-import { StatusChangeCallback } from "./api/service/main/status/interface/status-change-callback";
+import { StatusChangeSubscriber } from "./api/service/main/status/interface/status-change-subscriber";
 import StatusServiceApi from "./api/service/main/status/status-service-api";
 import MeetingServiceApi from "./api/service/main/meeting/meeting-service-api";
 import { ThemeShape } from "./api/service/main/space/interface/theme/theme-shape";
@@ -83,7 +83,9 @@ import RvStepServiceApi from "./api/service/sync/step/rv-step-service-api";
 import { TStepChangeType } from "./api/service/target/step/t-step-change-type.enum";
 import TStepServiceApi from "./api/service/target/step/t-step-service-api";
 import { TStepSubscriber } from "./api/service/target/step/t-step-subscriber.type";
-import { UseTStep } from "./api/service/sync/hook/use-t-step.type";
+import { UseTStep } from "@/api/hook/use-t-step.type";
+import { UseStepOptions } from "./api/hook/use-step-options.type";
+import { StepOptions } from "./api/service/sync/step/interface/step-options.type";
 
 export type {
   OfpApi,
@@ -96,7 +98,7 @@ export type {
   Screen,
   StepChangeSubscriber,
   Status,
-  StatusChangeCallback,
+  StatusChangeSubscriber,
   StatusServiceApi,
   PluginConnectorApi,
   PluginServiceApi,
@@ -156,6 +158,8 @@ export type {
   TStepServiceApi,
   TStepSubscriber,
   UseTStep,
+  UseStepOptions,
+  StepOptions,
 }
 
 export {
