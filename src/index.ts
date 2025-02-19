@@ -87,6 +87,15 @@ import { TStepSubscriber } from "./api/service/target/step/t-step-subscriber.typ
 import { UseTStep } from "@/api/hook/use-t-step.type";
 import { UseStepOptions } from "./api/hook/use-step-options.type";
 import { StepOptions } from "./api/service/sync/step/interface/step-options.type";
+import FileUtils from "./utils/file-utils"
+import MathUtils from "./utils/math-utils"
+import NativeEventUtils from "./utils/native-event-utils"
+import NetworkUtils from "./utils/network-utils"
+import NumberUtils from "./utils/number-utils"
+import PromiseUtils from "./utils/promise-utils"
+import RvUtils from "./utils/rv-utils"
+import TimeUtils from "./utils/time-utils"
+import UrlUtils from "./utils/url-utils"
 
 export type {
   OfpApi,
@@ -183,4 +192,13 @@ export {
   LocalFileStatus,
   FileLoadInfo,
   TStepChangeType,
+  FileUtils,
+  MathUtils,
+  NativeEventUtils,
+  NetworkUtils,
+  NumberUtils,
+  PromiseUtils,
+  RvUtils,
+  TimeUtils,
+  UrlUtils,
 }
