@@ -1,6 +1,6 @@
 import {StoredRhineVar, YPath} from "rhine-var";
 
-export default class RvUtils{
+export default class RvUtils {
   static makeYPath(path: string): YPath {
     let yPath: YPath = []
     for (const item of path.split('.')) {

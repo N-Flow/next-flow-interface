@@ -1,4 +1,4 @@
-export default class NetworkUtils{
+export default class NetworkUtils {
   static async fetchJsonWithRetry(url: string, retries = 3) {
     let lastError
 

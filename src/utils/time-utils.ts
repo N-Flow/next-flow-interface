@@ -1,4 +1,4 @@
-export default class TimeUtils{
+export default class TimeUtils {
   static convertTimeText(seconds: number): string {
     const h = Math.floor(seconds / 3600)
     const m = Math.floor((seconds % 3600) / 60)
