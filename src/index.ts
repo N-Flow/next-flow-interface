@@ -104,6 +104,7 @@ import { MessageState } from "./api/service/main/message/interface/message-state
 import DialogController from "./api/service/main/dialog/interface/dialog-controller.interface";
 import DialogServiceApi from "./api/service/main/dialog/dialog-service-api";
 import DialogCreateOptions from "./api/service/main/dialog/interface/dialog-create-options.interface";
+import Dialog from "./api/service/main/dialog/interface/dialog.interface";
 
 export type {
   OfpApi,
@@ -217,4 +218,5 @@ export {
   TimeUtils,
   UrlUtils,
   Message,
+  Dialog,
 }

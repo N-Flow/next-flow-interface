@@ -1,12 +1,10 @@
-import DialogCreateOptions from "./dialog-create-options.interface"
+import Dialog from "./dialog.interface"
 
 export default interface DialogController {
 
   id: string
 
-  createTime: Date
-
-  options: DialogCreateOptions
+  dialog: Dialog
 
   show(): void
 

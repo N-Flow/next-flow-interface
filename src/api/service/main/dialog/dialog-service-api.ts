@@ -1,8 +1,14 @@
 import {FunctionComponent} from "react";
 import DialogCreateOptions from "@/api/service/main/dialog/interface/dialog-create-options.interface";
 import DialogController from "./interface/dialog-controller.interface";
+import Dialog from "./interface/dialog.interface";
 
 export default interface DialogServiceApi {
+
+  /**
+   * 当前所有对话框
+   */
+  dialogs: Dialog[]
 
   /**
    * 创建对话框 最全面的对话框创建方法
