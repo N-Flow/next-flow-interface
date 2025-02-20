@@ -101,7 +101,6 @@ export interface OfpApi {
       FileProgressBar: FunctionComponent<FileProgressBarProps>
       FlexGrow: FunctionComponent<FlexGrowProps>
       ProgressBar: FunctionComponent<ProgressBarProps>
-      ResourceBlock: FunctionComponent<ResourceBlockProps>
       UploadButtonAndList: FunctionComponent<UploadButtonAndListProps>
       ScrollBar: FunctionComponent<ScrollBarProps>
     }
