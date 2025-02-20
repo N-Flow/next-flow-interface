@@ -31,7 +31,6 @@ import {RsdSwitchProps} from "./components/rsd/rsd-switch-props";
 import {RsdSelectableButtonProps} from "./components/rsd/rsd-selectable-button-props";
 import {AntSelectProps} from "./components/ant/ant-select-props";
 import {FlexGrowProps} from "./components/normal/flex-grow-props";
-import DialogApi from "./service/view/dialog-api";
 import ThemeProviderProps from "./components/ant/theme-provider-props";
 import ModulePreloaderApi from "./service/main/preloader/module-preloader-api";
 import SyncServiceApi from "./service/sync/sync-service-api";
@@ -42,7 +41,6 @@ import RvStepServiceApi from "@/api/service/sync/step/rv-step-service-api";
 import TStepServiceApi from "@/api/service/target/step/t-step-service-api";
 import {UseStepOptions} from "@/api/hook/use-step-options.type";
 import {AntEmptyProps} from "@/api/components/ant/ant-empty-props";
-import {ResourceBlockProps} from "@/api/components/normal/resource-block-props";
 import MessageServiceApi from "@/api/service/main/message/message-service-api";
 
 export interface OfpApi {
@@ -70,10 +68,6 @@ export interface OfpApi {
 
     target: {
       tStepService: TStepServiceApi
-    }
-
-    view: {
-      Dialog: DialogApi
     }
 
   }

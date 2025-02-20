@@ -46,7 +46,7 @@ export default class Dialog {
 
     public show: boolean = false,
     public controller: DialogController | null = null,
-    public inputValue: string = '',
+    public inputValue: string = defaultValue,
     public createTime: Date = new Date(),
     public focusInput: () => void = () => {},
   ) {

@@ -6,6 +6,7 @@ import RvConfiguration from "@/api/service/sync/interface/step/configuration/rv-
 export default interface RvStep {
   name: string
   sid: string
+
   attributes: RhineVarMap<any>
 
   camera: RvCamera
