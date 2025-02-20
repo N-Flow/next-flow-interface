@@ -1,6 +1,7 @@
 import {StoredRhineVar, YPath} from "rhine-var";
 
 export default class RvUtils {
+
   static makeYPath(path: string): YPath {
     let yPath: YPath = []
     for (const item of path.split('.')) {
@@ -42,4 +43,16 @@ export default class RvUtils {
     }
     obj[path[path.length - 1]] = value
   }
+
+  // 检查两段路径是否完全重叠，长度可不同，开头相同。指从开头开始每一项比较，直到有一方结束，是否全部相同
+  static checkYPathOverlay(from: YPath, target: YPath) {
+    let n = from.length > target.length ? target.length : from.length
+    for (let i = 0; i < n; i++) {
+      if (from[i] != target[i]) {
+        return false
+      }
+    }
+    return true
+  }
+
 }

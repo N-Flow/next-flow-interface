@@ -41,7 +41,6 @@ import { AntSwitchProps } from "./api/components/ant/ant-switch-props";
 import { AntEmptyProps } from "./api/components/ant/ant-empty-props";
 import { FileProgressBarProps } from "@/api/components/normal/file-progress-bar-props";
 import { ProgressBarProps } from "@/api/components/normal/progress-bar-props";
-import { ResourceBlockProps } from "@/api/components/normal/resource-block-props"
 import { UploadButtonAndListProps } from "@/api/components/normal/upload-button-and-list-props";
 import { ScrollBarProps } from "@/api/components/normal/scroll-bar-props"
 import { RsdButtonProps } from "./api/components/rsd/rsd-button-props";
@@ -57,7 +56,6 @@ import { RsdNumberProps } from "./api/components/rsd/rsd-number-props";
 import { RsdSelectableButtonProps } from "./api/components/rsd/rsd-selectable-button-props";
 import { RsdSwitchProps } from "./api/components/rsd/rsd-switch-props";
 import { RsdTitleProps } from "./api/components/rsd/rsd-title-props";
-import DialogApi from "./api/service/view/dialog-api";
 import ThemeProviderProps from "./api/components/ant/theme-provider-props";
 import { LocalFileStatus } from "./api/service/main/file/interface/local-file-status.enum";
 import FileLoadInfo from "./api/service/main/file/interface/file-load-info";
@@ -75,7 +73,6 @@ import BuiltInPluginConfig from "./api/service/main/plugin/interface/built-in-pl
 import PluginConfig from "./api/service/main/plugin/interface/plugin-config";
 import ExternalPluginConfig from "./api/service/main/plugin/interface/external-plugin-config";
 import RvStep from "./api/service/sync/interface/step/rv-step.interface";
-import RvCamera from "@/api/service/sync/interface/step/camera/rv-camera.interface";
 import RvConfiguration from "./api/service/sync/interface/step/configuration/rv-configuration.interface";
 import RvAudio from "@/api/service/sync/interface/step/configuration/audio-info/rv-audio.interface";
 import RvEnvironment from "@/api/service/sync/interface/step/environment/rv-environment.interface";
@@ -136,7 +133,6 @@ export type {
   AnchorProps,
   FileProgressBarProps,
   ProgressBarProps,
-  ResourceBlockProps,
   UploadButtonAndListProps,
   ScrollBarProps,
   RsdButtonProps,
@@ -170,7 +166,6 @@ export type {
   RvBase,
   RvGlobal,
   RvStep,
-  RvCamera,
   RvConfiguration,
   RvAudio,
   RvEnvironment,
@@ -204,7 +199,6 @@ export {
   ThemeShape,
   IconPluginPosition,
   PluginType,
-  DialogApi,
   LocalFileStatus,
   FileLoadInfo,
   TStepChangeType,
