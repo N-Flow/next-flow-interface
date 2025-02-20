@@ -70,4 +70,25 @@ export default interface DialogServiceApi {
     closeOnOutsideClick?: boolean,
   }): Promise<string | undefined>
 
+  /**
+   * 获取对话框
+   *
+   * @param id 对话框的 id
+   *
+   * @returns 返回对应 id 的对话框 如果没有则返回 undefined
+   */
+  get(id: string): Dialog | undefined
+
+  /**
+   * 关闭对话框
+   *
+   * @param dialog 对话框控制器
+   */
+  close(dialog: string | Dialog): boolean
+
+  /**
+   * 关闭所有对话框
+   */
+  closeAll(): number
+
 }

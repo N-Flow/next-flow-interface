@@ -28,6 +28,6 @@ export default interface DialogCreateOptions {
   onCloseButtonClick?: () => void,  // 点击右上角关闭按钮回调
   closeOnConfirm?: boolean,  // 点击确认后关闭 默认为 true
   closeOnCancel?: boolean,  // 点击取消后关闭 默认为 true
-  closeOnOutside?: boolean,  // 点击外部后关闭 默认为 false
+  closeOnOutsideClick?: boolean,  // 点击外部后关闭 默认为 false
   closeOnCloseButtonClick?: boolean,  // 点击右上角关闭按钮后关闭 默认为 true
 }

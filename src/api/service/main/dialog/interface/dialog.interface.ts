@@ -42,9 +42,8 @@ export default class Dialog {
     public closeOnConfirm: boolean = true,
     public closeOnCancel: boolean = true,
     public closeOnOutsideClick: boolean = false,
-    public closeOnCloseButton: boolean = true,
+    public closeOnCloseButtonClick: boolean = true,
 
-    public show: boolean = false,
     public controller: DialogController | null = null,
     public inputValue: string = defaultValue,
     public createTime: Date = new Date(),
@@ -82,6 +81,8 @@ export default class Dialog {
       options.onCloseButtonClick,
       options.closeOnConfirm,
       options.closeOnCancel,
+      options.closeOnOutsideClick,
+      options.closeOnCloseButtonClick,
     )
   }
 
