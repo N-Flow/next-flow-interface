@@ -45,7 +45,9 @@ export default class RvUtils {
   }
 
   // 检查两段路径是否完全重叠，长度可不同，开头相同。指从开头开始每一项比较，直到有一方结束，是否全部相同
-  static checkYPathOverlay(from: YPath, target: YPath) {
+  static checkYPathOverlay(from: YPath | string, target: YPath | string) {
+    from = RvUtils.ensureYPath(from)
+    target = RvUtils.ensureYPath(target)
     let n = from.length > target.length ? target.length : from.length
     for (let i = 0; i < n; i++) {
       if (from[i] != target[i]) {
