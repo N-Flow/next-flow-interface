@@ -93,7 +93,7 @@ import MathUtils from "./utils/math-utils";
 import NativeEventUtils from "./utils/native-event-utils";
 import NetworkUtils from "./utils/network-utils";
 import NumberUtils from "./utils/number-utils";
-import PromiseUtils from "./utils/promise-utils";
+import {sleep} from "./utils/promise-utils";
 import RvUtils from "./utils/rv-utils";
 import TimeUtils from "./utils/time-utils";
 import UrlUtils from "./utils/url-utils";
@@ -212,7 +212,7 @@ export {
   NativeEventUtils,
   NetworkUtils,
   NumberUtils,
-  PromiseUtils,
+  sleep,
   RvUtils,
   TimeUtils,
   UrlUtils,
