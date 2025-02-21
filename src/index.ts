@@ -102,6 +102,8 @@ import DialogController from "./api/service/main/dialog/interface/dialog-control
 import DialogServiceApi from "./api/service/main/dialog/dialog-service-api";
 import DialogCreateOptions from "./api/service/main/dialog/interface/dialog-create-options.interface";
 import Dialog from "./api/service/main/dialog/interface/dialog.interface";
+import { PresetsType } from "./api/service/sync/interface/step/class/presets-type.enum"
+import { RvMaterialState } from "./api/service/sync/interface/step/attributes/rv-material-state.interface"
 
 export type {
   OfpApi,
@@ -183,6 +185,7 @@ export type {
   DialogController,
   DialogServiceApi,
   DialogCreateOptions,
+  RvMaterialState,
 }
 
 export {
@@ -213,4 +216,5 @@ export {
   UrlUtils,
   Message,
   Dialog,
+  PresetsType,
 }
