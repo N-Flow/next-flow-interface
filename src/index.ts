@@ -78,6 +78,7 @@ import RvAudio from "@/api/service/sync/interface/step/configuration/audio-info/
 import RvEnvironment from "@/api/service/sync/interface/step/environment/rv-environment.interface";
 import RvVersion from "./api/service/sync/interface/version/rv-version.interface";
 import RvStepServiceApi from "./api/service/sync/step/rv-step-service-api";
+import RvModel from "./api/service/sync/model/models-list-api"
 import { TStepChangeType } from "./api/service/target/step/t-step-change-type.enum";
 import TStepServiceApi from "./api/service/target/step/t-step-service-api";
 import { TStepSubscriber } from "./api/service/target/step/t-step-subscriber.type";
@@ -102,9 +103,12 @@ import DialogController from "./api/service/main/dialog/interface/dialog-control
 import DialogServiceApi from "./api/service/main/dialog/dialog-service-api";
 import DialogCreateOptions from "./api/service/main/dialog/interface/dialog-create-options.interface";
 import Dialog from "./api/service/main/dialog/interface/dialog.interface";
-import { PresetsType } from "./api/service/sync/interface/step/interface/presets-type.enum"
-import { MaterialType } from "./api/service/sync/interface/step/interface/material-type.enum"
+import { PresetsType } from "./api/service/sync/interface/step/presets-type.enum"
+import { MaterialType } from "./api/service/sync/interface/step/material-type.enum"
 import { RvMaterialState } from "./api/service/sync/interface/step/attributes/rv-material-state.interface"
+import { ModelFormat } from "./api/service/sync/interface/model/model-format.enum"
+import { ModelOrigin } from "./api/service/sync/interface/model/model-origin.enum"
+import RvModelServiceApi from "./api/service/sync/model/rv-model-service-api"
 
 export type {
   OfpApi,
@@ -174,6 +178,7 @@ export type {
   RvEnvironment,
   RvVersion,
   RvStepServiceApi,
+  RvModel,
   TStepServiceApi,
   TStepSubscriber,
   UseTStep,
@@ -187,6 +192,7 @@ export type {
   DialogServiceApi,
   DialogCreateOptions,
   RvMaterialState,
+  RvModelServiceApi,
 }
 
 export {
@@ -219,4 +225,6 @@ export {
   Dialog,
   PresetsType,
   MaterialType,
+  ModelFormat,
+  ModelOrigin,
 }

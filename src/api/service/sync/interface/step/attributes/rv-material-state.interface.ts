@@ -1,4 +1,4 @@
-import {MaterialType} from "@/api/service/sync/interface/step/interface/material-type.enum";
+import {MaterialType} from "@/api/service/sync/interface/step/material-type.enum";
 import {NodeMaterialBlockConnectionPointTypes} from "@babylonjs/core"
 
 export interface RvMaterialState {
