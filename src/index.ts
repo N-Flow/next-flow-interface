@@ -23,7 +23,7 @@ import Meeting from "./api/service/main/meeting/interface/meeting";
 import { ShareMode } from "./api/service/main/meeting/interface/share-mode";
 import { MeetingStatus } from "./api/service/main/meeting/interface/meeting-status";
 import UserServiceApi from "./api/service/main/user/user-service-api";
-import PluginState from "./api/service/main/plugin/interface/plugin-state";
+import PluginState from "./api/service/main/plugin/interface/plugin-state.interface";
 import AcceptMime from "./api/service/main/file/interface/accept-mime";
 import LocalFileServiceApi from "./api/service/main/file/local-file-service-api";
 import PluginServiceApi from "./api/service/main/plugin/plugin-service-api";
@@ -69,9 +69,9 @@ import RvGlobal from "./api/service/sync/interface/global/rv-global.interface";
 import { FlexGrowProps } from "./api/components/normal/flex-grow-props";
 import RvGlobalServiceApi from "./api/service/sync/global/rv-global-service-api";
 import HistoryManagerApi from "./api/service/sync/history-manager-api";
-import BuiltInPluginConfig from "./api/service/main/plugin/interface/built-in-plugin-config";
-import PluginConfig from "./api/service/main/plugin/interface/plugin-config";
-import ExternalPluginConfig from "./api/service/main/plugin/interface/external-plugin-config";
+import BuiltInPluginConfig from "./api/service/main/plugin/interface/built-in-plugin-config.interface";
+import BasePluginConfig from "./api/service/main/plugin/interface/base-plugin-config.interface";
+import ExternalPluginConfig from "./api/service/main/plugin/interface/external-plugin-config.interface";
 import RvStep from "./api/service/sync/interface/step/rv-step.interface";
 import RvConfiguration from "./api/service/sync/interface/step/configuration/rv-configuration.interface";
 import RvAudio from "@/api/service/sync/interface/step/configuration/audio-info/rv-audio.interface";
@@ -105,12 +105,14 @@ import Dialog from "./api/service/main/dialog/interface/dialog.interface";
 import { PresetsType } from "./api/service/sync/interface/step/interface/presets-type.enum"
 import { MaterialType } from "./api/service/sync/interface/step/interface/material-type.enum"
 import { RvMaterialState } from "./api/service/sync/interface/step/attributes/rv-material-state.interface"
+import { PluginConfig } from "./api/service/main/plugin/interface/plugin-config.type";
+import { PluginFrom } from "./api/service/main/plugin/interface/plugin-from.enum";
 
 export type {
   OfpApi,
   Translator,
   Meeting,
-  PluginConfig,
+  BasePluginConfig,
   PluginState,
   SpaceServiceApi,
   Page,
@@ -187,6 +189,7 @@ export type {
   DialogServiceApi,
   DialogCreateOptions,
   RvMaterialState,
+  PluginConfig,
 }
 
 export {
@@ -219,4 +222,5 @@ export {
   Dialog,
   PresetsType,
   MaterialType,
+  PluginFrom,
 }

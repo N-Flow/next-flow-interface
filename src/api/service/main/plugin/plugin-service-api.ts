@@ -1,7 +1,7 @@
-import PluginState from "@/api/service/main/plugin/interface/plugin-state";
+import PluginState from "@/api/service/main/plugin/interface/plugin-state.interface";
 import BasePlugin from "@/plugin/base-plugin";
-import ExternalPluginConfig from "@/api/service/main/plugin/interface/external-plugin-config";
-import BuiltInPluginConfig from "@/api/service/main/plugin/interface/built-in-plugin-config";
+import ExternalPluginConfig from "@/api/service/main/plugin/interface/external-plugin-config.interface";
+import BuiltInPluginConfig from "@/api/service/main/plugin/interface/built-in-plugin-config.interface";
 
 export default interface PluginServiceApi {
 
