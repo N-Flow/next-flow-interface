@@ -111,6 +111,8 @@ import { PluginFrom } from "./api/service/main/plugin/interface/plugin-from.enum
 import { ModelFormat } from "./api/service/sync/interface/model/model-format.enum"
 import { ModelOrigin } from "./api/service/sync/interface/model/model-origin.enum"
 import RvModelServiceApi from "./api/service/sync/model/rv-model-service-api"
+import { PluginEventType } from "./api/service/main/plugin/interface/plugin-event-type.enum";
+import { PluginServiceSubscriber } from "./api/service/main/plugin/interface/plugin-service-subscriber.type";
 
 export type {
   OfpApi,
@@ -196,6 +198,7 @@ export type {
   RvMaterialState,
   PluginConfig,
   RvModelServiceApi,
+  PluginServiceSubscriber,
 }
 
 export {
@@ -231,4 +234,5 @@ export {
   PluginFrom,
   ModelFormat,
   ModelOrigin,
+  PluginEventType,
 }
