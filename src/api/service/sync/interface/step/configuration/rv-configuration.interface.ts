@@ -1,5 +1,5 @@
 import RvAudio from "@/api/service/sync/interface/step/configuration/audio-info/rv-audio.interface";
-import {ThemeBackground} from "@/api/service/main/space/interface/theme/theme-background";
+import {ThemeBackground} from "@/api/service/main/space/dto/theme/theme-background";
 
 export default interface RvConfiguration {
   description: {
@@ -18,7 +18,7 @@ export default interface RvConfiguration {
     target: string
   }
   ui: {
-    darkTheme: ThemeBackground
+    theme: ThemeBackground
     enableStepChangeButton: boolean
     enableTopbar: boolean
     hideStep: boolean

@@ -1,4 +1,4 @@
-import DialogCreateOptions from "@/api/service/main/dialog/interface/dialog-create-options.interface";
+import DialogCreateOptions from "@/api/service/main/dialog/dto/dialog-create-options.interface";
 import DialogController from "./dialog-controller.interface";
 import {FunctionComponent} from "react";
 
