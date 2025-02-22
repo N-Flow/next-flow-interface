@@ -35,8 +35,7 @@ export default interface DialogServiceApi {
     icon?: FunctionComponent,
     confirmText?: string,
     cancelText?: string,
-    themeColor?: ThemeColor,
-    themeBackground?: ThemeBackground,
+    theme?: ThemeColor,
     background?: ThemeBackground,
     leftMode?: boolean,
     className?: string,
@@ -59,8 +58,7 @@ export default interface DialogServiceApi {
     content?: string,
     contentView?: FunctionComponent,
     icon?: FunctionComponent,
-    themeColor?: ThemeColor,
-    themeBackground?: ThemeBackground,
+    theme?: ThemeColor,
     leftMode?: boolean,
     className?: string,
     style?: object,
@@ -92,11 +90,11 @@ export default interface DialogServiceApi {
    *
    * @param dialog 对话框控制器
    */
-  close(dialog: string | Dialog): boolean
+  close(dialog: string | Dialog): Promise<boolean>
 
   /**
    * 关闭所有对话框
    */
-  closeAll(): number
+  closeAll(): Promise<number>
 
 }
