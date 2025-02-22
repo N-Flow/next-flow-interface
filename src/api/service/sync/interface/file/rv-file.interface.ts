@@ -1,5 +1,5 @@
 import {FileType} from "@/api/service/sync/interface/file/file-type.enum";
-import RvFileInfo from "@/api/service/sync/interface/file/file-info/rv-file-info.interface";
+import RvFileInfo from "@/api/service/sync/interface/file/info/rv-file-info.interface";
 
 export default interface RvFile {
   fid: string

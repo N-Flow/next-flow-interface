@@ -10,7 +10,7 @@ export default interface IconPlugin extends BasePlugin {
   label: string
   color: ThemeColor
 
-  enabled: boolean
+  open: boolean
   
   icon: FunctionComponent
 

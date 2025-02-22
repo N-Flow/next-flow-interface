@@ -113,6 +113,7 @@ import { ModelOrigin } from "./api/service/sync/interface/model/model-origin.enu
 import RvModelServiceApi from "./api/service/sync/model/rv-model-service-api"
 import { PluginEventType } from "./api/service/main/plugin/interface/plugin-event-type.enum";
 import { PluginServiceSubscriber } from "./api/service/main/plugin/interface/plugin-service-subscriber.type";
+import PluginContainerServiceApi from "./api/service/main/plugin/plugin-container-service-api";
 
 export type {
   OfpApi,
@@ -199,6 +200,7 @@ export type {
   PluginConfig,
   RvModelServiceApi,
   PluginServiceSubscriber,
+  PluginContainerServiceApi,
 }
 
 export {
