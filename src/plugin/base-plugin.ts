@@ -1,4 +1,4 @@
-import {PluginType} from "./enum/plugin-type.enum";
+import {PluginType} from "./dto/plugin-type.enum";
 import {ThemeColor} from "@/api/service/main/space/interface/theme/theme-color";
 
 export default interface BasePlugin {
