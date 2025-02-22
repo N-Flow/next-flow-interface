@@ -1,7 +1,9 @@
 import {FunctionComponent} from "react";
 import DialogCreateOptions from "@/api/service/main/dialog/dto/dialog-create-options.interface";
 import DialogController from "@/api/service/main/dialog/dto/dialog-controller.interface";
-import Dialog from "@/api/service/main/dialog/dto/dialog.interface";
+import Dialog from "@/api/service/main/dialog/dialog.class";
+import {ThemeColor} from "@/api/service/main/space/dto/theme/theme-color";
+import {ThemeBackground} from "@/api/service/main/space/dto/theme/theme-background";
 
 export default interface DialogServiceApi {
 
@@ -29,16 +31,19 @@ export default interface DialogServiceApi {
   confirm(options: {
     title: string,
     content?: string,
+    contentView?: FunctionComponent,
     icon?: FunctionComponent,
     confirmText?: string,
     cancelText?: string,
+    themeColor?: ThemeColor,
+    themeBackground?: ThemeBackground,
+    background?: ThemeBackground,
+    leftMode?: boolean,
     className?: string,
     style?: object,
     onConfirm?: () => void,
     onCancel?: () => void,
-    onOutsideClick?: () => void,
-    closeOnConfirm?: boolean,
-    closeOnCancel?: boolean,
+    onClose?: () => void,
     closeOnOutsideClick?: boolean,
   }): Promise<boolean>
 
@@ -52,21 +57,24 @@ export default interface DialogServiceApi {
   input(options: {
     title: string,
     content?: string,
+    contentView?: FunctionComponent,
     icon?: FunctionComponent,
+    themeColor?: ThemeColor,
+    themeBackground?: ThemeBackground,
+    leftMode?: boolean,
     className?: string,
     style?: object,
-    defaultValue?: string,
-    inputPlaceholder?: string,
-    allowEmpty?: boolean,
-    autoFocus?: boolean,
     confirmText?: string,
     cancelText?: string,
+    defaultValue?: string,
+    inputPlaceholder?: string,
+    autoFocus?: boolean,
+    allowEmpty?: boolean,
     onChange?: (value: string) => void,
+    onCheck?: (value: string) => boolean,
     onConfirm?: (value: string) => void,
     onCancel?: () => void,
-    onOutsideClick?: () => void,
-    closeOnConfirm?: boolean,
-    closeOnCancel?: boolean,
+    onClose?: () => void,
     closeOnOutsideClick?: boolean,
   }): Promise<string | undefined>
 

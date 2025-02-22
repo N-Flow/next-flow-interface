@@ -1,4 +1,6 @@
 import {FunctionComponent} from "react";
+import {ThemeColor} from "@/api/service/main/space/dto/theme/theme-color";
+import {ThemeBackground} from "@/api/service/main/space/dto/theme/theme-background";
 
 export default interface DialogCreateOptions {
   id?: string,  // 对话框的唯一id
@@ -7,6 +9,9 @@ export default interface DialogCreateOptions {
   contentView?: FunctionComponent,  // 中间视图
   icon?: FunctionComponent,  // 图标
   view?: FunctionComponent,  // 视图 全屏于整个对话框
+  themeColor?: ThemeColor,
+  themeBackground?: ThemeBackground,
+  leftMode?: boolean,  // 左对齐模式
   className?: string,  // 对话框框体 类名
   style?: object,  // 对话框框体 样式
   confirmText?: string,  // 确认按钮文字 为空字符串时不显示

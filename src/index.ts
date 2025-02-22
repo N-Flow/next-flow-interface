@@ -103,7 +103,7 @@ import { MessageState } from "./api/service/main/message/dto/message-state.type"
 import DialogController from "./api/service/main/dialog/dto/dialog-controller.interface";
 import DialogServiceApi from "./api/service/main/dialog/dialog-service-api";
 import DialogCreateOptions from "./api/service/main/dialog/dto/dialog-create-options.interface";
-import Dialog from "./api/service/main/dialog/dto/dialog.interface";
+import Dialog from "./api/service/main/dialog/dialog.class";
 import { PresetsType } from "./api/service/sync/interface/step/presets-type.enum"
 import { MaterialType } from "./api/service/sync/interface/step/material-type.enum"
 import { RvMaterialState } from "./api/service/sync/interface/step/attributes/rv-material-state.interface"

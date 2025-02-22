@@ -1,4 +1,4 @@
-import Dialog from "./dialog.interface"
+import Dialog from "../dialog.class"
 
 export default interface DialogController {
 

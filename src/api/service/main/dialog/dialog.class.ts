@@ -1,6 +1,8 @@
 import DialogCreateOptions from "@/api/service/main/dialog/dto/dialog-create-options.interface";
-import DialogController from "./dialog-controller.interface";
+import DialogController from "./dto/dialog-controller.interface";
 import {FunctionComponent} from "react";
+import {ThemeColor} from "../space/dto/theme/theme-color";
+import {ThemeBackground} from "../space/dto/theme/theme-background";
 
 export default class Dialog {
 
@@ -14,6 +16,9 @@ export default class Dialog {
     public icon: FunctionComponent | undefined = undefined,
     public view: FunctionComponent | undefined = undefined,
 
+    public themeColor: ThemeColor = ThemeColor.BLUE,
+    public themeBackground: ThemeBackground = ThemeBackground.DEFAULT,
+    public leftMode: boolean = false,
     public className: string = '',
     public style: object = {},
 
@@ -63,6 +68,9 @@ export default class Dialog {
       options.contentView,
       options.icon,
       options.view,
+      options.themeColor,
+      options.themeBackground,
+      options.leftMode,
       options.className,
       options.style,
       options.confirmText,
