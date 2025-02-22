@@ -19,6 +19,7 @@ import {FileProgressBarProps} from "./components/normal/file-progress-bar-props"
 import {ProgressBarProps} from "./components/normal/progress-bar-props";
 import {UploadButtonAndListProps} from "./components/normal/upload-button-and-list-props";
 import {ScrollBarProps} from "./components/normal/scroll-bar-props"
+import {DialogProps} from "./components/normal/dialog-props"
 import {RsdCheckboxProps} from "./components/rsd/rsd-checkbox-props";
 import {RsdColorProps} from "./components/rsd/rsd-color-props";
 import {RsdSelectProps} from "./components/rsd/rsd-select-props";
@@ -97,6 +98,7 @@ export interface OfpApi {
       ProgressBar: FunctionComponent<ProgressBarProps>
       UploadButtonAndList: FunctionComponent<UploadButtonAndListProps>
       ScrollBar: FunctionComponent<ScrollBarProps>
+      Dialog: FunctionComponent<DialogProps>
     }
 
     rsd: {

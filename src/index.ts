@@ -43,6 +43,7 @@ import { FileProgressBarProps } from "./api/components/normal/file-progress-bar-
 import { ProgressBarProps } from "./api/components/normal/progress-bar-props";
 import { UploadButtonAndListProps } from "./api/components/normal/upload-button-and-list-props";
 import { ScrollBarProps } from "./api/components/normal/scroll-bar-props"
+import { DialogProps } from "./api/components/normal/dialog-props"
 import { RsdButtonProps } from "./api/components/rsd/rsd-button-props";
 import { RsdCheckboxProps } from "./api/components/rsd/rsd-checkbox-props"
 import { RsdColorProps } from "./api/components/rsd/rsd-color-props"
@@ -147,6 +148,7 @@ export type {
   ProgressBarProps,
   UploadButtonAndListProps,
   ScrollBarProps,
+  DialogProps,
   RsdButtonProps,
   RsdCheckboxProps,
   RsdColorProps,
