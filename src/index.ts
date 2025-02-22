@@ -23,7 +23,7 @@ import Meeting from "./api/service/main/meeting/interface/meeting";
 import { ShareMode } from "./api/service/main/meeting/interface/share-mode";
 import { MeetingStatus } from "./api/service/main/meeting/interface/meeting-status";
 import UserServiceApi from "./api/service/main/user/user-service-api";
-import PluginState from "./api/service/main/plugin/interface/plugin-state.interface";
+import PluginState from "./api/service/main/plugin/dto/plugin-state.interface";
 import AcceptMime from "./api/service/main/file/interface/accept-mime";
 import LocalFileServiceApi from "./api/service/main/file/local-file-service-api";
 import PluginServiceApi from "./api/service/main/plugin/plugin-service-api";
@@ -39,10 +39,10 @@ import { AntNumberProps } from "./api/components/ant/ant-number-props";
 import { AntSelectProps } from "./api/components/ant/ant-select-props";
 import { AntSwitchProps } from "./api/components/ant/ant-switch-props";
 import { AntEmptyProps } from "./api/components/ant/ant-empty-props";
-import { FileProgressBarProps } from "@/api/components/normal/file-progress-bar-props";
-import { ProgressBarProps } from "@/api/components/normal/progress-bar-props";
-import { UploadButtonAndListProps } from "@/api/components/normal/upload-button-and-list-props";
-import { ScrollBarProps } from "@/api/components/normal/scroll-bar-props"
+import { FileProgressBarProps } from "./api/components/normal/file-progress-bar-props";
+import { ProgressBarProps } from "./api/components/normal/progress-bar-props";
+import { UploadButtonAndListProps } from "./api/components/normal/upload-button-and-list-props";
+import { ScrollBarProps } from "./api/components/normal/scroll-bar-props"
 import { RsdButtonProps } from "./api/components/rsd/rsd-button-props";
 import { RsdCheckboxProps } from "./api/components/rsd/rsd-checkbox-props"
 import { RsdColorProps } from "./api/components/rsd/rsd-color-props"
@@ -69,22 +69,22 @@ import RvGlobal from "./api/service/sync/interface/global/rv-global.interface";
 import { FlexGrowProps } from "./api/components/normal/flex-grow-props";
 import RvGlobalServiceApi from "./api/service/sync/global/rv-global-service-api";
 import HistoryManagerApi from "./api/service/sync/history-manager-api";
-import BuiltInPluginConfig from "./api/service/main/plugin/interface/built-in-plugin-config.interface";
-import BasePluginConfig from "./api/service/main/plugin/interface/base-plugin-config.interface";
-import ExternalPluginConfig from "./api/service/main/plugin/interface/external-plugin-config.interface";
+import BuiltInPluginConfig from "./api/service/main/plugin/dto/built-in-plugin-config.interface";
+import BasePluginConfig from "./api/service/main/plugin/dto/base-plugin-config.interface";
+import ExternalPluginConfig from "./api/service/main/plugin/dto/external-plugin-config.interface";
 import RvStep from "./api/service/sync/interface/step/rv-step.interface";
 import RvConfiguration from "./api/service/sync/interface/step/configuration/rv-configuration.interface";
-import RvAudio from "@/api/service/sync/interface/step/configuration/audio-info/rv-audio.interface";
-import RvEnvironment from "@/api/service/sync/interface/step/environment/rv-environment.interface";
+import RvAudio from "./api/service/sync/interface/step/configuration/audio-info/rv-audio.interface";
+import RvEnvironment from "./api/service/sync/interface/step/environment/rv-environment.interface";
 import RvVersion from "./api/service/sync/interface/version/rv-version.interface";
 import RvStepServiceApi from "./api/service/sync/step/rv-step-service-api";
 import RvModel from "./api/service/sync/model/models-list-api"
 import { TStepChangeType } from "./api/service/target/step/t-step-change-type.enum";
 import TStepServiceApi from "./api/service/target/step/t-step-service-api";
 import { TStepSubscriber } from "./api/service/target/step/t-step-subscriber.type";
-import { UseTStep } from "@/api/hook/use-t-step.type";
+import { UseTStep } from "./api/hook/use-t-step.type";
 import { UseStepOptions } from "./api/hook/use-step-options.type";
-import { StepOptions } from "@/api/service/sync/step/dto/step-options.type";
+import { StepOptions } from "./api/service/sync/step/dto/step-options.type";
 import { PluginViewProps } from "./plugin/dto/plugin-view-props.interface";
 import FileUtils from "./utils/file-utils";
 import MathUtils from "./utils/math-utils";
@@ -106,13 +106,13 @@ import Dialog from "./api/service/main/dialog/interface/dialog.interface";
 import { PresetsType } from "./api/service/sync/interface/step/presets-type.enum"
 import { MaterialType } from "./api/service/sync/interface/step/material-type.enum"
 import { RvMaterialState } from "./api/service/sync/interface/step/attributes/rv-material-state.interface"
-import { PluginConfig } from "./api/service/main/plugin/interface/plugin-config.type";
-import { PluginFrom } from "./api/service/main/plugin/interface/plugin-from.enum";
+import { PluginConfig } from "./api/service/main/plugin/dto/plugin-config.type";
+import { PluginFrom } from "./api/service/main/plugin/dto/plugin-from.enum";
 import { ModelFormat } from "./api/service/sync/interface/model/model-format.enum"
 import { ModelOrigin } from "./api/service/sync/interface/model/model-origin.enum"
 import RvModelServiceApi from "./api/service/sync/model/rv-model-service-api"
-import { PluginEventType } from "./api/service/main/plugin/interface/plugin-event-type.enum";
-import { PluginServiceSubscriber } from "./api/service/main/plugin/interface/plugin-service-subscriber.type";
+import { PluginEventType } from "./api/service/main/plugin/dto/plugin-event-type.enum";
+import { PluginServiceSubscriber } from "./api/service/main/plugin/dto/plugin-service-subscriber.type";
 import PluginContainerServiceApi from "./api/service/main/plugin/plugin-container-service-api";
 
 export type {
