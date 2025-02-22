@@ -1,7 +1,7 @@
 import {FunctionComponent} from "react";
-import DialogCreateOptions from "@/api/service/main/dialog/interface/dialog-create-options.interface";
-import DialogController from "./interface/dialog-controller.interface";
-import Dialog from "./interface/dialog.interface";
+import DialogCreateOptions from "@/api/service/main/dialog/dto/dialog-create-options.interface";
+import DialogController from "@/api/service/main/dialog/dto/dialog-controller.interface";
+import Dialog from "@/api/service/main/dialog/dto/dialog.interface";
 
 export default interface DialogServiceApi {
 

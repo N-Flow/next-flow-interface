@@ -1,4 +1,4 @@
-import FileLoadInfo from "@/api/service/main/file/interface/file-load-info";
+import FileLoadInfo from "@/api/service/main/file/dto/file-load-info";
 
 export default interface LocalFileServiceState {
   files: { [fid: string]: FileLoadInfo }

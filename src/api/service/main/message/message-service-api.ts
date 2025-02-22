@@ -1,4 +1,4 @@
-import { MessageType } from "./interface/message-type.type"
+import { MessageType } from "@/api/service/main/message/dto/message-type.type"
 import { Message } from "./message.class"
 
 export default interface MessageServiceApi {

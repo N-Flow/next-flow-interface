@@ -1,5 +1,5 @@
-import Meeting from "./interface/meeting";
-import {ShareMode} from "./interface/share-mode";
+import Meeting from "@/api/service/main/meeting/dto/meeting";
+import {ShareMode} from "@/api/service/main/meeting/dto/share-mode";
 
 export default interface MeetingServiceApi {
   

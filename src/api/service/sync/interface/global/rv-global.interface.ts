@@ -1,4 +1,4 @@
-import {ThemeBackground} from "@/api/service/main/space/interface/theme/theme-background";
+import {ThemeBackground} from "@/api/service/main/space/dto/theme/theme-background";
 
 export default interface RvGlobal {
   information: {
