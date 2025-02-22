@@ -26,6 +26,8 @@ export default interface DialogCreateOptions {
   onCancelButtonClick?: () => void,  // 点击取消按钮回调
   onOutsideClick?: () => void,  // 点击外部回调
   onCloseButtonClick?: () => void,  // 点击右上角关闭按钮回调
+  onRender?: (() => void), // 对话框渲染回调
+  onEffect?: (() => (()=>void)), // 对话框Effect回调
   closeOnConfirm?: boolean,  // 点击确认后关闭 默认为 true
   closeOnCancel?: boolean,  // 点击取消后关闭 默认为 true
   closeOnOutsideClick?: boolean,  // 点击外部后关闭 默认为 false

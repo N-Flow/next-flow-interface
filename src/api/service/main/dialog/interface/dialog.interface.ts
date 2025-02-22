@@ -39,6 +39,9 @@ export default class Dialog {
     public onOutsideClick: (() => void) = () => {},
     public onCloseButtonClick: (() => void) = () => {},
 
+    public onRender: (() => void) = () => {},
+    public onEffect: (() => (()=>void)) = () => (() => {}),
+
     public closeOnConfirm: boolean = true,
     public closeOnCancel: boolean = true,
     public closeOnOutsideClick: boolean = false,
@@ -79,6 +82,8 @@ export default class Dialog {
       options.onCancelButtonClick,
       options.onOutsideClick,
       options.onCloseButtonClick,
+      options.onRender,
+      options.onEffect,
       options.closeOnConfirm,
       options.closeOnCancel,
       options.closeOnOutsideClick,

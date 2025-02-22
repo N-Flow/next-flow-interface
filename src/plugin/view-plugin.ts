@@ -6,5 +6,5 @@ export default interface ViewPlugin extends BasePlugin{
   view: FunctionComponent<PluginViewProps>
   
   onRender?: () => void
-  onEffect?: () => void
+  onEffect?: (() => (()=>void))
 }

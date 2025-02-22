@@ -114,6 +114,7 @@ import RvModelServiceApi from "./api/service/sync/model/rv-model-service-api"
 import { PluginEventType } from "./api/service/main/plugin/dto/plugin-event-type.enum";
 import { PluginServiceSubscriber } from "./api/service/main/plugin/dto/plugin-service-subscriber.type";
 import PluginContainerServiceApi from "./api/service/main/plugin/plugin-container-service-api";
+import DialogPlugin from "./plugin/dialog-plugin";
 
 export type {
   OfpApi,
@@ -201,6 +202,7 @@ export type {
   RvModelServiceApi,
   PluginServiceSubscriber,
   PluginContainerServiceApi,
+  DialogPlugin,
 }
 
 export {

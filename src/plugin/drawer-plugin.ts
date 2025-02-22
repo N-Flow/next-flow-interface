@@ -10,7 +10,7 @@ export default interface DrawerPlugin extends IconPlugin {
   drawer: FunctionComponent<PluginViewProps>
   
   onRender?: () => void
-  onEffect?: () => void
+  onEffect?: (() => (()=>void))
 
   onTitleClick?: () => void
   onTitleContextMenu?: () => void
