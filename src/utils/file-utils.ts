@@ -17,5 +17,12 @@ export default class FileUtils {
     if (numberText.endsWith('.00')) numberText = numberText.slice(0, -3)
     return `${numberText} ${units[i]}`
   }
+
+  static ensureFileArray(files: File | File[] | FileList | null): File[] {
+    if (files === null) return [];
+    if (files instanceof File) return [files]
+    if (fileList instanceof FileList) return Array.from(fileList)
+    return files
+  }
 }
 
