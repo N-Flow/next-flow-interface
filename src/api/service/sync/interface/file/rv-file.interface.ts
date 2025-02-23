@@ -1,9 +1,11 @@
 import {FileType} from "@/api/service/sync/interface/file/file-type.enum";
 import RvFileInfo from "@/api/service/sync/interface/file/info/rv-file-info.interface";
+import { AttachType } from "./attach-type.enum";
 
 export default interface RvFile {
   fid: string
   type: FileType
+
   info: RvFileInfo
 
   uploading?: boolean
@@ -13,5 +15,9 @@ export default interface RvFile {
     bucket: string
   }
   url?: string  // Only for url
-  from?: string  // Only for attach
+  from?: {  // Only for attach
+    fid: string
+    type: AttachType
+    path: string
+  }
 }

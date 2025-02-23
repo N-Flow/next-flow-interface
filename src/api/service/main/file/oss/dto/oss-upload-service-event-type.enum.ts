@@ -1,5 +1,5 @@
 
-export enum OssUploadEventType {
+export enum OssUploadServiceEventType {
   START = 'START',
   PROGRESS = 'PROGRESS',
   PAUSE = 'PAUSE',

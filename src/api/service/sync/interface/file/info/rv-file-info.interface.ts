@@ -3,8 +3,8 @@ export default interface RvFileInfo {
   name: string
   size: number
   type: string
-  lastModified: number
+  lastModified: number  // timestamp of last modified
 
-  preview: string
+  preview: string  // url of picture or base64 string
   describe: string
 }
