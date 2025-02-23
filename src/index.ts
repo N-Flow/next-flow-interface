@@ -102,13 +102,13 @@ import DialogController from "./api/service/main/dialog/dto/dialog-controller.in
 import DialogServiceApi from "./api/service/main/dialog/dialog-service-api";
 import DialogCreateOptions from "./api/service/main/dialog/dto/dialog-create-options.interface";
 import Dialog from "./api/service/main/dialog/dialog.class";
-import { PresetsType } from "./api/service/sync/interface/step/presets-type.enum"
-import { MaterialType } from "./api/service/sync/interface/step/material-type.enum"
+import { RvPresetsType } from "./api/service/sync/interface/step/rv-presets-type.enum"
+import { RvMaterialType } from "./api/service/sync/interface/step/rv-material-type.enum"
 import { RvMaterialState } from "./api/service/sync/interface/step/attributes/rv-material-state.interface"
 import { PluginConfig } from "./api/service/main/plugin/dto/plugin-config.type";
 import { PluginFrom } from "./api/service/main/plugin/dto/plugin-from.enum";
-import { ModelFormat } from "./api/service/sync/interface/model/model-format.enum"
-import { ModelOrigin } from "./api/service/sync/interface/model/model-origin.enum"
+import { RvModelFormat } from "./api/service/sync/interface/model/rv-model-format.enum"
+import { RvModelOrigin } from "./api/service/sync/interface/model/rv-model-origin.enum"
 import RvModelServiceApi from "./api/service/sync/model/rv-model-service-api"
 import { PluginEventType } from "./api/service/main/plugin/dto/plugin-event-type.enum";
 import { PluginServiceSubscriber } from "./api/service/main/plugin/dto/plugin-service-subscriber.type";
@@ -129,7 +129,7 @@ import { OssUploadInstanceStatus } from "./api/service/main/file/oss/dto/oss-upl
 import OssUploadInstance from "./api/service/main/file/oss/dto/oss-upload-instance.interface";
 import RvFile from "./api/service/sync/interface/file/rv-file.interface";
 import { RvFileType } from "./api/service/sync/interface/file/rv-file-type.enum";
-import { AttachType } from "./api/service/sync/interface/file/attach-type.enum";
+import { RvAttachType } from "./api/service/sync/interface/file/rv-attach-type.enum";
 import { LocalFileServiceEventType } from "./api/service/main/file/local/dto/local-file-service-event-type.enum";
 import { LocalFileServiceSubscriber } from "./api/service/main/file/local/dto/local-file-service-subscriber.type";
 
@@ -259,18 +259,18 @@ export {
   UrlUtils,
   Message,
   Dialog,
-  PresetsType,
-  MaterialType,
+  RvPresetsType,
+  RvMaterialType,
   PluginFrom,
-  ModelFormat,
-  ModelOrigin,
+  RvModelFormat,
+  RvModelOrigin,
   PluginEventType,
   LocalFileStatus,
   LocalFileType,
   OssUploadInstanceStatus,
   OssUploadServiceEventType,
   RvFileType,
-  AttachType,
+  RvAttachType,
   RvFileServiceEventType,
   LocalFileServiceEventType,
 }

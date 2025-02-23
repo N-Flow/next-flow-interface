@@ -1,4 +1,4 @@
-import {MaterialType} from "@/api/service/sync/interface/step/material-type.enum";
+import {RvMaterialType} from "@/api/service/sync/interface/step/rv-material-type.enum";
 import {NodeMaterialBlockConnectionPointTypes} from "@babylonjs/core"
 
 export interface RvMaterialState {
@@ -12,7 +12,7 @@ export interface RvMaterialGeneralState {
   isPickable: boolean
   visibility: number
   receiveShadows: boolean
-  materialType: MaterialType
+  materialType: RvMaterialType
   isExtracted: boolean
 }
 

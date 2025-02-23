@@ -1,11 +1,11 @@
 import {RhineVarMap} from "rhine-var"
-import {ModelOrigin} from "@/api/service/sync/interface/model/model-origin.enum";
-import {ModelFormat} from "@/api/service/sync/interface/model/model-format.enum";
+import {RvModelOrigin} from "@/api/service/sync/interface/model/rv-model-origin.enum";
+import {RvModelFormat} from "@/api/service/sync/interface/model/rv-model-format.enum";
 
 export default interface RvModel {
-  origin: ModelOrigin
+  origin: RvModelOrigin
   name: string
-  format: ModelFormat
+  format: RvModelFormat
   icon: string
   group: string
   path: string

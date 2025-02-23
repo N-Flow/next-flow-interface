@@ -1,4 +1,4 @@
-export enum PresetsType {
+export enum RvPresetsType {
   NONE = 'None',
   METAL = 'Metal',
   PLASTIC = 'Plastics',

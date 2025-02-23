@@ -1,4 +1,4 @@
-export enum MaterialType {
+export enum RvMaterialType {
   None = 'None',
   PBR = 'PBR Material',
   Standard = 'Standard Material',
