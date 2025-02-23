@@ -1,5 +1,5 @@
-import LocalFile from "./dto/base-local-file.interface";
 import {LocalFileServiceSubscriber} from "./dto/local-file-service-subscriber.type";
+import {LocalFile} from "./dto/local-file.type";
 
 export default interface LocalFileServiceApi {
 
@@ -8,7 +8,9 @@ export default interface LocalFileServiceApi {
 
   get(fid: string): LocalFile | undefined
 
-  add(file: LocalFile): void
+  add(localFile: LocalFile): void
+
+  addByFile(fid: string, file: File): LocalFile
 
   remove(fid: string): void
 

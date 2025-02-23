@@ -10,11 +10,7 @@ export default interface RvFile {
 
   uploading?: boolean
 
-  oss?: {  // Only for oss
-    path: string
-    bucket: string
-  }
-  url?: string  // Only for url
+  url?: string  // For url or oss (https://xxx, oss://{bucket}/{path})
   from?: {  // Only for attach
     fid: string
     type: RvAttachType

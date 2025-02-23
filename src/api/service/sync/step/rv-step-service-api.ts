@@ -19,6 +19,8 @@ export default interface RvStepServiceApi {
 
   getStepIndex(sid: string): number
 
+  generateId(): string
+
 
   getStepOptions(withDisable?: boolean): StepOptions
 

@@ -196,6 +196,7 @@ export type {
   RvGlobal,
   RvStep,
   RvFile,
+  RvFileInfo,
   RvConfiguration,
   RvAudio,
   RvEnvironment,

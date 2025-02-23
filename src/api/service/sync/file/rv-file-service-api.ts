@@ -96,4 +96,9 @@ export default interface RvFileServiceApi {
    */
   getInfo(fid: string): RvFileInfo | undefined
 
+  /**
+   * 生成 Id
+   */
+  generateId(): string
+
 }

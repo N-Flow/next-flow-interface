@@ -1,5 +1,3 @@
-
-// 负责存储下载完成的内容 以及下载任务
 import {LocalFileStatus} from "@/api/service/main/file/local/dto/local-file-status.enum";
 
 export default interface BaseLocalFile {
