@@ -5,6 +5,6 @@ export enum OssUploadServiceEventType {
   PAUSE = 'PAUSE',
   RESUME = 'RESUME',
   UPLOADED = 'UPLOADED',
-  ERROR = 'ERROR',
+  FAILED = 'FAILED',
   CANCELED = 'CANCELED',
 }

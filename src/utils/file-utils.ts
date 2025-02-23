@@ -21,7 +21,7 @@ export default class FileUtils {
   static ensureFileArray(files: File | File[] | FileList | null): File[] {
     if (files === null) return [];
     if (files instanceof File) return [files]
-    if (fileList instanceof FileList) return Array.from(fileList)
+    if (files instanceof FileList) return Array.from(files)
     return files
   }
 }
