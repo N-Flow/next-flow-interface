@@ -5,6 +5,7 @@ export default interface LocalFileServiceApi {
 
   files: Map<string, LocalFile>
 
+
   get(fid: string): LocalFile | undefined
 
   add(file: LocalFile): void
