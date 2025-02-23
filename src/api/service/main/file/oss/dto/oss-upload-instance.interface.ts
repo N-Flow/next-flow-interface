@@ -10,4 +10,6 @@ export default interface OssUploadInstance {
   status: OssUploadInstanceStatus
   progress: number
 
+  data?: any
+
 }
