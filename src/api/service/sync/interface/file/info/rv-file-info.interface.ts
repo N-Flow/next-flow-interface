@@ -6,5 +6,5 @@ export default interface RvFileInfo {
   lastModified: number  // timestamp of last modified
 
   preview: string  // url of picture or base64 string
-  describe: string
+  description: string
 }

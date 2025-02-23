@@ -3,9 +3,10 @@ import {OssUploadInstanceStatus} from "@/api/service/main/file/oss/dto/oss-uploa
 export default interface OssUploadInstance {
 
   fid: string
-  file: File
-  size: number
 
+  file: File
+
+  // 上传任务
   status: OssUploadInstanceStatus
   progress: number
 

@@ -1,10 +1,10 @@
-import {FileType} from "@/api/service/sync/interface/file/file-type.enum";
+import {RvFileType} from "@/api/service/sync/interface/file/rv-file-type.enum";
 import RvFileInfo from "@/api/service/sync/interface/file/info/rv-file-info.interface";
 import { AttachType } from "./attach-type.enum";
 
 export default interface RvFile {
   fid: string
-  type: FileType
+  type: RvFileType
 
   info: RvFileInfo
 

@@ -1,5 +1,5 @@
 
-export enum FileType {
+export enum RvFileType {
   OSS = 'OSS',
   URL = 'URL',
   ATTACH = 'ATTACH',

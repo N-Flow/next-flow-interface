@@ -22,9 +22,9 @@ export default interface PluginServiceApi {
    *
    * @param id  插件 ID
    *
-   * @returns  插件状态 没有找到则返回 null
+   * @returns  插件状态 没有找到则返回 undefined
    */
-  get(id: string): PluginState | null
+  get(id: string): PluginState | undefined
 
   /**
    * 订阅插件服务事件 详情请见 {@link PluginServiceSubscriber}

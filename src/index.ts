@@ -24,7 +24,7 @@ import { ShareMode } from "./api/service/main/meeting/dto/share-mode";
 import { MeetingStatus } from "./api/service/main/meeting/dto/meeting-status";
 import UserServiceApi from "./api/service/main/user/user-service-api";
 import PluginState from "./api/service/main/plugin/dto/plugin-state.interface";
-import AcceptMime from "./api/service/main/file/local/dto/accept-mime";
+import AcceptMime from "./api/service/main/file/local/accept-mime";
 import LocalFileServiceApi from "./api/service/main/file/local/local-file-service-api";
 import PluginServiceApi from "./api/service/main/plugin/plugin-service-api";
 import PluginConnectorApi from "./api/service/main/plugin/plugin-connector-api";
@@ -59,7 +59,6 @@ import { RsdSwitchProps } from "./api/components/rsd/rsd-switch-props";
 import { RsdTitleProps } from "./api/components/rsd/rsd-title-props";
 import ThemeProviderProps from "./api/components/ant/theme-provider-props";
 import { LocalFileStatus } from "./api/service/main/file/local/dto/local-file-status.enum";
-import FileLoadInfo from "./api/service/main/file/local/dto/file-load-info";
 import UserInfo from "./api/service/main/user/dto/user-info.interface";
 import UserAuth from "./api/service/main/user/dto/user-auth.interface";
 import ModulePreloaderApi from "./api/service/main/preloader/module-preloader-api";
@@ -115,6 +114,22 @@ import { PluginEventType } from "./api/service/main/plugin/dto/plugin-event-type
 import { PluginServiceSubscriber } from "./api/service/main/plugin/dto/plugin-service-subscriber.type";
 import PluginContainerServiceApi from "./api/service/main/plugin/plugin-container-service-api";
 import DialogPlugin from "./plugin/dialog-plugin";
+import RvFileServiceApi from "./api/service/sync/file/rv-file-service-api";
+import {RvFileServiceEventType } from "./api/service/sync/file/dto/rv-file-service-event-type.enum";
+import { RvFileServiceSubscriber } from "./api/service/sync/file/dto/rv-file-service-subscriber.type";
+import { LocalFile } from "./api/service/main/file/local/dto/local-file.type";
+import BaseLocalFile from "./api/service/main/file/local/dto/base-local-file.interface";
+import BlobLocalFile from "./api/service/main/file/local/dto/blob-local-file.interface";
+import ObjectLocalFile from "./api/service/main/file/local/dto/object-local-file.interface";
+import { LocalFileType } from "./api/service/main/file/local/dto/local-file-type.enum";
+import OssUploadServiceApi from "./api/service/main/file/oss/oss-upload-service-api";
+import { OssUploadServiceSubscriber } from "./api/service/main/file/oss/dto/oss-upload-service-subscriber.type";
+import { OssUploadServiceEventType } from "./api/service/main/file/oss/dto/oss-upload-service-event-type.enum";
+import { OssUploadInstanceStatus } from "./api/service/main/file/oss/dto/oss-upload-instance-status.enum";
+import OssUploadInstance from "./api/service/main/file/oss/dto/oss-upload-instance.interface";
+import RvFile from "./api/service/sync/interface/file/rv-file.interface";
+import { RvFileType } from "./api/service/sync/interface/file/rv-file-type.enum";
+import { AttachType } from "./api/service/sync/interface/file/attach-type.enum";
 
 export type {
   OfpApi,
@@ -163,7 +178,6 @@ export type {
   RsdSwitchProps,
   RsdTitleProps,
   ThemeProviderProps,
-  LocalFileServiceApi,
   InternationalizationServiceApi,
   UserAuth,
   UserInfo,
@@ -179,6 +193,7 @@ export type {
   RvBase,
   RvGlobal,
   RvStep,
+  RvFile,
   RvConfiguration,
   RvAudio,
   RvEnvironment,
@@ -203,6 +218,16 @@ export type {
   PluginServiceSubscriber,
   PluginContainerServiceApi,
   DialogPlugin,
+  RvFileServiceApi,
+  RvFileServiceSubscriber,
+  LocalFileServiceApi,
+  LocalFile,
+  BaseLocalFile,
+  BlobLocalFile,
+  ObjectLocalFile,
+  OssUploadServiceApi,
+  OssUploadServiceSubscriber,
+  OssUploadInstance,
 }
 
 export {
@@ -219,8 +244,6 @@ export {
   ThemeShape,
   IconPluginPosition,
   PluginType,
-  LocalFileStatus,
-  FileLoadInfo,
   TStepChangeType,
   FileUtils,
   MathUtils,
@@ -239,4 +262,11 @@ export {
   ModelFormat,
   ModelOrigin,
   PluginEventType,
+  LocalFileStatus,
+  LocalFileType,
+  OssUploadInstanceStatus,
+  OssUploadServiceEventType,
+  RvFileType,
+  AttachType,
+  RvFileServiceEventType,
 }

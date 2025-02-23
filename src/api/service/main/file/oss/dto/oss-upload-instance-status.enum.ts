@@ -3,7 +3,7 @@ export enum OssUploadInstanceStatus {
   WAITING = 'WAITING',
   UPLOADING = 'UPLOADING',
   PAUSED = 'PAUSED',
+  COMPLETED = 'COMPLETED',
+  FAILED = 'FAILED',
   CANCELED = 'CANCELED',
-  SUCCESS = 'SUCCESS',
-  ERROR = 'ERROR',
 }

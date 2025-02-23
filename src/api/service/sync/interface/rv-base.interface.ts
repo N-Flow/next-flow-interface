@@ -1,4 +1,4 @@
-import type { RhineVarMap } from 'rhine-var';
+import type { RhineVarMap, RhineVarArray } from 'rhine-var';
 import RvGlobal from "./global/rv-global.interface";
 import RvStep from "./step/rv-step.interface";
 import RvMaterial from "@/api/service/sync/interface/material/rv-material.interface";
@@ -10,7 +10,7 @@ import RvVersion from "@/api/service/sync/interface/version/rv-version.interface
 export default interface RvBase {
 
   global: RvGlobal
-  order: RhineVarMap<string>
+  order: RhineVarArray<string>
   steps: RhineVarMap<RvStep>
 
   files: RhineVarMap<RvFile>

@@ -43,6 +43,8 @@ import TStepServiceApi from "@/api/service/target/step/t-step-service-api";
 import {UseStepOptions} from "@/api/hook/use-step-options.type";
 import {AntEmptyProps} from "@/api/components/ant/ant-empty-props";
 import MessageServiceApi from "@/api/service/main/message/message-service-api";
+import OssUploadServiceApi from "@/api/service/main/file/oss/oss-upload-service-api";
+import RvFileServiceApi from "@/api/service/sync/file/rv-file-service-api";
 
 export interface OfpApi {
 
@@ -57,6 +59,8 @@ export interface OfpApi {
       meetingService: MeetingServiceApi
       modulePreloader: ModulePreloaderApi
       messageService: MessageServiceApi
+      localFileService: LocalFileServiceApi
+      ossUploadService: OssUploadServiceApi
     }
 
     sync: {
@@ -64,6 +68,7 @@ export interface OfpApi {
       historyManager: HistoryManagerApi
       rvGlobalService: RvGlobalServiceApi
       rvStepService: RvStepServiceApi
+      rvFileService: RvFileServiceApi
     }
 
     target: {

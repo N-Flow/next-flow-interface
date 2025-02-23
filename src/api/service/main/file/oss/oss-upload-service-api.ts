@@ -3,7 +3,7 @@ import {OssUploadServiceSubscriber} from "@/api/service/main/file/oss/dto/oss-up
 
 export default interface OssUploadServiceApi {
 
-  instances: OssUploadInstance[]
+  instances: Map<string, OssUploadInstance>
 
 
   upload(fid: string, file: File): OssUploadInstance
