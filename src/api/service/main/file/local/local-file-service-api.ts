@@ -1,4 +1,5 @@
 import LocalFile from "./dto/base-local-file.interface";
+import {LocalFileServiceSubscriber} from "./dto/local-file-service-subscriber.type";
 
 export default interface LocalFileServiceApi {
 
@@ -18,6 +19,15 @@ export default interface LocalFileServiceApi {
   resume(fid: string): void  // 暂不支持
 
   cancel(fid: string): void
+
+
+  subscribe(subscriber: LocalFileServiceSubscriber): () => void
+
+  unsubscribe(subscriber: LocalFileServiceSubscriber): void
+
+  subscribeSingle(fid: string, subscriber: LocalFileServiceSubscriber): () => void
+
+  unsubscribeSingle(fid: string, subscriber: LocalFileServiceSubscriber): void
 
 
   /**

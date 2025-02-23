@@ -1,10 +1,10 @@
 
-export enum OssUploadServiceEventType {
+export enum LocalFileServiceEventType {
   START = 'START',
   PROGRESS = 'PROGRESS',
   PAUSE = 'PAUSE',
   RESUME = 'RESUME',
-  UPLOADED = 'UPLOADED',
+  LOADED = 'LOADED',
   ERROR = 'ERROR',
   CANCELED = 'CANCELED',
 }

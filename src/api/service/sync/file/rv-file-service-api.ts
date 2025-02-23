@@ -45,7 +45,9 @@ export default interface RvFileServiceApi {
   /**
    * 订阅文件服务相关事件
    *
-   * @param subscriber  订阅者
+   * @param subscriber
+   *
+   * @returns 取消订阅函数
    */
   subscribe(subscriber: RvFileServiceSubscriber): () => void
 
@@ -55,6 +57,25 @@ export default interface RvFileServiceApi {
    * @param subscriber  订阅者
    */
   unsubscribe(subscriber: RvFileServiceSubscriber): void
+
+
+  /**
+   * 订阅文件服务相关事件
+   *
+   * @param fid  文件的 fid
+   * @param subscriber  订阅者
+   *
+   * @returns 取消订阅函数
+   */
+  subscribeSingle(fid: string, subscriber: RvFileServiceSubscriber): () => void
+
+  /**
+   * 移除订阅
+   *
+   * @param fid  文件的 fid
+   * @param subscriber  订阅者
+   */
+  unsubscribeSingle(fid: string, subscriber: RvFileServiceSubscriber): void
 
 
   /**

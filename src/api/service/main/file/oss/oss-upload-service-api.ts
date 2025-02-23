@@ -23,8 +23,12 @@ export default interface OssUploadServiceApi {
   hasFile(file: File): boolean
 
 
-  subscribe(fid: string, subscriber: OssUploadServiceSubscriber): () => void
+  subscribe(subscriber: OssUploadServiceSubscriber): () => void
 
-  unsubscribe(fid: string, subscriber: OssUploadServiceSubscriber): void
+  unsubscribe(subscriber: OssUploadServiceSubscriber): void
+
+  subscribeSingle(fid: string, subscriber: OssUploadServiceSubscriber): () => void
+
+  unsubscribeSingle(fid: string, subscriber: OssUploadServiceSubscriber): void
 
 }

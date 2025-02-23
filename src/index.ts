@@ -130,6 +130,8 @@ import OssUploadInstance from "./api/service/main/file/oss/dto/oss-upload-instan
 import RvFile from "./api/service/sync/interface/file/rv-file.interface";
 import { RvFileType } from "./api/service/sync/interface/file/rv-file-type.enum";
 import { AttachType } from "./api/service/sync/interface/file/attach-type.enum";
+import { LocalFileServiceEventType } from "./api/service/main/file/local/dto/local-file-service-event-type.enum";
+import { LocalFileServiceSubscriber } from "./api/service/main/file/local/dto/local-file-service-subscriber.type";
 
 export type {
   OfpApi,
@@ -228,6 +230,7 @@ export type {
   OssUploadServiceApi,
   OssUploadServiceSubscriber,
   OssUploadInstance,
+  LocalFileServiceSubscriber,
 }
 
 export {
@@ -269,4 +272,5 @@ export {
   RvFileType,
   AttachType,
   RvFileServiceEventType,
+  LocalFileServiceEventType,
 }
