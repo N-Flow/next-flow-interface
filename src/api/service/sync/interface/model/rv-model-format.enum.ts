@@ -1,4 +1,4 @@
-export enum ModelFormat {
+export enum RvModelFormat {
   Basic = 'Basic',
 
   GLB = 'GLB',
