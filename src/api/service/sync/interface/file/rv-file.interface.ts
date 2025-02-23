@@ -4,10 +4,14 @@ import RvFileInfo from "@/api/service/sync/interface/file/info/rv-file-info.inte
 export default interface RvFile {
   fid: string
   type: FileType
-  ossPath: string
-  ossBucket: string
-  uploading: boolean
   info: RvFileInfo
-  url: string
-  attachFrom: string
+
+  uploading?: boolean
+
+  oss?: {  // Only for oss
+    path: string
+    bucket: string
+  }
+  url?: string  // Only for url
+  from?: string  // Only for attach
 }

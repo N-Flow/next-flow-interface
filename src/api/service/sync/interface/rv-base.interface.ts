@@ -13,7 +13,7 @@ export default interface RvBase {
   order: RhineVarMap<string>
   steps: RhineVarMap<RvStep>
 
-  files: RvFile
+  files: RhineVarMap<RvFile>
   models: RvModel
   materials: RvMaterial
 

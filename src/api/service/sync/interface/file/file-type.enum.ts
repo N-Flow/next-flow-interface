@@ -1,6 +1,6 @@
 
 export enum FileType {
-  OSS = 'oss',
-  URL = 'url',
-  ATTACH = 'attach',
+  OSS = 'OSS',
+  URL = 'URL',
+  ATTACH = 'ATTACH',
 }

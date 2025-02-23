@@ -1,7 +1,7 @@
 import type {FunctionComponent} from "react";
 import SpaceServiceApi from './service/main/space/space-service-api'
 import PluginServiceApi from "./service/main/plugin/plugin-service-api";
-import LocalFileServiceApi from "./service/main/file/local-file-service-api";
+import LocalFileServiceApi from "./service/main/file/local/local-file-service-api";
 import InternationalizationServiceApi from "./service/main/internationalization/internationalization-service-api";
 import MeetingServiceApi from "./service/main/meeting/meeting-service-api";
 import StatusServiceApi from './service/main/status/status-service-api';
@@ -54,7 +54,6 @@ export interface OfpApi {
       pluginService: PluginServiceApi
       internationalizationService: InternationalizationServiceApi
       userService: UserServiceApi
-      localFileService: LocalFileServiceApi
       meetingService: MeetingServiceApi
       modulePreloader: ModulePreloaderApi
       messageService: MessageServiceApi

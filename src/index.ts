@@ -24,8 +24,8 @@ import { ShareMode } from "./api/service/main/meeting/dto/share-mode";
 import { MeetingStatus } from "./api/service/main/meeting/dto/meeting-status";
 import UserServiceApi from "./api/service/main/user/user-service-api";
 import PluginState from "./api/service/main/plugin/dto/plugin-state.interface";
-import AcceptMime from "./api/service/main/file/dto/accept-mime";
-import LocalFileServiceApi from "./api/service/main/file/local-file-service-api";
+import AcceptMime from "./api/service/main/file/local/dto/accept-mime";
+import LocalFileServiceApi from "./api/service/main/file/local/local-file-service-api";
 import PluginServiceApi from "./api/service/main/plugin/plugin-service-api";
 import PluginConnectorApi from "./api/service/main/plugin/plugin-connector-api";
 import { Locale } from "./api/service/main/internationalization/dto/locale";
@@ -58,9 +58,8 @@ import { RsdSelectableButtonProps } from "./api/components/rsd/rsd-selectable-bu
 import { RsdSwitchProps } from "./api/components/rsd/rsd-switch-props";
 import { RsdTitleProps } from "./api/components/rsd/rsd-title-props";
 import ThemeProviderProps from "./api/components/ant/theme-provider-props";
-import { LocalFileStatus } from "./api/service/main/file/dto/local-file-status.enum";
-import FileLoadInfo from "./api/service/main/file/dto/file-load-info";
-import LocalFileServiceState from "./api/service/main/file/dto/local-file-service-state.interface";
+import { LocalFileStatus } from "./api/service/main/file/local/dto/local-file-status.enum";
+import FileLoadInfo from "./api/service/main/file/local/dto/file-load-info";
 import UserInfo from "./api/service/main/user/dto/user-info.interface";
 import UserAuth from "./api/service/main/user/dto/user-auth.interface";
 import ModulePreloaderApi from "./api/service/main/preloader/module-preloader-api";
@@ -166,7 +165,6 @@ export type {
   ThemeProviderProps,
   LocalFileServiceApi,
   InternationalizationServiceApi,
-  LocalFileServiceState,
   UserAuth,
   UserInfo,
   UserServiceApi,
