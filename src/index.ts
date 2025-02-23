@@ -132,6 +132,7 @@ import { RvFileType } from "./api/service/sync/interface/file/rv-file-type.enum"
 import { RvAttachType } from "./api/service/sync/interface/file/rv-attach-type.enum";
 import { LocalFileServiceEventType } from "./api/service/main/file/local/dto/local-file-service-event-type.enum";
 import { LocalFileServiceSubscriber } from "./api/service/main/file/local/dto/local-file-service-subscriber.type";
+import RvFileInfo from "./api/service/sync/interface/file/info/rv-file-info.interface";
 
 export type {
   OfpApi,
