@@ -31,7 +31,7 @@ import {RsdNumberListProps} from "./components/rsd/rsd-number-list-props";
 import {RsdSwitchProps} from "./components/rsd/rsd-switch-props";
 import {RsdSelectableButtonProps} from "./components/rsd/rsd-selectable-button-props";
 import {AntSelectProps} from "./components/ant/ant-select-props";
-import {FlexGrowProps} from "./components/normal/flex-grow-props";
+import {FlexGrowProps} from "./components/dev/flex-grow-props";
 import ThemeProviderProps from "./components/ant/theme-provider-props";
 import ModulePreloaderApi from "./service/main/preloader/module-preloader-api";
 import SyncServiceApi from "./service/sync/sync-service-api";
@@ -46,6 +46,7 @@ import MessageServiceApi from "@/api/service/main/message/message-service-api";
 import OssUploadServiceApi from "@/api/service/main/file/oss/oss-upload-service-api";
 import RvFileServiceApi from "@/api/service/sync/file/rv-file-service-api";
 import ResourceServiceApi from "@/api/service/main/file/resource/resource-service-api";
+import MainPortalProps from "@/api/components/dev/main-portal-props";
 
 export interface OfpApi {
 
@@ -100,7 +101,6 @@ export interface OfpApi {
       Anchor: FunctionComponent<AnchorProps>
       DrawerLoading: FunctionComponent<SpanProps>
       FileProgressBar: FunctionComponent<FileProgressBarProps>
-      FlexGrow: FunctionComponent<FlexGrowProps>
       ProgressBar: FunctionComponent<ProgressBarProps>
       UploadButtonAndList: FunctionComponent<UploadButtonAndListProps>
       ScrollBar: FunctionComponent<ScrollBarProps>
@@ -123,6 +123,11 @@ export interface OfpApi {
       RsdSwitch: FunctionComponent<RsdSwitchProps>
       RsdTextarea: FunctionComponent<RsdInputProps>
       RsdTitle: FunctionComponent<RsdTitleProps>
+    }
+
+    dev: {
+      FlexGrow: FunctionComponent<FlexGrowProps>
+      MainPortal: FunctionComponent<MainPortalProps>
     }
   }
 

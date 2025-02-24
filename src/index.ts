@@ -65,7 +65,7 @@ import ModulePreloaderApi from "./api/service/main/preloader/module-preloader-ap
 import SyncServiceApi from "./api/service/sync/sync-service-api";
 import RvBase from "./api/service/sync/interface/rv-base.interface";
 import RvGlobal from "./api/service/sync/interface/global/rv-global.interface";
-import { FlexGrowProps } from "./api/components/normal/flex-grow-props";
+import { FlexGrowProps } from "./api/components/dev/flex-grow-props";
 import RvGlobalServiceApi from "./api/service/sync/global/rv-global-service-api";
 import HistoryManagerApi from "./api/service/sync/history-manager-api";
 import BuiltInPluginConfig from "./api/service/main/plugin/dto/built-in-plugin-config.interface";
@@ -134,6 +134,8 @@ import { LocalFileServiceEventType } from "./api/service/main/file/local/dto/loc
 import { LocalFileServiceSubscriber } from "./api/service/main/file/local/dto/local-file-service-subscriber.type";
 import RvFileInfo from "./api/service/sync/interface/file/info/rv-file-info.interface";
 import ResourceServiceApi from "./api/service/main/file/resource/resource-service-api";
+import FileData from "./api/service/main/file/resource/dto/file-data.interface";
+import MainPortalProps from "./api/components/dev/main-portal-props";
 
 export type {
   OfpApi,
@@ -235,6 +237,8 @@ export type {
   OssUploadInstance,
   LocalFileServiceSubscriber,
   ResourceServiceApi,
+  FileData,
+  MainPortalProps,
 }
 
 export {
