@@ -18,8 +18,14 @@ export default class FileUtils {
     return `${numberText} ${units[i]}`
   }
 
-  static ensureFileArray(files: File | File[] | FileList | null): File[] {
-    if (files === null) return [];
+  static splitName(name: string): [string, string] {
+    const index = name.lastIndexOf('.')
+    if (index === -1) return [name, '']
+    return [name.substring(0, index), name.substring(index + 1)]
+  }
+
+  static ensureFileArray(files: File | File[] | FileList | null | undefined): File[] {
+    if (!files) return [];
     if (files instanceof File) return [files]
     if (files instanceof FileList) return Array.from(files)
     return files
