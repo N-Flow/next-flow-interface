@@ -45,6 +45,7 @@ import {AntEmptyProps} from "@/api/components/ant/ant-empty-props";
 import MessageServiceApi from "@/api/service/main/message/message-service-api";
 import OssUploadServiceApi from "@/api/service/main/file/oss/oss-upload-service-api";
 import RvFileServiceApi from "@/api/service/sync/file/rv-file-service-api";
+import ResourceServiceApi from "@/api/service/main/file/resource/resource-service-api";
 
 export interface OfpApi {
 
@@ -61,6 +62,7 @@ export interface OfpApi {
       messageService: MessageServiceApi
       localFileService: LocalFileServiceApi
       ossUploadService: OssUploadServiceApi
+      ResourceService: ResourceServiceApi
     }
 
     sync: {
