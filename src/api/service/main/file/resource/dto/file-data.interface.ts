@@ -9,5 +9,5 @@ export default interface FileData {
   description: string
   size: string
   progress: number
-  preview?: File
+  preview?: string
 }

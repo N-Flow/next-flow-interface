@@ -47,6 +47,7 @@ import OssUploadServiceApi from "@/api/service/main/file/oss/oss-upload-service-
 import RvFileServiceApi from "@/api/service/sync/file/rv-file-service-api";
 import ResourceServiceApi from "@/api/service/main/file/resource/resource-service-api";
 import MainPortalProps from "@/api/components/dev/main-portal-props";
+import {MaterialSymbolProps} from "@/api/components/normal/material-symbol-props";
 
 export interface OfpApi {
 
@@ -105,6 +106,7 @@ export interface OfpApi {
       UploadButtonAndList: FunctionComponent<UploadButtonAndListProps>
       ScrollBar: FunctionComponent<ScrollBarProps>
       Dialog: FunctionComponent<DialogProps>
+      MaterialSymbol: FunctionComponent<MaterialSymbolProps>
     }
 
     rsd: {

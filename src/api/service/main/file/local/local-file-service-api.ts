@@ -15,7 +15,7 @@ export default interface LocalFileServiceApi {
   remove(fid: string): void
 
 
-  load(fid: string, url?: string): void
+  load(fid: string, url: string): void
 
   pause(fid: string): void  // 暂不支持
 

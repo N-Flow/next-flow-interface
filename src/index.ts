@@ -136,6 +136,7 @@ import RvFileInfo from "./api/service/sync/interface/file/info/rv-file-info.inte
 import ResourceServiceApi from "./api/service/main/file/resource/resource-service-api";
 import FileData from "./api/service/main/file/resource/dto/file-data.interface";
 import MainPortalProps from "./api/components/dev/main-portal-props";
+import { MaterialSymbolProps } from "./api/components/normal/material-symbol-props";
 
 export type {
   OfpApi,
@@ -239,6 +240,7 @@ export type {
   ResourceServiceApi,
   FileData,
   MainPortalProps,
+  MaterialSymbolProps,
 }
 
 export {
