@@ -10,6 +10,8 @@ export default interface StatusServiceApi {
 
   unsubscribeAuthenticated(subscriber: StatusChangeSubscriber): void
 
+  afterAuthenticated(subscriber: StatusChangeSubscriber): void
+
   waitAuthenticated(): Promise<boolean>
 
 
