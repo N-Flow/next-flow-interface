@@ -1,2 +1,2 @@
 
-export type StatusChangeSubscriber = (key: string, value: boolean) => void
+export type StatusChangeSubscriber = (value: boolean) => void
