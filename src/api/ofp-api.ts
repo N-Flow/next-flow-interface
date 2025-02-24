@@ -62,7 +62,7 @@ export interface OfpApi {
       messageService: MessageServiceApi
       localFileService: LocalFileServiceApi
       ossUploadService: OssUploadServiceApi
-      ResourceService: ResourceServiceApi
+      resourceService: ResourceServiceApi
     }
 
     sync: {

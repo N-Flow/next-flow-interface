@@ -26,6 +26,13 @@ export default class RvUtils {
     return path
   }
 
+  static ensureYPathString(path: string | YPath): string {
+    if (typeof path !== 'string') {
+      path = RvUtils.makeYPathString(path)
+    }
+    return path
+  }
+
   static getByYPath<T = any>(source: StoredRhineVar<any> | any, path: string | YPath): T {
     path = RvUtils.ensureYPath(path)
     let obj: any = source
