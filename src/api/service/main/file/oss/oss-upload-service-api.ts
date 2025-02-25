@@ -6,7 +6,7 @@ export default interface OssUploadServiceApi {
   instances: Map<string, OssUploadInstance>
 
 
-  upload(fid: string, file: File): OssUploadInstance
+  upload(file: File, fid?: string): OssUploadInstance
 
   pause(fid: string): boolean
 

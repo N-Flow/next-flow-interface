@@ -1,5 +1,4 @@
-import RvFileInfo from "@/api/service/sync/interface/file/info/rv-file-info.interface";
-import FileData from "@/api/service/main/file/resource/dto/file-data.interface";
+import FileData from "@/api/service/main/resource/dto/file-data.interface";
 
 export default interface ResourceServiceApi {
 
@@ -18,10 +17,12 @@ export default interface ResourceServiceApi {
   }
 
 
-  upload(fileList: FileList | File[] | File | null | undefined): void
+  upload(file: File, fid?: string): void
+
+  uploadMulti(fileList: FileList | File[] | File | null | undefined, fidList?: string[]): void
 
 
-  generateFileInfoAndPreview(file: File): Promise<[RvFileInfo, File | null]>
+  generateDescribeAndPreview(file: File): Promise<[string, File | null]>
 
   generatePreviewFile(img: HTMLImageElement | HTMLVideoElement, name: string): Promise<File>
 

@@ -1,21 +1,21 @@
 import {RecursiveMap, RecursiveObject} from "rhine-var";
-import RvFile from "@/api/service/sync/interface/file/rv-file.interface";
-import {RvFileServiceSubscriber} from "@/api/service/sync/file/dto/rv-file-service-subscriber.type";
+import RvResource from "@/api/service/sync/interface/resource/rv-resource.interface";
+import {RvResourceServiceSubscriber} from "@/api/service/sync/resource/dto/rv-resource-service-subscriber.type";
 
 
-export default interface RvFileServiceApi {
+export default interface RvResourceServiceApi {
 
   /**
    * 存储所有文件的 RhineVar 对象
    */
-  files: RecursiveMap<RvFile>
+  resources: RecursiveMap<RvResource>
 
   /**
    * 获取文件 不存在则返回 undefined
    *
    * @param fid  文件的 fid
    */
-  get(fid: string): RecursiveObject<RvFile> | undefined
+  get(fid: string): RecursiveObject<RvResource> | undefined
 
   /**
    * 是否存在某个文件
@@ -30,7 +30,7 @@ export default interface RvFileServiceApi {
    *
    * @param file  文件内容
    */
-  add(file: RvFile): void
+  add(file: RvResource): void
 
   /**
    * 移除一个文件
@@ -47,14 +47,14 @@ export default interface RvFileServiceApi {
    *
    * @returns 取消订阅函数
    */
-  subscribe(subscriber: RvFileServiceSubscriber): () => void
+  subscribe(subscriber: RvResourceServiceSubscriber): () => void
 
   /**
    * 移除订阅
    *
    * @param subscriber  订阅者
    */
-  unsubscribe(subscriber: RvFileServiceSubscriber): void
+  unsubscribe(subscriber: RvResourceServiceSubscriber): void
 
 
   /**
@@ -65,7 +65,7 @@ export default interface RvFileServiceApi {
    *
    * @returns 取消订阅函数
    */
-  subscribeSingle(fid: string, subscriber: RvFileServiceSubscriber): () => void
+  subscribeSingle(fid: string, subscriber: RvResourceServiceSubscriber): () => void
 
   /**
    * 移除订阅
@@ -73,11 +73,11 @@ export default interface RvFileServiceApi {
    * @param fid  文件的 fid
    * @param subscriber  订阅者
    */
-  unsubscribeSingle(fid: string, subscriber: RvFileServiceSubscriber): void
+  unsubscribeSingle(fid: string, subscriber: RvResourceServiceSubscriber): void
 
   /**
    * 生成 Id
    */
   generateId(): string
-
+  
 }

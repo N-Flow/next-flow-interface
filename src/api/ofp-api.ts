@@ -45,10 +45,11 @@ import {AntEmptyProps} from "@/api/components/ant/ant-empty-props";
 import MessageServiceApi from "@/api/service/main/message/message-service-api";
 import OssUploadServiceApi from "@/api/service/main/file/oss/oss-upload-service-api";
 import RvFileServiceApi from "@/api/service/sync/file/rv-file-service-api";
-import ResourceServiceApi from "@/api/service/main/file/resource/resource-service-api";
+import ResourceServiceApi from "@/api/service/main/resource/resource-service-api";
 import MainPortalProps from "@/api/components/dev/main-portal-props";
 import {MaterialSymbolProps} from "@/api/components/normal/material-symbol-props";
 import FirstLoadServiceApi from "@/api/service/main/file/first/first-load-service-api";
+import RvResourceServiceApi from "./service/sync/resource/rv-resource-service-api";
 
 export interface OfpApi {
 
@@ -75,6 +76,7 @@ export interface OfpApi {
       rvGlobalService: RvGlobalServiceApi
       rvStepService: RvStepServiceApi
       rvFileService: RvFileServiceApi
+      rvResourceService: RvResourceServiceApi
     }
 
     target: {

@@ -115,8 +115,7 @@ import { PluginServiceSubscriber } from "./api/service/main/plugin/dto/plugin-se
 import PluginContainerServiceApi from "./api/service/main/plugin/plugin-container-service-api";
 import DialogPlugin from "./plugin/dialog-plugin";
 import RvFileServiceApi from "./api/service/sync/file/rv-file-service-api";
-import {RvFileServiceEventType } from "./api/service/sync/file/dto/rv-file-service-event-type.enum";
-import { RvFileServiceSubscriber } from "./api/service/sync/file/dto/rv-file-service-subscriber.type";
+import {RvFileServiceEventType, RvFileServiceSubscriber } from "./api/service/sync/file/dto/rv-file-service-subscriber.type";
 import { LocalFile } from "./api/service/main/file/local/dto/local-file.type";
 import BaseLocalFile from "./api/service/main/file/local/dto/base-local-file.interface";
 import BlobLocalFile from "./api/service/main/file/local/dto/blob-local-file.interface";
@@ -128,16 +127,19 @@ import { OssUploadInstanceStatus } from "./api/service/main/file/oss/dto/oss-upl
 import OssUploadInstance from "./api/service/main/file/oss/dto/oss-upload-instance.interface";
 import RvFile from "./api/service/sync/interface/file/rv-file.interface";
 import { RvFileType } from "./api/service/sync/interface/file/rv-file-type.enum";
-import { RvAttachType } from "./api/service/sync/interface/file/rv-attach-type.enum";
+import { RvAttachType } from "./api/service/sync/interface/resource/rv-attach-type.enum";
 import {LocalFileServiceEventType, LocalFileServiceSubscriber } from "./api/service/main/file/local/dto/local-file-service-subscriber.type";
-import RvFileInfo from "./api/service/sync/interface/file/info/rv-file-info.interface";
-import ResourceServiceApi from "./api/service/main/file/resource/resource-service-api";
-import FileData from "./api/service/main/file/resource/dto/file-data.interface";
+import ResourceServiceApi from "./api/service/main/resource/resource-service-api";
+import FileData from "@/api/service/main/resource/dto/file-data.interface";
 import MainPortalProps from "./api/components/dev/main-portal-props";
 import { MaterialSymbolProps } from "./api/components/normal/material-symbol-props";
 import {FirstLoadServiceEventType, FirstLoadServiceSubscriber } from "./api/service/main/file/first/dto/first-load-service-subscriber.type";
 import { FirstLoadServiceStatus } from "./api/service/main/file/first/dto/first-load-service-status.enum";
 import FirstLoadServiceApi from "./api/service/main/file/first/first-load-service-api";
+import RvResource from "./api/service/sync/interface/resource/rv-resource.interface";
+import { RvResourceType } from "./api/service/sync/interface/resource/rv-resource-type.enum";
+import { RvResourceServiceEventType, RvResourceServiceSubscriber } from "./api/service/sync/resource/dto/rv-resource-service-subscriber.type";
+import RvResourceServiceApi from "./api/service/sync/resource/rv-resource-service-api";
 
 export type {
   OfpApi,
@@ -202,7 +204,7 @@ export type {
   RvGlobal,
   RvStep,
   RvFile,
-  RvFileInfo,
+  RvResource,
   RvConfiguration,
   RvAudio,
   RvEnvironment,
@@ -244,6 +246,8 @@ export type {
   MaterialSymbolProps,
   FirstLoadServiceSubscriber,
   FirstLoadServiceApi,
+  RvResourceServiceSubscriber,
+  RvResourceServiceApi,
 }
 
 export {
@@ -288,4 +292,6 @@ export {
   LocalFileServiceEventType,
   FirstLoadServiceStatus,
   FirstLoadServiceEventType,
+  RvResourceServiceEventType,
+  RvResourceType,
 }

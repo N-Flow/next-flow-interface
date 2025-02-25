@@ -6,6 +6,7 @@ import RvFile from "@/api/service/sync/interface/file/rv-file.interface";
 import RvMeeting from "@/api/service/sync/interface/meeting/rv-meeting.interface";
 import RvModel from "@/api/service/sync/interface/model/rv-model.interface";
 import RvVersion from "@/api/service/sync/interface/version/rv-version.interface";
+import RvResource from "@/api/service/sync/interface/resource/rv-resource.interface";
 
 export default interface RvBase {
 
@@ -14,6 +15,8 @@ export default interface RvBase {
   steps: RhineVarMap<RvStep>
 
   files: RhineVarMap<RvFile>
+  resources: RhineVarMap<RvResource>
+
   models: RvModel
   materials: RvMaterial
 
