@@ -18,6 +18,8 @@ export default interface StatusServiceApi {
   subscribeDataSynchronized(subscriber: StatusChangeSubscriber): () => void
 
   unsubscribeDataSynchronized(subscriber: StatusChangeSubscriber): void
+
+  afterDataSynchronized(subscriber: StatusChangeSubscriber): void
   
   waitDataSynchronized(): Promise<boolean>
 
@@ -25,6 +27,8 @@ export default interface StatusServiceApi {
   subscribeSyncInitialized(subscriber: StatusChangeSubscriber): () => void
 
   unsubscribeSyncInitialized(subscriber: StatusChangeSubscriber): void
+
+  afterSyncInitialized(subscriber: StatusChangeSubscriber): void
   
   waitSyncInitialized(): Promise<boolean>
 
@@ -32,6 +36,8 @@ export default interface StatusServiceApi {
   subscribeRsInitialized(subscriber: StatusChangeSubscriber): () => void
 
   unsubscribeRsInitialized(subscriber: StatusChangeSubscriber): void
+
+  afterRsInitialized(subscriber: StatusChangeSubscriber): void
   
   waitRsInitialized(): Promise<boolean>
 
@@ -39,6 +45,8 @@ export default interface StatusServiceApi {
   subscribeAllInitialized(subscriber: StatusChangeSubscriber): () => void
 
   unsubscribeAllInitialized(subscriber: StatusChangeSubscriber): void
+
+  afterAllInitialized(subscriber: StatusChangeSubscriber): void
   
   waitAllInitialized(): Promise<boolean>
 
@@ -46,6 +54,8 @@ export default interface StatusServiceApi {
   subscribeLoaded(subscriber: StatusChangeSubscriber): () => void
 
   unsubscribeLoaded(subscriber: StatusChangeSubscriber): void
+
+  afterLoaded(subscriber: StatusChangeSubscriber): void
   
   waitLoaded(): Promise<boolean>
 
@@ -53,6 +63,8 @@ export default interface StatusServiceApi {
   subscribeRendered(subscriber: StatusChangeSubscriber): () => void
 
   unsubscribeRendered(subscriber: StatusChangeSubscriber): void
+
+  afterRendered(subscriber: StatusChangeSubscriber): void
   
   waitRendered(): Promise<boolean>
 
@@ -60,6 +72,8 @@ export default interface StatusServiceApi {
   subscribeShown(subscriber: StatusChangeSubscriber): () => void
 
   unsubscribeShown(subscriber: StatusChangeSubscriber): void
+
+  afterShown(subscriber: StatusChangeSubscriber): void
   
   waitShown(): Promise<boolean>
   
