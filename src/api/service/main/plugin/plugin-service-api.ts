@@ -10,7 +10,7 @@ export default interface PluginServiceApi {
   /**
    * 是否为精简输出模式 不会针对每一个插件输出详细信息 （默认为 true）
    */
-  CONCISE_LOG_MODE: boolean
+  DETAILED_LOG_MODE: boolean
 
   /**
    * 所有已添加的插件状态
