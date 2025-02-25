@@ -123,20 +123,21 @@ import BlobLocalFile from "./api/service/main/file/local/dto/blob-local-file.int
 import ObjectLocalFile from "./api/service/main/file/local/dto/object-local-file.interface";
 import { LocalFileType } from "./api/service/main/file/local/dto/local-file-type.enum";
 import OssUploadServiceApi from "./api/service/main/file/oss/oss-upload-service-api";
-import { OssUploadServiceSubscriber } from "./api/service/main/file/oss/dto/oss-upload-service-subscriber.type";
-import { OssUploadServiceEventType } from "./api/service/main/file/oss/dto/oss-upload-service-event-type.enum";
+import {OssUploadServiceEventType, OssUploadServiceSubscriber } from "./api/service/main/file/oss/dto/oss-upload-service-subscriber.type";
 import { OssUploadInstanceStatus } from "./api/service/main/file/oss/dto/oss-upload-instance-status.enum";
 import OssUploadInstance from "./api/service/main/file/oss/dto/oss-upload-instance.interface";
 import RvFile from "./api/service/sync/interface/file/rv-file.interface";
 import { RvFileType } from "./api/service/sync/interface/file/rv-file-type.enum";
 import { RvAttachType } from "./api/service/sync/interface/file/rv-attach-type.enum";
-import { LocalFileServiceEventType } from "./api/service/main/file/local/dto/local-file-service-event-type.enum";
-import { LocalFileServiceSubscriber } from "./api/service/main/file/local/dto/local-file-service-subscriber.type";
+import {LocalFileServiceEventType, LocalFileServiceSubscriber } from "./api/service/main/file/local/dto/local-file-service-subscriber.type";
 import RvFileInfo from "./api/service/sync/interface/file/info/rv-file-info.interface";
 import ResourceServiceApi from "./api/service/main/file/resource/resource-service-api";
 import FileData from "./api/service/main/file/resource/dto/file-data.interface";
 import MainPortalProps from "./api/components/dev/main-portal-props";
 import { MaterialSymbolProps } from "./api/components/normal/material-symbol-props";
+import {FirstLoadServiceEventType, FirstLoadServiceSubscriber } from "./api/service/main/file/first/dto/first-load-service-subscriber.type";
+import { FirstLoadServiceStatus } from "./api/service/main/file/first/dto/first-load-service-status.enum";
+import FirstLoadServiceApi from "./api/service/main/file/first/first-load-service-api";
 
 export type {
   OfpApi,
@@ -241,6 +242,8 @@ export type {
   FileData,
   MainPortalProps,
   MaterialSymbolProps,
+  FirstLoadServiceSubscriber,
+  FirstLoadServiceApi,
 }
 
 export {
@@ -283,4 +286,6 @@ export {
   RvAttachType,
   RvFileServiceEventType,
   LocalFileServiceEventType,
+  FirstLoadServiceStatus,
+  FirstLoadServiceEventType,
 }

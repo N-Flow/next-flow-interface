@@ -48,6 +48,7 @@ import RvFileServiceApi from "@/api/service/sync/file/rv-file-service-api";
 import ResourceServiceApi from "@/api/service/main/file/resource/resource-service-api";
 import MainPortalProps from "@/api/components/dev/main-portal-props";
 import {MaterialSymbolProps} from "@/api/components/normal/material-symbol-props";
+import FirstLoadServiceApi from "@/api/service/main/file/first/first-load-service-api";
 
 export interface OfpApi {
 
@@ -65,6 +66,7 @@ export interface OfpApi {
       localFileService: LocalFileServiceApi
       ossUploadService: OssUploadServiceApi
       resourceService: ResourceServiceApi
+      firstLoadService: FirstLoadServiceApi
     }
 
     sync: {
