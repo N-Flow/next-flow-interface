@@ -3,3 +3,5 @@ export function sleep(time: number) {
     setTimeout(resolve, time);
   })
 }
+
+export type SleepFunction = typeof sleep;

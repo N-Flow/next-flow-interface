@@ -50,6 +50,8 @@ import MainPortalProps from "@/api/components/dev/main-portal-props";
 import {MaterialSymbolProps} from "@/api/components/normal/material-symbol-props";
 import FirstLoadServiceApi from "@/api/service/main/file/first/first-load-service-api";
 import RvResourceServiceApi from "./service/sync/resource/rv-resource-service-api";
+import {MaterialSymbolFunction} from "@/utils/material-symbol-utils";
+import {SleepFunction} from "@/utils/sleep-utils";
 
 export interface OfpApi {
 
@@ -143,6 +145,8 @@ export interface OfpApi {
   }
 
   utils: {
+    materialSymbol: MaterialSymbolFunction
+    sleep: SleepFunction
   }
 
   modules: {

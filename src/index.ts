@@ -90,7 +90,7 @@ import MathUtils from "./utils/math-utils";
 import NativeEventUtils from "./utils/native-event-utils";
 import NetworkUtils from "./utils/network-utils";
 import NumberUtils from "./utils/number-utils";
-import {sleep} from "./utils/promise-utils";
+import {sleep} from "./utils/sleep-utils";
 import RvUtils from "./utils/rv-utils";
 import TimeUtils from "./utils/time-utils";
 import UrlUtils from "./utils/url-utils";
@@ -140,6 +140,7 @@ import RvResource from "./api/service/sync/interface/resource/rv-resource.interf
 import { RvResourceType } from "./api/service/sync/interface/resource/rv-resource-type.enum";
 import { RvResourceServiceEventType, RvResourceServiceSubscriber } from "./api/service/sync/resource/dto/rv-resource-service-subscriber.type";
 import RvResourceServiceApi from "./api/service/sync/resource/rv-resource-service-api";
+import { MaterialSymbolOptions, MaterialSymbolFunction } from "./utils/material-symbol-utils";
 
 export type {
   OfpApi,
@@ -248,6 +249,8 @@ export type {
   FirstLoadServiceApi,
   RvResourceServiceSubscriber,
   RvResourceServiceApi,
+  MaterialSymbolOptions,
+  MaterialSymbolFunction,
 }
 
 export {
