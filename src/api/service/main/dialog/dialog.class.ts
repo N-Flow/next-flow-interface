@@ -64,7 +64,7 @@ export default class Dialog {
       options,
       id,
       options.title,
-      options.titleIron,
+      options.titleIcon,
       options.content,
       options.contentView,
       options.icon,

@@ -4,7 +4,7 @@ import {ThemeColor} from "@/api/service/main/space/dto/theme/theme-color";
 export default interface DialogCreateOptions {
   id?: string,  // 对话框的唯一id
   title?: string,  // 标题
-  titleIron?: FunctionComponent,  // 标题左侧图标
+  titleIcon?: FunctionComponent,  // 标题左侧图标
   content?: string,  // 内容
   contentView?: FunctionComponent,  // 中间视图
   icon?: FunctionComponent,  // 图标

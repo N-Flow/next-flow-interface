@@ -30,6 +30,7 @@ export default interface DialogServiceApi {
    */
   confirm(options: {
     title: string,
+    titleIcon: FunctionComponent,
     content?: string,
     contentView?: FunctionComponent,
     icon?: FunctionComponent,
@@ -55,6 +56,7 @@ export default interface DialogServiceApi {
    */
   input(options: {
     title: string,
+    titleIcon: FunctionComponent,
     content?: string,
     contentView?: FunctionComponent,
     icon?: FunctionComponent,
