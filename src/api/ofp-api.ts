@@ -50,6 +50,7 @@ import MainPortalProps from "@/api/components/dev/main-portal-props";
 import {MaterialSymbolProps} from "@/api/components/normal/material-symbol-props";
 import FirstLoadServiceApi from "@/api/service/main/file/first/first-load-service-api";
 import RvResourceServiceApi from "./service/sync/resource/rv-resource-service-api";
+import DialogServiceApi from "@/api/service/main/dialog/dialog-service-api";
 
 export interface OfpApi {
 
@@ -68,6 +69,7 @@ export interface OfpApi {
       ossUploadService: OssUploadServiceApi
       resourceService: ResourceServiceApi
       firstLoadService: FirstLoadServiceApi
+      dialogService: DialogServiceApi
     }
 
     sync: {
@@ -143,6 +145,7 @@ export interface OfpApi {
   }
 
   utils: {
+    materialSymbol: any
   }
 
   modules: {

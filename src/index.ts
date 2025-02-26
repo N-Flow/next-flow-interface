@@ -140,6 +140,7 @@ import RvResource from "./api/service/sync/interface/resource/rv-resource.interf
 import { RvResourceType } from "./api/service/sync/interface/resource/rv-resource-type.enum";
 import { RvResourceServiceEventType, RvResourceServiceSubscriber } from "./api/service/sync/resource/dto/rv-resource-service-subscriber.type";
 import RvResourceServiceApi from "./api/service/sync/resource/rv-resource-service-api";
+import { MaterialSymbolOptions } from "./utils/dto/material-symbol-options";
 
 export type {
   OfpApi,
@@ -248,6 +249,7 @@ export type {
   FirstLoadServiceApi,
   RvResourceServiceSubscriber,
   RvResourceServiceApi,
+  MaterialSymbolOptions,
 }
 
 export {
