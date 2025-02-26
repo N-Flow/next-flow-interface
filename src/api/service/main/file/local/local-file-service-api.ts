@@ -8,14 +8,14 @@ export default interface LocalFileServiceApi {
 
   get(fid: string): LocalFile | undefined
 
-  add(localFile: LocalFile): void
-
-  addByFile(fid: string, file: File): LocalFile
+  has(fid: string): boolean
 
   remove(fid: string): void
 
 
-  load(fid: string, url: string): void
+  load(fid: string, url: string): Promise<LocalFile>
+
+  loadByFile(fid: string, file: File): LocalFile
 
   pause(fid: string): void  // 暂不支持
 
