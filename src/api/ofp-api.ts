@@ -52,6 +52,7 @@ import FirstLoadServiceApi from "@/api/service/main/file/first/first-load-servic
 import RvResourceServiceApi from "./service/sync/resource/rv-resource-service-api";
 import {MaterialSymbolFunction} from "@/utils/material-symbol-utils";
 import {SleepFunction} from "@/utils/sleep-utils";
+import DialogServiceApi from "@/api/service/main/dialog/dialog-service-api";
 
 export interface OfpApi {
 
@@ -70,6 +71,7 @@ export interface OfpApi {
       ossUploadService: OssUploadServiceApi
       resourceService: ResourceServiceApi
       firstLoadService: FirstLoadServiceApi
+      dialogService: DialogServiceApi
     }
 
     sync: {
