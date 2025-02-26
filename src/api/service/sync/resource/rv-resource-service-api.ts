@@ -79,5 +79,14 @@ export default interface RvResourceServiceApi {
    * 生成 Id
    */
   generateId(): string
+
+  /**
+   * 查找相同文件
+   *
+   * @param file  文件
+   *
+   * @returns 返回相同文件的 fid 如果没有则返回 null
+   */
+  findSame(file: File): Promise<string | null>
   
 }

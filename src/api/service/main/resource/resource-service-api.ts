@@ -19,7 +19,7 @@ export default interface ResourceServiceApi {
 
   upload(file: File, fid?: string): void
 
-  uploadMulti(fileList: FileList | File[] | File | null | undefined, fidList?: string[]): void
+  uploadMulti(fileList: FileList | File[] | File | null | undefined, check?: boolean, fidList?: string[]): void
 
 
   generateDescribeAndPreview(file: File): Promise<[string, File | null]>

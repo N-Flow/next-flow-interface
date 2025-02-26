@@ -6,6 +6,7 @@ export default interface RvFile {
 
   name: string
   size: number
+  hash?: string
 
   url: string  // For url or oss (https://xxx, oss://{bucket}/{path})
 

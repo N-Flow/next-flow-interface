@@ -69,5 +69,28 @@ export default class FileUtils {
     return CryptoUtils.computeSHA256(finalBuffer)
   }
 
+  /**
+   * 判断两个文件是否相同
+   *
+   * @param file  目标文件
+   * @param name  另一个文件的名称
+   * @param size  另一个文件的大小
+   * @param hash  另一个文件的哈希 (可选) (通过上方 chunkHash 函数计算得出)
+   *
+   * @returns  是否相同
+   */
+  static async isSameFile(file: File, name: string, size: number, hash?: string): Promise<boolean> {
+    if (name === file.name && size === file.size) {
+      if (hash) {
+        if (hash === await FileUtils.chunkHash(file)) {
+          return true
+        }
+      } else {
+        return true
+      }
+    }
+    return false
+  }
+
 }
 
