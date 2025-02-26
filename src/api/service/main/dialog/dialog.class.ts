@@ -10,6 +10,7 @@ export default class Dialog {
 
     public id: string,
     public title: string = '',
+    public titleIcon: FunctionComponent | undefined = undefined,
     public content: string = '',
     public contentView: FunctionComponent | undefined = undefined,
     public icon: FunctionComponent | undefined = undefined,
@@ -49,6 +50,7 @@ export default class Dialog {
     public closeOnCancel: boolean = true,
     public closeOnOutsideClick: boolean = false,
     public closeOnCloseButtonClick: boolean = true,
+    public alignButton: boolean = true,
 
     public controller: DialogController | null = null,
     public inputValue: string = defaultValue,
@@ -62,6 +64,7 @@ export default class Dialog {
       options,
       id,
       options.title,
+      options.titleIron,
       options.content,
       options.contentView,
       options.icon,
@@ -93,6 +96,7 @@ export default class Dialog {
       options.closeOnCancel,
       options.closeOnOutsideClick,
       options.closeOnCloseButtonClick,
+      options.alignButton,
     )
   }
 
