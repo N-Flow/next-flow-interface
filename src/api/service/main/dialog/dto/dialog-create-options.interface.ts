@@ -4,6 +4,7 @@ import {ThemeColor} from "@/api/service/main/space/dto/theme/theme-color";
 export default interface DialogCreateOptions {
   id?: string,  // 对话框的唯一id
   title?: string,  // 标题
+  titleIron?: FunctionComponent,  // 标题左侧图标
   content?: string,  // 内容
   contentView?: FunctionComponent,  // 中间视图
   icon?: FunctionComponent,  // 图标
@@ -35,4 +36,5 @@ export default interface DialogCreateOptions {
   closeOnCancel?: boolean,  // 点击取消后关闭 默认为 true
   closeOnOutsideClick?: boolean,  // 点击外部后关闭 默认为 false
   closeOnCloseButtonClick?: boolean,  // 点击右上角关闭按钮后关闭 默认为 true
+  alignButton?: boolean,  // 以描述文本为基准对齐按钮 默认为 true
 }
