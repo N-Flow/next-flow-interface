@@ -1,4 +1,7 @@
+import CryptoUtils from "./crypto-utils";
+
 export default class FileUtils {
+
   static to3n(bn: number) {
     const integerPartLength = Math.floor(bn).toString().length
     const decimalPlaces = integerPartLength <= 1 ? 2 : 1
@@ -30,5 +33,41 @@ export default class FileUtils {
     if (files instanceof FileList) return Array.from(files)
     return files
   }
+
+  static async chunkHash(file: File): Promise<string> {
+    const CHUNKS_POSITIONS = [0.25, 0.5, 0.75]  // 25%, 50%, 75%
+    const CHUNK_SIZE = 64 * 1024 // 64KB
+    const SIZE_THRESHOLD = 1024 * 1024 // 1MB
+
+    // 处理小文件（<=1MB）
+    if (file.size <= SIZE_THRESHOLD) {
+      const buffer = await file.arrayBuffer()
+      return CryptoUtils.computeSHA256(buffer)
+    }
+
+    // 处理大文件（>1MB）
+
+    // 选择三个位置的片段
+    const positions = CHUNKS_POSITIONS.map(p => Math.floor(file.size * p))
+
+    // 并行读取并计算各片段的哈希
+    const partialHashes = await Promise.all(
+      positions.map(async (position) => {
+        const start = position
+        const end = Math.min(start + CHUNK_SIZE, file.size)
+        const chunk = file.slice(start, end)
+        const buffer = await chunk.arrayBuffer()
+        return CryptoUtils.computeSHA256(buffer)
+      })
+    );
+
+    // 合并哈希并生成最终哈希
+    const encoder = new TextEncoder()
+    const combinedHashString = partialHashes.join('')
+    const finalBuffer = encoder.encode(combinedHashString)
+
+    return CryptoUtils.computeSHA256(finalBuffer)
+  }
+
 }
 

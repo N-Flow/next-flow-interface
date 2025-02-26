@@ -141,6 +141,7 @@ import { RvResourceType } from "./api/service/sync/interface/resource/rv-resourc
 import { RvResourceServiceEventType, RvResourceServiceSubscriber } from "./api/service/sync/resource/dto/rv-resource-service-subscriber.type";
 import RvResourceServiceApi from "./api/service/sync/resource/rv-resource-service-api";
 import { MaterialSymbolOptions, MaterialSymbolFunction } from "./utils/material-symbol-utils";
+import CryptoUtils from "./utils/crypto-utils";
 
 export type {
   OfpApi,
@@ -297,4 +298,5 @@ export {
   FirstLoadServiceEventType,
   RvResourceServiceEventType,
   RvResourceType,
+  CryptoUtils,
 }
