@@ -7,6 +7,11 @@ export default interface HistoryManagerApi {
 
   redo(): void
 
+  canUndo(): boolean
+
+  canRedo(): boolean
+
+
   check(operate: string): void
 
   stop(): void
