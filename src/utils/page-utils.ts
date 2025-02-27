@@ -1,4 +1,4 @@
-import { PageType } from "../api/service/main/space/dto/page/page-type"
+import { PageType } from "../api/service/main/space/dto/page/page-type.enum"
 
 export default class PageUtils {
 

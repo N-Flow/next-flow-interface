@@ -1,5 +1,5 @@
 import {FunctionComponent} from "react";
-import {ThemeColor} from "@/api/service/main/space/dto/theme/theme-color";
+import {ThemeColor} from "@/api/service/main/theme/dto/theme-color.enum";
 
 export default interface DialogCreateOptions {
   id?: string,  // 对话框的唯一id
