@@ -144,6 +144,11 @@ import { MaterialSymbolOptions, MaterialSymbolFunction } from "./utils/material-
 import CryptoUtils from "./utils/crypto-utils";
 import {HistoryServiceEventType, HistoryServiceSubscriber } from "./api/service/sync/dto/history-service-subscriber.type";
 import { HistoryServiceStateSubscriber } from "./api/service/sync/dto/history-service-state-subscriber.type";
+import ContextMenuServiceApi from "./api/service/main/context-menu/context-menu-service-api";
+import ContextMenu from "./api/service/main/context-menu/context-menu.class";
+import { ContextMenuCreateOptions } from "./api/service/main/context-menu/dto/context-menu-create-options.interface";
+import { ContextMenuController } from "./api/service/main/context-menu/dto/context-menu-controller.interface";
+
 
 export type {
   OfpApi,
@@ -256,6 +261,9 @@ export type {
   MaterialSymbolFunction,
   HistoryServiceSubscriber,
   HistoryServiceStateSubscriber,
+  ContextMenuServiceApi,
+  ContextMenuCreateOptions,
+  ContextMenuController,
 }
 
 export {
@@ -304,4 +312,5 @@ export {
   RvResourceType,
   CryptoUtils,
   HistoryServiceEventType,
+  ContextMenu,
 }
