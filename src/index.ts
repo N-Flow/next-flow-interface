@@ -164,6 +164,7 @@ import { MenuLineCreateOptions } from "./api/service/main/context-menu/dto/menu-
 import { MenuLineController } from "./api/service/main/context-menu/dto/menu-line-controller.interface";
 import { ContextMenuProps } from "./api/components/normal/context-menu-props";
 import PageUtils from "./utils/page-utils";
+import { MenuLineType } from "./api/service/main/context-menu/dto/menu-line-type.enum";
 
 
 export type {
@@ -343,4 +344,5 @@ export {
   ContextMenu,
   MenuLine,
   PageUtils,
+  MenuLineType,
 }

@@ -22,7 +22,7 @@ export default class MenuLine {
     public onMouseOut: (() => void) = () => {},
 
     public checked: boolean = false,
-    public onChange: ((checked: boolean) => void) = () => {},
+    public onChange: ((value: boolean) => void) = () => {},
 
     public subMenu: MenuLineCreateOptions[] = [], // 子菜单项
 
