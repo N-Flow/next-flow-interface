@@ -142,6 +142,10 @@ import { RvResourceServiceEventType, RvResourceServiceSubscriber } from "./api/s
 import RvResourceServiceApi from "./api/service/sync/resource/rv-resource-service-api";
 import { MaterialSymbolOptions, MaterialSymbolFunction } from "./utils/material-symbol-utils";
 import CryptoUtils from "./utils/crypto-utils";
+import ContextMenuServiceApi from "./api/service/main/context-menu/context-menu-service-api";
+import ContextMenu from "./api/service/main/context-menu/context-menu.class";
+import { ContextMenuCreateOptions } from "./api/service/main/context-menu/dto/context-menu-create-options.interface";
+import { ContextMenuController } from "./api/service/main/context-menu/dto/context-menu-controller.interface";
 
 export type {
   OfpApi,
@@ -252,6 +256,9 @@ export type {
   RvResourceServiceApi,
   MaterialSymbolOptions,
   MaterialSymbolFunction,
+  ContextMenuServiceApi,
+  ContextMenuCreateOptions,
+  ContextMenuController,
 }
 
 export {
@@ -299,4 +306,5 @@ export {
   RvResourceServiceEventType,
   RvResourceType,
   CryptoUtils,
+  ContextMenu,
 }
