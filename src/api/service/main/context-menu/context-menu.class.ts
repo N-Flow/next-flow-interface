@@ -1,6 +1,6 @@
 import {ContextMenuCreateOptions} from "@/api/service/main/context-menu/dto/context-menu-create-options.interface";
-import {MenuLine} from "@/api/service/main/context-menu/dto/menu-line.interface";
 import {ContextMenuController} from "@/api/service/main/context-menu/dto/context-menu-controller.interface";
+import {MenuLineCreateOptions} from "@/api/service/main/context-menu/dto/menu-line-create-options.interface";
 
 export default class ContextMenu {
 
@@ -8,7 +8,7 @@ export default class ContextMenu {
     public options: ContextMenuCreateOptions,
 
     public id: string,
-    public lines: MenuLine[] = [],
+    public lines: MenuLineCreateOptions[] = [],
     public x: number = 0,
     public y: number = 0,
     public onOutsideClick: (() => void) = () => {},
