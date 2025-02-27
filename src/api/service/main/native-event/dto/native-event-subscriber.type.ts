@@ -11,3 +11,5 @@ export type NativeKeyboardEventSubscriber = (e: KeyboardEvent) => void
 export type NativeFocusEventSubscriber = (e: FocusEvent) => void
 
 export type NativeUIEventSubscriber = (e: UIEvent) => void
+
+export type NativeAnyEventSubscriber = (e: any) => void

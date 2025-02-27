@@ -4,7 +4,7 @@ import {
   NativePointerEventSubscriber,
   NativeKeyboardEventSubscriber,
   NativeFocusEventSubscriber,
-  NativeUIEventSubscriber,
+  NativeUIEventSubscriber, NativeAnyEventSubscriber,
 } from "@/api/service/main/native-event/dto/native-event-subscriber.type"
 
 export default interface NativeEventServiceApi {
@@ -58,17 +58,11 @@ export default interface NativeEventServiceApi {
   subscribeKeyUp(subscriber: NativeKeyboardEventSubscriber): () => void
   unsubscribeKeyUp(subscriber: NativeKeyboardEventSubscriber): void
 
-  subscribeKeyPress(subscriber: NativeKeyboardEventSubscriber): () => void
-  unsubscribeKeyPress(subscriber: NativeKeyboardEventSubscriber): void
-
   subscribeKeyDownExceptInput(subscriber: NativeKeyboardEventSubscriber): () => void
   unsubscribeKeyDownExceptInput(subscriber: NativeKeyboardEventSubscriber): void
 
   subscribeKeyUpExceptInput(subscriber: NativeKeyboardEventSubscriber): () => void
   unsubscribeKeyUp(subscriber: NativeKeyboardEventSubscriber): void
-
-  subscribeKeyPressExceptInput(subscriber: NativeKeyboardEventSubscriber): () => void
-  unsubscribeKeyPress(subscriber: NativeKeyboardEventSubscriber): void
 
 
   // Focus Events
@@ -83,7 +77,9 @@ export default interface NativeEventServiceApi {
   subscribeScroll(subscriber: NativeUIEventSubscriber): () => void
   unsubscribeScroll(subscriber: NativeUIEventSubscriber): void
 
-  subscribeResize(subscriber: NativeUIEventSubscriber): () => void
-  unsubscribeResize(subscriber: NativeUIEventSubscriber): void
+
+  // Special Events
+  subscribeResize(subscriber: NativeAnyEventSubscriber): () => void
+  unsubscribeResize(subscriber: NativeAnyEventSubscriber): void
 
 }
