@@ -16,7 +16,8 @@ export default interface Screen {
   shadowAround: boolean
   
   focusMode: FocusMode
-  
+
+  babylonConsoleLoaded: boolean
   showBabylonConsole: boolean
   
 }
