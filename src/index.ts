@@ -149,6 +149,10 @@ import ContextMenu from "./api/service/main/context-menu/context-menu.class";
 import { ContextMenuCreateOptions } from "./api/service/main/context-menu/dto/context-menu-create-options.interface";
 import { ContextMenuController } from "./api/service/main/context-menu/dto/context-menu-controller.interface";
 import RvHistory from "./api/service/sync/interface/history/RvHistory.interface";
+import MenuLine from "./api/service/main/context-menu/menu-line.class";
+import { MenuLineCreateOptions } from "./api/service/main/context-menu/dto/menu-line-create-options.interface";
+import { MenuLineController } from "./api/service/main/context-menu/dto/menu-line-controller.interface";
+import { ContextMenuProps } from "./api/components/normal/context-menu-props";
 
 
 export type {
@@ -179,6 +183,7 @@ export type {
   AntSelectProps,
   AntEmptyProps,
   AnchorProps,
+  ContextMenuProps,
   FileProgressBarProps,
   ProgressBarProps,
   UploadButtonAndListProps,
@@ -266,6 +271,8 @@ export type {
   ContextMenuCreateOptions,
   ContextMenuController,
   RvHistory,
+  MenuLineCreateOptions,
+  MenuLineController,
 }
 
 export {
@@ -315,4 +322,5 @@ export {
   CryptoUtils,
   HistoryServiceEventType,
   ContextMenu,
+  MenuLine,
 }

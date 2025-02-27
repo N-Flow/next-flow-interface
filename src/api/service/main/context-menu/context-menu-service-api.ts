@@ -1,6 +1,9 @@
 import ContextMenu from "@/api/service/main/context-menu/context-menu.class";
 import {ContextMenuCreateOptions} from "@/api/service/main/context-menu/dto/context-menu-create-options.interface";
 import {ContextMenuController} from "@/api/service/main/context-menu/dto/context-menu-controller.interface";
+import {MenuLineCreateOptions} from "@/api/service/main/context-menu/dto/menu-line-create-options.interface";
+import MenuLine from "@/api/service/main/context-menu/menu-line.class";
+import {MenuLineController} from "@/api/service/main/context-menu/dto/menu-line-controller.interface";
 
 export default interface ContextMenuServiceApi {
 
@@ -8,6 +11,12 @@ export default interface ContextMenuServiceApi {
    * 当前所有右键菜单
    */
   contextMenus: ContextMenu[]
+
+  /**
+   * 右键菜单单条内容
+   */
+  menusLines: MenuLine[]
+
 
   /**
    * 创建右键菜单
@@ -38,4 +47,15 @@ export default interface ContextMenuServiceApi {
    * 关闭所有右键菜单
    */
   closeAll(): Promise<number>
+
+
+  /**
+   * 创建右键菜单单条内容
+   *
+   * @param options 创建右键菜单的选项对象 具体选项见 ContextMenuCreateOptions
+   *
+   * @returns 返回所创建的右键菜单的控制器
+   */
+  createMenuLine(options: MenuLineCreateOptions): MenuLineController
+
 }

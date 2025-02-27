@@ -1,6 +1,7 @@
-import {MenuLineType} from "@/api/service/main/context-menu/dto/menu-line-type.enum";
+import {MenuLineType} from "./dto/menu-line-type.enum";
 import {FunctionComponent} from "react";
-import {MenuLineCreateOptions} from "@/api/service/main/context-menu/dto/menu-line-create-options.interface";
+import {MenuLineCreateOptions} from "./dto/menu-line-create-options.interface";
+import {ContextMenuController} from "@/api/service/main/context-menu/dto/context-menu-controller.interface";
 
 export default class MenuLine {
 
@@ -24,6 +25,9 @@ export default class MenuLine {
     public onChange: ((checked: boolean) => void) = () => {},
 
     public subMenu: MenuLineCreateOptions[] = [], // 子菜单项
+
+    public controller: ContextMenuController | null = null,
+    public createTime: Date = new Date(),
   ) {
   }
 
