@@ -36,7 +36,7 @@ import ThemeProviderProps from "./components/ant/theme-provider-props";
 import ModulePreloaderApi from "./service/main/preloader/module-preloader-api";
 import SyncServiceApi from "./service/sync/sync-service-api";
 import RvGlobalServiceApi from "@/api/service/sync/global/rv-global-service-api";
-import HistoryManagerApi from "./service/sync/history-manager-api";
+import HistoryServiceApi from "./service/sync/history-service-api";
 import {UseTStep} from "@/api/hook/use-t-step.type";
 import RvStepServiceApi from "@/api/service/sync/step/rv-step-service-api";
 import TStepServiceApi from "@/api/service/target/step/t-step-service-api";
@@ -76,7 +76,7 @@ export interface OfpApi {
 
     sync: {
       syncService: SyncServiceApi
-      historyManager: HistoryManagerApi
+      historyService: HistoryServiceApi
       rvGlobalService: RvGlobalServiceApi
       rvStepService: RvStepServiceApi
       rvFileService: RvFileServiceApi

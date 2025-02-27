@@ -67,7 +67,7 @@ import RvBase from "./api/service/sync/interface/rv-base.interface";
 import RvGlobal from "./api/service/sync/interface/global/rv-global.interface";
 import { FlexGrowProps } from "./api/components/dev/flex-grow-props";
 import RvGlobalServiceApi from "./api/service/sync/global/rv-global-service-api";
-import HistoryManagerApi from "./api/service/sync/history-manager-api";
+import HistoryServiceApi from "./api/service/sync/history-service-api";
 import BuiltInPluginConfig from "./api/service/main/plugin/dto/built-in-plugin-config.interface";
 import BasePluginConfig from "./api/service/main/plugin/dto/base-plugin-config.interface";
 import ExternalPluginConfig from "./api/service/main/plugin/dto/external-plugin-config.interface";
@@ -142,6 +142,8 @@ import { RvResourceServiceEventType, RvResourceServiceSubscriber } from "./api/s
 import RvResourceServiceApi from "./api/service/sync/resource/rv-resource-service-api";
 import { MaterialSymbolOptions, MaterialSymbolFunction } from "./utils/material-symbol-utils";
 import CryptoUtils from "./utils/crypto-utils";
+import {HistoryServiceEventType, HistoryServiceSubscriber } from "./api/service/sync/dto/history-service-subscriber.type";
+import { HistoryServiceStateSubscriber } from "./api/service/sync/dto/history-service-state-subscriber.type";
 
 export type {
   OfpApi,
@@ -199,7 +201,7 @@ export type {
   SyncServiceApi,
   FlexGrowProps,
   RvGlobalServiceApi,
-  HistoryManagerApi,
+  HistoryServiceApi,
   BuiltInPluginConfig,
   ExternalPluginConfig,
   RvBase,
@@ -252,6 +254,8 @@ export type {
   RvResourceServiceApi,
   MaterialSymbolOptions,
   MaterialSymbolFunction,
+  HistoryServiceSubscriber,
+  HistoryServiceStateSubscriber,
 }
 
 export {
@@ -299,4 +303,5 @@ export {
   RvResourceServiceEventType,
   RvResourceType,
   CryptoUtils,
+  HistoryServiceEventType,
 }
