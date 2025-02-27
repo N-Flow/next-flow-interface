@@ -1,5 +1,5 @@
 import {PluginType} from "./dto/plugin-type.enum";
-import {ThemeColor} from "@/api/service/main/space/dto/theme/theme-color";
+import {ThemeColor} from "@/api/service/main/theme/dto/theme-color.enum";
 
 export default interface BasePlugin {
   id: string

@@ -4,20 +4,20 @@ import IconPlugin from "./plugin/icon-plugin";
 import ViewPlugin from "./plugin/view-plugin";
 import { IconPluginPosition } from "./plugin/dto/icon-plugin-position.enum";
 import { PluginType } from "./plugin/dto/plugin-type.enum";
-import { ThemeBackground } from "./api/service/main/space/dto/theme/theme-background";
-import { ThemeColor } from "./api/service/main/space/dto/theme/theme-color";
+import { ThemeBackground } from "./api/service/main/theme/dto/theme-background.enum";
+import { ThemeColor } from "./api/service/main/theme/dto/theme-color.enum";
 import { OfpApi } from "./api/ofp-api";
 import SpaceServiceApi, { StepChangeSubscriber } from "./api/service/main/space/space-service-api";
-import { PageMode } from "./api/service/main/space/dto/page/page-mode";
+import { PageMode } from "./api/service/main/space/dto/page/page-mode.enum";
 import Status from "./api/service/main/status/dto/status";
-import { PageType } from "./api/service/main/space/dto/page/page-type";
+import { PageType } from "./api/service/main/space/dto/page/page-type.enum";
 import { StatusChangeSubscriber } from "./api/service/main/status/dto/status-change-subscriber";
 import StatusServiceApi from "./api/service/main/status/status-service-api";
 import MeetingServiceApi from "./api/service/main/meeting/meeting-service-api";
-import { ThemeShape } from "./api/service/main/space/dto/theme/theme-shape";
-import { FocusMode } from "./api/service/main/space/dto/screen/focus-mode";
-import Screen from "./api/service/main/space/dto/screen/screen";
-import {ScreenSize} from "./api/service/main/space/dto/screen/screen-size";
+import { ThemeShape } from "./api/service/main/theme/dto/theme-shape.enum";
+import { FocusMode } from "./api/service/main/space/dto/screen/focus-mode.enum";
+import Screen from "./api/service/main/space/dto/screen/screen.interface";
+import {ScreenSize} from "./api/service/main/space/dto/screen/screen-size.enum";
 import Page from "./api/service/main/space/dto/page/page";
 import Meeting from "./api/service/main/meeting/dto/meeting";
 import { ShareMode } from "./api/service/main/meeting/dto/share-mode";
@@ -165,6 +165,8 @@ import { MenuLineController } from "./api/service/main/context-menu/dto/menu-lin
 import { ContextMenuProps } from "./api/components/normal/context-menu-props";
 import PageUtils from "./utils/page-utils";
 import { MenuLineType } from "./api/service/main/context-menu/dto/menu-line-type.enum";
+import ThemeState from "./api/service/main/theme/dto/theme-state.interface";
+import ThemeServiceApi from "./api/service/main/theme/theme-service-api";
 
 
 export type {
@@ -293,6 +295,8 @@ export type {
   NativeAnyEventSubscriber,
   MenuLineCreateOptions,
   MenuLineController,
+  ThemeState,
+  ThemeServiceApi,
 }
 
 export {

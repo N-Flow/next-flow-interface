@@ -1,7 +1,7 @@
 import DialogCreateOptions from "@/api/service/main/dialog/dto/dialog-create-options.interface";
 import DialogController from "./dto/dialog-controller.interface";
 import {FunctionComponent} from "react";
-import {ThemeColor} from "../space/dto/theme/theme-color";
+import {ThemeColor} from "../theme/dto/theme-color.enum";
 
 export default class Dialog {
 

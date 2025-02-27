@@ -1,7 +1,7 @@
 import {ContextMenuCreateOptions} from "@/api/service/main/context-menu/dto/context-menu-create-options.interface";
 import {ContextMenuController} from "@/api/service/main/context-menu/dto/context-menu-controller.interface";
 import {MenuLineCreateOptions} from "@/api/service/main/context-menu/dto/menu-line-create-options.interface";
-import {ThemeColor} from "@/api/service/main/space/dto/theme/theme-color";
+import {ThemeColor} from "@/api/service/main/theme/dto/theme-color.enum";
 
 export default class ContextMenu {
 

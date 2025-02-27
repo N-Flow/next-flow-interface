@@ -1,5 +1,5 @@
 import {MenuLineCreateOptions} from "@/api/service/main/context-menu/dto/menu-line-create-options.interface";
-import {ThemeColor} from "@/api/service/main/space/dto/theme/theme-color";
+import {ThemeColor} from "@/api/service/main/theme/dto/theme-color.enum";
 
 export interface ContextMenuCreateOptions {
   id?: string, // 菜单唯一id
