@@ -1,0 +1,13 @@
+import {MouseEvent, KeyboardEvent, FocusEvent, PointerEvent, UIEvent, WheelEvent} from "react";
+
+export type NativeMouseEventSubscriber = (e: MouseEvent) => void
+
+export type NativeWheelEventSubscriber = (e: WheelEvent) => void
+
+export type NativePointerEventSubscriber = (e: PointerEvent) => void
+
+export type NativeKeyboardEventSubscriber = (e: KeyboardEvent) => void
+
+export type NativeFocusEventSubscriber = (e: FocusEvent) => void
+
+export type NativeUIEventSubscriber = (e: UIEvent) => void

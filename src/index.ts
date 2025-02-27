@@ -149,6 +149,15 @@ import ContextMenu from "./api/service/main/context-menu/context-menu.class";
 import { ContextMenuCreateOptions } from "./api/service/main/context-menu/dto/context-menu-create-options.interface";
 import { ContextMenuController } from "./api/service/main/context-menu/dto/context-menu-controller.interface";
 import RvHistory from "./api/service/sync/interface/history/RvHistory.interface";
+import {
+  NativeMouseEventSubscriber,
+  NativeWheelEventSubscriber,
+  NativePointerEventSubscriber,
+  NativeKeyboardEventSubscriber,
+  NativeFocusEventSubscriber,
+  NativeUIEventSubscriber,
+} from "./api/service/main/native-event/dto/native-event-subscriber.type"
+import NativeEventServiceApi from "./api/service/main/native-event/native-event-service-api";
 
 
 export type {
@@ -266,6 +275,13 @@ export type {
   ContextMenuCreateOptions,
   ContextMenuController,
   RvHistory,
+  NativeMouseEventSubscriber,
+  NativeWheelEventSubscriber,
+  NativePointerEventSubscriber,
+  NativeKeyboardEventSubscriber,
+  NativeFocusEventSubscriber,
+  NativeUIEventSubscriber,
+  NativeEventServiceApi,
 }
 
 export {

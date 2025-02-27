@@ -53,6 +53,7 @@ import RvResourceServiceApi from "./service/sync/resource/rv-resource-service-ap
 import {MaterialSymbolFunction} from "@/utils/material-symbol-utils";
 import {SleepFunction} from "@/utils/sleep-utils";
 import DialogServiceApi from "@/api/service/main/dialog/dialog-service-api";
+import NativeEventServiceApi from "@/api/service/main/native-event/native-event-service-api";
 
 export interface OfpApi {
 
@@ -72,6 +73,7 @@ export interface OfpApi {
       resourceService: ResourceServiceApi
       firstLoadService: FirstLoadServiceApi
       dialogService: DialogServiceApi
+      nativeEventService: NativeEventServiceApi
     }
 
     sync: {
