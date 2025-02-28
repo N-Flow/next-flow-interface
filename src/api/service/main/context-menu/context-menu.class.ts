@@ -10,6 +10,7 @@ export default class ContextMenu {
 
     public id: string,
     public lines: MenuLineCreateOptions[] = [],
+    public showIcon: boolean = false,
     public x: number = 0,
     public y: number = 0,
     public closeOnOutsideClick: boolean = false,
@@ -25,6 +26,7 @@ export default class ContextMenu {
       options,
       id,
       options.lines,
+      options.showIcon,
       options.x,
       options.y,
       options.closeOnOutsideClick,

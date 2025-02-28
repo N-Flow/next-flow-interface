@@ -15,8 +15,11 @@ export interface MenuLineCreateOptions {
   onMouseOver?: () => void, // 鼠标悬停事件
   onMouseOut?: () => void, // 鼠标移开事件
 
-  checked?: boolean; // 是否被选中 默认false
-  onChange?: (value: boolean) => void; // 状态变更时的回调
+  checkboxValue?: boolean,  // 复选框状态 默认值false
+  onCheckboxChange?: (value: any) => void,  // 复选框回调
+
+  checked?: boolean, // 是否被选中 默认false
+  onChange?: (value: boolean) => void, // 状态变更时的回调
 
   subMenu?: MenuLineCreateOptions[], // 子菜单项
 }

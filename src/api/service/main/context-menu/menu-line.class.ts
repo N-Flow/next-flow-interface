@@ -21,6 +21,9 @@ export default class MenuLine {
     public onMouseOver: (() => void) = () => {},
     public onMouseOut: (() => void) = () => {},
 
+    public checkboxValue: boolean = false,
+    public onCheckboxChange: ((value: any) => void) = () => {},
+
     public checked: boolean = false,
     public onChange: ((value: boolean) => void) = () => {},
 
@@ -45,6 +48,8 @@ export default class MenuLine {
       options.onClick,
       options.onMouseOver,
       options.onMouseOut,
+      options.checkboxValue,
+      options.onCheckboxChange,
       options.checked,
       options.onChange,
       options.subMenu,
