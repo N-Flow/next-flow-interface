@@ -2,6 +2,7 @@ import {ContextMenuCreateOptions} from "@/api/service/main/context-menu/dto/cont
 import {ContextMenuController} from "@/api/service/main/context-menu/dto/context-menu-controller.interface";
 import {MenuLineCreateOptions} from "@/api/service/main/context-menu/dto/menu-line-create-options.interface";
 import {ThemeColor} from "@/api/service/main/theme/dto/theme-color.enum";
+import MenuLine from "@/api/service/main/context-menu/menu-line.class";
 
 export default class ContextMenu {
 
@@ -9,7 +10,7 @@ export default class ContextMenu {
     public options: ContextMenuCreateOptions,
 
     public id: string,
-    public lines: MenuLineCreateOptions[] = [],
+    public lines: MenuLine[] = [],
     public showIcon: boolean = false,
     public x: number = 0,
     public y: number = 0,
@@ -21,11 +22,11 @@ export default class ContextMenu {
   ) {
   }
 
-  static fromOptions(id: string, options: ContextMenuCreateOptions): ContextMenu {
+  static fromOptions(id: string, options: ContextMenuCreateOptions, menuLines?: MenuLine[]): ContextMenu {
     return new ContextMenu(
       options,
       id,
-      options.lines,
+      menuLines,
       options.showIcon,
       options.x,
       options.y,

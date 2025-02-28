@@ -12,11 +12,6 @@ export default interface ContextMenuServiceApi {
    */
   contextMenus: ContextMenu[]
 
-  /**
-   * 右键菜单单条内容
-   */
-  menusLines: MenuLine[]
-
 
   /**
    * 创建右键菜单
@@ -47,15 +42,5 @@ export default interface ContextMenuServiceApi {
    * 关闭所有右键菜单
    */
   closeAll(): Promise<number>
-
-
-  /**
-   * 创建右键菜单单条内容
-   *
-   * @param options 创建右键菜单的选项对象 具体选项见 ContextMenuCreateOptions
-   *
-   * @returns 返回所创建的右键菜单的控制器
-   */
-  createMenuLine(options: MenuLineCreateOptions): MenuLineController
 
 }
