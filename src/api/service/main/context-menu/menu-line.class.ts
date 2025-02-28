@@ -2,6 +2,7 @@ import {MenuLineType} from "./dto/menu-line-type.enum";
 import {FunctionComponent} from "react";
 import {MenuLineCreateOptions} from "./dto/menu-line-create-options.interface";
 import {ContextMenuController} from "@/api/service/main/context-menu/dto/context-menu-controller.interface";
+import {ContextMenuCreateOptions} from "@/api/service/main/context-menu/dto/context-menu-create-options.interface";
 
 export default class MenuLine {
 
@@ -17,7 +18,10 @@ export default class MenuLine {
     public disabled: boolean = false,
     public shortcut: string = '',
 
+    // TODO: 添加传入参数e @YF
     public onClick: (() => void) = () => {},
+
+    // TODO: 改名为 onMouseEnter/Leave @YF
     public onMouseOver: (() => void) = () => {},
     public onMouseOut: (() => void) = () => {},
 
@@ -25,13 +29,14 @@ export default class MenuLine {
     public checkboxValue: boolean = false,
     public onCheckboxChange: ((value: any) => void) = () => {},
 
-    // TODO: 删除 @YF
+    // TODO: 删除2个 @YF
     public checked: boolean = false,
     public onChange: ((value: boolean) => void) = () => {},
 
-    public subMenu: MenuLineCreateOptions[] = [], // 子菜单项
+    // TODO: 改名为 sub @YF
+    public subMenu: ContextMenuCreateOptions | undefined = undefined, // 子菜单项
 
-    public controller: ContextMenuController | null = null,
+    public controller: ContextMenuController | undefined = undefined,
     public createTime: Date = new Date(),
   ) {
   }

@@ -1,5 +1,6 @@
 import {MenuLineType} from "@/api/service/main/context-menu/dto/menu-line-type.enum";
 import {FunctionComponent} from "react";
+import {ContextMenuCreateOptions} from "@/api/service/main/context-menu/dto/context-menu-create-options.interface";
 
 export interface MenuLineCreateOptions {
   id?: string,  //单条菜单唯一id
@@ -21,5 +22,5 @@ export interface MenuLineCreateOptions {
   checked?: boolean, // 是否被选中 默认false
   onChange?: (value: boolean) => void, // 状态变更时的回调
 
-  subMenu?: MenuLineCreateOptions[], // 子菜单项
+  subMenu?: ContextMenuCreateOptions, // 子菜单项
 }
