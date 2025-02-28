@@ -18,23 +18,14 @@ export default class MenuLine {
     public disabled: boolean = false,
     public shortcut: string = '',
 
-    // TODO: 添加传入参数e @YF
-    public onClick: (() => void) = () => {},
+    public onClick: ((e: any) => void) = () => {},
+    public onMouseOver: ((e: any) => void) = () => {},
+    public onMouseOut: ((e: any) => void) = () => {},
 
-    // TODO: 改名为 onMouseEnter/Leave @YF
-    public onMouseOver: (() => void) = () => {},
-    public onMouseOut: (() => void) = () => {},
-
-    // TODO: 改名为 checkboxDefaultValue @YF
-    public checkboxValue: boolean = false,
+    public checkboxDefaultValue: boolean = false,
     public onCheckboxChange: ((value: any) => void) = () => {},
 
-    // TODO: 删除2个 @YF
-    public checked: boolean = false,
-    public onChange: ((value: boolean) => void) = () => {},
-
-    // TODO: 改名为 sub @YF
-    public subMenu: ContextMenuCreateOptions | undefined = undefined, // 子菜单项
+    public sub: ContextMenuCreateOptions | undefined = undefined, // 子菜单项
 
     public controller: ContextMenuController | undefined = undefined,
     public createTime: Date = new Date(),
@@ -55,11 +46,9 @@ export default class MenuLine {
       options.onClick,
       options.onMouseOver,
       options.onMouseOut,
-      options.checkboxValue,
+      options.checkboxDefaultValue,
       options.onCheckboxChange,
-      options.checked,
-      options.onChange,
-      options.subMenu,
+      options.sub,
     )
   }
 

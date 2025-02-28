@@ -12,15 +12,12 @@ export interface MenuLineCreateOptions {
   disabled?: boolean, // 禁用状态 默认false
   shortcut?: string, // 快捷键
 
-  onClick?: () => void,  // 点击事件
-  onMouseOver?: () => void, // 鼠标悬停事件
-  onMouseOut?: () => void, // 鼠标移开事件
+  onClick?: (e: any) => void,  // 点击事件
+  onMouseOver?: (e: any) => void, // 鼠标悬停事件
+  onMouseOut?: (e: any) => void, // 鼠标移开事件
 
-  checkboxValue?: boolean,  // 复选框状态 默认值false
+  checkboxDefaultValue?: boolean,  // 复选框状态 默认值false
   onCheckboxChange?: (value: any) => void,  // 复选框回调
 
-  checked?: boolean, // 是否被选中 默认false
-  onChange?: (value: boolean) => void, // 状态变更时的回调
-
-  subMenu?: ContextMenuCreateOptions, // 子菜单项
+  sub?: ContextMenuCreateOptions, // 子菜单项
 }
