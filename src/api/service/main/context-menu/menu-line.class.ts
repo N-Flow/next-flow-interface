@@ -21,9 +21,11 @@ export default class MenuLine {
     public onMouseOver: (() => void) = () => {},
     public onMouseOut: (() => void) = () => {},
 
+    // TODO: 改名为 checkboxDefaultValue @YF
     public checkboxValue: boolean = false,
     public onCheckboxChange: ((value: any) => void) = () => {},
 
+    // TODO: 删除 @YF
     public checked: boolean = false,
     public onChange: ((value: boolean) => void) = () => {},
 
