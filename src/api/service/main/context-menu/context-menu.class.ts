@@ -23,11 +23,19 @@ export default class ContextMenu {
   }
 
   static fromOptions(id: string, options: ContextMenuCreateOptions, menuLines?: MenuLine[]): ContextMenu {
+    let showIcon = options.showIcon
+    if (showIcon === undefined) {
+      options.lines?.forEach(line => {
+        if (line.icon) {
+          showIcon = true
+        }
+      })
+    }
     return new ContextMenu(
       options,
       id,
       menuLines,
-      options.showIcon,
+      showIcon,
       options.x,
       options.y,
       options.closeOnOutsideClick,
