@@ -51,7 +51,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v${{ needs.Version.outputs.current_version }}
-          release_name: Release v${{ needs.Version.outputs.current_version }}
+          release_name: v${{ needs.Version.outputs.current_version }}
           body: "Install: https://www.npmjs.com/package/oflow-interface"
           draft: false
           prerelease: false
