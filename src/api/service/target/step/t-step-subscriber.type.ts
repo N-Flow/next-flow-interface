@@ -1,4 +1,4 @@
-import {StoredRhineVar, RvPath} from "rhine-var";
+import { RvPath } from "rhine-var";
 import { TStepChangeType } from "./t-step-change-type.enum";
 
 export type TStepSubscriber = (
