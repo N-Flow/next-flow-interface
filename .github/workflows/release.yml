@@ -10,6 +10,7 @@ on:
 jobs:
 
   Version:
+    name: Analysis Version
     runs-on: ubuntu-latest
     outputs:
       version_changed: ${{ steps.detect.outputs.version_changed }}
@@ -57,6 +58,7 @@ jobs:
           prerelease: false
 
   Publish:
+    name: Publish to NPM
     needs: Version
     if: ${{ needs.Version.outputs.version_changed == 'true' }}
     runs-on: ubuntu-latest
@@ -85,3 +87,50 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  Packages:
+    name: Publish to GitHub
+    needs: Version
+    if: ${{ needs.Version.outputs.version_changed == 'true' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "yarn"
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run Unit Tests
+        run: yarn test
+
+      - name: Build Project
+        run: yarn build
+
+      - name: Add scope to package.json
+        run: |
+          sudo apt-get install -y jq
+          cp package.json package.json.bak
+          jq '.name = "@O-FLOW/\(.name)" | .repository.url = "git+https://github.com/O-FLOW/rhine-var.git"' package.json > package.json.tmp
+          mv package.json.tmp package.json
+          jq empty package.json   
+
+      - name: Configure npm Registry
+        run: |
+          npm config set @O-FLOW:registry=https://npm.pkg.github.com
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+
+      - name: Publish to NPM
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
