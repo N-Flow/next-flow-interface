@@ -39,6 +39,7 @@ jobs:
           fi
 
   Release:
+    name: Release and Tag
     needs: Version
     if: ${{ needs.Version.outputs.version_changed == 'true' }}
     runs-on: ubuntu-latest
