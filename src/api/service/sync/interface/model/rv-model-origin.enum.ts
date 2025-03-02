@@ -1,5 +1,5 @@
 export enum RvModelOrigin {
-  Basic = 'basic',
-  Provider = 'provider',
-  Upload = 'upload',
+  BASIC = 'BASIC',
+  PROVIDER = 'PROVIDER',
+  UPLOAD = 'UPLOAD',
 }

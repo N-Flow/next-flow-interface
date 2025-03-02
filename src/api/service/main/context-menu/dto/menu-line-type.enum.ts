@@ -4,4 +4,5 @@ export enum MenuLineType {
   DIVIDER = 'DIVIDER',  // 分割线
   CHECKBOX = 'CHECKBOX',  // 单个可选中复选框
   SUB = 'SUB',  // 二级菜单
+  VIEW = 'VIEW',  // 无
 }
