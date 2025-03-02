@@ -10,7 +10,7 @@ export default interface RvStepServiceApi {
   get(sid: string): RecursiveObject<RvStep> | undefined
 
 
-  add(from?: string, index?: number): void
+  add(from?: string, index?: number): string
 
   move(sid: string, to: number): boolean
 
