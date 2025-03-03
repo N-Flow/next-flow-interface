@@ -1,3 +1,4 @@
+
 export default class AcceptMime {
   
   static TEXTURE = 'babylonjs/texture'

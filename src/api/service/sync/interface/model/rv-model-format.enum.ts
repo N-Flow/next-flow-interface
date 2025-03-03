@@ -1,13 +1,21 @@
-export enum RvModelFormat {
-  Basic = 'Basic',
 
+export enum RvModelFormat {
   GLB = 'GLB',
   GLTF = 'GLTF',
   OBJ = 'OBJ',
   STL = 'STL',
-
   FBX = 'FBX',
-  DAE = 'DAE',
+
+  MP4 = 'MP4',
+
+  JPG = 'JPG',
+  JPEG = 'JPEG',
+  PNG = 'PNG',
+
+  MP3 = 'MP3',
+  WAV = 'WAV',
+
+  TXT = 'TXT',
 
   OTHER = 'OTHER',
 }
