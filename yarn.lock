@@ -894,10 +894,10 @@ resize-observer-polyfill@^1.5.1:
   resolved "https://registry.npmjs.org/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
   integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
 
-rhine-var@0.9.22:
-  version "0.9.22"
-  resolved "https://registry.npmjs.org/rhine-var/-/rhine-var-0.9.22.tgz#d8a86289bcfbceda2203cb120d2aeec8f4af0a04"
-  integrity sha512-OHBsHM1eLRsAYkvnT2XTNN8c9tHDzTUQkTb3RRqnezfDjfuAzVqz5BdHSKV3HEl/7zhZ7XsPfGxJjE1xXVqHDg==
+rhine-var@0.9.23:
+  version "0.9.23"
+  resolved "https://registry.npmjs.org/rhine-var/-/rhine-var-0.9.23.tgz#8486700458219458dc94d7299c805ddffa54a98f"
+  integrity sha512-2ppdp4wZcOJmfEEovK8+GGDAuM4B+gAXcTbXUnU4nvWZJomQUKO4+QcewEhD42CpUxekdI0lmTBC+0nJ35y5LQ==
   dependencies:
     "@hocuspocus/provider" "^2.15.0"
     y-protocols "^1.0.6"
