@@ -29,7 +29,7 @@ import {RsdNoneProps} from "./components/rsd/rsd-none-props";
 import {RsdNumberProps} from "./components/rsd/rsd-number-props";
 import {RsdNumberListProps} from "./components/rsd/rsd-number-list-props";
 import {RsdSwitchProps} from "./components/rsd/rsd-switch-props";
-import {RsdSelectableButtonProps} from "./components/rsd/rsd-selectable-button-props";
+import {RsdCheckableButtonProps} from "./components/rsd/rsd-checkable-button-props";
 import {AntSelectProps} from "./components/ant/ant-select-props";
 import {FlexGrowProps} from "./components/dev/flex-grow-props";
 import ThemeProviderProps from "./components/ant/theme-provider-props";
@@ -121,7 +121,7 @@ export interface OfpApi {
 
     rsd: {
       RsdButton: FunctionComponent<RsdButtonProps>
-      RsdSelectableButton: FunctionComponent<RsdSelectableButtonProps>
+      RsdCheckableButton: FunctionComponent<RsdCheckableButtonProps>
       RsdCheckbox: FunctionComponent<RsdCheckboxProps>
       RsdColor: FunctionComponent<RsdColorProps>
       RsdSelect: FunctionComponent<RsdSelectProps>
@@ -145,7 +145,7 @@ export interface OfpApi {
 
   styles: {
     rss: any
-    rsbStyles: any
+    checkableButtonStyles: any
   }
 
   utils: {

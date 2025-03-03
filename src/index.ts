@@ -54,7 +54,7 @@ import { RsdMentionsProps } from "./api/components/rsd/rsd-mentions-props";
 import { RsdNoneProps } from "./api/components/rsd/rsd-none-props";
 import { RsdNumberListProps } from "./api/components/rsd/rsd-number-list-props";
 import { RsdNumberProps } from "./api/components/rsd/rsd-number-props";
-import { RsdSelectableButtonProps } from "./api/components/rsd/rsd-selectable-button-props";
+import { RsdCheckableButtonProps } from "./api/components/rsd/rsd-checkable-button-props";
 import { RsdSwitchProps } from "./api/components/rsd/rsd-switch-props";
 import { RsdTitleProps } from "./api/components/rsd/rsd-title-props";
 import ThemeProviderProps from "./api/components/ant/theme-provider-props";
@@ -213,7 +213,7 @@ export type {
   RsdNoneProps,
   RsdNumberListProps,
   RsdNumberProps,
-  RsdSelectableButtonProps,
+  RsdCheckableButtonProps,
   RsdSwitchProps,
   RsdTitleProps,
   ThemeProviderProps,
