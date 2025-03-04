@@ -179,7 +179,13 @@ export default class AcceptMime {
     }
     return support
   }
-  
+
+  static getExtension(filename: string): string {
+    if (!filename) return ''
+    const parts = filename.split('.')
+    return parts.length > 0 ? parts.pop() as string : ''
+  }
+
   static getExtensionWithDot(filename: string): string {
     if (!filename) return ''
     const parts = filename.split('.')

@@ -4,6 +4,7 @@ import {
   NativePointerEventSubscriber,
   NativeKeyboardEventSubscriber,
   NativeFocusEventSubscriber,
+  NativeDragEventSubscriber,
   NativeUIEventSubscriber, NativeAnyEventSubscriber,
 } from "@/api/service/main/native-event/dto/native-event-subscriber.type"
 
@@ -19,11 +20,12 @@ export default interface NativeEventServiceApi {
   subscribeDoubleClick(subscriber: NativeMouseEventSubscriber): () => void
   unsubscribeDoubleClick(subscriber: NativeMouseEventSubscriber): void
 
-  subscribeDrag(subscriber: NativeMouseEventSubscriber): () => void
-  unsubscribeDrag(subscriber: NativeMouseEventSubscriber): void
 
-  subscribeDrop(subscriber: NativeMouseEventSubscriber): () => void
-  unsubscribeDrop(subscriber: NativeMouseEventSubscriber): void
+  subscribeDrag(subscriber: NativeDragEventSubscriber): () => void
+  unsubscribeDrag(subscriber: NativeDragEventSubscriber): void
+
+  subscribeDrop(subscriber: NativeDragEventSubscriber): () => void
+  unsubscribeDrop(subscriber: NativeDragEventSubscriber): void
 
 
   // Wheel Events

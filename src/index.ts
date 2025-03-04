@@ -156,6 +156,7 @@ import {
   NativeFocusEventSubscriber,
   NativeUIEventSubscriber,
   NativeAnyEventSubscriber,
+  NativeDragEventSubscriber,
 } from "./api/service/main/native-event/dto/native-event-subscriber.type"
 import NativeEventServiceApi from "./api/service/main/native-event/native-event-service-api";
 import MenuLine from "./api/service/main/context-menu/menu-line.class";
@@ -304,6 +305,7 @@ export type {
   RvSceneNode,
   RvNode,
   RvBasicConfig,
+  NativeDragEventSubscriber,
 }
 
 export {
