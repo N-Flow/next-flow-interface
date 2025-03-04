@@ -8,6 +8,7 @@ import RvModel from "@/api/service/sync/interface/model/rv-model.interface";
 import RvVersion from "@/api/service/sync/interface/version/rv-version.interface";
 import RvResource from "@/api/service/sync/interface/resource/rv-resource.interface";
 import RvHistory from "@/api/service/sync/interface/history/RvHistory.interface";
+import RvSceneNode from './scene/rv-scene-node.interface';
 
 export default interface RvBase {
 
@@ -17,6 +18,8 @@ export default interface RvBase {
 
   files: RhineVarMap<RvFile>
   resources: RhineVarMap<RvResource>
+
+  scene: RvSceneNode
 
   models: RvModel
   materials: RvMaterial

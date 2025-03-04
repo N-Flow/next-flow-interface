@@ -77,7 +77,6 @@ import RvAudio from "./api/service/sync/interface/step/configuration/audio-info/
 import RvEnvironment from "./api/service/sync/interface/step/environment/rv-environment.interface";
 import RvVersion from "./api/service/sync/interface/version/rv-version.interface";
 import RvStepServiceApi from "./api/service/sync/step/rv-step-service-api";
-import RvModel from "./api/service/sync/model/models-list-api"
 import { TStepChangeType } from "./api/service/target/step/t-step-change-type.enum";
 import TStepServiceApi from "./api/service/target/step/t-step-service-api";
 import { TStepSubscriber } from "./api/service/target/step/t-step-subscriber.type";
@@ -167,6 +166,11 @@ import PageUtils from "./utils/page-utils";
 import { MenuLineType } from "./api/service/main/context-menu/dto/menu-line-type.enum";
 import ThemeState from "./api/service/main/theme/dto/theme-state.interface";
 import ThemeServiceApi from "./api/service/main/theme/theme-service-api";
+import RvModel from "./api/service/sync/interface/model/rv-model.interface";
+import RvSceneNode from "./api/service/sync/interface/scene/rv-scene-node.interface";
+import RvNode from "./api/service/sync/interface/model/node/rv-node.interface";
+import RvBasicConfig from "./api/service/sync/interface/model/config/rv-basic-config.interface";
+import { RvBasicType } from "./api/service/sync/interface/model/config/rv-basic-type.enum";
 
 
 export type {
@@ -297,6 +301,9 @@ export type {
   MenuLineController,
   ThemeState,
   ThemeServiceApi,
+  RvSceneNode,
+  RvNode,
+  RvBasicConfig,
 }
 
 export {
@@ -349,4 +356,5 @@ export {
   MenuLine,
   PageUtils,
   MenuLineType,
+  RvBasicType,
 }
