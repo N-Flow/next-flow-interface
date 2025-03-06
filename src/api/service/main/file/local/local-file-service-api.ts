@@ -1,4 +1,4 @@
-import {LocalFileServiceSubscriber} from "./dto/local-file-service-subscriber.type";
+import {LocalFileServiceEventType, LocalFileServiceSubscriber} from "./dto/local-file-service-subscriber.type";
 import {LocalFile} from "./dto/local-file.type";
 
 export default interface LocalFileServiceApi {
@@ -32,6 +32,11 @@ export default interface LocalFileServiceApi {
 
   unsubscribeSingle(fid: string, subscriber: LocalFileServiceSubscriber): void
 
+  publish(fid: string, type: LocalFileServiceEventType, localFile?: LocalFile): void
+
+  afterLoaded(fid: string, subscriber: (localFile: LocalFile) => void): void
+
+  waitLoaded(fid: string): Promise<LocalFile>
 
   /**
    * 是否已经载入完成
