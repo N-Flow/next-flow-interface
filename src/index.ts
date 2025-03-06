@@ -161,7 +161,6 @@ import {
 import NativeEventServiceApi from "./api/service/main/native-event/native-event-service-api";
 import MenuLine from "./api/service/main/context-menu/menu-line.class";
 import { MenuLineCreateOptions } from "./api/service/main/context-menu/dto/menu-line-create-options.interface";
-import { MenuLineController } from "./api/service/main/context-menu/dto/menu-line-controller.interface";
 import { ContextMenuProps } from "./api/components/normal/context-menu-props";
 import PageUtils from "./utils/page-utils";
 import { MenuLineType } from "./api/service/main/context-menu/dto/menu-line-type.enum";
@@ -299,7 +298,6 @@ export type {
   NativeEventServiceApi,
   NativeAnyEventSubscriber,
   MenuLineCreateOptions,
-  MenuLineController,
   ThemeState,
   ThemeServiceApi,
   RvSceneNode,

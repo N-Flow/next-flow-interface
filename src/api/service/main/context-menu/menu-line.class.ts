@@ -30,7 +30,6 @@ export default class MenuLine {
 
     public sub: ContextMenuCreateOptions | undefined = undefined, // 子菜单项
 
-    public controller: ContextMenuController | undefined = undefined,
     public createTime: Date = new Date(),
   ) {
   }
