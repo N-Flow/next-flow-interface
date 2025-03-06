@@ -26,4 +26,6 @@ export default interface ResourceServiceApi {
 
   generatePreviewFile(img: HTMLImageElement | HTMLVideoElement, name: string): Promise<File>
 
+  generateId(): string
+
 }
