@@ -16,7 +16,7 @@ export default interface HistoryServiceApi {
 
   pushState(state: any): void
 
-  check(operate: string): void
+  check(operate: string, forceStop?: boolean): void
 
   stop(): void
 
