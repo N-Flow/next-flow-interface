@@ -7,6 +7,6 @@ export default interface RsModel {
   progress: number
   status: string
 
-  node: Node
+  node?: Node
 
 }

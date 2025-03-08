@@ -10,18 +10,20 @@ export default interface LocalFileServiceApi {
 
   has(fid: string): boolean
 
-  remove(fid: string): void
+  remove(fid: string): boolean
 
+
+  add(localFile: LocalFile): boolean
 
   load(fid: string, url: string): Promise<LocalFile>
 
   loadByFile(fid: string, file: File): LocalFile
 
-  pause(fid: string): void  // 暂不支持
+  pause(fid: string): boolean  // 暂不支持
 
-  resume(fid: string): void  // 暂不支持
+  resume(fid: string): boolean  // 暂不支持
 
-  cancel(fid: string): void
+  cancel(fid: string): boolean  // 暂不支持
 
 
   subscribe(subscriber: LocalFileServiceSubscriber): () => void
@@ -32,7 +34,7 @@ export default interface LocalFileServiceApi {
 
   unsubscribeSingle(fid: string, subscriber: LocalFileServiceSubscriber): void
 
-  publish(fid: string, type: LocalFileServiceEventType, localFile?: LocalFile): void
+  publish(fid: string, type: LocalFileServiceEventType, localFile: LocalFile): void
 
   afterLoaded(fid: string, subscriber: (localFile: LocalFile) => void): void
 
