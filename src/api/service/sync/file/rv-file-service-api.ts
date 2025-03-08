@@ -18,12 +18,25 @@ export default interface RvFileServiceApi {
   get(fid: string): RecursiveObject<RvFile> | undefined
 
   /**
+   * 通过 url 获取文件 不存在则返回 undefined
+   *
+   * @param url  文件的 url
+   */
+  getByUrl(url: string): RecursiveObject<RvFile> | undefined
+
+  /**
    * 是否存在某个文件
    *
    * @param fid
    */
   has(fid: string): boolean
 
+  /**
+   * 是否存在某个URL的文件
+   *
+   * @param url
+   */
+  hasUrl(url: string): boolean
 
   /**
    * 添加一个文件

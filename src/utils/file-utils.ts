@@ -92,5 +92,23 @@ export default class FileUtils {
     return false
   }
 
+  static async getFileInfo(url: string): Promise<{ name: string, size: number }> {
+    // Send HEAD request
+    const response = await fetch(url, { method: 'HEAD' })
+    if (!response.ok) throw new Error(`Request failed with status: ${response.status}`)
+
+    // Get file size
+    const sizeHeader = response.headers.get('Content-Length')
+    if (!sizeHeader) throw new Error('Unable to get file size')
+    const size = parseInt(sizeHeader, 10)
+    if (isNaN(size)) throw new Error('Invalid file size')
+
+    // Extract filename from URL
+    const urlObj = new URL(url)
+    const filename = urlObj.pathname.split('/').pop() || 'unknown'
+
+    return { name: filename, size }
+  }
+
 }
 

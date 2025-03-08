@@ -21,6 +21,8 @@ export default interface RvModelServiceApi {
 
   has(mid: string): boolean
 
+  hasFid(fid: string): boolean
+
   add(model: RvModel): void
 
   remove(mid: string): boolean
