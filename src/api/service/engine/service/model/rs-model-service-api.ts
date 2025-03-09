@@ -15,10 +15,7 @@ export default interface RsModelServiceApi {
 
   add(rsModel: RsModel): boolean
 
-  // 如果没有添加，则自动调用add
   load(mid: string): Promise<void>
-
-  loadAndInitialize(mid: string): Promise<void>
   
 
   pause(mid: string): boolean  // 暂不支持

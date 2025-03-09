@@ -21,7 +21,7 @@ export default interface RvModel {
  *
  * {
  *   mid: 'M-XXX',
- *   name: 'M-XXX',
+ *   name: 'Basic XXX',
  *   origin: RvModelOrigin.BASIC,
  *   format: RvModelFormat.BUILTIN,
  *   fid: 'F-XXX',
@@ -58,7 +58,7 @@ export default interface RvModel {
  * }
  *
  *
- * 3. Model From Image / Video / Text
+ * 3. Model From Image / Video
  *
  * {
  *   mid: 'M-XXX',
@@ -66,6 +66,25 @@ export default interface RvModel {
  *   origin: RvModelOrigin.UPLOAD,
  *   format: RvModelFormat.MP4,
  *   fid: 'F-XXX',
+ *   node: {
+ *     nid: 'N-XXX',
+ *     name: 'M-XXX',
+ *   }
+ * }
+ *
+ *
+ * 4. Text Model
+ *
+ * {
+ *   mid: 'M-XXX',
+ *   name: 'Text XXX',
+ *   origin: RvModelOrigin.BASIC,
+ *   format: RvModelFormat.BUILTIN,
+ *   fid: 'F-XXX',
+ *   config: {
+ *     type: RvBasicType.TEXT,
+ *     text: 'Hello World',
+ *   },
  *   node: {
  *     nid: 'N-XXX',
  *     name: 'M-XXX',
