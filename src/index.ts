@@ -171,6 +171,10 @@ import RvSceneNode from "./api/service/sync/interface/scene/rv-scene-node.interf
 import RvNode from "./api/service/sync/interface/model/node/rv-node.interface";
 import RvBasicConfig from "./api/service/sync/interface/model/config/rv-basic-config.interface";
 import { RvBasicType } from "./api/service/sync/interface/model/config/rv-basic-type.enum";
+import RsModelServiceApi from "./api/service/engine/service/model/rs-model-service-api";
+import RsModel from "./api/service/engine/service/model/dto/rs-model.interface";
+import { RsModelStatus } from "./api/service/engine/service/model/dto/rs-model-status.enum";
+import { RsModelServiceEventType, RsModelServiceSubscriber } from "./api/service/engine/service/model/dto/rs-model-service-subscriber.type";
 
 
 export type {
@@ -304,6 +308,9 @@ export type {
   RvNode,
   RvBasicConfig,
   NativeDragEventSubscriber,
+  RsModelServiceApi,
+  RsModel,
+  RsModelServiceSubscriber,
 }
 
 export {
@@ -357,4 +364,6 @@ export {
   PageUtils,
   MenuLineType,
   RvBasicType,
+  RsModelStatus,
+  RsModelServiceEventType,
 }
