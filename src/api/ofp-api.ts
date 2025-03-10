@@ -55,6 +55,7 @@ import {SleepFunction} from "@/utils/sleep-utils";
 import DialogServiceApi from "@/api/service/main/dialog/dialog-service-api";
 import NativeEventServiceApi from "@/api/service/main/native-event/native-event-service-api";
 import RvModelServiceApi from "./service/sync/model/rv-model-service-api";
+import FirstLoadModelServiceApi from "@/api/service/engine/service/model/first/first-load-model-service-api";
 
 export interface OfpApi {
 
@@ -75,6 +76,7 @@ export interface OfpApi {
       firstLoadService: FirstLoadServiceApi
       dialogService: DialogServiceApi
       nativeEventService: NativeEventServiceApi
+      firstLoadModelService: FirstLoadModelServiceApi
     }
 
     sync: {

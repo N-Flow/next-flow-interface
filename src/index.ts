@@ -175,6 +175,9 @@ import RsModelServiceApi from "./api/service/engine/service/model/rs-model-servi
 import RsModel from "./api/service/engine/service/model/dto/rs-model.interface";
 import { RsModelStatus } from "./api/service/engine/service/model/dto/rs-model-status.enum";
 import { RsModelServiceEventType, RsModelServiceSubscriber } from "./api/service/engine/service/model/dto/rs-model-service-subscriber.type";
+import FirstLoadModelServiceApi from "./api/service/engine/service/model/first/first-load-model-service-api";
+import {FirstLoadModelServiceEventType, FirstLoadModelServiceSubscriber } from "./api/service/engine/service/model/first/dto/first-load-model-service-subscriber.type";
+import { FirstLoadModelServiceStatus } from "./api/service/engine/service/model/first/dto/first-load-model-service-status.enum";
 
 
 export type {
@@ -311,6 +314,8 @@ export type {
   RsModelServiceApi,
   RsModel,
   RsModelServiceSubscriber,
+  FirstLoadModelServiceSubscriber,
+  FirstLoadModelServiceApi,
 }
 
 export {
@@ -366,4 +371,6 @@ export {
   RvBasicType,
   RsModelStatus,
   RsModelServiceEventType,
+  FirstLoadModelServiceStatus,
+  FirstLoadModelServiceEventType,
 }
