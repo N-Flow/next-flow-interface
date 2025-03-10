@@ -10,7 +10,7 @@ export default interface RvModel {
   format: RvModelFormat
   fid?: string
   config?: RvBasicConfig | any
-  node?: RvNode
+  node?: string
 }
 
 
