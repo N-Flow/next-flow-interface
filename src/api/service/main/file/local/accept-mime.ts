@@ -191,7 +191,12 @@ export default class AcceptMime {
     const parts = filename.split('.')
     return '.' + (parts.length > 1 ? parts.pop() as string : '')
   }
-  
+
+  static getNameWithoutExtension(filename: string): string {
+    const i = filename.lastIndexOf('.')
+    return i > 0 ? filename.substring(0, i) : filename
+  }
+
   static isSupportModel(mime: string, filename = '') {
     if (mime == AcceptMime.ANY) return true
     if (AcceptMime.getSupportModel().includes(mime)) return true
