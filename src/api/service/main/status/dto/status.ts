@@ -6,7 +6,8 @@ export default interface Status {
   RsInitialized: boolean
   AllInitialized: boolean
   PluginLoaded: boolean
-  Loaded: boolean
+  FileLoaded: boolean
+  ModelLoaded: boolean
   Rendered: boolean
   Shown: boolean
 }

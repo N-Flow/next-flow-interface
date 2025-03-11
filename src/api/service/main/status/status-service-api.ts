@@ -60,13 +60,21 @@ export default interface StatusServiceApi {
   waitPluginLoaded(): Promise<boolean>
 
   
-  subscribeLoaded(subscriber: StatusChangeSubscriber): () => void
+  subscribeFileLoaded(subscriber: StatusChangeSubscriber): () => void
 
-  unsubscribeLoaded(subscriber: StatusChangeSubscriber): void
+  unsubscribeFileLoaded(subscriber: StatusChangeSubscriber): void
 
-  afterLoaded(subscriber: StatusChangeSubscriber): void
+  afterFileLoaded(subscriber: StatusChangeSubscriber): void
   
-  waitLoaded(): Promise<boolean>
+  waitFileLoaded(): Promise<boolean>
+
+  subscribeModelLoaded(subscriber: StatusChangeSubscriber): () => void
+
+  unsubscribeModelLoaded(subscriber: StatusChangeSubscriber): void
+
+  afterModelLoaded(subscriber: StatusChangeSubscriber): void
+
+  waitModelLoaded(): Promise<boolean>
 
   
   subscribeRendered(subscriber: StatusChangeSubscriber): () => void
