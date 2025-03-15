@@ -77,7 +77,7 @@ import RvAudio from "./api/service/sync/interface/step/configuration/audio-info/
 import RvEnvironment from "./api/service/sync/interface/step/environment/rv-environment.interface";
 import RvVersion from "./api/service/sync/interface/version/rv-version.interface";
 import RvStepServiceApi from "./api/service/sync/step/rv-step-service-api";
-import { TStepChangeType } from "./api/service/target/step/t-step-change-type.enum";
+import { TChangeType } from "./api/service/target/dto/t-change-type.enum";
 import TStepServiceApi from "./api/service/target/step/t-step-service-api";
 import { TStepSubscriber } from "./api/service/target/step/t-step-subscriber.type";
 import { UseTStep } from "./api/hook/use-t-step.type";
@@ -103,7 +103,6 @@ import DialogCreateOptions from "./api/service/main/dialog/dto/dialog-create-opt
 import Dialog from "./api/service/main/dialog/dialog.class";
 import { RvPresetsType } from "./api/service/sync/interface/step/rv-presets-type.enum"
 import { RvMaterialType } from "./api/service/sync/interface/step/rv-material-type.enum"
-import { RvMaterialState } from "./api/service/sync/interface/step/attributes/rv-material-state.interface"
 import { PluginConfig } from "./api/service/main/plugin/dto/plugin-config.type";
 import { PluginFrom } from "./api/service/main/plugin/dto/plugin-from.enum";
 import { RvModelFormat } from "./api/service/sync/interface/model/rv-model-format.enum"
@@ -178,6 +177,12 @@ import { RsModelServiceEventType, RsModelServiceSubscriber } from "./api/service
 import FirstLoadModelServiceApi from "./api/service/engine/service/model/first/first-load-model-service-api";
 import {FirstLoadModelServiceEventType, FirstLoadModelServiceSubscriber } from "./api/service/engine/service/model/first/dto/first-load-model-service-subscriber.type";
 import { FirstLoadModelServiceStatus } from "./api/service/engine/service/model/first/dto/first-load-model-service-status.enum";
+import TAttributeServiceApi from "./api/service/target/attribute/t-attribute-service-api";
+import { TAttributeSubscriber } from "./api/service/target/attribute/t-attribute-subscriber.type";
+import RvAttribute from "./api/service/sync/interface/step/attributes/rv-attribute.interface";
+import RvLocation from "./api/service/sync/interface/step/attributes/location/rv-location.interface";
+import RvGlobalMaterial from "./api/service/sync/interface/material/rv-global-material.interface";
+import RvMaterial from "./api/service/sync/interface/step/attributes/material/rv-material.interface";
 
 
 export type {
@@ -253,6 +258,8 @@ export type {
   RvModel,
   TStepServiceApi,
   TStepSubscriber,
+  TAttributeServiceApi,
+  TAttributeSubscriber,
   UseTStep,
   UseStepOptions,
   StepOptions,
@@ -263,7 +270,7 @@ export type {
   DialogController,
   DialogServiceApi,
   DialogCreateOptions,
-  RvMaterialState,
+  RvGlobalMaterial,
   PluginConfig,
   RvModelServiceApi,
   PluginServiceSubscriber,
@@ -316,6 +323,9 @@ export type {
   RsModelServiceSubscriber,
   FirstLoadModelServiceSubscriber,
   FirstLoadModelServiceApi,
+  RvAttribute,
+  RvLocation,
+  RvMaterial,
 }
 
 export {
@@ -332,7 +342,7 @@ export {
   ThemeShape,
   IconPluginPosition,
   PluginType,
-  TStepChangeType,
+  TChangeType,
   FileUtils,
   MathUtils,
   NativeEventUtils,

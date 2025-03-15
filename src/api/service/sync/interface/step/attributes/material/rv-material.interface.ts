@@ -1,7 +1,7 @@
 import {RvMaterialType} from "@/api/service/sync/interface/step/rv-material-type.enum";
 import {NodeMaterialBlockConnectionPointTypes} from "@babylonjs/core"
 
-export interface RvMaterialState {
+export default interface RvMaterial {
   general: RvMaterialGeneralState
   texture: RvMaterialTextureState
   pbr?: RvMaterialPBRState

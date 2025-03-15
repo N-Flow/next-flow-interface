@@ -1,7 +1,7 @@
 import type { RhineVarMap, RhineVarArray } from 'rhine-var';
 import RvGlobal from "./global/rv-global.interface";
 import RvStep from "./step/rv-step.interface";
-import RvMaterial from "@/api/service/sync/interface/material/rv-material.interface";
+import RvGlobalMaterial from "@/api/service/sync/interface/material/rv-global-material.interface";
 import RvFile from "@/api/service/sync/interface/file/rv-file.interface";
 import RvMeeting from "@/api/service/sync/interface/meeting/rv-meeting.interface";
 import RvModel from "@/api/service/sync/interface/model/rv-model.interface";
@@ -22,7 +22,7 @@ export default interface RvBase {
   scene: RvSceneNode
 
   models: RvModel
-  materials: RvMaterial
+  materials: RvGlobalMaterial
 
   history: RvHistory
 
