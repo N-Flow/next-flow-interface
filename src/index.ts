@@ -191,6 +191,8 @@ import { UseStepOptions } from "./api/hook/use-step-options.type";
 import { UseTAttribute } from "./api/hook/use-t-attribute.type";
 import { V2, V3, V4 } from "./type/general/vector.type";
 import VectorUtils from "./utils/vector-utils";
+import RvAttributesServiceApi from "./api/service/sync/step/attributes/rv-attributes-service-api";
+import RvLocationAttributeApi from "./api/service/attributes/location/rv-location-attribute-api";
 
 
 export type {
@@ -343,6 +345,8 @@ export type {
   V2,
   V3,
   V4,
+  RvAttributesServiceApi,
+  RvLocationAttributeApi,
 }
 
 export {

@@ -59,10 +59,16 @@ import FirstLoadModelServiceApi from "@/api/service/engine/render/model/first/fi
 import { UseTAttribute } from "./hook/use-t-attribute.type";
 import RsSelectionServiceApi from "@/api/service/engine/operate/selection/rs-selection-service-api";
 import TAttributeServiceApi from "./service/target/attribute/t-attribute-service-api";
+import RvLocationAttributeApi from "@/api/service/attributes/location/rv-location-attribute-api";
+import RvAttributesServiceApi from "@/api/service/sync/step/attributes/rv-attributes-service-api";
 
 export interface OfpApi {
 
   services: {
+
+    attributes: {
+      rvLocationAttribute: RvLocationAttributeApi
+    }
 
     main: {
       spaceService: SpaceServiceApi
@@ -102,6 +108,7 @@ export interface OfpApi {
       rvFileService: RvFileServiceApi
       rvResourceService: RvResourceServiceApi
       rvModelService: RvModelServiceApi
+      rvAttributesService: RvAttributesServiceApi
     }
 
     target: {
