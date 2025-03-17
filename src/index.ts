@@ -79,9 +79,7 @@ import RvVersion from "./api/service/sync/interface/version/rv-version.interface
 import RvStepServiceApi from "./api/service/sync/step/rv-step-service-api";
 import { TChangeType } from "./api/service/target/dto/t-change-type.enum";
 import TStepServiceApi from "./api/service/target/step/t-step-service-api";
-import { TStepSubscriber } from "./api/service/target/step/t-step-subscriber.type";
-import { UseTStep } from "./api/hook/use-t-step.type";
-import { UseStepOptions } from "./api/hook/use-step-options.type";
+import { TSubscriber } from "./api/service/target/dto/t-subscriber.type";
 import { StepOptions } from "./api/service/sync/step/dto/step-options.type";
 import { PluginViewProps } from "./plugin/dto/plugin-view-props.interface";
 import FileUtils from "./utils/file-utils";
@@ -178,7 +176,6 @@ import FirstLoadModelServiceApi from "./api/service/engine/service/model/first/f
 import {FirstLoadModelServiceEventType, FirstLoadModelServiceSubscriber } from "./api/service/engine/service/model/first/dto/first-load-model-service-subscriber.type";
 import { FirstLoadModelServiceStatus } from "./api/service/engine/service/model/first/dto/first-load-model-service-status.enum";
 import TAttributeServiceApi from "./api/service/target/attribute/t-attribute-service-api";
-import { TAttributeSubscriber } from "./api/service/target/attribute/t-attribute-subscriber.type";
 import RvAttribute from "./api/service/sync/interface/step/attributes/rv-attribute.interface";
 import RvLocation from "./api/service/sync/interface/step/attributes/location/rv-location.interface";
 import RvGlobalMaterial from "./api/service/sync/interface/material/rv-global-material.interface";
@@ -257,11 +254,8 @@ export type {
   RvStepServiceApi,
   RvModel,
   TStepServiceApi,
-  TStepSubscriber,
+  TSubscriber,
   TAttributeServiceApi,
-  TAttributeSubscriber,
-  UseTStep,
-  UseStepOptions,
   StepOptions,
   PluginViewProps,
   MessageServiceApi,
