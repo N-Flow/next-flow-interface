@@ -33,10 +33,13 @@ export default class RvUtils {
     return path
   }
 
-  static getByRvPath<T = any>(source: StoredRhineVar<any> | any, path: string | RvPath): T {
+  static getByRvPath<T = any>(source: StoredRhineVar<any> | any, path: string | RvPath): T  {
     path = RvUtils.ensureRvPath(path)
     let obj: any = source
     for (const key of path) {
+      if (obj === undefined) {
+        return undefined as any
+      }
       obj = obj[key]
     }
     return obj
