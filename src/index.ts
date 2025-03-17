@@ -189,6 +189,8 @@ import RsSelectionState from "./api/service/engine/operate/selection/dto/rs-sele
 import { UseTStep } from "./api/hook/use-t-step.type";
 import { UseStepOptions } from "./api/hook/use-step-options.type";
 import { UseTAttribute } from "./api/hook/use-t-attribute.type";
+import { V2, V3, V4 } from "./type/general/vector.type";
+import VectorUtils from "./utils/vector-utils";
 
 
 export type {
@@ -338,6 +340,9 @@ export type {
   UseTStep,
   UseTAttribute,
   UseStepOptions,
+  V2,
+  V3,
+  V4,
 }
 
 export {
@@ -360,6 +365,7 @@ export {
   NativeEventUtils,
   NetworkUtils,
   NumberUtils,
+  VectorUtils,
   sleep,
   RvUtils,
   TimeUtils,

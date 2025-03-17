@@ -1,9 +1,11 @@
+import {V3, V4} from "@/type/general/vector.type";
 
 export default interface RvLocation {
 
-  position: {x: number, y: number, z: number}
-  rotation: {x: number, y: number, z: number}
-  scale: {x: number, y: number, z: number}
-  nearMode: boolean
+  position: V3
+  rotation: V3
+  nearMode: boolean,
+  scale: V3
+  rotationQuaternion?: V4
 
 }

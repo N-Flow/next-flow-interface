@@ -33,18 +33,4 @@ export default class MathUtils {
     }
     return index
   }
-
-  static xyzToArray = (data: any, d = [0, 0, 0]) => {
-    if (!data) return d
-    return [data.x, data.y, data.z]
-  }
-
-  static xyzwToArray = (data: any, d = [0, 0, 0, 0], round = -1) => {
-    if (!data) return d
-    if (round === -1) {
-      return [data.x, data.y, data.z, data.w]
-    } else {
-      return [NumberUtils.roundToX(data.x, round), NumberUtils.roundToX(data.y, round), NumberUtils.roundToX(data.z, round), NumberUtils.roundToX(data.w, round)]
-    }
-  }
 }
