@@ -168,18 +168,24 @@ import RvSceneNode from "./api/service/sync/interface/scene/rv-scene-node.interf
 import RvNode from "./api/service/sync/interface/model/node/rv-node.interface";
 import RvBasicConfig from "./api/service/sync/interface/model/config/rv-basic-config.interface";
 import { RvBasicType } from "./api/service/sync/interface/model/config/rv-basic-type.enum";
-import RsModelServiceApi from "./api/service/engine/service/model/rs-model-service-api";
-import RsModel from "./api/service/engine/service/model/dto/rs-model.interface";
-import { RsModelStatus } from "./api/service/engine/service/model/dto/rs-model-status.enum";
-import { RsModelServiceEventType, RsModelServiceSubscriber } from "./api/service/engine/service/model/dto/rs-model-service-subscriber.type";
-import FirstLoadModelServiceApi from "./api/service/engine/service/model/first/first-load-model-service-api";
-import {FirstLoadModelServiceEventType, FirstLoadModelServiceSubscriber } from "./api/service/engine/service/model/first/dto/first-load-model-service-subscriber.type";
-import { FirstLoadModelServiceStatus } from "./api/service/engine/service/model/first/dto/first-load-model-service-status.enum";
+import RsModelServiceApi from "./api/service/engine/render/model/rs-model-service-api";
+import RsModel from "@/api/service/engine/render/model/dto/rs-model.interface";
+import { RsModelStatus } from "@/api/service/engine/render/model/dto/rs-model-status.enum";
+import { RsModelServiceEventType, RsModelServiceSubscriber } from "@/api/service/engine/render/model/dto/rs-model-service-subscriber.type";
+import FirstLoadModelServiceApi from "./api/service/engine/render/model/first/first-load-model-service-api";
+import {FirstLoadModelServiceEventType, FirstLoadModelServiceSubscriber } from "@/api/service/engine/render/model/first/dto/first-load-model-service-subscriber.type";
+import { FirstLoadModelServiceStatus } from "@/api/service/engine/render/model/first/dto/first-load-model-service-status.enum";
 import TAttributeServiceApi from "./api/service/target/attribute/t-attribute-service-api";
 import RvAttribute from "./api/service/sync/interface/step/attributes/rv-attribute.interface";
 import RvLocation from "./api/service/sync/interface/step/attributes/location/rv-location.interface";
 import RvGlobalMaterial from "./api/service/sync/interface/material/rv-global-material.interface";
 import RvMaterial from "./api/service/sync/interface/step/attributes/material/rv-material.interface";
+import RsSelectionServiceApi from "./api/service/engine/operate/selection/rs-selection-service-api";
+import HighLightInfo from "./api/service/engine/operate/selection/dto/hight-light-info.interface";
+import { SelectedSubscriber } from "./api/service/engine/operate/selection/dto/selected-subscriber.type";
+import RsSelectionNodeInfo from "./api/service/engine/operate/selection/dto/rs-selection-node-info";
+import { LastSubscriber } from "./api/service/engine/operate/selection/dto/last-subscriber.type";
+import RsSelectionState from "./api/service/engine/operate/selection/dto/rs-selection-state.interface";
 
 
 export type {
@@ -320,6 +326,12 @@ export type {
   RvAttribute,
   RvLocation,
   RvMaterial,
+  RsSelectionServiceApi,
+  RsSelectionNodeInfo,
+  HighLightInfo,
+  SelectedSubscriber,
+  LastSubscriber,
+  RsSelectionState,
 }
 
 export {

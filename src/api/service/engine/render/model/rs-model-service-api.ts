@@ -1,5 +1,5 @@
-import {RsModelServiceEventType, RsModelServiceSubscriber} from "./dto/rs-model-service-subscriber.type";
-import RsModel from "./dto/rs-model.interface"
+import {RsModelServiceEventType, RsModelServiceSubscriber} from "@/api/service/engine/render/model/dto/rs-model-service-subscriber.type";
+import RsModel from "@/api/service/engine/render/model/dto/rs-model.interface"
 
 export default interface RsModelServiceApi {
   
