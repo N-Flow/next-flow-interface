@@ -1,4 +1,4 @@
-import {RecursiveArray, RecursiveMap, RecursiveObject} from "rhine-var";
+import {RecursiveArray, RecursiveMap, RecursiveObject, StoredRhineVar} from "rhine-var";
 import RvStep from "../interface/step/rv-step.interface";
 import {StepOptions} from "@/api/service/sync/step/dto/step-options.type";
 
@@ -17,11 +17,15 @@ export default interface RvStepServiceApi {
   remove(sid: string): boolean
 
 
+  getStepOptions(withDisable?: boolean): StepOptions
+
   getStepIndex(sid: string): number
+
+  getStepByIndex(index: number): StoredRhineVar<RvStep> | undefined
+
+  getCurrentStep(): StoredRhineVar<RvStep> | undefined
 
   generateId(): string
 
-
-  getStepOptions(withDisable?: boolean): StepOptions
 
 }
