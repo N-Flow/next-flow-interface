@@ -1,4 +1,5 @@
-import {RhineVarMap} from "rhine-var";
+import {RecursiveMap, RhineVarMap, StoredRhineVar} from "rhine-var";
+import RvAttribute from "../../interface/step/attributes/rv-attribute.interface";
 
 export default interface RvAttributesServiceApi {
 
@@ -6,6 +7,11 @@ export default interface RvAttributesServiceApi {
 
   forEachNode(nid: string, callback: (attributes: RhineVarMap<any>, sid: string) => void): void
 
-  setToAll(nid: string, key: string, value: any): void
+  setToAllStep(nid: string, key: string, value: any): void
+
+
+  get(sid: string): RecursiveMap<RvAttribute> | undefined
+
+  getNode(sid: string, nid: string): StoredRhineVar<RvAttribute> | undefined
 
 }
