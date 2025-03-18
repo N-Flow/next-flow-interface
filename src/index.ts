@@ -176,7 +176,7 @@ import FirstLoadModelServiceApi from "./api/service/engine/render/model/first/fi
 import {FirstLoadModelServiceEventType, FirstLoadModelServiceSubscriber } from "./api/service/engine/render/model/first/dto/first-load-model-service-subscriber.type";
 import { FirstLoadModelServiceStatus } from "./api/service/engine/render/model/first/dto/first-load-model-service-status.enum";
 import TAttributeServiceApi from "./api/service/target/attribute/t-attribute-service-api";
-import RvAttribute from "./api/service/sync/interface/step/attributes/rv-attribute.interface";
+import RvAttributes from "./api/service/sync/interface/step/attributes/rv-attributes.interface";
 import RvLocation from "./api/service/sync/interface/step/attributes/location/rv-location.interface";
 import RvGlobalMaterial from "./api/service/sync/interface/material/rv-global-material.interface";
 import RvMaterial from "./api/service/sync/interface/step/attributes/material/rv-material.interface";
@@ -330,7 +330,7 @@ export type {
   RsModelServiceSubscriber,
   FirstLoadModelServiceSubscriber,
   FirstLoadModelServiceApi,
-  RvAttribute,
+  RvAttributes,
   RvLocation,
   RvMaterial,
   RsSelectionServiceApi,

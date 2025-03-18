@@ -1,5 +1,5 @@
 import {RecursiveMap, RhineVarMap, StoredRhineVar} from "rhine-var";
-import RvAttribute from "../../interface/step/attributes/rv-attribute.interface";
+import RvAttributes from "../../interface/step/attributes/rv-attributes.interface";
 
 export default interface RvAttributesServiceApi {
 
@@ -10,8 +10,8 @@ export default interface RvAttributesServiceApi {
   setToAllStep(nid: string, key: string, value: any): void
 
 
-  get(sid: string): RecursiveMap<RvAttribute> | undefined
+  get(sid: string): RecursiveMap<RvAttributes> | undefined
 
-  getNode(sid: string, nid: string): StoredRhineVar<RvAttribute> | undefined
+  getNode(sid: string, nid: string): StoredRhineVar<RvAttributes> | undefined
 
 }
