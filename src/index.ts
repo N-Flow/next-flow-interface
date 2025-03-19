@@ -193,6 +193,7 @@ import { V2, V3, V4 } from "./type/general/vector.type";
 import VectorUtils from "./utils/vector-utils";
 import RvAttributesServiceApi from "./api/service/sync/step/attributes/rv-attributes-service-api";
 import RvLocationAttributeApi from "./api/service/attributes/location/rv-location-attribute-api";
+import throttle from "./utils/throttle-utils";
 
 
 export type {
@@ -371,6 +372,7 @@ export {
   NumberUtils,
   VectorUtils,
   sleep,
+  throttle,
   RvUtils,
   TimeUtils,
   UrlUtils,
