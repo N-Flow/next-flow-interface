@@ -194,6 +194,7 @@ import VectorUtils from "./utils/vector-utils";
 import RvAttributesServiceApi from "./api/service/sync/step/attributes/rv-attributes-service-api";
 import RvLocationAttributeApi from "./api/service/attributes/location/rv-location-attribute-api";
 import throttle from "./utils/throttle-utils";
+import { UseBase } from "./api/hook/use-base.type";
 
 
 export type {
@@ -340,6 +341,7 @@ export type {
   SelectedSubscriber,
   LastSubscriber,
   RsSelectionState,
+  UseBase,
   UseTStep,
   UseTAttribute,
   UseStepOptions,

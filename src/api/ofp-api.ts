@@ -61,6 +61,7 @@ import RsSelectionServiceApi from "@/api/service/engine/operate/selection/rs-sel
 import TAttributeServiceApi from "./service/target/attribute/t-attribute-service-api";
 import RvLocationAttributeApi from "@/api/service/attributes/location/rv-location-attribute-api";
 import RvAttributesServiceApi from "@/api/service/sync/step/attributes/rv-attributes-service-api";
+import {UseBase} from "@/api/hook/use-base.type";
 
 export interface OfpApi {
 
@@ -119,6 +120,7 @@ export interface OfpApi {
   }
 
   hooks: {
+    useBase: UseBase
     useTStep: UseTStep
     useTAttribute: UseTAttribute
     useStepOptions: UseStepOptions
