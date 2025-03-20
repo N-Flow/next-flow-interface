@@ -195,6 +195,8 @@ import RvAttributesServiceApi from "./api/service/sync/step/attributes/rv-attrib
 import RvLocationAttributeApi from "./api/service/attributes/location/rv-location-attribute-api";
 import throttle from "./utils/throttle-utils";
 import { UseBase } from "./api/hook/use-base.type";
+import NodePair from "./api/service/engine/render/model/dto/node-pair.interface";
+import RsNodeServiceApi from "./api/service/engine/render/model/rs-node-service-api";
 
 
 export type {
@@ -350,6 +352,8 @@ export type {
   V4,
   RvAttributesServiceApi,
   RvLocationAttributeApi,
+  RsNodeServiceApi,
+  NodePair,
 }
 
 export {

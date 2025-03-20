@@ -62,6 +62,8 @@ import TAttributeServiceApi from "./service/target/attribute/t-attribute-service
 import RvLocationAttributeApi from "@/api/service/attributes/location/rv-location-attribute-api";
 import RvAttributesServiceApi from "@/api/service/sync/step/attributes/rv-attributes-service-api";
 import {UseBase} from "@/api/hook/use-base.type";
+import RsNodeServiceApi from "./service/engine/render/model/rs-node-service-api";
+import RsModelServiceApi from "@/api/service/engine/render/model/rs-model-service-api";
 
 export interface OfpApi {
 
@@ -96,7 +98,8 @@ export interface OfpApi {
       }
 
       render: {
-
+        rsNodeService: RsNodeServiceApi
+        rsModelService: RsModelServiceApi
       }
 
     }
