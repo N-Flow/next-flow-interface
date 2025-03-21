@@ -10,6 +10,17 @@ export default interface RsSelectionServiceApi {
   changeBranchMode(value?: boolean, message?: boolean): void
 
 
+  click: (nid?: string, ctrl?: boolean) => void
+
+  set: (nid: string) => void
+
+  add: (nid: string) => void
+
+  remove: (nid: string) => void
+
+  clear: () => void
+
+
   subscribe(subscriber: SelectedSubscriber): () => void
 
   unsubscribe(subscriber: SelectedSubscriber): void
