@@ -197,6 +197,8 @@ import throttle from "./utils/throttle-utils";
 import { UseBase } from "./api/hook/use-base.type";
 import NodePair from "./api/service/engine/render/model/dto/node-pair.interface";
 import RsNodeServiceApi from "./api/service/engine/render/model/rs-node-service-api";
+import RvLabel from "./api/service/sync/interface/step/attributes/label/rv-label.interface";
+import RvLabelAttributeApi from "./api/service/attributes/label/rv-label-attribute-api";
 
 
 export type {
@@ -354,6 +356,8 @@ export type {
   RvLocationAttributeApi,
   RsNodeServiceApi,
   NodePair,
+  RvLabel,
+  RvLabelAttributeApi,
 }
 
 export {
