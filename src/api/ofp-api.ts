@@ -66,6 +66,15 @@ import RsNodeServiceApi from "./service/engine/render/model/rs-node-service-api"
 import RsModelServiceApi from "@/api/service/engine/render/model/rs-model-service-api";
 import RvLabelAttributeApi from "@/api/service/attributes/label/rv-label-attribute-api";
 import RvLoopAttributeApi from "@/api/service/attributes/animation/loop/rv-loop-attribute-api";
+import CameraConfigurationAnimationApi
+  from "@/api/service/engine/animation/entry/environment/camera-configuration-animation-api";
+import CameraLocationAnimationApi from "@/api/service/engine/animation/entry/environment/camera-location-animation-api";
+import FogAnimationApi from "@/api/service/engine/animation/entry/environment/fog-animation-api";
+import GroundAnimationApi from "@/api/service/engine/animation/entry/environment/ground-animation-api";
+import LightAnimationApi from "@/api/service/engine/animation/entry/environment/light-animation-api";
+import ShadowAnimationApi from "@/api/service/engine/animation/entry/environment/shadow-animation-api";
+import SkyboxAnimationApi from "@/api/service/engine/animation/entry/environment/skybox-animation-api";
+import RsEnvironmentServiceApi from "@/api/service/engine/render/environment/rs-environment-service-api";
 
 export interface OfpApi {
 
@@ -97,6 +106,16 @@ export interface OfpApi {
 
     engine: {
 
+      animation: {
+        cameraConfigurationAnimation: CameraConfigurationAnimationApi
+        cameraLocationAnimation: CameraLocationAnimationApi
+        fogAnimation: FogAnimationApi
+        groundAnimation: GroundAnimationApi
+        lightAnimation: LightAnimationApi
+        shadowAnimation: ShadowAnimationApi
+        skyboxAnimation: SkyboxAnimationApi
+      }
+
       operate: {
         rsSelectionService: RsSelectionServiceApi
       }
@@ -104,6 +123,7 @@ export interface OfpApi {
       render: {
         rsNodeService: RsNodeServiceApi
         rsModelService: RsModelServiceApi
+        rsEnvironmentService: RsEnvironmentServiceApi
       }
 
     }
