@@ -199,6 +199,8 @@ import NodePair from "./api/service/engine/render/model/dto/node-pair.interface"
 import RsNodeServiceApi from "./api/service/engine/render/model/rs-node-service-api";
 import RvLabel from "./api/service/sync/interface/step/attributes/label/rv-label.interface";
 import RvLabelAttributeApi from "./api/service/attributes/label/rv-label-attribute-api";
+import RvCamera from "./api/service/sync/interface/step/environment/camera/rv-camera.interface";
+import RvCameraLocation from "./api/service/sync/interface/step/environment/camera/location/rv-camera-location.interface";
 
 
 export type {
@@ -358,6 +360,8 @@ export type {
   NodePair,
   RvLabel,
   RvLabelAttributeApi,
+  RvCamera,
+  RvCameraLocation,
 }
 
 export {

@@ -1,3 +1,4 @@
+import RvCamera from "@/api/service/sync/interface/step/environment/camera/rv-camera.interface";
 
 export default interface RvEnvironment {
 
@@ -28,27 +29,7 @@ export default interface RvEnvironment {
     normalBias: number
   }
 
-  camera: {
-
-    enable: boolean
-
-    config: {
-      easy: boolean
-      distanceMin: number
-      distanceMax: number
-      fov: number
-    }
-
-    alpha: number
-    beta: number
-    radius: number
-
-    target: {
-      x: number
-      y: number
-      z: number
-    }
-  }
+  camera: RvCamera
 
   fog: {
     enable: boolean
