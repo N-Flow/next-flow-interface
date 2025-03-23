@@ -15,6 +15,8 @@ export enum RvModelFormat {
   MP3 = 'MP3',
   WAV = 'WAV',
 
+  TXT = 'TXT',
+
   TEXT = 'TEXT',
 
   BUILTIN = 'BUILTIN',
