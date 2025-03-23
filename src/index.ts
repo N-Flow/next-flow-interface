@@ -201,6 +201,8 @@ import RvLabel from "./api/service/sync/interface/step/attributes/label/rv-label
 import RvLabelAttributeApi from "./api/service/attributes/label/rv-label-attribute-api";
 import RvCamera from "./api/service/sync/interface/step/environment/camera/rv-camera.interface";
 import RvCameraLocation from "./api/service/sync/interface/step/environment/camera/location/rv-camera-location.interface";
+import RvLoop from "./api/service/sync/interface/step/attributes/animation/loop/rv-loop.interface";
+import RvLoopAttributeApi from "./api/service/attributes/animation/loop/rv-loop-attribute-api";
 
 
 export type {
@@ -362,6 +364,8 @@ export type {
   RvLabelAttributeApi,
   RvCamera,
   RvCameraLocation,
+  RvLoop,
+  RvLoopAttributeApi,
 }
 
 export {
