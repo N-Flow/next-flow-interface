@@ -65,6 +65,7 @@ import {UseBase} from "@/api/hook/use-base.type";
 import RsNodeServiceApi from "./service/engine/render/model/rs-node-service-api";
 import RsModelServiceApi from "@/api/service/engine/render/model/rs-model-service-api";
 import RvLabelAttributeApi from "@/api/service/attributes/label/rv-label-attribute-api";
+import RvLoopAttributeApi from "@/api/service/attributes/animation/loop/rv-loop-attribute-api";
 
 export interface OfpApi {
 
@@ -73,6 +74,7 @@ export interface OfpApi {
     attributes: {
       rvLocationAttribute: RvLocationAttributeApi
       rvLabelAttribute: RvLabelAttributeApi
+      rvLoopAttribute: RvLoopAttributeApi
     }
 
     main: {
