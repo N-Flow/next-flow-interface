@@ -203,6 +203,8 @@ import RvCamera from "./api/service/sync/interface/step/environment/camera/rv-ca
 import RvCameraLocation from "./api/service/sync/interface/step/environment/camera/location/rv-camera-location.interface";
 import RvLoop from "./api/service/sync/interface/step/attributes/animation/loop/rv-loop.interface";
 import RvLoopAttributeApi from "./api/service/attributes/animation/loop/rv-loop-attribute-api";
+import RvNative from "./api/service/sync/interface/step/attributes/animation/native/rv-native.interface";
+import RvNativeAttributeApi from "./api/service/attributes/animation/native/rv-native-attribute-api";
 
 
 export type {
@@ -366,6 +368,8 @@ export type {
   RvCameraLocation,
   RvLoop,
   RvLoopAttributeApi,
+  RvNative,
+  RvNativeAttributeApi,
 }
 
 export {
