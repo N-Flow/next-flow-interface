@@ -77,6 +77,7 @@ import SkyboxAnimationApi from "@/api/service/engine/animation/entry/environment
 import RsEnvironmentServiceApi from "@/api/service/engine/render/environment/rs-environment-service-api";
 import RsServiceApi from "@/api/service/engine/rs-service-api";
 import EasyPropertyAnimationApi from "@/api/service/engine/animation/factory/between/easy-property-animation-api";
+import PluginContainerServiceApi from "@/api/service/main/plugin/plugin-container-service-api";
 
 export interface OfpApi {
 
@@ -104,6 +105,7 @@ export interface OfpApi {
       dialogService: DialogServiceApi
       nativeEventService: NativeEventServiceApi
       firstLoadModelService: FirstLoadModelServiceApi
+      pluginContainerService: PluginContainerServiceApi
     }
 
     engine: {
