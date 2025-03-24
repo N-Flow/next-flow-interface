@@ -10,11 +10,13 @@ export default interface BasePlugin {
   type: PluginType
   theme: ThemeColor
 
-  data: any
+  loadApi?: () => void
 
-  onInstall: () => Promise<void>
-  onEnable: () => Promise<void>
-  onDisable: () => Promise<void>
-  onUninstall: () => Promise<void>
+  data?: any
+
+  onInstall?: () => Promise<void>
+  onEnable?: () => Promise<void>
+  onDisable?: () => Promise<void>
+  onUninstall?: () => Promise<void>
 }
 
