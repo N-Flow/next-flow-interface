@@ -203,6 +203,17 @@ import RvCamera from "./api/service/sync/interface/step/environment/camera/rv-ca
 import RvCameraLocation from "./api/service/sync/interface/step/environment/camera/location/rv-camera-location.interface";
 import RvLoop from "./api/service/sync/interface/step/attributes/animation/loop/rv-loop.interface";
 import RvLoopAttributeApi from "./api/service/attributes/animation/loop/rv-loop-attribute-api";
+import RvNative from "./api/service/sync/interface/step/attributes/animation/native/rv-native.interface";
+import RvNativeAttributeApi from "./api/service/attributes/animation/native/rv-native-attribute-api";
+import CameraConfigurationAnimationApi from "./api/service/engine/animation/entry/environment/camera-configuration-animation-api"
+import CameraLocationAnimationApi from "./api/service/engine/animation/entry/environment/camera-location-animation-api";
+import RvAwareness, {RvAwarenessClick, RvAwarenessUser } from "./api/service/sync/interface/awareness/rv-awareness.interface";
+import FogAnimationApi from "./api/service/engine/animation/entry/environment/fog-animation-api";
+import GroundAnimationApi from "./api/service/engine/animation/entry/environment/ground-animation-api";
+import LightAnimationApi from "./api/service/engine/animation/entry/environment/light-animation-api";
+import ShadowAnimationApi from "./api/service/engine/animation/entry/environment/shadow-animation-api";
+import SkyboxAnimationApi from "./api/service/engine/animation/entry/environment/skybox-animation-api";
+import RsEnvironmentServiceApi from "./api/service/engine/render/environment/rs-environment-service-api";
 
 
 export type {
@@ -366,6 +377,19 @@ export type {
   RvCameraLocation,
   RvLoop,
   RvLoopAttributeApi,
+  RvNative,
+  RvNativeAttributeApi,
+  CameraConfigurationAnimationApi,
+  CameraLocationAnimationApi,
+  RvAwarenessUser,
+  RvAwarenessClick,
+  RvAwareness,
+  FogAnimationApi,
+  GroundAnimationApi,
+  LightAnimationApi,
+  ShadowAnimationApi,
+  SkyboxAnimationApi,
+  RsEnvironmentServiceApi,
 }
 
 export {
