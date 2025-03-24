@@ -8,9 +8,9 @@ export default interface CameraLocationAnimationApi {
 
   cameraAnimation: AnimationGroup | null
 
-  play(data: RvCameraLocation, duration: number, enableNear: boolean): void
+  play(data: RvCameraLocation, duration?: number, enableNear?: boolean): void
 
-  playEasy(data: RvCameraLocation, duration: number): void
+  playEasy(data: RvCameraLocation, duration?: number): void
 
   makeCameraAnimationsEase(data: RvCameraLocation, duration?: number): Animation[]
 
