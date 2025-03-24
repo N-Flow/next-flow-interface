@@ -59,7 +59,7 @@ export default class FileUtils {
         const buffer = await chunk.arrayBuffer()
         return CryptoUtils.computeSHA256(buffer)
       })
-    );
+    )
 
     // 合并哈希并生成最终哈希
     const encoder = new TextEncoder()
