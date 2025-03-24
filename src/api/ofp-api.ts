@@ -75,6 +75,8 @@ import LightAnimationApi from "@/api/service/engine/animation/entry/environment/
 import ShadowAnimationApi from "@/api/service/engine/animation/entry/environment/shadow-animation-api";
 import SkyboxAnimationApi from "@/api/service/engine/animation/entry/environment/skybox-animation-api";
 import RsEnvironmentServiceApi from "@/api/service/engine/render/environment/rs-environment-service-api";
+import RsServiceApi from "@/api/service/engine/rs-service-api";
+import EasyPropertyAnimationApi from "@/api/service/engine/animation/factory/between/easy-property-animation-api";
 
 export interface OfpApi {
 
@@ -114,6 +116,8 @@ export interface OfpApi {
         lightAnimation: LightAnimationApi
         shadowAnimation: ShadowAnimationApi
         skyboxAnimation: SkyboxAnimationApi
+
+        easyPropertyAnimation: EasyPropertyAnimationApi
       }
 
       operate: {
@@ -125,6 +129,8 @@ export interface OfpApi {
         rsModelService: RsModelServiceApi
         rsEnvironmentService: RsEnvironmentServiceApi
       }
+
+      rsService: RsServiceApi
 
     }
 

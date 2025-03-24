@@ -214,6 +214,9 @@ import LightAnimationApi from "./api/service/engine/animation/entry/environment/
 import ShadowAnimationApi from "./api/service/engine/animation/entry/environment/shadow-animation-api";
 import SkyboxAnimationApi from "./api/service/engine/animation/entry/environment/skybox-animation-api";
 import RsEnvironmentServiceApi from "./api/service/engine/render/environment/rs-environment-service-api";
+import RsServiceApi from "./api/service/engine/rs-service-api";
+import { SupportAnimationTarget } from "./api/service/engine/animation/factory/dto/support-animation-target.type";
+import EasyPropertyAnimationApi from "./api/service/engine/animation/factory/between/easy-property-animation-api";
 
 
 export type {
@@ -390,6 +393,9 @@ export type {
   ShadowAnimationApi,
   SkyboxAnimationApi,
   RsEnvironmentServiceApi,
+  RsServiceApi,
+  EasyPropertyAnimationApi,
+  SupportAnimationTarget,
 }
 
 export {
