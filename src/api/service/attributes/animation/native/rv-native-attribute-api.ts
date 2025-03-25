@@ -6,7 +6,7 @@ export default interface RvNativeAttributeApi {
 
   defaultValue: RvNative
 
-  generate(): RvNative
+  generate(nid: string): RvNative
 
   ensure(nid: string): boolean
 

@@ -78,6 +78,7 @@ import RsEnvironmentServiceApi from "@/api/service/engine/render/environment/rs-
 import RsServiceApi from "@/api/service/engine/rs-service-api";
 import EasyPropertyAnimationApi from "@/api/service/engine/animation/factory/between/easy-property-animation-api";
 import PluginContainerServiceApi from "@/api/service/main/plugin/plugin-container-service-api";
+import RvNativeAttributeApi from "@/api/service/attributes/animation/native/rv-native-attribute-api";
 
 export interface OfpApi {
 
@@ -87,6 +88,7 @@ export interface OfpApi {
       rvLocationAttribute: RvLocationAttributeApi
       rvLabelAttribute: RvLabelAttributeApi
       rvLoopAttribute: RvLoopAttributeApi
+      rvNativeAttribute: RvNativeAttributeApi
     }
 
     main: {
