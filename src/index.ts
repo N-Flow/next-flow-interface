@@ -217,6 +217,8 @@ import RsEnvironmentServiceApi from "./api/service/engine/render/environment/rs-
 import RsServiceApi from "./api/service/engine/rs-service-api";
 import { SupportAnimationTarget } from "./api/service/engine/animation/factory/dto/support-animation-target.type";
 import EasyPropertyAnimationApi from "./api/service/engine/animation/factory/between/easy-property-animation-api";
+import RvCode from "./api/service/sync/interface/step/attributes/code/rv-code.interface";
+import RvCodeAttributeApi from "./api/service/attributes/code/rv-code-attribute-api";
 
 
 export type {
@@ -396,6 +398,8 @@ export type {
   RsServiceApi,
   EasyPropertyAnimationApi,
   SupportAnimationTarget,
+  RvCode,
+  RvCodeAttributeApi,
 }
 
 export {
