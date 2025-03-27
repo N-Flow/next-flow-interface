@@ -80,6 +80,7 @@ import EasyPropertyAnimationApi from "@/api/service/engine/animation/factory/bet
 import PluginContainerServiceApi from "@/api/service/main/plugin/plugin-container-service-api";
 import RvNativeAttributeApi from "@/api/service/attributes/animation/native/rv-native-attribute-api";
 import RvCodeAttributeApi from "@/api/service/attributes/code/rv-code-attribute-api";
+import ThemeServiceApi from "@/api/service/main/theme/theme-service-api";
 
 export interface OfpApi {
 
@@ -97,6 +98,7 @@ export interface OfpApi {
       spaceService: SpaceServiceApi
       statusService: StatusServiceApi
       pluginService: PluginServiceApi
+      themeService: ThemeServiceApi
       internationalizationService: InternationalizationServiceApi
       userService: UserServiceApi
       meetingService: MeetingServiceApi

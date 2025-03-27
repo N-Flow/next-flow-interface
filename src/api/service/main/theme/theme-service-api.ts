@@ -6,4 +6,8 @@ export default interface ThemeServiceApi {
 
   isDarkTheme(): boolean
 
+  updateBackground(): void
+
+  updateBackgroundByColor(color: string): void
+
 }
