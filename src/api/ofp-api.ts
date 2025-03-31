@@ -81,6 +81,7 @@ import PluginContainerServiceApi from "@/api/service/main/plugin/plugin-containe
 import RvNativeAttributeApi from "@/api/service/attributes/animation/native/rv-native-attribute-api";
 import RvCodeAttributeApi from "@/api/service/attributes/code/rv-code-attribute-api";
 import ThemeServiceApi from "@/api/service/main/theme/theme-service-api";
+import RvMaterialAttributeApi from "@/api/service/attributes/material/rv-material-attribute-api";
 
 export interface OfpApi {
 
@@ -92,6 +93,7 @@ export interface OfpApi {
       rvLoopAttribute: RvLoopAttributeApi
       rvNativeAttribute: RvNativeAttributeApi
       rvCodeAttribute: RvCodeAttributeApi
+      rvMaterialAttribute: RvMaterialAttributeApi
     }
 
     main: {

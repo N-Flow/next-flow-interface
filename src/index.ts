@@ -222,7 +222,8 @@ import RvCodeAttributeApi from "./api/service/attributes/code/rv-code-attribute-
 import {RvMaterialGeneral} from "./api/service/sync/interface/step/attributes/material/general/rv-material-general.interface";
 import {RvMaterialPBR} from "./api/service/sync/interface/step/attributes/material/pbr/rv-material-pbr.interface";
 import { RvMaterialTexture } from "./api/service/sync/interface/step/attributes/material/texture/rv-material-texture.interface";
-import { RvMaterialNode } from "./api/service/sync/interface/step/attributes/material/node/rv-material-node.interface";
+import { RvMaterialNode, RvMaterialNodeInput } from "./api/service/sync/interface/step/attributes/material/node/rv-material-node.interface";
+import RvMaterialAttributeApi from "./api/service/attributes/material/rv-material-attribute-api";
 
 
 export type {
@@ -408,6 +409,8 @@ export type {
   RvMaterialTexture,
   RvMaterialPBR,
   RvMaterialNode,
+  RvMaterialNodeInput,
+  RvMaterialAttributeApi,
 }
 
 export {
