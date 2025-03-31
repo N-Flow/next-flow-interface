@@ -219,6 +219,10 @@ import { SupportAnimationTarget } from "./api/service/engine/animation/factory/d
 import EasyPropertyAnimationApi from "./api/service/engine/animation/factory/between/easy-property-animation-api";
 import RvCode from "./api/service/sync/interface/step/attributes/code/rv-code.interface";
 import RvCodeAttributeApi from "./api/service/attributes/code/rv-code-attribute-api";
+import {RvMaterialGeneral} from "./api/service/sync/interface/step/attributes/material/general/rv-material-general.interface";
+import {RvMaterialPBR} from "./api/service/sync/interface/step/attributes/material/pbr/rv-material-pbr.interface";
+import { RvMaterialTexture } from "./api/service/sync/interface/step/attributes/material/texture/rv-material-texture.interface";
+import { RvMaterialNode } from "./api/service/sync/interface/step/attributes/material/node/rv-material-node.interface";
 
 
 export type {
@@ -400,6 +404,10 @@ export type {
   SupportAnimationTarget,
   RvCode,
   RvCodeAttributeApi,
+  RvMaterialGeneral,
+  RvMaterialTexture,
+  RvMaterialPBR,
+  RvMaterialNode,
 }
 
 export {
