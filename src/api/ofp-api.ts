@@ -218,7 +218,6 @@ export interface OfpApi {
 
   styles: {
     rss: any
-    checkableButtonStyles: any
   }
 
   utils: {
