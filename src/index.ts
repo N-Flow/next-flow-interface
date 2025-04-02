@@ -224,6 +224,7 @@ import {RvMaterialPBR} from "./api/service/sync/interface/step/attributes/materi
 import { RvMaterialTexture } from "./api/service/sync/interface/step/attributes/material/texture/rv-material-texture.interface";
 import { RvMaterialNode, RvMaterialNodeInput } from "./api/service/sync/interface/step/attributes/material/node/rv-material-node.interface";
 import RvMaterialAttributeApi from "./api/service/attributes/material/rv-material-attribute-api";
+import SceneServiceApi from "./api/service/main/scene/scene-service-api";
 
 
 export type {
@@ -411,6 +412,7 @@ export type {
   RvMaterialNode,
   RvMaterialNodeInput,
   RvMaterialAttributeApi,
+  SceneServiceApi,
 }
 
 export {

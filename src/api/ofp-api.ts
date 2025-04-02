@@ -82,6 +82,7 @@ import RvNativeAttributeApi from "@/api/service/attributes/animation/native/rv-n
 import RvCodeAttributeApi from "@/api/service/attributes/code/rv-code-attribute-api";
 import ThemeServiceApi from "@/api/service/main/theme/theme-service-api";
 import RvMaterialAttributeApi from "@/api/service/attributes/material/rv-material-attribute-api";
+import sceneServiceApi from "./service/main/scene/scene-service-api";
 
 export interface OfpApi {
 
@@ -114,6 +115,7 @@ export interface OfpApi {
       nativeEventService: NativeEventServiceApi
       firstLoadModelService: FirstLoadModelServiceApi
       pluginContainerService: PluginContainerServiceApi
+      sceneService: sceneServiceApi
     }
 
     engine: {
