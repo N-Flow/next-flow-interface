@@ -3,5 +3,5 @@ import RvNative from "@/api/service/sync/interface/step/attributes/animation/nat
 
 export default interface RvAnimation {
   loop?: RvLoop
-  native?: RvNative
+  embedded?: RvNative
 }
