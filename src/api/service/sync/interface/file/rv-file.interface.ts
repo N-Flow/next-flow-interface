@@ -8,7 +8,7 @@ export default interface RvFile {
   size: number
   hash?: string
 
-  url: string  // For url or oss (https://xxx, oss://{bucket}/{path})
+  url: string  // https://xxx  oss://{bucket}/{path}  attach://{fid}
 
   createdAt: number
   updatedAt: number
