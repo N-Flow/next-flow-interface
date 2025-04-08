@@ -225,6 +225,7 @@ import { RvMaterialTexture } from "./api/service/sync/interface/step/attributes/
 import { RvMaterialNode, RvMaterialNodeInput } from "./api/service/sync/interface/step/attributes/material/node/rv-material-node.interface";
 import RvMaterialAttributeApi from "./api/service/attributes/material/rv-material-attribute-api";
 import SceneServiceApi from "./api/service/main/scene/scene-service-api";
+import AddLocalDataOption from "./api/service/main/file/local/dto/add-local-data-option.interface";
 
 
 export type {
@@ -319,6 +320,7 @@ export type {
   RvFileServiceSubscriber,
   LocalDataServiceApi,
   LocalData,
+  AddLocalDataOption,
   BaseLocalData,
   BlobLocalData,
   ObjectLocalData,

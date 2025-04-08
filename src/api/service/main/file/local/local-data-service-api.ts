@@ -1,5 +1,6 @@
 import {LocalDataServiceEventType, LocalDataServiceSubscriber} from "./dto/local-data-service-subscriber.type";
 import {LocalData} from "./dto/local-data.type";
+import AddLocalDataOption from "@/api/service/main/file/local/dto/add-local-data-option.interface";
 
 export default interface LocalDataServiceApi {
 
@@ -13,11 +14,11 @@ export default interface LocalDataServiceApi {
   remove(fid: string): boolean
 
 
-  add(localData: LocalData): boolean
+  add(localData: AddLocalDataOption): boolean
 
   load(fid: string, url: string): Promise<LocalData>
 
-  loadByFile(fid: string, file: File): LocalData
+  loadByFile(fid: string, file: File): void
 
   pause(fid: string): boolean  // 暂不支持
 
