@@ -1,12 +1,12 @@
 import {FirstLoadServiceStatus} from "@/api/service/main/file/first/dto/first-load-service-status.enum";
 import {FirstLoadServiceSubscriber} from "@/api/service/main/file/first/dto/first-load-service-subscriber.type";
-import {LocalFile} from "@/api/service/main/file/local/dto/local-file.type";
+import {LocalData} from "@/api/service/main/file/local/dto/local-data.type";
 
 export default interface FirstLoadServiceApi {
 
   status: FirstLoadServiceStatus
 
-  localFileList: LocalFile[]
+  localDataList: LocalData[]
 
   loadingNumber: number
   loadedNumber: number

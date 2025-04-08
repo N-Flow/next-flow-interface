@@ -1,5 +1,5 @@
 
-export enum LocalFileStatus {
+export enum LocalDataStatus {
   WAITING = 'WAITING',
   LOADING = 'LOADING',
   PAUSED = 'PAUSED',

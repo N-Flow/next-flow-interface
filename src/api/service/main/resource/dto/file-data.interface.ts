@@ -1,10 +1,10 @@
-import { LocalFileStatus } from "../../file/local/dto/local-file-status.enum"
+import { LocalDataStatus } from "../../file/local/dto/local-file-status.enum"
 
 export default interface FileData {
   fid: string
   name: string
   type: string  // File type
-  status: LocalFileStatus
+  status: LocalDataStatus
   nameWithoutType: string
   description: string
   size: string

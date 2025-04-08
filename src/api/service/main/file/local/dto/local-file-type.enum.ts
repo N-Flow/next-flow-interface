@@ -1,5 +1,5 @@
 
-export enum LocalFileType {
+export enum LocalDataType {
   BLOB = 'BLOB',
   OBJECT = 'OBJECT',
 }

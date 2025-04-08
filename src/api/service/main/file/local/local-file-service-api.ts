@@ -1,23 +1,23 @@
-import {LocalFileServiceEventType, LocalFileServiceSubscriber} from "./dto/local-file-service-subscriber.type";
-import {LocalFile} from "./dto/local-file.type";
+import {LocalDataServiceEventType, LocalDataServiceSubscriber} from "./dto/local-data-service-subscriber.type";
+import {LocalData} from "./dto/local-data.type";
 
-export default interface LocalFileServiceApi {
+export default interface LocalDataServiceApi {
 
-  files: Map<string, LocalFile>
+  files: Map<string, LocalData>
 
 
-  get(fid: string): LocalFile | undefined
+  get(fid: string): LocalData | undefined
 
   has(fid: string): boolean
 
   remove(fid: string): boolean
 
 
-  add(localFile: LocalFile): boolean
+  add(localData: LocalData): boolean
 
-  load(fid: string, url: string): Promise<LocalFile>
+  load(fid: string, url: string): Promise<LocalData>
 
-  loadByFile(fid: string, file: File): LocalFile
+  loadByFile(fid: string, file: File): LocalData
 
   pause(fid: string): boolean  // 暂不支持
 
@@ -26,19 +26,19 @@ export default interface LocalFileServiceApi {
   cancel(fid: string): boolean  // 暂不支持
 
 
-  subscribe(subscriber: LocalFileServiceSubscriber): () => void
+  subscribe(subscriber: LocalDataServiceSubscriber): () => void
 
-  unsubscribe(subscriber: LocalFileServiceSubscriber): void
+  unsubscribe(subscriber: LocalDataServiceSubscriber): void
 
-  subscribeSingle(fid: string, subscriber: LocalFileServiceSubscriber): () => void
+  subscribeSingle(fid: string, subscriber: LocalDataServiceSubscriber): () => void
 
-  unsubscribeSingle(fid: string, subscriber: LocalFileServiceSubscriber): void
+  unsubscribeSingle(fid: string, subscriber: LocalDataServiceSubscriber): void
 
-  publish(fid: string, type: LocalFileServiceEventType, localFile: LocalFile): void
+  publish(fid: string, type: LocalDataServiceEventType, localData: LocalData): void
 
-  afterLoaded(fid: string, subscriber: (localFile: LocalFile) => void): void
+  afterLoaded(fid: string, subscriber: (localData: LocalData) => void): void
 
-  waitLoaded(fid: string): Promise<LocalFile>
+  waitLoaded(fid: string): Promise<LocalData>
 
   /**
    * 是否已经载入完成

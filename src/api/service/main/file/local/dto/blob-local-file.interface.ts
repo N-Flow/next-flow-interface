@@ -1,9 +1,9 @@
-import BaseLocalFile from "@/api/service/main/file/local/dto/base-local-file.interface";
-import {LocalFileType} from "@/api/service/main/file/local/dto/local-file-type.enum";
+import BaseLocalData from "@/api/service/main/file/local/dto/base-local-file.interface";
+import {LocalDataType} from "@/api/service/main/file/local/dto/local-file-type.enum";
 
-export default interface BlobLocalFile extends BaseLocalFile {
+export default interface BlobLocalData extends BaseLocalData {
 
-  type: LocalFileType.BLOB
+  type: LocalDataType.BLOB
 
   blob: Blob | null
 

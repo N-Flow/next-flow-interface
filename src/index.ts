@@ -25,7 +25,7 @@ import { MeetingStatus } from "./api/service/main/meeting/dto/meeting-status";
 import UserServiceApi from "./api/service/main/user/user-service-api";
 import PluginState from "./api/service/main/plugin/dto/plugin-state.interface";
 import AcceptMime from "./api/service/main/file/local/accept-mime";
-import LocalFileServiceApi from "./api/service/main/file/local/local-file-service-api";
+import LocalDataServiceApi from "./api/service/main/file/local/local-file-service-api";
 import PluginServiceApi from "./api/service/main/plugin/plugin-service-api";
 import PluginConnectorApi from "./api/service/main/plugin/plugin-connector-api";
 import { Locale } from "./api/service/main/internationalization/dto/locale";
@@ -58,7 +58,7 @@ import { RsdCheckableButtonProps } from "./api/components/rsd/rsd-checkable-butt
 import { RsdSwitchProps } from "./api/components/rsd/rsd-switch-props";
 import { RsdTitleProps } from "./api/components/rsd/rsd-title-props";
 import ThemeProviderProps from "./api/components/ant/theme-provider-props";
-import { LocalFileStatus } from "./api/service/main/file/local/dto/local-file-status.enum";
+import { LocalDataStatus } from "./api/service/main/file/local/dto/local-file-status.enum";
 import UserInfo from "./api/service/main/user/dto/user-info.interface";
 import UserAuth from "./api/service/main/user/dto/user-auth.interface";
 import ModulePreloaderApi from "./api/service/main/preloader/module-preloader-api";
@@ -112,11 +112,11 @@ import PluginContainerServiceApi from "./api/service/main/plugin/plugin-containe
 import DialogPlugin from "./plugin/dialog-plugin";
 import RvFileServiceApi from "./api/service/sync/file/rv-file-service-api";
 import {RvFileServiceEventType, RvFileServiceSubscriber } from "./api/service/sync/file/dto/rv-file-service-subscriber.type";
-import { LocalFile } from "./api/service/main/file/local/dto/local-file.type";
-import BaseLocalFile from "./api/service/main/file/local/dto/base-local-file.interface";
-import BlobLocalFile from "./api/service/main/file/local/dto/blob-local-file.interface";
-import ObjectLocalFile from "./api/service/main/file/local/dto/object-local-file.interface";
-import { LocalFileType } from "./api/service/main/file/local/dto/local-file-type.enum";
+import { LocalData } from "./api/service/main/file/local/dto/local-data.type";
+import BaseLocalData from "./api/service/main/file/local/dto/base-local-file.interface";
+import BlobLocalData from "./api/service/main/file/local/dto/blob-local-file.interface";
+import ObjectLocalData from "./api/service/main/file/local/dto/object-local-file.interface";
+import { LocalDataType } from "./api/service/main/file/local/dto/local-file-type.enum";
 import OssUploadServiceApi from "./api/service/main/file/oss/oss-upload-service-api";
 import {OssUploadServiceEventType, OssUploadServiceSubscriber } from "./api/service/main/file/oss/dto/oss-upload-service-subscriber.type";
 import { OssUploadInstanceStatus } from "./api/service/main/file/oss/dto/oss-upload-instance-status.enum";
@@ -124,7 +124,7 @@ import OssUploadInstance from "./api/service/main/file/oss/dto/oss-upload-instan
 import RvFile from "./api/service/sync/interface/file/rv-file.interface";
 import { RvFileType } from "./api/service/sync/interface/file/rv-file-type.enum";
 import { RvAttachType } from "./api/service/sync/interface/resource/rv-attach-type.enum";
-import {LocalFileServiceEventType, LocalFileServiceSubscriber } from "./api/service/main/file/local/dto/local-file-service-subscriber.type";
+import {LocalDataServiceEventType, LocalDataServiceSubscriber } from "./api/service/main/file/local/dto/local-data-service-subscriber.type";
 import ResourceServiceApi from "./api/service/main/resource/resource-service-api";
 import FileData from "./api/service/main/resource/dto/file-data.interface";
 import MainPortalProps from "./api/components/dev/main-portal-props";
@@ -317,15 +317,15 @@ export type {
   DialogPlugin,
   RvFileServiceApi,
   RvFileServiceSubscriber,
-  LocalFileServiceApi,
-  LocalFile,
-  BaseLocalFile,
-  BlobLocalFile,
-  ObjectLocalFile,
+  LocalDataServiceApi,
+  LocalData,
+  BaseLocalData,
+  BlobLocalData,
+  ObjectLocalData,
   OssUploadServiceApi,
   OssUploadServiceSubscriber,
   OssUploadInstance,
-  LocalFileServiceSubscriber,
+  LocalDataServiceSubscriber,
   ResourceServiceApi,
   FileData,
   MainPortalProps,
@@ -449,14 +449,14 @@ export {
   RvModelFormat,
   RvModelOrigin,
   PluginEventType,
-  LocalFileStatus,
-  LocalFileType,
+  LocalDataStatus,
+  LocalDataType,
   OssUploadInstanceStatus,
   OssUploadServiceEventType,
   RvFileType,
   RvAttachType,
   RvFileServiceEventType,
-  LocalFileServiceEventType,
+  LocalDataServiceEventType,
   FirstLoadServiceStatus,
   FirstLoadServiceEventType,
   RvResourceServiceEventType,

@@ -1,11 +1,11 @@
-import {LocalFileStatus} from "@/api/service/main/file/local/dto/local-file-status.enum";
+import {LocalDataStatus} from "@/api/service/main/file/local/dto/local-file-status.enum";
 
-export default interface BaseLocalFile {
+export default interface BaseLocalData {
 
   fid: string
 
   // 下载任务
-  status: LocalFileStatus
+  status: LocalDataStatus
   progress: number  // 已下载字节数
 
 }
