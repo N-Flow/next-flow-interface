@@ -3,6 +3,8 @@ export default class AcceptMime {
   
   static TEXTURE = 'babylonjs/texture'
   static EXTENSION_TEXTURE = 'babylonjs/texture'
+  static NODE_MATERIAL = 'babylonjs/node-material'
+  static EXTENSION_NODE_MATERIAL = 'babylonjs/node-material'
   
   static GLB = 'model/gltf-binary'
   static GLTF = 'model/gltf+json'
@@ -303,7 +305,7 @@ export default class AcceptMime {
       case AcceptMime.EXTENSION_MP4:
         return AcceptMime.MP4
       default:
-        return ''
+        return extension
     }
   }
   
