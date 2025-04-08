@@ -1,4 +1,4 @@
-import { LocalDataStatus } from "../../file/local/dto/local-file-status.enum"
+import { LocalDataStatus } from "../../file/local/dto/local-data-status.enum"
 
 export default interface FileData {
   fid: string
