@@ -1,10 +1,13 @@
+import { RvAttachType } from "../../../sync/interface/resource/rv-attach-type.enum"
 
 export default class AcceptMime {
   
   static TEXTURE = 'babylonjs/texture'
   static EXTENSION_TEXTURE = 'babylonjs/texture'
-  static NODE_MATERIAL = 'babylonjs/node-material'
-  static EXTENSION_NODE_MATERIAL = 'babylonjs/node-material'
+  static MATERIAL = 'babylonjs/material'
+  static EXTENSION_MATERIAL = 'babylonjs/material'
+  static UV = 'babylonjs/uv'
+  static EXTENSION_UV = 'babylonjs/uv'
   
   static GLB = 'model/gltf-binary'
   static GLTF = 'model/gltf+json'
@@ -76,6 +79,8 @@ export default class AcceptMime {
   static EXTENSION_MKV = '.mkv';
   
   static ANY = '*/*'
+
+  static UNKNOWN = 'unknown/unknown'
   
   
   static getSupportModel() {
@@ -182,7 +187,7 @@ export default class AcceptMime {
     return support
   }
 
-  static getExtension(filename: string): string {
+  static getExtensionByFilename(filename: string): string {
     if (!filename) return ''
     const parts = filename.split('.')
     return parts.length > 0 ? parts.pop() as string : ''
@@ -253,6 +258,12 @@ export default class AcceptMime {
   
   static getExtensionByMime(mime: string) {
     switch (mime) {
+      case AcceptMime.TEXTURE:
+        return AcceptMime.EXTENSION_TEXTURE
+      case AcceptMime.MATERIAL:
+        return AcceptMime.EXTENSION_MATERIAL
+      case AcceptMime.UV:
+        return AcceptMime.EXTENSION_UV
       case AcceptMime.GLB:
         return AcceptMime.EXTENSION_GLB
       case AcceptMime.GLTF:
@@ -276,12 +287,18 @@ export default class AcceptMime {
       case AcceptMime.MP4:
         return AcceptMime.EXTENSION_MP4
       default:
-        return ''
+        return AcceptMime.UNKNOWN
     }
   }
   
   static getMimeByExtension(extension: string) {
     switch (extension) {
+      case AcceptMime.EXTENSION_TEXTURE:
+        return AcceptMime.TEXTURE
+      case AcceptMime.EXTENSION_MATERIAL:
+        return AcceptMime.MATERIAL
+      case AcceptMime.EXTENSION_UV:
+        return AcceptMime.UV
       case AcceptMime.EXTENSION_GLB:
         return AcceptMime.GLB
       case AcceptMime.EXTENSION_GLTF:
@@ -305,7 +322,7 @@ export default class AcceptMime {
       case AcceptMime.EXTENSION_MP4:
         return AcceptMime.MP4
       default:
-        return extension
+        return AcceptMime.UNKNOWN
     }
   }
   
@@ -327,16 +344,46 @@ export default class AcceptMime {
   }
   
   static isTexture(type: string) {
-    return type == 'sf/texture'
+    return type == AcceptMime.TEXTURE || type == AcceptMime.EXTENSION_TEXTURE
   }
   
-  static isNodeMaterial(type: string) {
-    return type == 'sf/node-material'
+  static isMaterial(type: string) {
+    return type == AcceptMime.MATERIAL || type == AcceptMime.EXTENSION_MATERIAL
   }
-  
-  static isPreviewImage(type: string) {
-    return type == 'sf/image-preview'
+
+  static isUV(type: string) {
+    return type == AcceptMime.UV || type == AcceptMime.EXTENSION_UV
   }
+
+
+  static rvAttachTypeToExtension(rvAttachType: RvAttachType) {
+    if (rvAttachType === RvAttachType.TEXTURE) {
+      return AcceptMime.EXTENSION_TEXTURE
+    } else if (rvAttachType === RvAttachType.MATERIAL) {
+      return AcceptMime.EXTENSION_MATERIAL
+    } else if (rvAttachType === RvAttachType.UV) {
+      return AcceptMime.EXTENSION_UV
+    }
+  }
+
+  static rvAttachTypeToMime(rvAttachType: RvAttachType) {
+    if (rvAttachType === RvAttachType.TEXTURE) {
+      return AcceptMime.TEXTURE
+    } else if (rvAttachType === RvAttachType.MATERIAL) {
+      return AcceptMime.MATERIAL
+    } else if (rvAttachType === RvAttachType.UV) {
+      return AcceptMime.UV
+    }
+  }
+
+  static isAttachTypeExtension(extension: string) {
+    return extension == AcceptMime.EXTENSION_TEXTURE || extension == AcceptMime.EXTENSION_MATERIAL || extension == AcceptMime.EXTENSION_UV
+  }
+
+  static isAttachTypeMime(mime: string) {
+    return mime == AcceptMime.TEXTURE || mime == AcceptMime.MATERIAL || mime == AcceptMime.UV
+  }
+
 }
 
 
