@@ -3,10 +3,11 @@ import { RvAttachType } from "../../../sync/interface/resource/rv-attach-type.en
 export default class AcceptMime {
   
   static TEXTURE = 'babylonjs/texture'
-  static EXTENSION_TEXTURE = 'babylonjs/texture'
   static MATERIAL = 'babylonjs/material'
-  static EXTENSION_MATERIAL = 'babylonjs/material'
   static UV = 'babylonjs/uv'
+
+  static EXTENSION_TEXTURE = 'babylonjs/texture'
+  static EXTENSION_MATERIAL = 'babylonjs/material'
   static EXTENSION_UV = 'babylonjs/uv'
   
   static GLB = 'model/gltf-binary'
@@ -107,6 +108,8 @@ export default class AcceptMime {
       AcceptMime.WAV,
       AcceptMime.AAC,
       AcceptMime.OGG,
+      AcceptMime.FLAC,
+      AcceptMime.OPUS,
     ]
   }
   
@@ -116,6 +119,8 @@ export default class AcceptMime {
       AcceptMime.EXTENSION_WAV,
       AcceptMime.EXTENSION_AAC,
       AcceptMime.EXTENSION_OGG,
+      AcceptMime.EXTENSION_FLAC,
+      AcceptMime.EXTENSION_OPUS,
     ]
   }
   
@@ -123,6 +128,14 @@ export default class AcceptMime {
     return [
       AcceptMime.JPG,
       AcceptMime.PNG,
+      AcceptMime.GIF,
+      AcceptMime.BMP,
+      AcceptMime.WebP,
+      AcceptMime.SVG,
+      AcceptMime.TIFF,
+      AcceptMime.ICO,
+      AcceptMime.HEIF,
+      AcceptMime.AVIF,
     ]
   }
   
@@ -131,18 +144,44 @@ export default class AcceptMime {
       AcceptMime.EXTENSION_JPG,
       AcceptMime.EXTENSION_JPEG,
       AcceptMime.EXTENSION_PNG,
+      AcceptMime.EXTENSION_GIF,
+      AcceptMime.EXTENSION_BMP,
+      AcceptMime.EXTENSION_WEBP,
+      AcceptMime.EXTENSION_SVG,
+      AcceptMime.EXTENSION_TIFF,
+      AcceptMime.EXTENSION_ICO,
+      AcceptMime.EXTENSION_HEIF,
+      AcceptMime.EXTENSION_AVIF,
     ]
   }
   
   static getSupportVideo() {
     return [
       AcceptMime.MP4,
+      AcceptMime.WebM,
+      AcceptMime.AVI,
+      AcceptMime.MPEG,
+      AcceptMime.MOV,
+      AcceptMime.WMV,
+      AcceptMime.FLV,
+      AcceptMime.OGV,
+      AcceptMime.GP3,
+      AcceptMime.MKV,
     ]
   }
   
   static getSupportVideoExtension() {
     return [
       AcceptMime.EXTENSION_MP4,
+      AcceptMime.EXTENSION_WEBM,
+      AcceptMime.EXTENSION_AVI,
+      AcceptMime.EXTENSION_MPEG,
+      AcceptMime.EXTENSION_MOV,
+      AcceptMime.EXTENSION_WMV,
+      AcceptMime.EXTENSION_FLV,
+      AcceptMime.EXTENSION_OGV,
+      AcceptMime.EXTENSION_GP3,
+      AcceptMime.EXTENSION_MKV,
     ]
   }
   
@@ -278,14 +317,54 @@ export default class AcceptMime {
         return AcceptMime.EXTENSION_AAC
       case AcceptMime.OGG:
         return AcceptMime.EXTENSION_OGG
+      case AcceptMime.FLAC:
+        return AcceptMime.EXTENSION_FLAC
+      case AcceptMime.OPUS:
+        return AcceptMime.EXTENSION_OPUS
       case AcceptMime.JPG:
         return AcceptMime.EXTENSION_JPG
       case AcceptMime.PNG:
         return AcceptMime.EXTENSION_PNG
+      case AcceptMime.GIF:
+        return AcceptMime.EXTENSION_GIF
+      case AcceptMime.BMP:
+        return AcceptMime.EXTENSION_BMP
+      case AcceptMime.WebP:
+        return AcceptMime.EXTENSION_WEBP
+      case AcceptMime.SVG:
+        return AcceptMime.EXTENSION_SVG
+      case AcceptMime.TIFF:
+        return AcceptMime.EXTENSION_TIFF
+      case AcceptMime.ICO:
+        return AcceptMime.EXTENSION_ICO
+      case AcceptMime.HEIF:
+        return AcceptMime.EXTENSION_HEIF
+      case AcceptMime.AVIF:
+        return AcceptMime.EXTENSION_AVIF
       case AcceptMime.MP4:
         return AcceptMime.EXTENSION_MP4
-      default:
-        return AcceptMime.UNKNOWN
+      case AcceptMime.WebM:
+        return AcceptMime.EXTENSION_WEBM
+      case AcceptMime.AVI:
+        return AcceptMime.EXTENSION_AVI
+      case AcceptMime.MPEG:
+        return AcceptMime.EXTENSION_MPEG
+      case AcceptMime.MOV:
+        return AcceptMime.EXTENSION_MOV
+      case AcceptMime.WMV:
+        return AcceptMime.EXTENSION_WMV
+      case AcceptMime.FLV:
+        return AcceptMime.EXTENSION_FLV
+      case AcceptMime.OGV:
+        return AcceptMime.EXTENSION_OGV
+      case AcceptMime.GP3:
+        return AcceptMime.EXTENSION_GP3
+      case AcceptMime.MKV:
+        return AcceptMime.EXTENSION_MKV
+      case AcceptMime.ANY:
+        return ''
+      case AcceptMime.UNKNOWN:
+        return ''
     }
   }
   
@@ -313,14 +392,55 @@ export default class AcceptMime {
         return AcceptMime.AAC
       case AcceptMime.EXTENSION_OGG:
         return AcceptMime.OGG
+      case AcceptMime.EXTENSION_FLAC:
+        return AcceptMime.FLAC
+      case AcceptMime.EXTENSION_OPUS:
+        return AcceptMime.OPUS
       case AcceptMime.EXTENSION_JPG:
         return AcceptMime.JPG
       case AcceptMime.EXTENSION_PNG:
         return AcceptMime.PNG
+      case AcceptMime.EXTENSION_GIF:
+        return AcceptMime.GIF
+      case AcceptMime.EXTENSION_BMP:
+        return AcceptMime.BMP
+      case AcceptMime.EXTENSION_WEBP:
+        return AcceptMime.WebP
+      case AcceptMime.EXTENSION_SVG:
+        return AcceptMime.SVG
+      case AcceptMime.EXTENSION_TIFF:
+        return AcceptMime.TIFF
+      case AcceptMime.EXTENSION_ICO:
+        return AcceptMime.ICO
+      case AcceptMime.EXTENSION_HEIF:
+        return AcceptMime.HEIF
+      case AcceptMime.EXTENSION_AVIF:
+        return AcceptMime.AVIF
       case AcceptMime.EXTENSION_MP4:
         return AcceptMime.MP4
-      default:
-        return AcceptMime.UNKNOWN
+      case AcceptMime.EXTENSION_WEBM:
+        return AcceptMime.WebM
+      case AcceptMime.EXTENSION_AVI:
+        return AcceptMime.AVI
+      case AcceptMime.EXTENSION_MPEG:
+        return AcceptMime.MPEG
+      case AcceptMime.EXTENSION_MOV:
+        return AcceptMime.MOV
+      case AcceptMime.EXTENSION_WMV:
+        return AcceptMime.WMV
+      case AcceptMime.EXTENSION_FLV:
+        return AcceptMime.FLV
+      case AcceptMime.EXTENSION_OGV:
+        return AcceptMime.OGV
+      case AcceptMime.EXTENSION_GP3:
+        return AcceptMime.GP3
+      case AcceptMime.EXTENSION_MKV:
+        return AcceptMime.MKV
+
+      case AcceptMime.ANY:
+        return ''
+      case AcceptMime.UNKNOWN:
+        return ''
     }
   }
   
