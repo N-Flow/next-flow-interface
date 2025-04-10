@@ -226,6 +226,7 @@ import { RvMaterialNode, RvMaterialNodeInput } from "./api/service/sync/interfac
 import RvMaterialAttributeApi from "./api/service/attributes/material/rv-material-attribute-api";
 import SceneServiceApi from "./api/service/main/scene/scene-service-api";
 import AddLocalDataOption from "./api/service/main/file/local/dto/add-local-data-option.interface";
+import DataUtils from "./utils/data-utils";
 
 
 export type {
@@ -443,6 +444,7 @@ export {
   RvUtils,
   TimeUtils,
   UrlUtils,
+  DataUtils,
   Message,
   Dialog,
   RvPresetsType,
