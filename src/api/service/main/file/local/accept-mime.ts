@@ -204,31 +204,29 @@ export default class AcceptMime {
     return i > 0 ? filename.substring(0, i) : filename
   }
 
-  static isSupportModel(mime: string, filename = '') {
+  static isSupportModel(mime: string = AcceptMime.UNKNOWN) {
     if (mime == AcceptMime.ANY) return true
-    if (AcceptMime.getSupportModel().includes(mime)) return true
-    return AcceptMime.isSupportModelExtension(filename)
+    return AcceptMime.getSupportModel().includes(mime)
   }
   
-  static isSupportAudio(mime: string) {
+  static isSupportAudio(mime: string = AcceptMime.UNKNOWN) {
     if (mime == AcceptMime.ANY) return true
     return AcceptMime.getSupportAudio().includes(mime)
   }
   
-  static isSupportImage(mime: string) {
+  static isSupportImage(mime: string = AcceptMime.UNKNOWN) {
     if (mime == AcceptMime.ANY) return true
     return AcceptMime.getSupportImage().includes(mime)
   }
   
-  static isSupportVideo(mime: string) {
+  static isSupportVideo(mime: string = AcceptMime.UNKNOWN) {
     if (mime == AcceptMime.ANY) return true
     return AcceptMime.getSupportVideo().includes(mime)
   }
   
-  static isSupport(mime: string, filename = '') {
+  static isSupport(mime: string = AcceptMime.UNKNOWN) {
     if (mime == AcceptMime.ANY) return true
-    if (AcceptMime.getAllSupport().includes(mime)) return true
-    return AcceptMime.isSupportModelExtension(filename)
+    return AcceptMime.getAllSupport().includes(mime)
   }
   
   static isSupportModelExtension(filename: string) {
@@ -251,7 +249,7 @@ export default class AcceptMime {
     return AcceptMime.getSupportVideoExtension().includes(extension)
   }
   
-  static isSupportExtension(filename = '') {
+  static isSupportExtension(filename: string) {
     const extension = this.getExtensionWithDot(filename)
     return AcceptMime.getAllSupportExtension().includes(extension)
   }
@@ -337,22 +335,21 @@ export default class AcceptMime {
       if (extension && accept == extension) return true
     }
   }
+
   
-  // 是StepFlow内置定义的特殊子文件
-  static isStepFlowDefine(type: string) {
-    return type.startsWith('sf/')
+  static isTexture(mime: string = AcceptMime.UNKNOWN) {
+    if (mime == AcceptMime.ANY) return true
+    return mime == AcceptMime.TEXTURE || mime == AcceptMime.EXTENSION_TEXTURE
   }
   
-  static isTexture(type: string) {
-    return type == AcceptMime.TEXTURE || type == AcceptMime.EXTENSION_TEXTURE
-  }
-  
-  static isMaterial(type: string) {
-    return type == AcceptMime.MATERIAL || type == AcceptMime.EXTENSION_MATERIAL
+  static isMaterial(mime: string = AcceptMime.UNKNOWN) {
+    if (mime == AcceptMime.ANY) return true
+    return mime == AcceptMime.MATERIAL || mime == AcceptMime.EXTENSION_MATERIAL
   }
 
-  static isUV(type: string) {
-    return type == AcceptMime.UV || type == AcceptMime.EXTENSION_UV
+  static isUV(mime: string = AcceptMime.UNKNOWN) {
+    if (mime == AcceptMime.ANY) return true
+    return mime == AcceptMime.UV || mime == AcceptMime.EXTENSION_UV
   }
 
 
@@ -380,7 +377,8 @@ export default class AcceptMime {
     return extension == AcceptMime.EXTENSION_TEXTURE || extension == AcceptMime.EXTENSION_MATERIAL || extension == AcceptMime.EXTENSION_UV
   }
 
-  static isAttachTypeMime(mime: string) {
+  static isAttachTypeMime(mime: string = AcceptMime.UNKNOWN) {
+    if (mime == AcceptMime.ANY) return true
     return mime == AcceptMime.TEXTURE || mime == AcceptMime.MATERIAL || mime == AcceptMime.UV
   }
 
