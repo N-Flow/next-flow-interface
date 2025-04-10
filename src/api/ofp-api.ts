@@ -83,6 +83,7 @@ import RvCodeAttributeApi from "@/api/service/attributes/code/rv-code-attribute-
 import ThemeServiceApi from "@/api/service/main/theme/theme-service-api";
 import RvMaterialAttributeApi from "@/api/service/attributes/material/rv-material-attribute-api";
 import sceneServiceApi from "./service/main/scene/scene-service-api";
+import ResourcePreviewProps from "@/api/components/normal/resource-preview-props";
 
 export interface OfpApi {
 
@@ -192,6 +193,7 @@ export interface OfpApi {
       ScrollBar: FunctionComponent<ScrollBarProps>
       Dialog: FunctionComponent<DialogProps>
       MaterialSymbol: FunctionComponent<MaterialSymbolProps>
+      ResourcePreview: FunctionComponent<ResourcePreviewProps>
     }
 
     rsd: {

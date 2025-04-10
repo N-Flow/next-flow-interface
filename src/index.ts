@@ -227,6 +227,7 @@ import RvMaterialAttributeApi from "./api/service/attributes/material/rv-materia
 import SceneServiceApi from "./api/service/main/scene/scene-service-api";
 import AddLocalDataOption from "./api/service/main/file/local/dto/add-local-data-option.interface";
 import DataUtils from "./utils/data-utils";
+import ResourcePreviewProps from "./api/components/normal/resource-preview-props";
 
 
 export type {
@@ -416,6 +417,7 @@ export type {
   RvMaterialNodeInput,
   RvMaterialAttributeApi,
   SceneServiceApi,
+  ResourcePreviewProps,
 }
 
 export {
