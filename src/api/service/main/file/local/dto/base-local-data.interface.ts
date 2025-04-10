@@ -8,4 +8,6 @@ export default interface BaseLocalData {
   status: LocalDataStatus
   progress: number  // 已下载字节数
 
+  url?: string
+
 }

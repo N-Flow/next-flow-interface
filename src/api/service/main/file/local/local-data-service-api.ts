@@ -27,6 +27,11 @@ export default interface LocalDataServiceApi {
   cancel(fid: string): boolean  // 暂不支持
 
 
+  getUrl(fid: string): string
+
+  releaseUrl(fid: string): boolean
+
+
   subscribe(subscriber: LocalDataServiceSubscriber): () => void
 
   unsubscribe(subscriber: LocalDataServiceSubscriber): void

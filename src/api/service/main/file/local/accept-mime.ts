@@ -293,7 +293,7 @@ export default class AcceptMime {
     return AcceptMime.getAllSupportExtension().includes(extension)
   }
   
-  static getExtensionByMime(mime: string) {
+  static getExtensionByMime(mime: string = AcceptMime.UNKNOWN) {
     switch (mime) {
       case AcceptMime.TEXTURE:
         return AcceptMime.EXTENSION_TEXTURE
@@ -365,10 +365,12 @@ export default class AcceptMime {
         return ''
       case AcceptMime.UNKNOWN:
         return ''
+      default:
+        return ''
     }
   }
   
-  static getMimeByExtension(extension: string) {
+  static getMimeByExtension(extension: string = '') {
     switch (extension) {
       case AcceptMime.EXTENSION_TEXTURE:
         return AcceptMime.TEXTURE
@@ -436,11 +438,8 @@ export default class AcceptMime {
         return AcceptMime.GP3
       case AcceptMime.EXTENSION_MKV:
         return AcceptMime.MKV
-
-      case AcceptMime.ANY:
-        return ''
-      case AcceptMime.UNKNOWN:
-        return ''
+      default:
+        return AcceptMime.UNKNOWN
     }
   }
   
