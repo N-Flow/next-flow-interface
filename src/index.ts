@@ -478,4 +478,5 @@ export {
   RsModelServiceEventType,
   FirstLoadModelServiceStatus,
   FirstLoadModelServiceEventType,
+  Mime,
 }
