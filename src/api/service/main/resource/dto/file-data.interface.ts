@@ -6,6 +6,8 @@ export default interface FileData {
   name: string
   progress: number
   mime: string
+  filename?: string  // For resource with file
+  extension?: string  // For resource with file
   description?: string
   size?: string
   preview?: string
