@@ -119,6 +119,7 @@ export default class AcceptMime {
   static SUPPORT_TEXTURE_LIST = [
     ...AcceptMime.SUPPORT_IMAGE_LIST,
     ...AcceptMime.SUPPORT_VIDEO_LIST,
+    AcceptMime.TEXTURE,
   ]
 
 
