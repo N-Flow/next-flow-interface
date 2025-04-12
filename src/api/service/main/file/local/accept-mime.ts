@@ -1,10 +1,18 @@
-import { RvAttachType } from "../../../sync/interface/resource/rv-attach-type.enum"
+import {fileTypeFromBlob, fileTypeFromBuffer, fileTypeFromFile, fileTypeFromStream} from "file-type";
+import {RvAttachType} from "../../../sync/interface/resource/rv-attach-type.enum"
+import {BaseTexture, Material} from "@babylonjs/core";
+import type {AnyWebByteStream} from "strtok3";
+
 
 export default class AcceptMime {
   
+  static MESH = 'babylonjs/mesh'
+  static LIGHT = 'babylonjs/light'
+  static CAMERA = 'babylonjs/camera'
   static TEXTURE = 'babylonjs/texture'
   static MATERIAL = 'babylonjs/material'
   static UV = 'babylonjs/uv'
+  static ANIMATION = 'babylonjs/animation'
 
   static EXTENSION_TEXTURE = 'babylonjs/texture'
   static EXTENSION_MATERIAL = 'babylonjs/material'
@@ -82,7 +90,76 @@ export default class AcceptMime {
   static ANY = '*/*'
 
   static UNKNOWN = 'unknown/unknown'
-  
+
+
+  static async getMimeByObject(object?: File | Blob | BaseTexture | Material | any) {
+    if (object && object instanceof Blob) {
+      const ftr = await fileTypeFromBlob(object)
+      return ftr?.mime ?? AcceptMime.UNKNOWN
+    }
+    return AcceptMime.UNKNOWN
+  }
+
+  static async getMimeByPath(path?: string) {
+    if (path) {
+      const mime = (await import('mime')).default
+      return mime.getType(path) ?? AcceptMime.UNKNOWN
+    }
+    return AcceptMime.UNKNOWN
+  }
+
+  static async getMimeByUrl(url?: string) {
+    if (url) {
+      const response = await fetch(url)
+      const ftr = await fileTypeFromStream(response.body)
+      return ftr?.mime ?? AcceptMime.UNKNOWN
+    }
+    return AcceptMime.UNKNOWN
+  }
+
+  static async getMimeByBuffer(buffer?: ArrayBuffer | Uint8Array) {
+    if (buffer) {
+      const ftr = await fileTypeFromBuffer(buffer)
+      return ftr?.mime ?? AcceptMime.UNKNOWN
+    }
+    return AcceptMime.UNKNOWN
+  }
+
+  static async getMimeByStream(stream: AnyWebByteStream) {
+    if (stream) {
+      const ftr = await fileTypeFromStream(stream)
+      return ftr?.mime ?? AcceptMime.UNKNOWN
+    }
+    return AcceptMime.UNKNOWN
+  }
+
+  // 通用获取 Mime 函数
+  static async getMime(
+    input?: File | Blob | string | ArrayBuffer | Uint8Array | AnyWebByteStream | BaseTexture | Material | any
+  ): Promise<string> {
+    if (!input) {
+      return AcceptMime.UNKNOWN
+    } else if (typeof ReadableStream !== 'undefined' && input instanceof ReadableStream) {
+      return this.getMimeByStream(input);
+    } else if (input instanceof Blob) {
+      return this.getMimeByObject(input);
+    } else if (typeof input === 'string') {
+      if (input.startsWith('http://') || input.startsWith('https://')) {
+        return this.getMimeByUrl(input)
+      } else {
+        return this.getMimeByPath(input)
+      }
+    } else if (input instanceof ArrayBuffer || input instanceof Uint8Array) {
+      return this.getMimeByBuffer(input)
+    } else if (input instanceof BaseTexture) {
+      return AcceptMime.TEXTURE
+    } else if (input instanceof Material) {
+      return AcceptMime.MATERIAL
+    }
+    return AcceptMime.UNKNOWN
+  }
+
+
   
   static getSupportModel() {
     return [
@@ -92,16 +169,7 @@ export default class AcceptMime {
       AcceptMime.OBJ,
     ]
   }
-  
-  static getSupportModelExtension() {
-    return [
-      AcceptMime.EXTENSION_GLB,
-      AcceptMime.EXTENSION_GLTF,
-      AcceptMime.EXTENSION_STL,
-      AcceptMime.EXTENSION_OBJ,
-    ]
-  }
-  
+
   static getSupportAudio() {
     return [
       AcceptMime.MP3,
@@ -110,6 +178,15 @@ export default class AcceptMime {
       AcceptMime.OGG,
       AcceptMime.FLAC,
       AcceptMime.OPUS,
+    ]
+  }
+  
+  static getSupportModelExtension() {
+    return [
+      AcceptMime.EXTENSION_GLB,
+      AcceptMime.EXTENSION_GLTF,
+      AcceptMime.EXTENSION_STL,
+      AcceptMime.EXTENSION_OBJ,
     ]
   }
   

@@ -7,6 +7,7 @@ export default interface RvResource {
   name: string
   type: RvResourceType
 
+  mime: string
   preview?: string
   description?: string
 

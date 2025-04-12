@@ -6,6 +6,7 @@ export default interface RvFile {
 
   name: string
   size: number
+  mime: string
   hash?: string
 
   url: string  // https://xxx  oss://{bucket}/{path}  attach://{fid}
