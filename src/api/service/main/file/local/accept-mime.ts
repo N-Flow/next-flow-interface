@@ -181,17 +181,11 @@ export default class AcceptMime {
 
   
   static async getExtension(mime: string = AcceptMime.UNKNOWN) {
-    switch (mime) {
-      case AcceptMime.TEXTURE:
-        return AcceptMime.TEXTURE
-      case AcceptMime.MATERIAL:
-        return AcceptMime.MATERIAL
-      case AcceptMime.UV:
-        return AcceptMime.UV
-      case AcceptMime.ANY:
-        return ''
-      case AcceptMime.UNKNOWN:
-        return ''
+    if (AcceptMime.isBabylon(mime) || AcceptMime.isAttach(mime)) {
+      return mime
+    }
+    if (mime === AcceptMime.ANY || mime === AcceptMime.UNKNOWN) {
+      return ''
     }
     const mimeConverter = (await import('mime')).default
     return mimeConverter.getExtension(mime) ?? ''
@@ -228,7 +222,7 @@ export default class AcceptMime {
     return AcceptMime.SUPPORT_VIDEO_LIST.includes(mime)
   }
 
-  static isSupportBabylon(mime: string = AcceptMime.UNKNOWN) {
+  static isBabylon(mime: string = AcceptMime.UNKNOWN) {
     if (mime == AcceptMime.ANY) return true
     if (mime == AcceptMime.UNKNOWN) return false
     return AcceptMime.SUPPORT_BABYLON_LIST.includes(mime)
