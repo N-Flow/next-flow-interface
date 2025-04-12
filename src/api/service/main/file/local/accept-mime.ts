@@ -1,6 +1,6 @@
 import {fileTypeFromBlob, fileTypeFromBuffer, fileTypeFromFile, fileTypeFromStream} from "file-type";
 import {RvAttachType} from "../../../sync/interface/resource/rv-attach-type.enum"
-import {BaseTexture, Material} from "@babylonjs/core";
+import {AbstractMesh, BaseTexture, Material} from "@babylonjs/core";
 import type {AnyWebByteStream} from "strtok3";
 
 
@@ -52,6 +52,9 @@ export default class AcceptMime {
   static GP3 = 'video/3gpp';
   static MKV = 'video/x-matroska';
 
+  static TXT = 'text/plain'
+  static MARKDOWN = 'text/markdown'
+
 
   static SUPPORT_IMAGE_LIST = [
     AcceptMime.JPG,
@@ -84,6 +87,10 @@ export default class AcceptMime {
     AcceptMime.WAV,
   ]
 
+  static SUPPORT_TEXT_LIST = [
+    AcceptMime.TXT,
+  ]
+
 
   static SUPPORT_ALL_LIST = [
     ...AcceptMime.SUPPORT_IMAGE_LIST,
@@ -91,6 +98,7 @@ export default class AcceptMime {
     ...AcceptMime.SUPPORT_VIDEO_LIST,
     ...AcceptMime.SUPPORT_BABYLON_LIST,
     ...AcceptMime.SUPPORT_AUDIO_LIST,
+    ...AcceptMime.SUPPORT_TEXT_LIST,
   ]
 
   static SUPPORT_FILE_LIST = [
@@ -98,6 +106,14 @@ export default class AcceptMime {
     ...AcceptMime.SUPPORT_MODEL_LIST,
     ...AcceptMime.SUPPORT_VIDEO_LIST,
     ...AcceptMime.SUPPORT_AUDIO_LIST,
+    ...AcceptMime.SUPPORT_TEXT_LIST,
+  ]
+
+  static SUPPORT_RENDER_LIST = [
+    ...AcceptMime.SUPPORT_IMAGE_LIST,
+    ...AcceptMime.SUPPORT_MODEL_LIST,
+    ...AcceptMime.SUPPORT_VIDEO_LIST,
+    ...AcceptMime.SUPPORT_TEXT_LIST,
   ]
 
   static SUPPORT_TEXTURE_LIST = [
@@ -113,9 +129,16 @@ export default class AcceptMime {
   ]
 
 
-  static async getMimeByObject(object?: File | Blob | BaseTexture | Material | any) {
+  static async getMimeByBlob(object?: File | Blob) {
     if (object && object instanceof Blob) {
       const ftr = await fileTypeFromBlob(object)
+      if (!ftr) {
+        if (object instanceof File) {
+          if (object.name.endsWith('.stl')) {
+            return AcceptMime.STL
+          }
+        }
+      }
       return ftr?.mime ?? AcceptMime.UNKNOWN
     }
     return AcceptMime.UNKNOWN
@@ -162,7 +185,7 @@ export default class AcceptMime {
     } else if (typeof ReadableStream !== 'undefined' && input instanceof ReadableStream) {
       return this.getMimeByStream(input);
     } else if (input instanceof Blob) {
-      return this.getMimeByObject(input);
+      return this.getMimeByBlob(input);
     } else if (typeof input === 'string') {
       if (input.startsWith('http://') || input.startsWith('https://')) {
         return this.getMimeByUrl(input)
@@ -175,6 +198,8 @@ export default class AcceptMime {
       return AcceptMime.TEXTURE
     } else if (input instanceof Material) {
       return AcceptMime.MATERIAL
+    } else if (input instanceof AbstractMesh) {
+      return AcceptMime.MESH
     }
     return AcceptMime.UNKNOWN
   }
@@ -222,6 +247,12 @@ export default class AcceptMime {
     return AcceptMime.SUPPORT_VIDEO_LIST.includes(mime)
   }
 
+  static isSupportText(mime: string = AcceptMime.UNKNOWN) {
+    if (mime == AcceptMime.ANY) return true
+    if (mime == AcceptMime.UNKNOWN) return false
+    return AcceptMime.SUPPORT_TEXT_LIST.includes(mime)
+  }
+
   static isBabylon(mime: string = AcceptMime.UNKNOWN) {
     if (mime == AcceptMime.ANY) return true
     if (mime == AcceptMime.UNKNOWN) return false
@@ -234,6 +265,12 @@ export default class AcceptMime {
     return AcceptMime.SUPPORT_AUDIO_LIST.includes(mime)
   }
 
+  static isSupportRender(mime: string = AcceptMime.UNKNOWN) {
+    if (mime == AcceptMime.ANY) return true
+    if (mime == AcceptMime.UNKNOWN) return false
+    return AcceptMime.SUPPORT_RENDER_LIST.includes(mime)
+  }
+
   static isSupportTexture(mime: string = AcceptMime.UNKNOWN) {
     if (mime == AcceptMime.ANY) return true
     if (mime == AcceptMime.UNKNOWN) return false
@@ -243,22 +280,26 @@ export default class AcceptMime {
 
   static isTexture(mime: string = AcceptMime.UNKNOWN) {
     if (mime == AcceptMime.ANY) return true
+    if (mime == AcceptMime.UNKNOWN) return false
     return mime == AcceptMime.TEXTURE
   }
   
   static isMaterial(mime: string = AcceptMime.UNKNOWN) {
     if (mime == AcceptMime.ANY) return true
+    if (mime == AcceptMime.UNKNOWN) return false
     return mime == AcceptMime.MATERIAL
   }
 
   static isUV(mime: string = AcceptMime.UNKNOWN) {
     if (mime == AcceptMime.ANY) return true
+    if (mime == AcceptMime.UNKNOWN) return false
     return mime == AcceptMime.UV
   }
 
 
   static isAttach(mime: string = AcceptMime.UNKNOWN) {
     if (mime == AcceptMime.ANY) return true
+    if (mime == AcceptMime.UNKNOWN) return false
     return AcceptMime.ATTACH_LIST.includes(mime)
   }
 

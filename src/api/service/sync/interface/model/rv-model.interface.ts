@@ -1,13 +1,10 @@
 import {RvModelOrigin} from "@/api/service/sync/interface/model/rv-model-origin.enum";
-import {RvModelFormat} from "@/api/service/sync/interface/model/rv-model-format.enum";
-import RvNode from "@/api/service/sync/interface/model/node/rv-node.interface";
 import RvBasicConfig from "@/api/service/sync/interface/model/config/rv-basic-config.interface";
 
 export default interface RvModel {
   mid: string
   name: string
   origin: RvModelOrigin
-  format: RvModelFormat
   fid?: string
   config?: RvBasicConfig | any
   node?: string
@@ -24,7 +21,6 @@ export default interface RvModel {
  *   mid: 'M-XXX',
  *   name: 'Basic XXX',
  *   origin: RvModelOrigin.BASIC,
- *   format: RvModelFormat.BUILTIN,
  *   fid: 'F-XXX',
  *   config: {
  *     type: RvBasicType.CUBE,
@@ -47,7 +43,6 @@ export default interface RvModel {
  *   mid: 'M-XXX',
  *   name: 'FileNameWithOutExtension',
  *   origin: RvModelOrigin.UPLOAD,
- *   format: RvModelFormat.GLB,
  *   fid: 'F-XXX',
  *   node: {  // 在模型首次添加入场景后 填写这个选项 随后其他协同者才可开始加载这个模型
  *     nid: 'N-XXX',
@@ -65,7 +60,6 @@ export default interface RvModel {
  *   mid: 'M-XXX',
  *   name: 'M-XXX',
  *   origin: RvModelOrigin.UPLOAD,
- *   format: RvModelFormat.MP4,
  *   fid: 'F-XXX',
  *   node: {
  *     nid: 'N-XXX',
@@ -80,7 +74,6 @@ export default interface RvModel {
  *   mid: 'M-XXX',
  *   name: 'Text XXX',
  *   origin: RvModelOrigin.BASIC,
- *   format: RvModelFormat.BUILTIN,
  *   fid: 'F-XXX',
  *   config: {
  *     type: RvBasicType.TEXT,

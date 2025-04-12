@@ -103,7 +103,6 @@ import { RvPresetsType } from "./api/service/sync/interface/step/rv-presets-type
 import { RvMaterialType } from "./api/service/sync/interface/step/rv-material-type.enum"
 import { PluginConfig } from "./api/service/main/plugin/dto/plugin-config.type";
 import { PluginFrom } from "./api/service/main/plugin/dto/plugin-from.enum";
-import { RvModelFormat } from "./api/service/sync/interface/model/rv-model-format.enum"
 import { RvModelOrigin } from "./api/service/sync/interface/model/rv-model-origin.enum"
 import RvModelServiceApi from "./api/service/sync/model/rv-model-service-api"
 import { PluginEventType } from "./api/service/main/plugin/dto/plugin-event-type.enum";
@@ -452,7 +451,6 @@ export {
   RvPresetsType,
   RvMaterialType,
   PluginFrom,
-  RvModelFormat,
   RvModelOrigin,
   PluginEventType,
   LocalDataStatus,
