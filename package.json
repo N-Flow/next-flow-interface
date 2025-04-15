@@ -1,6 +1,6 @@
 {
   "name": "oflow-interface",
-  "version": "0.10.53",
+  "version": "0.10.54",
   "description": "Interface package for O FLOW. You can use this package to build your own plugin that can control anything.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
