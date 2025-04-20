@@ -6,7 +6,7 @@ export default interface RvModelServiceApi {
 
   models: RecursiveMap<RvModel>
 
-  uploadMulti(fileList: FileList | File[] | File | null | undefined):Promise<void>
+  uploadMulti(fileList: FileList | File[] | File | null | undefined, check?: boolean):Promise<void>
 
   addByFid(fid: string): void
 
