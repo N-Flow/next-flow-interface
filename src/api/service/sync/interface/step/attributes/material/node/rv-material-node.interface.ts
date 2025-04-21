@@ -1,7 +1,7 @@
 import {NodeMaterialBlockConnectionPointTypes} from "@babylonjs/core";
 
 export interface RvMaterialNode {
-  template: string
+  fid: string
   inputs: RvMaterialNodeInput[]
 }
 
