@@ -1,6 +1,12 @@
+import { AnimationGroup } from "@babylonjs/core"
 import { SupportAnimationTarget } from "../dto/support-animation-target.type"
 
 export default interface EasyPropertyAnimationApi {
+
+  animationMap: Map<string, {
+    animationGroup?: AnimationGroup
+    timeout?: ReturnType<typeof setTimeout>
+  }>
 
   play(
     id: string,
@@ -14,13 +20,12 @@ export default interface EasyPropertyAnimationApi {
     ease?: boolean,
   ): void
 
-  stop(id: string): void
-
-  getLastPlayTime(id: string): number
-
   playSplit(
+    id: string,
     callback: () => void,
     duration?: number,
   ): void
+
+  stop(id: string): void
 
 }
