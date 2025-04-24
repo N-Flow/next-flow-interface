@@ -177,7 +177,6 @@ import { FirstLoadModelServiceStatus } from "./api/service/engine/render/model/f
 import TAttributeServiceApi from "./api/service/target/attribute/t-attribute-service-api";
 import RvAttributes from "./api/service/sync/interface/step/attributes/rv-attributes.interface";
 import RvLocation from "./api/service/sync/interface/step/attributes/location/rv-location.interface";
-import RvGlobalMaterial from "./api/service/sync/interface/material/rv-global-material.interface";
 import RvMaterial from "./api/service/sync/interface/step/attributes/material/rv-material.interface";
 import RsSelectionServiceApi from "./api/service/engine/operate/selection/rs-selection-service-api";
 import HighLightInfo from "./api/service/engine/operate/selection/dto/hight-light-info.interface";
@@ -227,6 +226,7 @@ import SceneServiceApi from "./api/service/main/scene/scene-service-api";
 import AddLocalDataOption from "./api/service/main/file/local/dto/add-local-data-option.interface";
 import DataUtils from "./utils/data-utils";
 import ResourcePreviewProps from "./api/components/normal/resource-preview-props";
+import RvSeparate from "./api/service/sync/interface/separate/rv-separate.interface";
 
 
 export type {
@@ -311,7 +311,7 @@ export type {
   DialogController,
   DialogServiceApi,
   DialogCreateOptions,
-  RvGlobalMaterial,
+  RvSeparate,
   PluginConfig,
   RvModelServiceApi,
   PluginServiceSubscriber,
