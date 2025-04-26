@@ -56,9 +56,9 @@ import DialogServiceApi from "@/api/service/main/dialog/dialog-service-api";
 import NativeEventServiceApi from "@/api/service/main/native-event/native-event-service-api";
 import RvModelServiceApi from "./service/sync/model/rv-model-service-api";
 import FirstLoadModelServiceApi from "@/api/service/engine/render/model/first/first-load-model-service-api";
-import { UseTAttribute } from "./hook/use-t-attribute.type";
+import { UseTAttributes } from "./hook/use-t-attributes.type";
 import RsSelectionServiceApi from "@/api/service/engine/operate/selection/rs-selection-service-api";
-import TAttributeServiceApi from "./service/target/attribute/t-attribute-service-api";
+import TAttributesServiceApi from "./service/target/attribute/t-attributes-service-api";
 import RvLocationAttributeApi from "@/api/service/attributes/location/rv-location-attribute-api";
 import RvAttributesServiceApi from "@/api/service/sync/step/attributes/rv-attributes-service-api";
 import {UseBase} from "@/api/hook/use-base.type";
@@ -160,7 +160,7 @@ export interface OfpApi {
 
     target: {
       tStepService: TStepServiceApi
-      tAttributeService: TAttributeServiceApi
+      tAttributesService: TAttributesServiceApi
     }
 
   }
@@ -168,7 +168,7 @@ export interface OfpApi {
   hooks: {
     useBase: UseBase
     useTStep: UseTStep
-    useTAttribute: UseTAttribute
+    useTAttributes: UseTAttributes
     useStepOptions: UseStepOptions
   }
 

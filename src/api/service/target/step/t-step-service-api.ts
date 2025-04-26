@@ -1,7 +1,7 @@
 import {StoredRhineVar, RvPath} from "rhine-var";
 import RvStep from "../../sync/interface/step/rv-step.interface";
 import {TSubscriber} from "@/api/service/target/dto/t-subscriber.type";
-import {TAttributeSubscriber} from "@/api/service/target/dto/t-attribute-subscriber.type";
+import {TAttributesSubscriber} from "@/api/service/target/dto/t-attributes-subscriber.type";
 
 export default interface TStepServiceApi {
 
@@ -15,8 +15,8 @@ export default interface TStepServiceApi {
 
   get<T>(path: string | RvPath): T
 
-  subscribeAttributes(subscriber: TAttributeSubscriber): () => void
+  subscribeAttributes(subscriber: TAttributesSubscriber): () => void
 
-  unsubscribeAttributes(subscriber: TAttributeSubscriber): void
+  unsubscribeAttributes(subscriber: TAttributesSubscriber): void
 
 }

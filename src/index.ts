@@ -174,7 +174,7 @@ import { RsModelServiceEventType, RsModelServiceSubscriber } from "./api/service
 import FirstLoadModelServiceApi from "./api/service/engine/render/model/first/first-load-model-service-api";
 import {FirstLoadModelServiceEventType, FirstLoadModelServiceSubscriber } from "./api/service/engine/render/model/first/dto/first-load-model-service-subscriber.type";
 import { FirstLoadModelServiceStatus } from "./api/service/engine/render/model/first/dto/first-load-model-service-status.enum";
-import TAttributeServiceApi from "./api/service/target/attribute/t-attribute-service-api";
+import TAttributesServiceApi from "./api/service/target/attribute/t-attributes-service-api";
 import RvAttributes from "./api/service/sync/interface/step/attributes/rv-attributes.interface";
 import RvLocation from "./api/service/sync/interface/step/attributes/location/rv-location.interface";
 import RvMaterial from "./api/service/sync/interface/step/attributes/material/rv-material.interface";
@@ -186,7 +186,7 @@ import { LastSubscriber } from "./api/service/engine/operate/selection/dto/last-
 import RsSelectionState from "./api/service/engine/operate/selection/dto/rs-selection-state.interface";
 import { UseTStep } from "./api/hook/use-t-step.type";
 import { UseStepOptions } from "./api/hook/use-step-options.type";
-import { UseTAttribute } from "./api/hook/use-t-attribute.type";
+import { UseTAttributes } from "./api/hook/use-t-attributes.type";
 import { V2, V3, V4 } from "./type/general/vector.type";
 import VectorUtils from "./utils/vector-utils";
 import RvAttributesServiceApi from "./api/service/sync/step/attributes/rv-attributes-service-api";
@@ -227,7 +227,7 @@ import AddLocalDataOption from "./api/service/main/file/local/dto/add-local-data
 import DataUtils from "./utils/data-utils";
 import ResourcePreviewProps from "./api/components/normal/resource-preview-props";
 import RvSeparate from "./api/service/sync/interface/separate/rv-separate.interface";
-import { TAttributeSubscriber } from "./api/service/target/dto/t-attribute-subscriber.type";
+import { TAttributesSubscriber } from "./api/service/target/dto/t-attributes-subscriber.type";
 
 
 export type {
@@ -303,8 +303,8 @@ export type {
   RvModel,
   TStepServiceApi,
   TSubscriber,
-  TAttributeSubscriber,
-  TAttributeServiceApi,
+  TAttributesSubscriber,
+  TAttributesServiceApi,
   StepOptions,
   PluginViewProps,
   MessageServiceApi,
@@ -378,7 +378,7 @@ export type {
   RsSelectionState,
   UseBase,
   UseTStep,
-  UseTAttribute,
+  UseTAttributes,
   UseStepOptions,
   V2,
   V3,

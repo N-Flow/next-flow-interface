@@ -1,14 +1,14 @@
 import {StoredRhineVar, RvPath} from "rhine-var";
 import RvAttributes from "@/api/service/sync/interface/step/attributes/rv-attributes.interface";
-import {TAttributeSubscriber} from "@/api/service/target/dto/t-attribute-subscriber.type";
+import {TAttributesSubscriber} from "@/api/service/target/dto/t-attributes-subscriber.type";
 
-export default interface TAttributeServiceApi {
+export default interface TAttributesServiceApi {
 
   state: StoredRhineVar<RvAttributes> | null
 
-  subscribe(subscriber: TAttributeSubscriber): () => void
+  subscribe(subscriber: TAttributesSubscriber): () => void
 
-  unsubscribe(subscriber: TAttributeSubscriber): void
+  unsubscribe(subscriber: TAttributesSubscriber): void
 
   set<T>(path: string | RvPath, value: any): void
 
