@@ -227,6 +227,7 @@ import AddLocalDataOption from "./api/service/main/file/local/dto/add-local-data
 import DataUtils from "./utils/data-utils";
 import ResourcePreviewProps from "./api/components/normal/resource-preview-props";
 import RvSeparate from "./api/service/sync/interface/separate/rv-separate.interface";
+import { TAttributeSubscriber } from "./api/service/target/dto/t-attribute-subscriber.type";
 
 
 export type {
@@ -302,6 +303,7 @@ export type {
   RvModel,
   TStepServiceApi,
   TSubscriber,
+  TAttributeSubscriber,
   TAttributeServiceApi,
   StepOptions,
   PluginViewProps,
