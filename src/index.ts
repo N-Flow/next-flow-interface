@@ -100,7 +100,7 @@ import DialogServiceApi from "./api/service/main/dialog/dialog-service-api";
 import DialogCreateOptions from "./api/service/main/dialog/dto/dialog-create-options.interface";
 import Dialog from "./api/service/main/dialog/dialog.class";
 import { RvPresetType } from "./api/service/sync/interface/step/attributes/material/preset/rv-preset-type.enum"
-import { RvMaterialType } from "./api/service/sync/interface/step/rv-material-type.enum"
+import { RvMaterialType } from "./api/service/sync/interface/step/attributes/material/general/rv-material-type.enum"
 import { PluginConfig } from "./api/service/main/plugin/dto/plugin-config.type";
 import { PluginFrom } from "./api/service/main/plugin/dto/plugin-from.enum";
 import { RvModelOrigin } from "./api/service/sync/interface/model/rv-model-origin.enum"
