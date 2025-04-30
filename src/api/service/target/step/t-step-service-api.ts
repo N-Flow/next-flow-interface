@@ -5,6 +5,8 @@ import {TAttributesSubscriber} from "@/api/service/target/dto/t-attributes-subsc
 
 export default interface TStepServiceApi {
 
+  sid: string
+
   state: StoredRhineVar<RvStep>
 
   subscribe(subscriber: TSubscriber): () => void

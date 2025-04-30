@@ -6,14 +6,14 @@ export interface RvMaterialPBR {
     roughness: number
     emissiveColor: string
     alpha: number
-
+  }
+  advance: {
     reflectivityColor: string
     ambientColor: string
     indexOfRefraction: number
     metallicF0Factor: number
     reflectionColor: string
   }
-
   coat: {
     enable: boolean
     intensity: number

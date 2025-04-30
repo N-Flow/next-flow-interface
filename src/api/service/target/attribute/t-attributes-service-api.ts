@@ -4,6 +4,10 @@ import {TAttributesSubscriber} from "@/api/service/target/dto/t-attributes-subsc
 
 export default interface TAttributesServiceApi {
 
+  sid: string
+
+  nid: string
+
   state: StoredRhineVar<RvAttributes> | null
 
   subscribe(subscriber: TAttributesSubscriber): () => void
