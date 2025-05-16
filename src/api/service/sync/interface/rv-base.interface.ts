@@ -26,7 +26,7 @@ export default interface RvBase {
 
   history: RvHistory
 
-  meetings: RvMeeting
+  meetings: RhineVarMap<RvMeeting>
 
   version: RvVersion
 }

@@ -228,6 +228,8 @@ import DataUtils from "./utils/data-utils";
 import ResourcePreviewProps from "./api/components/normal/resource-preview-props";
 import RvSeparate from "./api/service/sync/interface/separate/rv-separate.interface";
 import { TAttributesSubscriber } from "./api/service/target/dto/t-attributes-subscriber.type";
+import RvMeeting, {RvMeetingCurrent, RvMeetingStatistic } from "./api/service/sync/interface/meeting/rv-meeting.interface";
+import RvMeetingServiceApi from "./api/service/sync/meeting/rv-meeting-service-api";
 
 
 export type {
@@ -419,6 +421,10 @@ export type {
   RvMaterialAttributeApi,
   SceneServiceApi,
   ResourcePreviewProps,
+  RvMeeting,
+  RvMeetingStatistic,
+  RvMeetingCurrent,
+  RvMeetingServiceApi,
 }
 
 export {
