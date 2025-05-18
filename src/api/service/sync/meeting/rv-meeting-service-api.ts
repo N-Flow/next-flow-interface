@@ -23,6 +23,8 @@ export default interface RvMeetingServiceApi {
 
   setConfigByCurrentMeeting(): boolean
 
+  generateId(): string
+
   removeAllMeetings(): void
 
 }

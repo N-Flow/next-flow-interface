@@ -1,4 +1,4 @@
-import type { RhineVarMap, RhineVarArray } from 'rhine-var';
+import type {RhineVarMap, RhineVarArray, StoredRhineVar} from 'rhine-var';
 import RvGlobal from "./global/rv-global.interface";
 import RvStep from "./step/rv-step.interface";
 import RvFile from "@/api/service/sync/interface/file/rv-file.interface";
