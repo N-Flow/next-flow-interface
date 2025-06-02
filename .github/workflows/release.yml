@@ -101,20 +101,20 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js Environment
-        uses: actions/setup-node@v4
+      - name: Setup Bun Environment
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: "20"
-          cache: "yarn"
+          bun-version: "latest"
+          registry-url: https://registry.npmjs.org/
 
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: Run Unit Tests
-        run: yarn test
+        run: bun test
 
       - name: Build Project
-        run: yarn build
+        run: bun run build
 
       - name: Add scope to package.json
         run: |
@@ -126,11 +126,11 @@ jobs:
 
       - name: Configure npm Registry
         run: |
-          npm config set @O-FLOW:registry=https://npm.pkg.github.com
+          bun config set @O-FLOW:registry=https://npm.pkg.github.com
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
 
-      - name: Publish to NPM
-        run: npm publish
+      - name: Publish to Github
+        run: bun publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          BUN_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
