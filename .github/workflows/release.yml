@@ -83,6 +83,12 @@ jobs:
       - name: Build Project
         run: bun run build
 
+      - name: Pack with verbose output
+        run: |
+          bun pm pack --dry-run
+          echo "Dry run successful, now packing..."
+          bun pm pack
+
       - name: Publish to NPM
         run: bun publish
         env:
