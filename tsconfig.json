@@ -30,8 +30,8 @@
     "declarationMap": true,
     "emitDeclarationOnly": false,
 
+    "baseUrl": "./",
     "paths": {
-      "baseUrl": ["."],
       "@/*": ["./src/*"],
     }
   },
