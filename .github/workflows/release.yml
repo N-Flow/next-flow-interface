@@ -111,7 +111,6 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: "latest"
-          registry-url: https://registry.npmjs.org/
 
       - name: Install Dependencies
         run: bun install --frozen-lockfile
@@ -134,9 +133,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 'latest'
-          registry-url: 'https://registry.npmjs.org/'
 
-      - name: Configure npm Registry
+      - name: Configure Github NPM Registry
         run: |
           npm config set @O-FLOW:registry=https://npm.pkg.github.com
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
