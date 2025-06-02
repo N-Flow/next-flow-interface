@@ -83,8 +83,11 @@ jobs:
       - name: Build Project
         run: bun run build
 
-      - name: Setup NPM
-        run: bun install -g npm
+      - name: Setup NodeJs for NPM
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+          registry-url: 'https://registry.npmjs.org/'
 
       - name: Publish to NPM
         run: npm publish
