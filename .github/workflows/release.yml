@@ -84,7 +84,7 @@ jobs:
         run: bun run build
 
       - name: Pack Project
-        run: bun pack
+        run: bun pm pack
 
       - name: Setup NodeJs for NPM
         uses: actions/setup-node@v4
