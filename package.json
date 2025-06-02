@@ -1,6 +1,6 @@
 {
   "name": "oflow-interface",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "description": "Interface package for O FLOW. You can use this package to build your own plugin that can control anything.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -27,6 +27,11 @@
     "Simulation",
     "Collaboration",
     "Interface"
+  ],
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
   ],
   "devDependencies": {
     "@babylonjs/core": "7.41.1",
