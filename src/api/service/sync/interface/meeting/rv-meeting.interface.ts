@@ -15,6 +15,7 @@ export interface RvMeetingCurrent {
 }
 
 export interface RvMeetingStatistic {
+  total: number,
 }
 
 export default interface RvMeeting {

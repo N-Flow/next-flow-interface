@@ -1,5 +1,4 @@
-import {fileTypeFromBlob, fileTypeFromBuffer, fileTypeFromFile, fileTypeFromStream} from "file-type"
-import {RvAttachType} from "../../../sync/interface/resource/rv-attach-type.enum"
+import {fileTypeFromBlob, fileTypeFromBuffer, fileTypeFromStream} from "file-type"
 import {AbstractMesh, BaseTexture, Material} from "@babylonjs/core"
 import type {AnyWebByteStream} from "strtok3"
 

@@ -1,6 +1,5 @@
 import {ContextMenuCreateOptions} from "@/api/service/main/context-menu/dto/context-menu-create-options.interface"
 import {ContextMenuController} from "@/api/service/main/context-menu/dto/context-menu-controller.interface"
-import {MenuLineCreateOptions} from "@/api/service/main/context-menu/dto/menu-line-create-options.interface"
 import {ThemeColor} from "@/api/service/main/theme/dto/theme-color.enum"
 import MenuLine from "@/api/service/main/context-menu/menu-line.class"
 

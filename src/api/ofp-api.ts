@@ -228,8 +228,5 @@ export interface OfpApi {
     materialSymbol: MaterialSymbolFunction
     sleep: SleepFunction
   }
-
-  modules: {
-  }
   
 }

@@ -1,4 +1,3 @@
-import NumberUtils from "./number-utils"
 
 export default class MathUtils {
   static toDegrees(angle: number) {

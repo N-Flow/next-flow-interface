@@ -1,4 +1,3 @@
-import { Node } from "@babylonjs/core"
 
 export default interface SceneServiceApi {
 
