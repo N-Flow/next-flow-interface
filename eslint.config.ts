@@ -12,17 +12,14 @@ const config: Linter.Config[] = defineConfig([
     ignores: ["**/tsconfig.json", "**/tsconfig.*.json", ".vscode/**", ".idea/**", "dist/**", "build/**", "node_modules/**"],
   },
   {
-    files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
+    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"],
     plugins: { js },
-    extends: ["js/recommended"]
-  },
-  {
-    files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
-    languageOptions: { globals: globals.browser }
+    languageOptions: { globals: globals.browser },
+    extends: ["js/recommended"],
   },
   ...tseslint.configs.recommended,
   {
-    files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
+    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"],
     plugins: { "unused-imports": unusedImports },
     rules: {
       "semi": ["error", "never"],
@@ -36,27 +33,27 @@ const config: Linter.Config[] = defineConfig([
           "varsIgnorePattern": "^_",
           "args": "after-used",
           "argsIgnorePattern": "^_"
-        }
+        },
       ],
-    }
+    },
   },
   {
     files: ["**/*.json"],
     plugins: { json },
     language: "json/json",
-    extends: ["json/recommended"]
+    extends: ["json/recommended"],
   },
   {
     files: ["**/*.jsonc", "**/*.jsonc", "tsconfig.json", "tsconfig.*.json"],
     plugins: { json },
     language: "json/jsonc",
-    extends: ["json/recommended"]
+    extends: ["json/recommended"],
   },
   {
     files: ["**/*.md"],
     plugins: { markdown },
     language: "markdown/gfm",
-    extends: ["markdown/recommended"]
+    extends: ["markdown/recommended"],
   },
 ])
 
