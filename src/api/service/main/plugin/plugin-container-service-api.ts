@@ -1,6 +1,6 @@
-import BasePlugin from "@/plugin/base-plugin";
-import { IconPluginPosition } from "@/plugin/dto/icon-plugin-position.enum";
-import IconPlugin from "@/plugin/icon-plugin";
+import BasePlugin from "@/plugin/base-plugin"
+import { IconPluginPosition } from "@/plugin/dto/icon-plugin-position.enum"
+import IconPlugin from "@/plugin/icon-plugin"
 
 export default interface PluginContainerServiceApi {
 

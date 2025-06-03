@@ -1,5 +1,5 @@
-import {DivProps} from "@/api/components/interface/base-types";
-import { ThemeColor } from "@/api/service/main/theme/dto/theme-color.enum";
+import {DivProps} from "@/api/components/interface/base-types"
+import { ThemeColor } from "@/api/service/main/theme/dto/theme-color.enum"
 
 // @ts-ignore
 export interface RsdFileSelectProps extends DivProps {

@@ -1,4 +1,4 @@
-import NodePair from "@/api/service/engine/render/model/dto/node-pair.interface";
+import NodePair from "@/api/service/engine/render/model/dto/node-pair.interface"
 import {Node} from '@babylonjs/core'
 
 export default interface RsNodeServiceApi {

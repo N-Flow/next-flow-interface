@@ -1,4 +1,4 @@
-import { LocalData } from "./local-data.type";
+import { LocalData } from "./local-data.type"
 
 export type LocalDataServiceSubscriber = (type: LocalDataServiceEventType, LocalData: LocalData) => void
 

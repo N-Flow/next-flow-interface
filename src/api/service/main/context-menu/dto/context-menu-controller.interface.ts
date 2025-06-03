@@ -1,4 +1,4 @@
-import ContextMenu from "@/api/service/main/context-menu/context-menu.class";
+import ContextMenu from "@/api/service/main/context-menu/context-menu.class"
 
 export interface ContextMenuController {
 

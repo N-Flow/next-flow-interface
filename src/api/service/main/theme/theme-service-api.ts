@@ -1,4 +1,4 @@
-import ThemeState from "@/api/service/main/theme/dto/theme-state.interface";
+import ThemeState from "@/api/service/main/theme/dto/theme-state.interface"
 
 export default interface ThemeServiceApi {
 

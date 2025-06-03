@@ -1,5 +1,5 @@
-import {Locale} from "@/api/service/main/internationalization/dto/locale";
-import {Translator} from "@/api/service/main/internationalization/dto/translator";
+import {Locale} from "@/api/service/main/internationalization/dto/locale"
+import {Translator} from "@/api/service/main/internationalization/dto/translator"
 
 export default interface InternationalizationServiceApi {
 

@@ -1,4 +1,4 @@
-import {V3} from "@/type/general/vector.type";
+import {V3} from "@/type/general/vector.type"
 
 export default interface RvLoop {
   rotationSpeed: V3,

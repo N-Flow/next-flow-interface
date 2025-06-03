@@ -1,7 +1,7 @@
-import {fileTypeFromBlob, fileTypeFromBuffer, fileTypeFromFile, fileTypeFromStream} from "file-type";
+import {fileTypeFromBlob, fileTypeFromBuffer, fileTypeFromFile, fileTypeFromStream} from "file-type"
 import {RvAttachType} from "../../../sync/interface/resource/rv-attach-type.enum"
-import {AbstractMesh, BaseTexture, Material} from "@babylonjs/core";
-import type {AnyWebByteStream} from "strtok3";
+import {AbstractMesh, BaseTexture, Material} from "@babylonjs/core"
+import type {AnyWebByteStream} from "strtok3"
 
 
 export default class AcceptMime {
@@ -30,27 +30,27 @@ export default class AcceptMime {
   static FLAC = 'audio/flac'
   static OPUS = 'audio/opus'
   
-  static JPG = 'image/jpeg';
-  static PNG = 'image/png';
-  static GIF = 'image/gif';
-  static BMP = 'image/bmp';
-  static WebP = 'image/webp';
-  static SVG = 'image/svg+xml';
-  static TIFF = 'image/tiff';
-  static ICO = 'image/x-icon';
-  static HEIF = 'image/heif';
-  static AVIF = 'image/avif';
+  static JPG = 'image/jpeg'
+  static PNG = 'image/png'
+  static GIF = 'image/gif'
+  static BMP = 'image/bmp'
+  static WebP = 'image/webp'
+  static SVG = 'image/svg+xml'
+  static TIFF = 'image/tiff'
+  static ICO = 'image/x-icon'
+  static HEIF = 'image/heif'
+  static AVIF = 'image/avif'
   
-  static MP4 = 'video/mp4';
-  static WebM = 'video/webm';
-  static AVI = 'video/x-msvideo';
-  static MPEG = 'video/mpeg';
-  static MOV = 'video/quicktime';
-  static WMV = 'video/x-ms-wmv';
-  static FLV = 'video/x-flv';
-  static OGV = 'video/ogg';
-  static GP3 = 'video/3gpp';
-  static MKV = 'video/x-matroska';
+  static MP4 = 'video/mp4'
+  static WebM = 'video/webm'
+  static AVI = 'video/x-msvideo'
+  static MPEG = 'video/mpeg'
+  static MOV = 'video/quicktime'
+  static WMV = 'video/x-ms-wmv'
+  static FLV = 'video/x-flv'
+  static OGV = 'video/ogg'
+  static GP3 = 'video/3gpp'
+  static MKV = 'video/x-matroska'
 
   static TXT = 'text/plain'
   static MARKDOWN = 'text/markdown'
@@ -184,9 +184,9 @@ export default class AcceptMime {
     if (!input) {
       return AcceptMime.UNKNOWN
     } else if (typeof ReadableStream !== 'undefined' && input instanceof ReadableStream) {
-      return this.getMimeByStream(input);
+      return this.getMimeByStream(input)
     } else if (input instanceof Blob) {
-      return this.getMimeByBlob(input);
+      return this.getMimeByBlob(input)
     } else if (typeof input === 'string') {
       if (input.startsWith('http://') || input.startsWith('https://')) {
         return this.getMimeByUrl(input)

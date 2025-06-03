@@ -1,5 +1,5 @@
-import {ReactNode} from "react";
-import {EmptyProps} from "antd";
+import {ReactNode} from "react"
+import {EmptyProps} from "antd"
 
 export interface AntEmptyProps extends EmptyProps{
   className?: string

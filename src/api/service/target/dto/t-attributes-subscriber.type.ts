@@ -1,6 +1,6 @@
-import { RvPath, StoredRhineVar } from "rhine-var";
-import { TChangeType } from "./t-change-type.enum";
-import RvAttributes from "@/api/service/sync/interface/step/attributes/rv-attributes.interface";
+import { RvPath, StoredRhineVar } from "rhine-var"
+import { TChangeType } from "./t-change-type.enum"
+import RvAttributes from "@/api/service/sync/interface/step/attributes/rv-attributes.interface"
 
 export type TAttributesSubscriber = (
   type: TChangeType,

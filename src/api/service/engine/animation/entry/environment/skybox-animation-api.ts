@@ -1,4 +1,4 @@
-import {Color3, Color4} from "@babylonjs/core";
+import {Color3, Color4} from "@babylonjs/core"
 
 
 export default interface SkyboxAnimationApi {

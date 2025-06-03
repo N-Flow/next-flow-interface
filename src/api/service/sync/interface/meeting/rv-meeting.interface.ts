@@ -1,5 +1,5 @@
-import {MeetingStatus} from "@/api/service/main/meeting/dto/meeting-status";
-import {ShareMode} from "@/api/service/main/meeting/dto/share-mode";
+import {MeetingStatus} from "@/api/service/main/meeting/dto/meeting-status"
+import {ShareMode} from "@/api/service/main/meeting/dto/share-mode"
 
 export interface RvMeetingCurrent {
   presenter: string,

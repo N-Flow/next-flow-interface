@@ -1,4 +1,4 @@
-import {V3, V4} from "@/type/general/vector.type";
+import {V3, V4} from "@/type/general/vector.type"
 
 export default interface RvLocation {
 

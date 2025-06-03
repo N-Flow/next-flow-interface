@@ -1,4 +1,4 @@
-import NumberUtils from "./number-utils";
+import NumberUtils from "./number-utils"
 
 export default class MathUtils {
   static toDegrees(angle: number) {
@@ -25,7 +25,7 @@ export default class MathUtils {
     let min = Infinity
     let index = -1
     for (let i = 0; i < list.length; i++) {
-      let distance = Math.abs(x - list[i])
+      const distance = Math.abs(x - list[i])
       if (distance < min) {
         min = distance
         index = i

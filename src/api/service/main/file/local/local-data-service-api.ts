@@ -1,6 +1,6 @@
-import {LocalDataServiceEventType, LocalDataServiceSubscriber} from "./dto/local-data-service-subscriber.type";
-import {LocalData} from "./dto/local-data.type";
-import AddLocalDataOption from "@/api/service/main/file/local/dto/add-local-data-option.interface";
+import {LocalDataServiceEventType, LocalDataServiceSubscriber} from "./dto/local-data-service-subscriber.type"
+import {LocalData} from "./dto/local-data.type"
+import AddLocalDataOption from "@/api/service/main/file/local/dto/add-local-data-option.interface"
 
 export default interface LocalDataServiceApi {
 

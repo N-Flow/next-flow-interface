@@ -1,5 +1,5 @@
-import {RvPath} from "rhine-var";
-import {PathValueArray} from "@/utils/dto/path-value-array";
+import {RvPath} from "rhine-var"
+import {PathValueArray} from "@/utils/dto/path-value-array"
 
 export default class DataUtils {
 

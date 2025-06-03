@@ -1,7 +1,7 @@
 export default class NumberUtils {
   static roundToX(num: number, x: number) {
-    const factor = Math.pow(10, x);
-    return Math.round(num * factor) / factor;
+    const factor = Math.pow(10, x)
+    return Math.round(num * factor) / factor
   }
 
   static r2(n: number): number {

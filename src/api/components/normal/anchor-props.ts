@@ -1,4 +1,4 @@
-import {DivProps} from "../interface/base-types";
+import {DivProps} from "../interface/base-types"
 
 export interface AnchorProps extends DivProps {
   list: string[]

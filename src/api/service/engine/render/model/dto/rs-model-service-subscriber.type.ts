@@ -1,4 +1,4 @@
-import RsModel from "@/api/service/engine/render/model/dto/rs-model.interface";
+import RsModel from "@/api/service/engine/render/model/dto/rs-model.interface"
 
 export type RsModelServiceSubscriber = (type: RsModelServiceEventType, rsModel: RsModel) => void
 

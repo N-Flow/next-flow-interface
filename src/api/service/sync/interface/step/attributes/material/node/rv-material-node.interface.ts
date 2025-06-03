@@ -1,4 +1,4 @@
-import {NodeMaterialBlockConnectionPointTypes} from "@babylonjs/core";
+import {NodeMaterialBlockConnectionPointTypes} from "@babylonjs/core"
 
 export interface RvMaterialNode {
   fid: string

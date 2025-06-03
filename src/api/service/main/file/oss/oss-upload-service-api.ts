@@ -1,5 +1,5 @@
-import OssUploadInstance from "@/api/service/main/file/oss/dto/oss-upload-instance.interface";
-import {OssUploadServiceSubscriber} from "@/api/service/main/file/oss/dto/oss-upload-service-subscriber.type";
+import OssUploadInstance from "@/api/service/main/file/oss/dto/oss-upload-instance.interface"
+import {OssUploadServiceSubscriber} from "@/api/service/main/file/oss/dto/oss-upload-service-subscriber.type"
 
 export default interface OssUploadServiceApi {
 

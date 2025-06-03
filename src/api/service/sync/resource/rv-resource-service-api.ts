@@ -1,6 +1,6 @@
-import {RecursiveMap, RecursiveObject} from "rhine-var";
-import RvResource from "@/api/service/sync/interface/resource/rv-resource.interface";
-import {RvResourceServiceSubscriber} from "@/api/service/sync/resource/dto/rv-resource-service-subscriber.type";
+import {RecursiveMap, RecursiveObject} from "rhine-var"
+import RvResource from "@/api/service/sync/interface/resource/rv-resource.interface"
+import {RvResourceServiceSubscriber} from "@/api/service/sync/resource/dto/rv-resource-service-subscriber.type"
 
 
 export default interface RvResourceServiceApi {

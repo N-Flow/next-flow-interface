@@ -1,4 +1,4 @@
-import {RvFileType} from "@/api/service/sync/interface/file/rv-file-type.enum";
+import {RvFileType} from "@/api/service/sync/interface/file/rv-file-type.enum"
 
 export default interface RvFile {
   fid: string

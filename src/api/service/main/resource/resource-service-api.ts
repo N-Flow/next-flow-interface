@@ -1,4 +1,4 @@
-import FileData from "@/api/service/main/resource/dto/file-data.interface";
+import FileData from "@/api/service/main/resource/dto/file-data.interface"
 
 export default interface ResourceServiceApi {
 

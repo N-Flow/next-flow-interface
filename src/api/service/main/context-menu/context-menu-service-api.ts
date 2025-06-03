@@ -1,6 +1,6 @@
-import ContextMenu from "@/api/service/main/context-menu/context-menu.class";
-import {ContextMenuCreateOptions} from "@/api/service/main/context-menu/dto/context-menu-create-options.interface";
-import {ContextMenuController} from "@/api/service/main/context-menu/dto/context-menu-controller.interface";
+import ContextMenu from "@/api/service/main/context-menu/context-menu.class"
+import {ContextMenuCreateOptions} from "@/api/service/main/context-menu/dto/context-menu-create-options.interface"
+import {ContextMenuController} from "@/api/service/main/context-menu/dto/context-menu-controller.interface"
 
 export default interface ContextMenuServiceApi {
 

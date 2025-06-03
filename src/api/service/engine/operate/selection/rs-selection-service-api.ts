@@ -1,6 +1,6 @@
-import { LastSubscriber } from "./dto/last-subscriber.type";
-import { SelectedSubscriber } from "./dto/selected-subscriber.type";
-import RsSelectionState from "@/api/service/engine/operate/selection/dto/rs-selection-state.interface";
+import { LastSubscriber } from "./dto/last-subscriber.type"
+import { SelectedSubscriber } from "./dto/selected-subscriber.type"
+import RsSelectionState from "@/api/service/engine/operate/selection/dto/rs-selection-state.interface"
 
 export default interface RsSelectionServiceApi {
 

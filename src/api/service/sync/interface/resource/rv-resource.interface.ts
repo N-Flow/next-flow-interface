@@ -1,5 +1,5 @@
-import {RvAttachType} from "@/api/service/sync/interface/resource/rv-attach-type.enum";
-import {RvResourceType} from "@/api/service/sync/interface/resource/rv-resource-type.enum";
+import {RvAttachType} from "@/api/service/sync/interface/resource/rv-attach-type.enum"
+import {RvResourceType} from "@/api/service/sync/interface/resource/rv-resource-type.enum"
 
 export default interface RvResource {
   fid: string

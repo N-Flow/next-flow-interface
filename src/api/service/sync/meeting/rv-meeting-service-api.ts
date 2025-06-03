@@ -1,5 +1,5 @@
-import {RecursiveArray, RecursiveMap, RhineVarArray, RhineVarMap, StoredRhineVar} from "rhine-var";
-import RvMeeting from "@/api/service/sync/interface/meeting/rv-meeting.interface";
+import {RecursiveArray, RecursiveMap, RhineVarArray, RhineVarMap, StoredRhineVar} from "rhine-var"
+import RvMeeting from "@/api/service/sync/interface/meeting/rv-meeting.interface"
 
 export default interface RvMeetingServiceApi {
 

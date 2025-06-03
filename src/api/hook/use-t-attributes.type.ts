@@ -1,4 +1,4 @@
-import {RvPath} from "rhine-var";
+import {RvPath} from "rhine-var"
 
 export type UseTAttributes = <T = any>(path?: string) => {
   sid: string,

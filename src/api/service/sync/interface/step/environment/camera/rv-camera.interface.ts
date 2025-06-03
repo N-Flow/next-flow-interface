@@ -1,5 +1,5 @@
 import RvCameraLocation
-  from "@/api/service/sync/interface/step/environment/camera/location/rv-camera-location.interface";
+  from "@/api/service/sync/interface/step/environment/camera/location/rv-camera-location.interface"
 
 export default interface RvCamera {
 

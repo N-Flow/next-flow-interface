@@ -1,6 +1,6 @@
-import {StoredRhineVar, RvPath} from "rhine-var";
-import RvAttributes from "@/api/service/sync/interface/step/attributes/rv-attributes.interface";
-import {TAttributesSubscriber} from "@/api/service/target/dto/t-attributes-subscriber.type";
+import {StoredRhineVar, RvPath} from "rhine-var"
+import RvAttributes from "@/api/service/sync/interface/step/attributes/rv-attributes.interface"
+import {TAttributesSubscriber} from "@/api/service/target/dto/t-attributes-subscriber.type"
 
 export default interface TAttributesServiceApi {
 

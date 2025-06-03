@@ -1,6 +1,6 @@
-import { V3, V4 } from "@/type/general/vector.type";
-import NumberUtils from "./number-utils";
-import { Quaternion, Vector3 } from "@babylonjs/core";
+import { V3, V4 } from "@/type/general/vector.type"
+import NumberUtils from "./number-utils"
+import { Quaternion, Vector3 } from "@babylonjs/core"
 
 export default class VectorUtils {
 

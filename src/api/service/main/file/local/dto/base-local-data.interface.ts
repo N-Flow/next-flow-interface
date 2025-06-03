@@ -1,4 +1,4 @@
-import {LocalDataStatus} from "@/api/service/main/file/local/dto/local-data-status.enum";
+import {LocalDataStatus} from "@/api/service/main/file/local/dto/local-data-status.enum"
 
 export default interface BaseLocalData {
 

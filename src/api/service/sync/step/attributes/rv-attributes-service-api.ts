@@ -1,5 +1,5 @@
-import {RecursiveMap, RhineVarMap, StoredRhineVar} from "rhine-var";
-import RvAttributes from "../../interface/step/attributes/rv-attributes.interface";
+import {RecursiveMap, RhineVarMap, StoredRhineVar} from "rhine-var"
+import RvAttributes from "../../interface/step/attributes/rv-attributes.interface"
 
 export default interface RvAttributesServiceApi {
 

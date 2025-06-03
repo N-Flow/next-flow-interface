@@ -20,7 +20,7 @@ export default class UrlUtils {
   }
 
   static async copyCurrentUrlToClipboard(): Promise<boolean> {
-    const url = window.location.href;
+    const url = window.location.href
     return UrlUtils.trySetClipboard(url)
   }
 

@@ -1,5 +1,5 @@
-import {RecursiveObject} from "rhine-var";
-import RvResource from "../../interface/resource/rv-resource.interface";
+import {RecursiveObject} from "rhine-var"
+import RvResource from "../../interface/resource/rv-resource.interface"
 
 export enum RvResourceServiceEventType {
   ADD = 'ADD',

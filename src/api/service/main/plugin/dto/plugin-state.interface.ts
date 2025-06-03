@@ -1,4 +1,4 @@
-import BasePlugin from "../../../../../plugin/base-plugin";
+import BasePlugin from "../../../../../plugin/base-plugin"
 
 export default interface PluginState {
   instance?: BasePlugin

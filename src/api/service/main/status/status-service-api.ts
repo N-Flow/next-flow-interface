@@ -1,5 +1,5 @@
-import Status from "@/api/service/main/status/dto/status";
-import {StatusChangeSubscriber} from "@/api/service/main/status/dto/status-change-subscriber";
+import Status from "@/api/service/main/status/dto/status"
+import {StatusChangeSubscriber} from "@/api/service/main/status/dto/status-change-subscriber"
 
 export default interface StatusServiceApi {
   

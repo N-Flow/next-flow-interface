@@ -1,9 +1,9 @@
-import {StoredRhineVar, RvPath} from "rhine-var";
+import {StoredRhineVar, RvPath} from "rhine-var"
 
 export default class RvUtils {
 
   static makeRvPath(path: string): RvPath {
-    let rvPath: RvPath = []
+    const rvPath: RvPath = []
     for (const item of path.split('.')) {
       const num = parseInt(item, 10)
       if (!isNaN(num) && item === num.toString()) {
@@ -58,7 +58,7 @@ export default class RvUtils {
   static checkRvPathOverlay(from: RvPath | string, target: RvPath | string) {
     from = RvUtils.ensureRvPath(from)
     target = RvUtils.ensureRvPath(target)
-    let n = from.length > target.length ? target.length : from.length
+    const n = from.length > target.length ? target.length : from.length
     for (let i = 0; i < n; i++) {
       if (from[i] != target[i]) {
         return false

@@ -1,4 +1,4 @@
-import CryptoUtils from "./crypto-utils";
+import CryptoUtils from "./crypto-utils"
 
 export default class FileUtils {
 
@@ -28,7 +28,7 @@ export default class FileUtils {
   }
 
   static ensureFileArray(files: File | File[] | FileList | null | undefined): File[] {
-    if (!files) return [];
+    if (!files) return []
     if (files instanceof File) return [files]
     if (files instanceof FileList) return Array.from(files)
     return files

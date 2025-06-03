@@ -1,5 +1,5 @@
-import {HistoryServiceSubscriber} from "@/api/service/sync/dto/history-service-subscriber.type";
-import {HistoryServiceStateSubscriber} from "@/api/service/sync/dto/history-service-state-subscriber.type";
+import {HistoryServiceSubscriber} from "@/api/service/sync/dto/history-service-subscriber.type"
+import {HistoryServiceStateSubscriber} from "@/api/service/sync/dto/history-service-state-subscriber.type"
 
 export default interface HistoryServiceApi {
 

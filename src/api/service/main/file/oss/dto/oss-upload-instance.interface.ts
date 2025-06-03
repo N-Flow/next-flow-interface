@@ -1,4 +1,4 @@
-import {OssUploadInstanceStatus} from "@/api/service/main/file/oss/dto/oss-upload-instance-status.enum";
+import {OssUploadInstanceStatus} from "@/api/service/main/file/oss/dto/oss-upload-instance-status.enum"
 
 export default interface OssUploadInstance {
 

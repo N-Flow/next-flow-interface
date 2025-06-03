@@ -11,7 +11,7 @@ export default class PageUtils {
 
   static forceGetSearchParams(key: string, errorMessage: string = '') {
     const params = new URLSearchParams(window.location.search)
-    let mt = params.get(key)
+    const mt = params.get(key)
     if (!mt) {
       if (errorMessage) console.error(errorMessage, mt)
       window.location.href = '/not-found'

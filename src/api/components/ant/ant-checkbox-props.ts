@@ -1,4 +1,4 @@
-import {SwitchProps} from "antd";
+import {SwitchProps} from "antd"
 
 export interface AntCheckboxProps extends SwitchProps {
   value: boolean
