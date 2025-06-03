@@ -22,7 +22,7 @@ export default function throttle<T extends (...args: any[]) => void>(
     const elapsed = now - lastExec
 
     lastArgs = args
-    lastThis = this
+    lastThis = this  // eslint-disable-line @typescript-eslint/no-this-alias
 
     if (lastExec === 0) {
       setTimeout(execute, 1)

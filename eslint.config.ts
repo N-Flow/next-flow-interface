@@ -8,6 +8,9 @@ import type { Linter } from "eslint"
 
 const config: Linter.Config[] = defineConfig([
   {
+    ignores: ["**/tsconfig.json", "**/tsconfig.*.json", ".vscode/**", ".idea/**", "dist/**", "build/**", "node_modules/**"],
+  },
+  {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     plugins: { js },
     extends: ["js/recommended"]
@@ -20,7 +23,8 @@ const config: Linter.Config[] = defineConfig([
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     rules: {
-      "semi": ["error", "never"]
+      "semi": ["error", "never"],
+      "@typescript-eslint/no-explicit-any": "warn",
     }
   },
   {
@@ -30,7 +34,7 @@ const config: Linter.Config[] = defineConfig([
     extends: ["json/recommended"]
   },
   {
-    files: ["**/*.jsonc"],
+    files: ["**/*.jsonc", "**/*.jsonc", "tsconfig.json", "tsconfig.*.json"],
     plugins: { json },
     language: "json/jsonc",
     extends: ["json/recommended"]

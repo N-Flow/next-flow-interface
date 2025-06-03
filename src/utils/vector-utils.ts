@@ -91,8 +91,12 @@ export default class VectorUtils {
     return VectorUtils.radiansToDegrees(q.toEulerAngles())
   }
 
+  private static isV4(v: V3 | V4): v is V4 {
+    return 'w' in v
+  }
+
   static toArray(v: V3 | V4): number[] {
-    if (v.hasOwnProperty('w')) {
+    if (this.isV4(v)) {
       return [v.x, v.y, v.z, (v as V4).w]
     } else {
       return [v.x, v.y, v.z]
@@ -104,7 +108,7 @@ export default class VectorUtils {
   }
 
   static toArrayWithRound4(v: V3 | V4, n: number = 0): number[] {
-    if (v.hasOwnProperty('w')) {
+    if (this.isV4(v)) {
       return [NumberUtils.roundToX(v.x, n), NumberUtils.roundToX(v.y, n), NumberUtils.roundToX(v.z, n), NumberUtils.roundToX((v as V4).w, n)]
     } else {
       return [NumberUtils.roundToX(v.x, n), NumberUtils.roundToX(v.y, n), NumberUtils.roundToX(v.z, n)]
