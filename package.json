@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "watch": "tsc --watch",
-    "lint": "eslint . --fix",
+    "lint": "eslint --fix",
     "test": "echo All tests passed.",
     "build": "tsc"
   },
@@ -47,6 +47,7 @@
     "brotli-wasm": "^3.0.1",
     "clsx": "2.1.1",
     "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
     "eslint-import-resolver-typescript": "^4.4.2",
     "eslint-plugin-import-x": "^4.15.0",
     "file-type": "^20.4.1",

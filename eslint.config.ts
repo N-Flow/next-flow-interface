@@ -7,10 +7,22 @@ import { defineConfig } from 'eslint/config'
 import { importX } from 'eslint-plugin-import-x'
 import globals from 'globals'
 import tseslint, {ConfigArray} from 'typescript-eslint'
+import eslintConfigPrettier from "eslint-config-prettier/flat"
+import { FlatCompat } from '@eslint/eslintrc'
 
 
-// Options
-const ENABLE_TYPE_CHECKED = true
+// Configuration
+const ENABLE_TYPE_CHECKED = true  // Set to enable project-based type checking
+const ENABLE_FRONTEND = false  // Set to enable Next.js, JSX, React, Hooks, and other frontend features
+const ENABLE_STYLESHEET = true  // Set to enable CSS, SCSS, SASS and other stylesheet features
+const IGNORE_PRETTIER = true  // Set to disable all rules that are unnecessary or might conflict with Prettier
+
+
+const directory = import.meta.dirname
+
+const compat = new FlatCompat({
+  baseDirectory: directory,
+})
 
 
 const globalConfig = defineConfig([
@@ -18,14 +30,13 @@ const globalConfig = defineConfig([
     ignores: [
       '.vscode/**',
       '.idea/**',
+      '.claude/**',
       'dist/**',
       'build/**',
       'node_modules/**',
-      '.claude/**',
     ],
   },
 ])
-
 
 const scriptFile = '*.{cjs,js,jsx,mjs,mjsx,cts,ts,tsx,mts,mtsx}'
 const jsFile = '*.{cjs,js,jsx,mjs,mjsx}'
@@ -37,7 +48,7 @@ const tsConfig = ENABLE_TYPE_CHECKED ? [
     languageOptions: {
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+        tsconfigRootDir: directory,
       },
     },
   },
@@ -120,13 +131,31 @@ const scriptConfig: ConfigArray = tseslint.config([
 ])
 
 
-const cssConfig = defineConfig([
-  {
-    ...css.configs.recommended,
-    files: ['**/*.css'],
-    language: 'css/css',
+const nextConfig = []
+if (ENABLE_FRONTEND) {
+  nextConfig.push(...compat.config({
+    extends: ['next/core-web-vitals', 'next/typescript'],
+  }))
+
+  for (const nextConfigElement of nextConfig) {
+    if (!nextConfigElement.files) {
+      nextConfigElement.files = [`**/${scriptFile}`]
+    }
   }
-])
+}
+
+
+const cssConfig = []
+
+if (ENABLE_STYLESHEET) {
+  cssConfig.push(...defineConfig([
+    {
+      ...css.configs.recommended,
+      files: ['**/*.css'],
+      language: 'css/css',
+    }
+  ]))
+}
 
 
 const markdownConfig = defineConfig([
@@ -154,6 +183,13 @@ const jsonConfig = defineConfig([
     language: 'json/jsonc',
   },
 ])
+
+
+const prettierConfig = []
+
+if (IGNORE_PRETTIER) {
+  prettierConfig.push(eslintConfigPrettier)
+}
 
 
 const customConfig = defineConfig([
@@ -201,13 +237,14 @@ const customConfig = defineConfig([
 const config = [
   ...globalConfig,
   ...scriptConfig,
+  ...nextConfig,
   ...cssConfig,
   ...markdownConfig,
   ...jsonConfig,
+  ...prettierConfig,
   ...customConfig,
 ]
 
 // console.log(config)
-
 
 export default config
