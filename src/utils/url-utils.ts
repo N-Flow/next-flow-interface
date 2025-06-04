@@ -1,16 +1,16 @@
-// import GlobalMessage from "@/core/main/message/global-message";
-// import InternationalizationService from "@/core/main/internationalization/internationalization-service";
+// Import GlobalMessage from "@/core/main/message/global-message";
+// Import InternationalizationService from "@/core/main/internationalization/internationalization-service";
 
 export default class UrlUtils {
   static getParam(name: string): string {
-    const reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
-    const r = window.location.search.substr(1).match(reg)
+    const reg = new RegExp(`(^|&)${  name  }=([^&]*)(&|$)`, 'i'),
+     r = window.location.search.substr(1).match(reg)
     return (r != null) ? decodeURIComponent(r[2]) : ''
   }
 
   static getHashParam(name: string): string {
-    const reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
-    const r = window.location.hash.substr(1).match(reg)
+    const reg = new RegExp(`(^|&)${  name  }=([^&]*)(&|$)`, 'i'),
+     r = window.location.hash.substr(1).match(reg)
     return (r != null) ? decodeURIComponent(r[2]) : ''
   }
 

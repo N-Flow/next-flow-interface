@@ -5,30 +5,30 @@ import { Quaternion, Vector3 } from "@babylonjs/core"
 export default class VectorUtils {
 
   static xyToArray = (data: any, round = -1, defaultValue = [0, 0]) => {
-    if (!data) return defaultValue
+    if (!data) {return defaultValue}
     if (round === -1) {
       return [data.x, data.y]
-    } else {
+    } 
       return [NumberUtils.roundToX(data.x, round), NumberUtils.roundToX(data.y, round)]
-    }
+    
   }
 
   static xyzToArray = (data: any, round = -1, defaultValue = [0, 0, 0]) => {
-    if (!data) return defaultValue
+    if (!data) {return defaultValue}
     if (round === -1) {
       return [data.x, data.y, data.z]
-    } else {
+    } 
       return [NumberUtils.roundToX(data.x, round), NumberUtils.roundToX(data.y, round), NumberUtils.roundToX(data.z, round)]
-    }
+    
   }
 
   static xyzwToArray = (data: any, round = -1, defaultValue = [0, 0, 0, 0]) => {
-    if (!data) return defaultValue
+    if (!data) {return defaultValue}
     if (round === -1) {
       return [data.x, data.y, data.z, data.w]
-    } else {
+    } 
       return [NumberUtils.roundToX(data.x, round), NumberUtils.roundToX(data.y, round), NumberUtils.roundToX(data.z, round), NumberUtils.roundToX(data.w, round)]
-    }
+    
   }
 
 
@@ -98,9 +98,9 @@ export default class VectorUtils {
   static toArray(v: V3 | V4): number[] {
     if (this.isV4(v)) {
       return [v.x, v.y, v.z, (v).w]
-    } else {
+    } 
       return [v.x, v.y, v.z]
-    }
+    
   }
 
   static fromQuaternion(q: Quaternion): V4 {
@@ -110,9 +110,9 @@ export default class VectorUtils {
   static toArrayWithRound4(v: V3 | V4, n = 0): number[] {
     if (this.isV4(v)) {
       return [NumberUtils.roundToX(v.x, n), NumberUtils.roundToX(v.y, n), NumberUtils.roundToX(v.z, n), NumberUtils.roundToX((v).w, n)]
-    } else {
+    } 
       return [NumberUtils.roundToX(v.x, n), NumberUtils.roundToX(v.y, n), NumberUtils.roundToX(v.z, n)]
-    }
+    
   }
 
 }

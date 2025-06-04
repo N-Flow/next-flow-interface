@@ -22,7 +22,7 @@ export default class ContextMenu {
   }
 
   static fromOptions(id: string, options: ContextMenuCreateOptions, menuLines?: MenuLine[]): ContextMenu {
-    let showIcon = options.showIcon
+    let {showIcon} = options
     if (showIcon === undefined) {
       options.lines?.forEach(line => {
         if (line.icon) {

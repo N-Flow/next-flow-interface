@@ -8,7 +8,7 @@ export default interface RvModel {
   fid?: string
   config?: RvBasicConfig | any
   node?: string
-  // node?: RvNode
+  // Node?: RvNode
 }
 
 

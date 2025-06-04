@@ -2,7 +2,9 @@ import js from '@eslint/js';
 import tseslint, {ConfigArray} from "typescript-eslint"
 import { defineConfig } from "eslint/config"
 import globals from "globals"
+import css from "@eslint/css"
 import markdown from "@eslint/markdown"
+import json from "@eslint/json"
 
 const globalConfig = defineConfig([
   {
@@ -13,59 +15,103 @@ const globalConfig = defineConfig([
       "build/**",
       "node_modules/**",
       ".claude/**",
-      "**/tsconfig.json",
-      "**/tsconfig.*.json",
     ],
   },
 ])
 
+const scriptFile = "*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"
+const jsFile = "*.{js,jsx,mjs,cjs}"
+const tsFile = "*.{ts,tsx,mts,cts}"
+
 const scriptConfig: ConfigArray = tseslint.config([
   {
-    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"],
     ...js.configs.recommended,
+    files: [`**/${scriptFile}`],
   },
   {
-    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"],
-    ...tseslint.configs.recommended[0],
+    ...tseslint.configs.strictTypeChecked[0],
+    files: [`**/${scriptFile}`],
   },
   {
-    ...tseslint.configs.recommended[1],
+    ...tseslint.configs.strictTypeChecked[1],
+    files: [`**/${tsFile}`],
   },
-  {
-    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"],
-    ...tseslint.configs.recommended[2],
-  },
+   {
+     ...tseslint.configs.strictTypeChecked[2],
+     files: [`**/${scriptFile}`],
+   },
+   {
+     ...tseslint.configs.stylisticTypeChecked[2],
+     files: [`**/${scriptFile}`],
+   },
   {
     files: [
-      "*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}",
-      "config/**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}",
-      "scripts/**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}",
-      "test/**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}",
-      "spec/**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}",
-      "tools/**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}",
+      scriptFile,
+      `config/**/${scriptFile}`,
+      `scripts/**/${scriptFile}`,
+      `test/**/${scriptFile}`,
+      `spec/**/${scriptFile}`,
+      `tools/**/${scriptFile}`,
     ],
     languageOptions: {
       globals: globals.node
     }
   },
   {
-    files: ["src/**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"],
+    files: [`src/**/${scriptFile}`],
     languageOptions: {
       globals: globals.browser
     }
+  },
+   {
+     files: [`**/${scriptFile}`],
+     languageOptions: {
+       parserOptions: {
+         projectService: true,
+         tsconfigRootDir: import.meta.dirname,
+       },
+     },
+   },
+])
+
+const cssConfig = defineConfig([
+  {
+    ...css.configs.recommended,
+    files: ["**/*.css"],
+    language: "css/css",
   }
 ])
 
 const markdownConfig = defineConfig([
-  markdown.configs.recommended,
+  {
+    ...markdown.configs.recommended[0],
+    language: "markdown/gfm",
+  },
+])
+
+const jsonConfig = defineConfig([
+  {
+    ...json.configs.recommended,
+    files: ["**/*.json"],
+    ignores: [
+      "**/tsconfig.json",
+      "**/tsconfig.*.json",
+    ],
+    language: "json/json",
+  },
+  {
+    ...json.configs.recommended,
+    files: ["**/*.jsonc", "**/*.json5", "**/tsconfig.json", "**/tsconfig.*.json"],
+    language: "json/jsonc",
+  },
 ])
 
 const config = [
   ...globalConfig,
   ...scriptConfig,
+  ...cssConfig,
   ...markdownConfig,
+  ...jsonConfig,
 ]
-
-console.log(config)
 
 export default config

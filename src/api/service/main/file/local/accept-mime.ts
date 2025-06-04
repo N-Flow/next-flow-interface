@@ -154,8 +154,8 @@ export default class AcceptMime {
 
   static async getMimeByUrl(url?: string) {
     if (url) {
-      const response = await fetch(url)
-      const ftr = await fileTypeFromStream(response.body)
+      const response = await fetch(url),
+       ftr = await fileTypeFromStream(response.body)
       return ftr?.mime ?? AcceptMime.UNKNOWN
     }
     return AcceptMime.UNKNOWN
@@ -189,9 +189,9 @@ export default class AcceptMime {
     } else if (typeof input === 'string') {
       if (input.startsWith('http://') || input.startsWith('https://')) {
         return this.getMimeByUrl(input)
-      } else {
+      } 
         return this.getMimeByPath(input)
-      }
+      
     } else if (input instanceof ArrayBuffer || input instanceof Uint8Array) {
       return this.getMimeByBuffer(input)
     } else if (input instanceof BaseTexture) {
@@ -218,88 +218,88 @@ export default class AcceptMime {
 
 
   static isSupport(mime: string = AcceptMime.UNKNOWN) {
-    if (mime == AcceptMime.ANY) return true
-    if (mime == AcceptMime.UNKNOWN) return false
+    if (mime == AcceptMime.ANY) {return true}
+    if (mime == AcceptMime.UNKNOWN) {return false}
     return AcceptMime.SUPPORT_ALL_LIST.includes(mime)
   }
 
   static isSupportFile(mime: string = AcceptMime.UNKNOWN) {
-    if (mime == AcceptMime.ANY) return true
-    if (mime == AcceptMime.UNKNOWN) return false
+    if (mime == AcceptMime.ANY) {return true}
+    if (mime == AcceptMime.UNKNOWN) {return false}
     return AcceptMime.SUPPORT_FILE_LIST.includes(mime)
   }
 
   static isSupportImage(mime: string = AcceptMime.UNKNOWN) {
-    if (mime == AcceptMime.ANY) return true
-    if (mime == AcceptMime.UNKNOWN) return false
+    if (mime == AcceptMime.ANY) {return true}
+    if (mime == AcceptMime.UNKNOWN) {return false}
     return AcceptMime.SUPPORT_IMAGE_LIST.includes(mime)
   }
 
   static isSupportModel(mime: string = AcceptMime.UNKNOWN) {
-    if (mime == AcceptMime.ANY) return true
-    if (mime == AcceptMime.UNKNOWN) return false
+    if (mime == AcceptMime.ANY) {return true}
+    if (mime == AcceptMime.UNKNOWN) {return false}
     return AcceptMime.SUPPORT_MODEL_LIST.includes(mime)
   }
 
   static isSupportVideo(mime: string = AcceptMime.UNKNOWN) {
-    if (mime == AcceptMime.ANY) return true
-    if (mime == AcceptMime.UNKNOWN) return false
+    if (mime == AcceptMime.ANY) {return true}
+    if (mime == AcceptMime.UNKNOWN) {return false}
     return AcceptMime.SUPPORT_VIDEO_LIST.includes(mime)
   }
 
   static isSupportText(mime: string = AcceptMime.UNKNOWN) {
-    if (mime == AcceptMime.ANY) return true
-    if (mime == AcceptMime.UNKNOWN) return false
+    if (mime == AcceptMime.ANY) {return true}
+    if (mime == AcceptMime.UNKNOWN) {return false}
     return AcceptMime.SUPPORT_TEXT_LIST.includes(mime)
   }
 
   static isBabylon(mime: string = AcceptMime.UNKNOWN) {
-    if (mime == AcceptMime.ANY) return true
-    if (mime == AcceptMime.UNKNOWN) return false
+    if (mime == AcceptMime.ANY) {return true}
+    if (mime == AcceptMime.UNKNOWN) {return false}
     return AcceptMime.SUPPORT_BABYLON_LIST.includes(mime)
   }
 
   static isSupportAudio(mime: string = AcceptMime.UNKNOWN) {
-    if (mime == AcceptMime.ANY) return true
-    if (mime == AcceptMime.UNKNOWN) return false
+    if (mime == AcceptMime.ANY) {return true}
+    if (mime == AcceptMime.UNKNOWN) {return false}
     return AcceptMime.SUPPORT_AUDIO_LIST.includes(mime)
   }
 
   static isSupportRender(mime: string = AcceptMime.UNKNOWN) {
-    if (mime == AcceptMime.ANY) return true
-    if (mime == AcceptMime.UNKNOWN) return false
+    if (mime == AcceptMime.ANY) {return true}
+    if (mime == AcceptMime.UNKNOWN) {return false}
     return AcceptMime.SUPPORT_RENDER_LIST.includes(mime)
   }
 
   static isSupportTexture(mime: string = AcceptMime.UNKNOWN) {
-    if (mime == AcceptMime.ANY) return true
-    if (mime == AcceptMime.UNKNOWN) return false
+    if (mime == AcceptMime.ANY) {return true}
+    if (mime == AcceptMime.UNKNOWN) {return false}
     return AcceptMime.SUPPORT_TEXTURE_LIST.includes(mime)
   }
 
 
   static isTexture(mime: string = AcceptMime.UNKNOWN) {
-    if (mime == AcceptMime.ANY) return true
-    if (mime == AcceptMime.UNKNOWN) return false
+    if (mime == AcceptMime.ANY) {return true}
+    if (mime == AcceptMime.UNKNOWN) {return false}
     return mime == AcceptMime.TEXTURE
   }
   
   static isMaterial(mime: string = AcceptMime.UNKNOWN) {
-    if (mime == AcceptMime.ANY) return true
-    if (mime == AcceptMime.UNKNOWN) return false
+    if (mime == AcceptMime.ANY) {return true}
+    if (mime == AcceptMime.UNKNOWN) {return false}
     return mime == AcceptMime.MATERIAL
   }
 
   static isUV(mime: string = AcceptMime.UNKNOWN) {
-    if (mime == AcceptMime.ANY) return true
-    if (mime == AcceptMime.UNKNOWN) return false
+    if (mime == AcceptMime.ANY) {return true}
+    if (mime == AcceptMime.UNKNOWN) {return false}
     return mime == AcceptMime.UV
   }
 
 
   static isAttach(mime: string = AcceptMime.UNKNOWN) {
-    if (mime == AcceptMime.ANY) return true
-    if (mime == AcceptMime.UNKNOWN) return false
+    if (mime == AcceptMime.ANY) {return true}
+    if (mime == AcceptMime.UNKNOWN) {return false}
     return AcceptMime.ATTACH_LIST.includes(mime)
   }
 

@@ -7,10 +7,10 @@ export default function throttle<T extends (...args: any[]) => void>(
     return func
   }
 
-  let lastExec = 0
-  let timeout: ReturnType<typeof setTimeout> | null = null
-  let lastArgs: Parameters<T> | undefined
-  let lastThis: any
+  let lastArgs: Parameters<T> | undefined,
+   lastExec = 0,
+   lastThis: any,
+   timeout: ReturnType<typeof setTimeout> | null = null
 
   function execute() {
     lastExec = Date.now()
@@ -18,8 +18,8 @@ export default function throttle<T extends (...args: any[]) => void>(
   }
 
   const throttled = function (this: any, ...args: Parameters<T>) {
-    const now = Date.now()
-    const elapsed = now - lastExec
+    const now = Date.now(),
+     elapsed = now - lastExec
 
     lastArgs = args
     lastThis = this  // eslint-disable-line @typescript-eslint/no-this-alias

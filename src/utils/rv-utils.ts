@@ -1,4 +1,4 @@
-import {StoredRhineVar, RvPath} from "rhine-var"
+import {RvPath, StoredRhineVar} from "rhine-var"
 
 export default class RvUtils {
 
