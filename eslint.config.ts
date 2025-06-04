@@ -1,14 +1,18 @@
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+import { includeIgnoreFile } from '@eslint/compat'
 import css from '@eslint/css'
+import { FlatCompat } from '@eslint/eslintrc'
 import js from '@eslint/js'
 import json from '@eslint/json'
 import markdown from '@eslint/markdown'
 import tsParser from '@typescript-eslint/parser'
 import { defineConfig } from 'eslint/config'
+import eslintConfigPrettier from 'eslint-config-prettier/flat'
 import { importX } from 'eslint-plugin-import-x'
 import globals from 'globals'
 import tseslint, {ConfigArray} from 'typescript-eslint'
-import eslintConfigPrettier from "eslint-config-prettier/flat"
-import { FlatCompat } from '@eslint/eslintrc'
 
 
 // Configuration
@@ -18,24 +22,18 @@ const ENABLE_STYLESHEET = true  // Set to enable CSS, SCSS, SASS and other style
 const IGNORE_PRETTIER = true  // Set to disable all rules that are unnecessary or might conflict with Prettier
 
 
-const directory = import.meta.dirname
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const gitignorePath = path.resolve(__dirname, '.gitignore')
 
 const compat = new FlatCompat({
-  baseDirectory: directory,
+  baseDirectory: __dirname,
 })
 
 
 const globalConfig = defineConfig([
-  {
-    ignores: [
-      '.vscode/**',
-      '.idea/**',
-      '.claude/**',
-      'dist/**',
-      'build/**',
-      'node_modules/**',
-    ],
-  },
+  includeIgnoreFile(gitignorePath),
+  {ignores: []},
 ])
 
 const scriptFile = '*.{cjs,js,jsx,mjs,mjsx,cts,ts,tsx,mts,mtsx}'
@@ -48,7 +46,7 @@ const tsConfig = ENABLE_TYPE_CHECKED ? [
     languageOptions: {
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: directory,
+        tsconfigRootDir: __dirname,
       },
     },
   },

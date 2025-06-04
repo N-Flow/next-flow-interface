@@ -1,6 +1,6 @@
 {
   "name": "oflow-interface",
-  "version": "0.13.2",
+  "version": "0.14.1",
   "description": "Interface package for O FLOW. You can use this package to build your own plugin that can control anything.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -36,6 +36,7 @@
   ],
   "devDependencies": {
     "@babylonjs/core": "7.41.1",
+    "@eslint/compat": "^1.2.9",
     "@eslint/css": "^0.8.1",
     "@eslint/js": "^9.28.0",
     "@eslint/json": "^0.12.0",

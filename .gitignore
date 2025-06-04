@@ -1,10 +1,58 @@
 
-# modules
-node_modules
-
-# build
-dist
-
 # IDE
-.vscode
-.idea
+.idea/
+.vscode/
+
+# AI
+.claude/
+
+
+# dependencies
+/node_modules/
+/jspm_packages/
+/web_modules/
+/.npm/
+/.yarn/
+/.pnp/
+pnp.*
+.pnp.*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# testing
+/coverage/
+*.lcov
+
+# cache
+.cache/
+
+# webpack
+.webpack/
+
+# production
+/build/
+/dist/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel/
+
+# typescript
+*.tsbuildinfo
