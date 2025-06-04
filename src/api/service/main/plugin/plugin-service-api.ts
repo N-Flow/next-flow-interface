@@ -1,9 +1,9 @@
-import PluginState from "@/api/service/main/plugin/dto/plugin-state.interface"
-import BasePlugin from "@/plugin/base-plugin"
-import ExternalPluginConfig from "@/api/service/main/plugin/dto/external-plugin-config.interface"
 import BuiltInPluginConfig from "@/api/service/main/plugin/dto/built-in-plugin-config.interface"
+import ExternalPluginConfig from "@/api/service/main/plugin/dto/external-plugin-config.interface"
 import {PluginConfig} from "@/api/service/main/plugin/dto/plugin-config.type"
 import { PluginServiceSubscriber } from "@/api/service/main/plugin/dto/plugin-service-subscriber.type"
+import PluginState from "@/api/service/main/plugin/dto/plugin-state.interface"
+import BasePlugin from "@/plugin/base-plugin"
 
 export default interface PluginServiceApi {
 

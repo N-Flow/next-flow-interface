@@ -1,8 +1,10 @@
+import {FunctionComponent,MouseEvent} from "react"
+
+import {ThemeColor} from "@/api/service/main/theme/dto/theme-color.enum"
+
 import BasePlugin from "./base-plugin"
 import {IconPluginPosition} from "./dto/icon-plugin-position.enum"
-import {FunctionComponent} from "react"
-import {ThemeColor} from "@/api/service/main/theme/dto/theme-color.enum"
-import {MouseEvent} from "react"
+
 
 export default interface IconPlugin extends BasePlugin {
   position: IconPluginPosition

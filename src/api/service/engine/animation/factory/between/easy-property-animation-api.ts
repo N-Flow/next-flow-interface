@@ -1,4 +1,5 @@
 import { AnimationGroup } from "@babylonjs/core"
+
 import { SupportAnimationTarget } from "../dto/support-animation-target.type"
 
 export default interface EasyPropertyAnimationApi {

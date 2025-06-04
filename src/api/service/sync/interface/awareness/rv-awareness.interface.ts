@@ -1,5 +1,5 @@
-import {V3} from "@/type/general/vector.type"
 import RvCameraLocation from "@/api/service/sync/interface/step/environment/camera/location/rv-camera-location.interface"
+import {V3} from "@/type/general/vector.type"
 
 export interface RvAwarenessUser {
   name: string,

@@ -1,7 +1,9 @@
-import {MenuLineType} from "./dto/menu-line-type.enum"
 import {FunctionComponent} from "react"
-import {MenuLineCreateOptions} from "./dto/menu-line-create-options.interface"
+
 import {ContextMenuCreateOptions} from "@/api/service/main/context-menu/dto/context-menu-create-options.interface"
+
+import {MenuLineCreateOptions} from "./dto/menu-line-create-options.interface"
+import {MenuLineType} from "./dto/menu-line-type.enum"
 
 export default class MenuLine {
 

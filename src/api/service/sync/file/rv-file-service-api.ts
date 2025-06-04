@@ -1,6 +1,7 @@
 import {RecursiveMap, RecursiveObject} from "rhine-var"
-import RvFile from "@/api/service/sync/interface/file/rv-file.interface"
+
 import {RvFileServiceSubscriber} from "@/api/service/sync/file/dto/rv-file-service-subscriber.type"
+import RvFile from "@/api/service/sync/interface/file/rv-file.interface"
 
 
 export default interface RvFileServiceApi {

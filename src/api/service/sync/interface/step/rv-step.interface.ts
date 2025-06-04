@@ -1,6 +1,7 @@
-import type { RhineVarMap } from 'rhine-var'
-import RvEnvironment from "@/api/service/sync/interface/step/environment/rv-environment.interface"
 import RvConfiguration from "@/api/service/sync/interface/step/configuration/rv-configuration.interface"
+import RvEnvironment from "@/api/service/sync/interface/step/environment/rv-environment.interface"
+
+import type { RhineVarMap } from 'rhine-var'
 
 export default interface RvStep {
   name: string

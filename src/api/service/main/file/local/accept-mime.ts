@@ -1,5 +1,6 @@
-import {fileTypeFromBlob, fileTypeFromBuffer, fileTypeFromStream} from "file-type"
 import {AbstractMesh, BaseTexture, Material} from "@babylonjs/core"
+import {fileTypeFromBlob, fileTypeFromBuffer, fileTypeFromStream} from "file-type"
+
 import type {AnyWebByteStream} from "strtok3"
 
 

@@ -1,4 +1,5 @@
 import {Node} from "@babylonjs/core"
+
 import { RsModelStatus } from "./rs-model-status.enum"
 
 export default interface RsModel {

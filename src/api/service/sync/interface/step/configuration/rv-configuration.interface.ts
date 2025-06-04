@@ -1,5 +1,5 @@
-import RvAudio from "@/api/service/sync/interface/step/configuration/audio-info/rv-audio.interface"
 import {ThemeBackground} from "@/api/service/main/theme/dto/theme-background.enum"
+import RvAudio from "@/api/service/sync/interface/step/configuration/audio-info/rv-audio.interface"
 
 export default interface RvConfiguration {
   description: {

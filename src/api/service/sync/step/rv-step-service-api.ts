@@ -1,6 +1,8 @@
 import {RecursiveArray, RecursiveMap, RecursiveObject, StoredRhineVar} from "rhine-var"
-import RvStep from "../interface/step/rv-step.interface"
+
 import {StepOptions} from "@/api/service/sync/step/dto/step-options.type"
+
+import RvStep from "../interface/step/rv-step.interface"
 
 export default interface RvStepServiceApi {
 

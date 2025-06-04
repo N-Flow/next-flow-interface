@@ -1,10 +1,13 @@
-import js from '@eslint/js';
-import tseslint, {ConfigArray} from "typescript-eslint"
 import { defineConfig } from "eslint/config"
+import tseslint, {ConfigArray} from "typescript-eslint"
+import tsParser from '@typescript-eslint/parser'
 import globals from "globals"
+import js from '@eslint/js'
 import css from "@eslint/css"
 import markdown from "@eslint/markdown"
 import json from "@eslint/json"
+import { importX } from 'eslint-plugin-import-x'
+
 
 const globalConfig = defineConfig([
   {
@@ -19,9 +22,9 @@ const globalConfig = defineConfig([
   },
 ])
 
-const scriptFile = "*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"
-const jsFile = "*.{js,jsx,mjs,cjs}"
-const tsFile = "*.{ts,tsx,mts,cts}"
+const scriptFile = "*.{cjs,js,jsx,mjs,mjsx,cts,ts,tsx,mts,mtsx}"
+const jsFile = "*.{cjs,js,jsx,mjs,mjsx}"
+const tsFile = "*.{cts,ts,tsx,mts,mtsx}"
 
 const scriptConfig: ConfigArray = tseslint.config([
   {
@@ -73,8 +76,19 @@ const scriptConfig: ConfigArray = tseslint.config([
      files: [`**/${scriptFile}`],
    },
   {
+    ...importX.flatConfigs.recommended,
     files: [`**/${scriptFile}`],
-    rules: {
+  },
+  {
+    ...importX.flatConfigs.typescript,
+    files: [`**/${scriptFile}`],
+  },
+  {
+    files: [`**/${scriptFile}`],
+    languageOptions: {
+      parser: tsParser,
+      ecmaVersion: 'latest',
+      sourceType: 'module',
     },
   },
 ])
@@ -117,6 +131,37 @@ const customConfig = defineConfig([
     files: [`src/**/${scriptFile}`],
     rules: {
       "@typescript-eslint/no-unused-vars": "off",
+      "import-x/order": [
+        "error",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index",
+            "object",
+            "type",
+          ],
+          "pathGroups": [
+            {
+              "pattern": "@/**",
+              "group": "internal",
+              "position": "before",
+            },
+          ],
+          "pathGroupsExcludedImportTypes": ["builtin"],
+          "newlines-between": "always",
+          "distinctGroup": false,
+          "alphabetize": {
+            "order": "asc",
+            "caseInsensitive": true
+          },
+          "sortTypesGroup": true,
+          "newlines-between-types": "always",
+        }
+      ]
     },
   },
 ])

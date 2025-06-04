@@ -1,9 +1,10 @@
 import {FunctionComponent} from "react"
-import DialogCreateOptions from "@/api/service/main/dialog/dto/dialog-create-options.interface"
-import DialogController from "@/api/service/main/dialog/dto/dialog-controller.interface"
+
 import Dialog from "@/api/service/main/dialog/dialog.class"
-import {ThemeColor} from "@/api/service/main/theme/dto/theme-color.enum"
+import DialogController from "@/api/service/main/dialog/dto/dialog-controller.interface"
+import DialogCreateOptions from "@/api/service/main/dialog/dto/dialog-create-options.interface"
 import {ThemeBackground} from "@/api/service/main/theme/dto/theme-background.enum"
+import {ThemeColor} from "@/api/service/main/theme/dto/theme-color.enum"
 
 export default interface DialogServiceApi {
 
