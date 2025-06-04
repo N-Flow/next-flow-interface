@@ -1,9 +1,8 @@
-import { RecursiveMap, StoredRhineVar} from "rhine-var"
+import { RecursiveMap, StoredRhineVar } from 'rhine-var'
 
-import RvMeeting from "@/api/service/sync/interface/meeting/rv-meeting.interface"
+import RvMeeting from '@/api/service/sync/interface/meeting/rv-meeting.interface'
 
 export default interface RvMeetingServiceApi {
-
   PACKAGE_INTERVAL: number
 
   ANIMATION_DURATION: number
@@ -27,5 +26,4 @@ export default interface RvMeetingServiceApi {
   generateId(): string
 
   removeAllMeetings(): void
-
 }

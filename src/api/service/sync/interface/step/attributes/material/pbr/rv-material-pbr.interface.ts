@@ -1,4 +1,3 @@
-
 export interface RvMaterialPBR {
   basic: {
     albedoColor: string
@@ -21,9 +20,9 @@ export interface RvMaterialPBR {
     indexOfRefraction: number
     useRoughnessFromMainTexture: boolean
 
-    clearCoatTexture: string,
-    roughnessTexture: string,
-    bumpTexture: string,
+    clearCoatTexture: string
+    roughnessTexture: string
+    bumpTexture: string
 
     enableTint: boolean
     tintColor: string

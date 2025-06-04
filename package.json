@@ -54,6 +54,7 @@
     "file-type": "^20.4.1",
     "globals": "^16.2.0",
     "mime": "^4.0.7",
+    "prettier": "^3.5.3",
     "react": "19.1.0-canary-ff628334-20250205",
     "react-dom": "19.1.0-canary-ff628334-20250205",
     "rhine-var": "0.10.5",

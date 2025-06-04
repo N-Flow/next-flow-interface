@@ -1,4 +1,3 @@
-
 export enum HistoryServiceEventType {
   'UNDO' = 'UNDO',
   'REDO' = 'REDO',

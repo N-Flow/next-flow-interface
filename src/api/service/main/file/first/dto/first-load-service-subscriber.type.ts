@@ -1,4 +1,3 @@
-
 export type FirstLoadServiceSubscriber = (type: FirstLoadServiceEventType) => void
 
 export enum FirstLoadServiceEventType {

@@ -1,4 +1,4 @@
-import {RvFileType} from "@/api/service/sync/interface/file/rv-file-type.enum"
+import { RvFileType } from '@/api/service/sync/interface/file/rv-file-type.enum'
 
 export default interface RvFile {
   fid: string
@@ -9,7 +9,7 @@ export default interface RvFile {
   mime: string
   hash?: string
 
-  url: string  // https://xxx  oss://{bucket}/{path}  attach://{fid}
+  url: string // https://xxx  oss://{bucket}/{path}  attach://{fid}
 
   createdAt: number
   updatedAt: number

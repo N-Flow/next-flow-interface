@@ -1,14 +1,12 @@
-import ContextMenu from "@/api/service/main/context-menu/context-menu.class"
-import {ContextMenuController} from "@/api/service/main/context-menu/dto/context-menu-controller.interface"
-import {ContextMenuCreateOptions} from "@/api/service/main/context-menu/dto/context-menu-create-options.interface"
+import ContextMenu from '@/api/service/main/context-menu/context-menu.class'
+import { ContextMenuController } from '@/api/service/main/context-menu/dto/context-menu-controller.interface'
+import { ContextMenuCreateOptions } from '@/api/service/main/context-menu/dto/context-menu-create-options.interface'
 
 export default interface ContextMenuServiceApi {
-
   /**
    * 当前所有右键菜单
    */
   contextMenus: ContextMenu[]
-
 
   /**
    * 创建右键菜单
@@ -39,5 +37,4 @@ export default interface ContextMenuServiceApi {
    * 关闭所有右键菜单
    */
   closeAll(): Promise<number>
-
 }

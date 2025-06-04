@@ -1,4 +1,3 @@
-
 export default interface Status {
   Authenticated: boolean
   DataSynchronized: boolean

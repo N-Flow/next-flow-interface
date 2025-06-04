@@ -18,7 +18,6 @@ export default class NetworkUtils {
     throw lastError
   }
 
-
   static async fetchBlobWithRetry(url: string, retries = 3) {
     let lastError
 

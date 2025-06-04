@@ -1,6 +1,4 @@
-
 export default interface SceneServiceApi {
-
   dragState: {
     nid: string
     x: number
@@ -8,5 +6,4 @@ export default interface SceneServiceApi {
     offsetX: number
     offsetY: number
   }
-
 }

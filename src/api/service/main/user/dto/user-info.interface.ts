@@ -1,4 +1,3 @@
-
 export default interface UserInfo {
   uid: string
   name: string

@@ -1,4 +1,4 @@
-import { MessageType } from "@/api/service/main/message/dto/message-type.type"
+import { MessageType } from '@/api/service/main/message/dto/message-type.type'
 
 export class Message {
   show = true
@@ -10,6 +10,5 @@ export class Message {
     public type: MessageType,
     public duration: number,
     public id: number,
-  ) {
-  }
+  ) {}
 }

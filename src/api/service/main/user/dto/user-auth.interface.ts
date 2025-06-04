@@ -1,4 +1,3 @@
-
 export default interface UserAuth {
   token: string
   refreshToken: string

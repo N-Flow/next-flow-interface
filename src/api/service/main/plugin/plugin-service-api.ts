@@ -1,12 +1,11 @@
-import BuiltInPluginConfig from "@/api/service/main/plugin/dto/built-in-plugin-config.interface"
-import ExternalPluginConfig from "@/api/service/main/plugin/dto/external-plugin-config.interface"
-import {PluginConfig} from "@/api/service/main/plugin/dto/plugin-config.type"
-import { PluginServiceSubscriber } from "@/api/service/main/plugin/dto/plugin-service-subscriber.type"
-import PluginState from "@/api/service/main/plugin/dto/plugin-state.interface"
-import BasePlugin from "@/plugin/base-plugin"
+import BuiltInPluginConfig from '@/api/service/main/plugin/dto/built-in-plugin-config.interface'
+import ExternalPluginConfig from '@/api/service/main/plugin/dto/external-plugin-config.interface'
+import { PluginConfig } from '@/api/service/main/plugin/dto/plugin-config.type'
+import { PluginServiceSubscriber } from '@/api/service/main/plugin/dto/plugin-service-subscriber.type'
+import PluginState from '@/api/service/main/plugin/dto/plugin-state.interface'
+import BasePlugin from '@/plugin/base-plugin'
 
 export default interface PluginServiceApi {
-
   /**
    * 是否为精简输出模式 不会针对每一个插件输出详细信息 （默认为 true）
    */
@@ -42,7 +41,6 @@ export default interface PluginServiceApi {
    */
   unsubscribe(subscriber: PluginServiceSubscriber): void
 
-
   /**
    * 添加插件
    *
@@ -76,7 +74,6 @@ export default interface PluginServiceApi {
    */
   debug(config: ExternalPluginConfig): void
 
-
   /**
    * 安装插件
    *
@@ -104,6 +101,4 @@ export default interface PluginServiceApi {
    * @param id  插件 ID
    */
   uninstall(id: string): Promise<void>
-
-
 }

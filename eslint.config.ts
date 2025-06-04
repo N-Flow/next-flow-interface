@@ -12,15 +12,13 @@ import { defineConfig } from 'eslint/config'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
 import { importX } from 'eslint-plugin-import-x'
 import globals from 'globals'
-import tseslint, {ConfigArray} from 'typescript-eslint'
-
+import tseslint, { ConfigArray } from 'typescript-eslint'
 
 // Configuration
-const ENABLE_TYPE_CHECKED = true  // Set to enable project-based type checking
-const ENABLE_FRONTEND = false  // Set to enable Next.js, JSX, React, Hooks, and other frontend features
-const ENABLE_STYLESHEET = true  // Set to enable CSS, SCSS, SASS and other stylesheet features
-const IGNORE_PRETTIER = true  // Set to disable all rules that are unnecessary or might conflict with Prettier
-
+const ENABLE_TYPE_CHECKED = true // Set to enable project-based type checking
+const ENABLE_FRONTEND = false // Set to enable Next.js, JSX, React, Hooks, and other frontend features
+const ENABLE_STYLESHEET = true // Set to enable CSS, SCSS, SASS and other stylesheet features
+const IGNORE_PRETTIER = true // Set to disable all rules that are unnecessary or might conflict with Prettier
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -30,60 +28,58 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 })
 
-
-const globalConfig = defineConfig([
-  includeIgnoreFile(gitignorePath),
-  {ignores: []},
-])
+const globalConfig = defineConfig([includeIgnoreFile(gitignorePath), { ignores: [] }])
 
 const scriptFile = '*.{cjs,js,jsx,mjs,mjsx,cts,ts,tsx,mts,mtsx}'
 const jsFile = '*.{cjs,js,jsx,mjs,mjsx}'
 const tsFile = '*.{cts,ts,tsx,mts,mtsx}'
 
-const tsConfig = ENABLE_TYPE_CHECKED ? [
-  {
-    files: [`**/${scriptFile}`],
-    languageOptions: {
-      parserOptions: {
-        projectService: true,
-        tsconfigRootDir: __dirname,
+const tsConfig = ENABLE_TYPE_CHECKED
+  ? [
+      {
+        files: [`**/${scriptFile}`],
+        languageOptions: {
+          parserOptions: {
+            projectService: true,
+            tsconfigRootDir: __dirname,
+          },
+        },
       },
-    },
-  },
-  {
-    ...tseslint.configs.strictTypeChecked[0],
-    files: [`**/${scriptFile}`],
-  },
-  {
-    ...tseslint.configs.strictTypeChecked[1],
-    files: [`**/${tsFile}`],
-  },
-  {
-    ...tseslint.configs.strictTypeChecked[2],
-    files: [`**/${scriptFile}`],
-  },
-  {
-    ...tseslint.configs.stylisticTypeChecked[2],
-    files: [`**/${scriptFile}`],
-  },
-] : [
-  {
-    ...tseslint.configs.strict[0],
-    files: [`**/${scriptFile}`],
-  },
-  {
-    ...tseslint.configs.strict[1],
-    files: [`**/${tsFile}`],
-  },
-  {
-    ...tseslint.configs.strict[2],
-    files: [`**/${scriptFile}`],
-  },
-  {
-    ...tseslint.configs.stylistic[2],
-    files: [`**/${scriptFile}`],
-  },
-]
+      {
+        ...tseslint.configs.strictTypeChecked[0],
+        files: [`**/${scriptFile}`],
+      },
+      {
+        ...tseslint.configs.strictTypeChecked[1],
+        files: [`**/${tsFile}`],
+      },
+      {
+        ...tseslint.configs.strictTypeChecked[2],
+        files: [`**/${scriptFile}`],
+      },
+      {
+        ...tseslint.configs.stylisticTypeChecked[2],
+        files: [`**/${scriptFile}`],
+      },
+    ]
+  : [
+      {
+        ...tseslint.configs.strict[0],
+        files: [`**/${scriptFile}`],
+      },
+      {
+        ...tseslint.configs.strict[1],
+        files: [`**/${tsFile}`],
+      },
+      {
+        ...tseslint.configs.strict[2],
+        files: [`**/${scriptFile}`],
+      },
+      {
+        ...tseslint.configs.stylistic[2],
+        files: [`**/${scriptFile}`],
+      },
+    ]
 
 const scriptConfig: ConfigArray = tseslint.config([
   {
@@ -96,14 +92,14 @@ const scriptConfig: ConfigArray = tseslint.config([
       `tools/**/${scriptFile}`,
     ],
     languageOptions: {
-      globals: globals.node
-    }
+      globals: globals.node,
+    },
   },
   {
     files: [`src/**/${scriptFile}`],
     languageOptions: {
-      globals: globals.browser
-    }
+      globals: globals.browser,
+    },
   },
   {
     ...js.configs.recommended,
@@ -128,12 +124,13 @@ const scriptConfig: ConfigArray = tseslint.config([
   },
 ])
 
-
 const nextConfig = []
 if (ENABLE_FRONTEND) {
-  nextConfig.push(...compat.config({
-    extends: ['next/core-web-vitals', 'next/typescript'],
-  }))
+  nextConfig.push(
+    ...compat.config({
+      extends: ['next/core-web-vitals', 'next/typescript'],
+    }),
+  )
 
   for (const nextConfigElement of nextConfig) {
     if (!nextConfigElement.files) {
@@ -142,19 +139,19 @@ if (ENABLE_FRONTEND) {
   }
 }
 
-
 const cssConfig = []
 
 if (ENABLE_STYLESHEET) {
-  cssConfig.push(...defineConfig([
-    {
-      ...css.configs.recommended,
-      files: ['**/*.css'],
-      language: 'css/css',
-    }
-  ]))
+  cssConfig.push(
+    ...defineConfig([
+      {
+        ...css.configs.recommended,
+        files: ['**/*.css'],
+        language: 'css/css',
+      },
+    ]),
+  )
 }
-
 
 const markdownConfig = defineConfig([
   {
@@ -164,15 +161,11 @@ const markdownConfig = defineConfig([
   },
 ])
 
-
 const jsonConfig = defineConfig([
   {
     ...json.configs.recommended,
     files: ['**/*.json'],
-    ignores: [
-      '**/tsconfig.json',
-      '**/tsconfig.*.json',
-    ],
+    ignores: ['**/tsconfig.json', '**/tsconfig.*.json'],
     language: 'json/json',
   },
   {
@@ -182,13 +175,11 @@ const jsonConfig = defineConfig([
   },
 ])
 
-
 const prettierConfig = []
 
 if (IGNORE_PRETTIER) {
   prettierConfig.push(eslintConfigPrettier)
 }
-
 
 const customConfig = defineConfig([
   {
@@ -199,7 +190,7 @@ const customConfig = defineConfig([
       'import-x/order': [
         'error',
         {
-          'groups': [
+          groups: [
             'builtin',
             'external',
             'internal',
@@ -209,28 +200,27 @@ const customConfig = defineConfig([
             'object',
             'type',
           ],
-          'pathGroups': [
+          pathGroups: [
             {
-              'pattern': '@/**',
-              'group': 'internal',
-              'position': 'before',
+              pattern: '@/**',
+              group: 'internal',
+              position: 'before',
             },
           ],
-          'pathGroupsExcludedImportTypes': ['builtin'],
+          pathGroupsExcludedImportTypes: ['builtin'],
           'newlines-between': 'always',
-          'distinctGroup': false,
-          'alphabetize': {
-            'order': 'asc',
-            'caseInsensitive': true
+          distinctGroup: false,
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
           },
-          'sortTypesGroup': true,
+          sortTypesGroup: true,
           'newlines-between-types': 'always',
         },
       ],
     },
   },
 ])
-
 
 const config = [
   ...globalConfig,

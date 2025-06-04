@@ -1,13 +1,12 @@
-import {BaseTexture, NodeMaterial, PBRMaterial} from "@babylonjs/core"
+import { BaseTexture, NodeMaterial, PBRMaterial } from '@babylonjs/core'
 
-import RvMaterial from "@/api/service/sync/interface/step/attributes/material/rv-material.interface"
+import RvMaterial from '@/api/service/sync/interface/step/attributes/material/rv-material.interface'
 
-import { RvMaterialNode } from "../../sync/interface/step/attributes/material/node/rv-material-node.interface"
-import { RvMaterialPBR } from "../../sync/interface/step/attributes/material/pbr/rv-material-pbr.interface"
-import { RvMaterialTexture } from "../../sync/interface/step/attributes/material/texture/rv-material-texture.interface"
+import { RvMaterialNode } from '../../sync/interface/step/attributes/material/node/rv-material-node.interface'
+import { RvMaterialPBR } from '../../sync/interface/step/attributes/material/pbr/rv-material-pbr.interface'
+import { RvMaterialTexture } from '../../sync/interface/step/attributes/material/texture/rv-material-texture.interface'
 
 export default interface RvMaterialAttributeApi {
-
   key: string
 
   defaultPBRValue: RvMaterialPBR
@@ -16,7 +15,10 @@ export default interface RvMaterialAttributeApi {
 
   defaultValue: RvMaterial
 
-  generateTexture(textureMap?: Map<string, BaseTexture>, material?: any | PBRMaterial | NodeMaterial): RvMaterialTexture
+  generateTexture(
+    textureMap?: Map<string, BaseTexture>,
+    material?: any | PBRMaterial | NodeMaterial,
+  ): RvMaterialTexture
 
   generatePBR(material?: PBRMaterial): RvMaterialPBR
 
@@ -25,5 +27,4 @@ export default interface RvMaterialAttributeApi {
   generate(nid: string): RvMaterial
 
   ensure(nid: string): boolean
-
 }

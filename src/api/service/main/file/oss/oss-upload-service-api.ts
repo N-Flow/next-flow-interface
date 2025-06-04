@@ -1,10 +1,8 @@
-import OssUploadInstance from "@/api/service/main/file/oss/dto/oss-upload-instance.interface"
-import {OssUploadServiceSubscriber} from "@/api/service/main/file/oss/dto/oss-upload-service-subscriber.type"
+import OssUploadInstance from '@/api/service/main/file/oss/dto/oss-upload-instance.interface'
+import { OssUploadServiceSubscriber } from '@/api/service/main/file/oss/dto/oss-upload-service-subscriber.type'
 
 export default interface OssUploadServiceApi {
-
   instances: Map<string, OssUploadInstance>
-
 
   upload(file: File, fid?: string, mime?: string, hash?: string): OssUploadInstance
 
@@ -14,14 +12,11 @@ export default interface OssUploadServiceApi {
 
   cancel(fid: string): boolean
 
-
   get(fid: string): OssUploadInstance | undefined
-
 
   has(fid: string): boolean
 
   hasFile(file: File): boolean
-
 
   subscribe(subscriber: OssUploadServiceSubscriber): () => void
 
@@ -30,5 +25,4 @@ export default interface OssUploadServiceApi {
   subscribeSingle(fid: string, subscriber: OssUploadServiceSubscriber): () => void
 
   unsubscribeSingle(fid: string, subscriber: OssUploadServiceSubscriber): void
-
 }

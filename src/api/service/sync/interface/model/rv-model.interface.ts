@@ -1,5 +1,5 @@
-import RvBasicConfig from "@/api/service/sync/interface/model/config/rv-basic-config.interface"
-import {RvModelOrigin} from "@/api/service/sync/interface/model/rv-model-origin.enum"
+import RvBasicConfig from '@/api/service/sync/interface/model/config/rv-basic-config.interface'
+import { RvModelOrigin } from '@/api/service/sync/interface/model/rv-model-origin.enum'
 
 export default interface RvModel {
   mid: string
@@ -10,7 +10,6 @@ export default interface RvModel {
   node?: string
   // Node?: RvNode
 }
-
 
 /**
  * Example
@@ -86,6 +85,3 @@ export default interface RvModel {
  * }
  *
  */
-
-
-

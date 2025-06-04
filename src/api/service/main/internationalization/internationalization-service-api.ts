@@ -1,8 +1,7 @@
-import {Locale} from "@/api/service/main/internationalization/dto/locale"
-import {Translator} from "@/api/service/main/internationalization/dto/translator"
+import { Locale } from '@/api/service/main/internationalization/dto/locale'
+import { Translator } from '@/api/service/main/internationalization/dto/translator'
 
 export default interface InternationalizationServiceApi {
-
   ALL_SUPPORT: Locale[]
   DEFAULT_SUPPORT: Locale
 
@@ -17,5 +16,4 @@ export default interface InternationalizationServiceApi {
   loadMessages(locale: Locale): Promise<any>
 
   clearCache(): void
-
 }

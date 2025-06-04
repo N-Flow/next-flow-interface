@@ -1,8 +1,7 @@
-import {HistoryServiceStateSubscriber} from "@/api/service/sync/dto/history-service-state-subscriber.type"
-import {HistoryServiceSubscriber} from "@/api/service/sync/dto/history-service-subscriber.type"
+import { HistoryServiceStateSubscriber } from '@/api/service/sync/dto/history-service-state-subscriber.type'
+import { HistoryServiceSubscriber } from '@/api/service/sync/dto/history-service-subscriber.type'
 
 export default interface HistoryServiceApi {
-
   operate: string
 
   undo(): void
@@ -13,13 +12,11 @@ export default interface HistoryServiceApi {
 
   canRedo(): boolean
 
-
   pushState(state: any): void
 
   check(operate: string, forceStop?: boolean): void
 
   stop(): void
-
 
   clear(): void
 
@@ -27,19 +24,15 @@ export default interface HistoryServiceApi {
 
   clearRedoStack(): void
 
-
   removeFirst(operate?: string): boolean
 
   removeLast(operate?: string): boolean
-
 
   subscribe(subscriber: HistoryServiceSubscriber): () => void
 
   unsubscribe(subscriber: HistoryServiceSubscriber): void
 
-
   subscribeState(subscriber: HistoryServiceStateSubscriber): () => void
 
   unsubscribeState(subscriber: HistoryServiceStateSubscriber): void
-
 }

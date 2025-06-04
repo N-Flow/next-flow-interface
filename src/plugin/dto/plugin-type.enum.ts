@@ -5,9 +5,9 @@ export enum PluginType {
   DRAWER = 'DRAWER',
 
   DIALOG = 'DIALOG',
-  
+
   CONTENT = 'CONTENT',
   WINDOW = 'WINDOW',
-  
+
   SERVICE = 'SERVICE',
 }

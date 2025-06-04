@@ -1,12 +1,11 @@
-import {FunctionComponent} from "react"
+import { FunctionComponent } from 'react'
 
-import {ContextMenuCreateOptions} from "@/api/service/main/context-menu/dto/context-menu-create-options.interface"
+import { ContextMenuCreateOptions } from '@/api/service/main/context-menu/dto/context-menu-create-options.interface'
 
-import {MenuLineCreateOptions} from "./dto/menu-line-create-options.interface"
-import {MenuLineType} from "./dto/menu-line-type.enum"
+import { MenuLineCreateOptions } from './dto/menu-line-create-options.interface'
+import { MenuLineType } from './dto/menu-line-type.enum'
 
 export default class MenuLine {
-
   constructor(
     public options: MenuLineCreateOptions,
 
@@ -20,20 +19,19 @@ export default class MenuLine {
     public disabled = false,
     public shortcut = '',
 
-    public onClick: ((e: any) => void) = () => {},
-    public onMouseOver: ((e: any) => void) = () => {},
-    public onMouseOut: ((e: any) => void) = () => {},
+    public onClick: (e: any) => void = () => {},
+    public onMouseOver: (e: any) => void = () => {},
+    public onMouseOut: (e: any) => void = () => {},
 
     public closeAllOnClick: boolean = type === MenuLineType.BUTTON,
 
     public checkboxDefaultValue = false,
-    public onCheckboxChange: ((value: any) => void) = () => {},
+    public onCheckboxChange: (value: any) => void = () => {},
 
     public sub: ContextMenuCreateOptions | undefined = undefined, // 子菜单项
 
     public createTime: Date = new Date(),
-  ) {
-  }
+  ) {}
 
   static fromOptions(id: string, options: MenuLineCreateOptions): MenuLine {
     return new MenuLine(
@@ -56,5 +54,4 @@ export default class MenuLine {
       options.sub,
     )
   }
-
 }

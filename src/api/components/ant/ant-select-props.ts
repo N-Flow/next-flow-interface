@@ -1,6 +1,6 @@
-import {SelectProps} from "antd"
+import { SelectProps } from 'antd'
 
-export interface AntSelectProps extends SelectProps{
+export interface AntSelectProps extends SelectProps {
   value?: any
   onChange?: (value: any, option: any) => void
   showSearch?: boolean

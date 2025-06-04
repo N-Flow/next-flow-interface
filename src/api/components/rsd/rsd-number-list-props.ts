@@ -1,4 +1,4 @@
-import {DivProps} from "@/api/components/interface/base-types"
+import { DivProps } from '@/api/components/interface/base-types'
 
 export interface RsdNumberListProps extends DivProps {
   style?: React.CSSProperties

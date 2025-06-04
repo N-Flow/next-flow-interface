@@ -5,11 +5,11 @@ import {
   NativeKeyboardEventSubscriber,
   NativeMouseEventSubscriber,
   NativePointerEventSubscriber,
-  NativeUIEventSubscriber, NativeWheelEventSubscriber,
-} from "@/api/service/main/native-event/dto/native-event-subscriber.type"
+  NativeUIEventSubscriber,
+  NativeWheelEventSubscriber,
+} from '@/api/service/main/native-event/dto/native-event-subscriber.type'
 
 export default interface NativeEventServiceApi {
-
   // Mouse Events
   subscribeClick(subscriber: NativeMouseEventSubscriber): () => void
   unsubscribeClick(subscriber: NativeMouseEventSubscriber): void
@@ -20,18 +20,15 @@ export default interface NativeEventServiceApi {
   subscribeDoubleClick(subscriber: NativeMouseEventSubscriber): () => void
   unsubscribeDoubleClick(subscriber: NativeMouseEventSubscriber): void
 
-
   subscribeDrag(subscriber: NativeDragEventSubscriber): () => void
   unsubscribeDrag(subscriber: NativeDragEventSubscriber): void
 
   subscribeDrop(subscriber: NativeDragEventSubscriber): () => void
   unsubscribeDrop(subscriber: NativeDragEventSubscriber): void
 
-
   // Wheel Events
   subscribeWheel(subscriber: NativeWheelEventSubscriber): () => void
   unsubscribeWheel(subscriber: NativeWheelEventSubscriber): void
-
 
   // Pointer Events
   subscribePointerDown(subscriber: NativePointerEventSubscriber): () => void
@@ -52,7 +49,6 @@ export default interface NativeEventServiceApi {
   subscribePointerLeave(subscriber: NativePointerEventSubscriber): () => void
   unsubscribePointerLeave(subscriber: NativePointerEventSubscriber): void
 
-
   // Keyboard Events
   subscribeKeyDown(subscriber: NativeKeyboardEventSubscriber): () => void
   unsubscribeKeyDown(subscriber: NativeKeyboardEventSubscriber): void
@@ -66,7 +62,6 @@ export default interface NativeEventServiceApi {
   subscribeKeyUpExceptInput(subscriber: NativeKeyboardEventSubscriber): () => void
   unsubscribeKeyUp(subscriber: NativeKeyboardEventSubscriber): void
 
-
   // Focus Events
   subscribeFocus(subscriber: NativeFocusEventSubscriber): () => void
   unsubscribeFocus(subscriber: NativeFocusEventSubscriber): void
@@ -74,14 +69,11 @@ export default interface NativeEventServiceApi {
   subscribeBlur(subscriber: NativeFocusEventSubscriber): () => void
   unsubscribeBlur(subscriber: NativeFocusEventSubscriber): void
 
-
   // UI Events
   subscribeScroll(subscriber: NativeUIEventSubscriber): () => void
   unsubscribeScroll(subscriber: NativeUIEventSubscriber): void
 
-
   // Special Events
   subscribeResize(subscriber: NativeAnyEventSubscriber): () => void
   unsubscribeResize(subscriber: NativeAnyEventSubscriber): void
-
 }

@@ -1,7 +1,6 @@
-import RvCode from "@/api/service/sync/interface/step/attributes/code/rv-code.interface"
+import RvCode from '@/api/service/sync/interface/step/attributes/code/rv-code.interface'
 
 export default interface RvCodeAttributeApi {
-
   key: string
 
   defaultValue: RvCode
@@ -9,5 +8,4 @@ export default interface RvCodeAttributeApi {
   generate(): RvCode
 
   ensure(nid: string): boolean
-
 }

@@ -1,15 +1,12 @@
-import RsSelectionState from "@/api/service/engine/operate/selection/dto/rs-selection-state.interface"
+import RsSelectionState from '@/api/service/engine/operate/selection/dto/rs-selection-state.interface'
 
-import { LastSubscriber } from "./dto/last-subscriber.type"
-import { SelectedSubscriber } from "./dto/selected-subscriber.type"
+import { LastSubscriber } from './dto/last-subscriber.type'
+import { SelectedSubscriber } from './dto/selected-subscriber.type'
 
 export default interface RsSelectionServiceApi {
-
   state: RsSelectionState
 
-
   changeBranchMode(value?: boolean, message?: boolean): void
-
 
   click: (nid?: string, ctrl?: boolean) => void
 
@@ -21,14 +18,11 @@ export default interface RsSelectionServiceApi {
 
   clear: () => void
 
-
   subscribe(subscriber: SelectedSubscriber): () => void
 
   unsubscribe(subscriber: SelectedSubscriber): void
 
-
   subscribeLast(subscriber: LastSubscriber): () => void
 
   unsubscribeLast(subscriber: LastSubscriber): void
-
 }

@@ -1,7 +1,6 @@
-import Dialog from "../dialog.class"
+import Dialog from '../dialog.class'
 
 export default interface DialogController {
-
   id: string
 
   dialog: Dialog
@@ -15,5 +14,4 @@ export default interface DialogController {
   setInputValue(value: string): void
 
   focusInput(): void
-
 }

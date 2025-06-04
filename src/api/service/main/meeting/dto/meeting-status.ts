@@ -1,4 +1,3 @@
-
 export enum MeetingStatus {
   NONE = 'NONE',
   WAITING = 'WAITING',

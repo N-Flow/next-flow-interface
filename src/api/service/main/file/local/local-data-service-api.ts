@@ -1,12 +1,13 @@
-import AddLocalDataOption from "@/api/service/main/file/local/dto/add-local-data-option.interface"
+import AddLocalDataOption from '@/api/service/main/file/local/dto/add-local-data-option.interface'
 
-import {LocalDataServiceEventType, LocalDataServiceSubscriber} from "./dto/local-data-service-subscriber.type"
-import {LocalData} from "./dto/local-data.type"
+import {
+  LocalDataServiceEventType,
+  LocalDataServiceSubscriber,
+} from './dto/local-data-service-subscriber.type'
+import { LocalData } from './dto/local-data.type'
 
 export default interface LocalDataServiceApi {
-
   files: Map<string, LocalData>
-
 
   get(fid: string): LocalData | undefined
 
@@ -14,24 +15,21 @@ export default interface LocalDataServiceApi {
 
   remove(fid: string): boolean
 
-
   add(localData: AddLocalDataOption): boolean
 
   load(fid: string, url: string): Promise<LocalData>
 
   loadByFile(fid: string, file: File): void
 
-  pause(fid: string): boolean  // 暂不支持
+  pause(fid: string): boolean // 暂不支持
 
-  resume(fid: string): boolean  // 暂不支持
+  resume(fid: string): boolean // 暂不支持
 
-  cancel(fid: string): boolean  // 暂不支持
-
+  cancel(fid: string): boolean // 暂不支持
 
   getUrl(fid: string): string
 
   releaseUrl(fid: string): boolean
-
 
   subscribe(subscriber: LocalDataServiceSubscriber): () => void
 
@@ -55,5 +53,4 @@ export default interface LocalDataServiceApi {
    * @returns  返回文件是否载入完成 文件不存在则返回 undefined
    */
   isLoaded(fid: string): boolean | undefined
-
 }

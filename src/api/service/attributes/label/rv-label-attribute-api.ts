@@ -1,7 +1,6 @@
-import RvLabel from "@/api/service/sync/interface/step/attributes/label/rv-label.interface"
+import RvLabel from '@/api/service/sync/interface/step/attributes/label/rv-label.interface'
 
 export default interface RvLabelAttributeApi {
-
   key: string
 
   defaultValue: RvLabel
@@ -9,5 +8,4 @@ export default interface RvLabelAttributeApi {
   generate(): RvLabel
 
   ensure(nid: string): boolean
-
 }

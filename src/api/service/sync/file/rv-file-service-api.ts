@@ -1,11 +1,9 @@
-import {RecursiveMap, RecursiveObject} from "rhine-var"
+import { RecursiveMap, RecursiveObject } from 'rhine-var'
 
-import {RvFileServiceSubscriber} from "@/api/service/sync/file/dto/rv-file-service-subscriber.type"
-import RvFile from "@/api/service/sync/interface/file/rv-file.interface"
-
+import { RvFileServiceSubscriber } from '@/api/service/sync/file/dto/rv-file-service-subscriber.type'
+import RvFile from '@/api/service/sync/interface/file/rv-file.interface'
 
 export default interface RvFileServiceApi {
-
   /**
    * 存储所有文件的 RhineVar 对象
    */
@@ -53,7 +51,6 @@ export default interface RvFileServiceApi {
    */
   remove(fid: string): boolean
 
-
   /**
    * 订阅文件服务相关事件
    *
@@ -69,7 +66,6 @@ export default interface RvFileServiceApi {
    * @param subscriber  订阅者
    */
   unsubscribe(subscriber: RvFileServiceSubscriber): void
-
 
   /**
    * 订阅文件服务相关事件
@@ -102,5 +98,4 @@ export default interface RvFileServiceApi {
    * @returns 返回相同文件的 fid 如果没有则返回 null
    */
   findSame(file: File): Promise<string | null>
-
 }

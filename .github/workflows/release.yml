@@ -8,7 +8,6 @@ on:
       - 'package.json'
 
 jobs:
-
   Version:
     name: Analysis Version
     runs-on: ubuntu-latest
@@ -26,11 +25,11 @@ jobs:
         run: |
           CURRENT_VERSION=$(jq -r .version package.json)
           echo "Current version: $CURRENT_VERSION"
-          
+
           git checkout HEAD~1 -- package.json 2>/dev/null || true
           PREVIOUS_VERSION=$(jq -r .version package.json 2>/dev/null || echo "0.0.0")
           echo "Previous version: $PREVIOUS_VERSION"
-          
+
           if [[ "$CURRENT_VERSION" != "$PREVIOUS_VERSION" ]]; then
             echo "version_changed=true" >> $GITHUB_OUTPUT
             echo "current_version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
@@ -54,7 +53,7 @@ jobs:
         with:
           tag_name: v${{ needs.Version.outputs.current_version }}
           release_name: v${{ needs.Version.outputs.current_version }}
-          body: "Install: https://www.npmjs.com/package/oflow-interface"
+          body: 'Install: https://www.npmjs.com/package/oflow-interface'
           draft: false
           prerelease: false
 
@@ -64,14 +63,13 @@ jobs:
     if: ${{ needs.Version.outputs.version_changed == 'true' }}
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Setup Bun Environment
         uses: oven-sh/setup-bun@v2
         with:
-          bun-version: "latest"
+          bun-version: 'latest'
 
       - name: Install Dependencies
         run: bun install --frozen-lockfile
@@ -102,14 +100,13 @@ jobs:
       contents: read
       packages: write
     steps:
-
       - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Setup Bun Environment
         uses: oven-sh/setup-bun@v2
         with:
-          bun-version: "latest"
+          bun-version: 'latest'
 
       - name: Install Dependencies
         run: bun install --frozen-lockfile
@@ -126,7 +123,7 @@ jobs:
           cp package.json package.json.bak
           jq '.name = "@O-FLOW/\(.name)" | .repository.url = "git+https://github.com/O-FLOW/rhine-var.git"' package.json > package.json.tmp
           mv package.json.tmp package.json
-          jq empty package.json   
+          jq empty package.json
 
       - name: Setup NodeJs for NPM
         uses: actions/setup-node@v4
@@ -142,4 +139,3 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-

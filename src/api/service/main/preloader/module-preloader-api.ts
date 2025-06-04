@@ -1,6 +1,4 @@
-
 export default interface ModulePreloaderApi {
-
   INTERVAL: number
   TIMEOUT: number
 
@@ -17,5 +15,4 @@ export default interface ModulePreloaderApi {
   initialized: boolean
 
   startProcessing(): void
-
 }

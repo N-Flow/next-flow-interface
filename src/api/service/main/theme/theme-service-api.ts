@@ -1,7 +1,6 @@
-import ThemeState from "@/api/service/main/theme/dto/theme-state.interface"
+import ThemeState from '@/api/service/main/theme/dto/theme-state.interface'
 
 export default interface ThemeServiceApi {
-
   state: ThemeState
 
   isDarkTheme(): boolean
@@ -9,5 +8,4 @@ export default interface ThemeServiceApi {
   updateBackground(): void
 
   updateBackgroundByColor(color: string): void
-
 }

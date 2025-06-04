@@ -1,8 +1,7 @@
-import Meeting from "@/api/service/main/meeting/dto/meeting"
-import {ShareMode} from "@/api/service/main/meeting/dto/share-mode"
+import Meeting from '@/api/service/main/meeting/dto/meeting'
+import { ShareMode } from '@/api/service/main/meeting/dto/share-mode'
 
 export default interface MeetingServiceApi {
-  
   state: Meeting
 
   // 是否在会议中
@@ -25,5 +24,4 @@ export default interface MeetingServiceApi {
 
   // 获取邀请链接
   getInviteLink(): string
-  
 }

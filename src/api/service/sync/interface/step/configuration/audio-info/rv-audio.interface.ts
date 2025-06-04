@@ -1,4 +1,3 @@
-
 export default interface RvAudio {
   autoPlay: boolean
   fid: string

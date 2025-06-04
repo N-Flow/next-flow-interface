@@ -1,4 +1,3 @@
-
 export enum PluginEventType {
   ADD = 'ADD',
   INSTALL = 'INSTALL',

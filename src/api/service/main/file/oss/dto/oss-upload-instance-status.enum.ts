@@ -1,4 +1,3 @@
-
 export enum OssUploadInstanceStatus {
   WAITING = 'WAITING',
   UPLOADING = 'UPLOADING',

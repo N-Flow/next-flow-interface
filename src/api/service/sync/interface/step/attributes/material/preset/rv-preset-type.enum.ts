@@ -1,4 +1,3 @@
-
 export enum RvPresetType {
   NONE = 'NONE',
   METAL = 'METAL',

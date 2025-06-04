@@ -1,4 +1,3 @@
-
 export interface UploadButtonAndListProps {
   uploadText: string
   accept: string[]

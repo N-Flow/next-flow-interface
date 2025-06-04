@@ -1,13 +1,12 @@
-import {FunctionComponent} from "react"
+import { FunctionComponent } from 'react'
 
-import DialogCreateOptions from "@/api/service/main/dialog/dto/dialog-create-options.interface"
+import DialogCreateOptions from '@/api/service/main/dialog/dto/dialog-create-options.interface'
 
-import {ThemeColor} from "../theme/dto/theme-color.enum"
+import { ThemeColor } from '../theme/dto/theme-color.enum'
 
-import DialogController from "./dto/dialog-controller.interface"
+import DialogController from './dto/dialog-controller.interface'
 
 export default class Dialog {
-
   constructor(
     public options: DialogCreateOptions,
 
@@ -32,22 +31,22 @@ export default class Dialog {
     public inputPlaceholder = '',
     public autoFocus: boolean = enableInput,
     public allowEmpty = false,
-    public onChange: ((value: string) => void) = () => {},
-    public onCheck: ((value: string) => boolean) = () => true,
+    public onChange: (value: string) => void = () => {},
+    public onCheck: (value: string) => boolean = () => true,
 
     public enableCloseButton = true,
 
-    public onConfirm: ((value: string) => void) = () => {},
-    public onCancel: (() => void) = () => {},
-    public onClose: (() => void) = () => {},
+    public onConfirm: (value: string) => void = () => {},
+    public onCancel: () => void = () => {},
+    public onClose: () => void = () => {},
 
-    public onConfirmButtonClick: (() => void) = () => {},
-    public onCancelButtonClick: (() => void) = () => {},
-    public onOutsideClick: (() => void) = () => {},
-    public onCloseButtonClick: (() => void) = () => {},
+    public onConfirmButtonClick: () => void = () => {},
+    public onCancelButtonClick: () => void = () => {},
+    public onOutsideClick: () => void = () => {},
+    public onCloseButtonClick: () => void = () => {},
 
-    public onRender: (() => void) = () => {},
-    public onEffect: (() => (()=>void)) = () => (() => {}),
+    public onRender: () => void = () => {},
+    public onEffect: () => () => void = () => () => {},
 
     public closeOnConfirm = true,
     public closeOnCancel = true,
@@ -59,8 +58,7 @@ export default class Dialog {
     public inputValue: string = defaultValue,
     public createTime: Date = new Date(),
     public focusInput: () => void = () => {},
-  ) {
-  }
+  ) {}
 
   static fromOptions(id: string, options: DialogCreateOptions): Dialog {
     return new Dialog(
@@ -104,5 +102,4 @@ export default class Dialog {
   }
 
   setHide: (value: boolean) => void = () => {}
-
 }

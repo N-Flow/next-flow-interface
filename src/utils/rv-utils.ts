@@ -1,7 +1,6 @@
-import {RvPath, StoredRhineVar} from "rhine-var"
+import { RvPath, StoredRhineVar } from 'rhine-var'
 
 export default class RvUtils {
-
   static makeRvPath(path: string): RvPath {
     const rvPath: RvPath = []
     for (const item of path.split('.')) {
@@ -33,7 +32,7 @@ export default class RvUtils {
     return path
   }
 
-  static getByRvPath<T = any>(source: StoredRhineVar | any, path: string | RvPath): T  {
+  static getByRvPath<T = any>(source: StoredRhineVar | any, path: string | RvPath): T {
     path = RvUtils.ensureRvPath(path)
     let obj: any = source
     for (const key of path) {
@@ -66,5 +65,4 @@ export default class RvUtils {
     }
     return true
   }
-
 }

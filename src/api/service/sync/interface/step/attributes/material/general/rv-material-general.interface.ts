@@ -1,4 +1,4 @@
-import {RvMaterialType} from "@/api/service/sync/interface/step/attributes/material/general/rv-material-type.enum"
+import { RvMaterialType } from '@/api/service/sync/interface/step/attributes/material/general/rv-material-type.enum'
 
 export interface RvMaterialGeneral {
   type: RvMaterialType

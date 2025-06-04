@@ -1,4 +1,3 @@
-
 export enum PageMode {
   DISPLAY = 'DISPLAY',
   FULL = 'FULL',

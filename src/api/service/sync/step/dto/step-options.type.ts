@@ -1,2 +1,1 @@
-
-export type StepOptions = {label: string, value: string}[]
+export type StepOptions = { label: string; value: string }[]

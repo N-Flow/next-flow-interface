@@ -1,4 +1,4 @@
-import {Color, ColorPickerProps} from "antd/es/color-picker"
+import { Color, ColorPickerProps } from 'antd/es/color-picker'
 
 export interface AntColorProps extends ColorPickerProps {
   value: Color | string | null

@@ -1,4 +1,3 @@
-
 export enum FirstLoadModelServiceStatus {
   WAITING = 'WAITING',
   LOADING = 'LOADING',

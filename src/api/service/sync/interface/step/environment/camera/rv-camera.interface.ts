@@ -1,8 +1,6 @@
-import RvCameraLocation
-  from "@/api/service/sync/interface/step/environment/camera/location/rv-camera-location.interface"
+import RvCameraLocation from '@/api/service/sync/interface/step/environment/camera/location/rv-camera-location.interface'
 
 export default interface RvCamera {
-
   enable: boolean
 
   location: RvCameraLocation
@@ -13,5 +11,4 @@ export default interface RvCamera {
     distanceMax: number
     fov: number
   }
-
 }

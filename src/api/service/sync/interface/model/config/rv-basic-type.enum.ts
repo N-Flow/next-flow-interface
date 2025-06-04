@@ -1,4 +1,3 @@
-
 export enum RvBasicType {
   TEXT = 'TEXT',
   CUBE = 'CUBE',

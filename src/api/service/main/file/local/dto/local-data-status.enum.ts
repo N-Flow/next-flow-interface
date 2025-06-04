@@ -1,4 +1,3 @@
-
 export enum LocalDataStatus {
   WAITING = 'WAITING',
   LOADING = 'LOADING',

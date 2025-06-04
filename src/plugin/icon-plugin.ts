@@ -1,10 +1,9 @@
-import {FunctionComponent,MouseEvent} from "react"
+import { FunctionComponent, MouseEvent } from 'react'
 
-import {ThemeColor} from "@/api/service/main/theme/dto/theme-color.enum"
+import { ThemeColor } from '@/api/service/main/theme/dto/theme-color.enum'
 
-import BasePlugin from "./base-plugin"
-import {IconPluginPosition} from "./dto/icon-plugin-position.enum"
-
+import BasePlugin from './base-plugin'
+import { IconPluginPosition } from './dto/icon-plugin-position.enum'
 
 export default interface IconPlugin extends BasePlugin {
   position: IconPluginPosition
@@ -13,7 +12,7 @@ export default interface IconPlugin extends BasePlugin {
   color: ThemeColor
 
   open: boolean
-  
+
   icon: FunctionComponent
 
   onEnabledChange?: (value: boolean, e: MouseEvent) => void

@@ -1,10 +1,9 @@
-import {ContextMenuController} from "@/api/service/main/context-menu/dto/context-menu-controller.interface"
-import {ContextMenuCreateOptions} from "@/api/service/main/context-menu/dto/context-menu-create-options.interface"
-import MenuLine from "@/api/service/main/context-menu/menu-line.class"
-import {ThemeColor} from "@/api/service/main/theme/dto/theme-color.enum"
+import { ContextMenuController } from '@/api/service/main/context-menu/dto/context-menu-controller.interface'
+import { ContextMenuCreateOptions } from '@/api/service/main/context-menu/dto/context-menu-create-options.interface'
+import MenuLine from '@/api/service/main/context-menu/menu-line.class'
+import { ThemeColor } from '@/api/service/main/theme/dto/theme-color.enum'
 
 export default class ContextMenu {
-
   constructor(
     public options: ContextMenuCreateOptions,
 
@@ -18,13 +17,16 @@ export default class ContextMenu {
 
     public controller: ContextMenuController | null = null,
     public createTime: Date = new Date(),
-  ) {
-  }
+  ) {}
 
-  static fromOptions(id: string, options: ContextMenuCreateOptions, menuLines?: MenuLine[]): ContextMenu {
-    let {showIcon} = options
+  static fromOptions(
+    id: string,
+    options: ContextMenuCreateOptions,
+    menuLines?: MenuLine[],
+  ): ContextMenu {
+    let { showIcon } = options
     if (showIcon === undefined) {
-      options.lines?.forEach(line => {
+      options.lines?.forEach((line) => {
         if (line.icon) {
           showIcon = true
         }
@@ -38,8 +40,7 @@ export default class ContextMenu {
       options.x,
       options.y,
       options.closeOnOutsideClick,
-      options.theme
+      options.theme,
     )
   }
-
 }

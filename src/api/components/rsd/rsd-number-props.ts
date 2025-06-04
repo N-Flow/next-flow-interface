@@ -1,4 +1,4 @@
-import {DivProps} from "@/api/components/interface/base-types"
+import { DivProps } from '@/api/components/interface/base-types'
 
 export interface RsdNumberProps extends DivProps {
   value: number | null

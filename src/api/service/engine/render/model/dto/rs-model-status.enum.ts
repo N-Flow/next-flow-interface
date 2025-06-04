@@ -1,4 +1,3 @@
-
 export enum RsModelStatus {
   WAITING = 'WAITING',
   LOADING = 'LOADING',

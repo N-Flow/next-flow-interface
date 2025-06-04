@@ -1,6 +1,6 @@
 export default class NumberUtils {
   static roundToX(num: number, x: number) {
-    const factor = 10**x
+    const factor = 10 ** x
     return Math.round(num * factor) / factor
   }
 
@@ -16,4 +16,3 @@ export default class NumberUtils {
     return typeof value === 'number' && !isNaN(value) && isFinite(value)
   }
 }
-

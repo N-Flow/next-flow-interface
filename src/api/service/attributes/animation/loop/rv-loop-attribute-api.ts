@@ -1,7 +1,6 @@
-import RvLoop from "@/api/service/sync/interface/step/attributes/animation/loop/rv-loop.interface"
+import RvLoop from '@/api/service/sync/interface/step/attributes/animation/loop/rv-loop.interface'
 
 export default interface RvLoopAttributeApi {
-
   key: string
 
   defaultValue: RvLoop
@@ -9,5 +8,4 @@ export default interface RvLoopAttributeApi {
   generate(): RvLoop
 
   ensure(nid: string): boolean
-
 }

@@ -1,4 +1,3 @@
-
 export enum TChangeType {
   SYNC = 'SYNC',
   STEP = 'STEP',

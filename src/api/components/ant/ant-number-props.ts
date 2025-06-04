@@ -1,4 +1,4 @@
-import {InputNumberProps} from "antd"
+import { InputNumberProps } from 'antd'
 
 export interface AntNumberProps extends InputNumberProps {
   value: number | null

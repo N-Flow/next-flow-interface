@@ -1,4 +1,4 @@
-import React, {FunctionComponent} from "react"
+import React, { FunctionComponent } from 'react'
 
 export interface MaterialSymbolOptions {
   fill?: boolean
@@ -8,5 +8,7 @@ export interface MaterialSymbolOptions {
   style?: React.CSSProperties
 }
 
-export type MaterialSymbolFunction = (icon: string, options?: MaterialSymbolOptions) => FunctionComponent
-
+export type MaterialSymbolFunction = (
+  icon: string,
+  options?: MaterialSymbolOptions,
+) => FunctionComponent

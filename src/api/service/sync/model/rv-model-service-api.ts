@@ -1,13 +1,12 @@
-import {RecursiveMap, RecursiveObject} from "rhine-var"
+import { RecursiveMap, RecursiveObject } from 'rhine-var'
 
-import RvNode from "@/api/service/sync/interface/model/node/rv-node.interface"
-import RvModel from "@/api/service/sync/interface/model/rv-model.interface"
+import RvNode from '@/api/service/sync/interface/model/node/rv-node.interface'
+import RvModel from '@/api/service/sync/interface/model/rv-model.interface'
 
 export default interface RvModelServiceApi {
-
   models: RecursiveMap<RvModel>
 
-  uploadMulti(fileList: FileList | File[] | File | null | undefined, check?: boolean):Promise<void>
+  uploadMulti(fileList: FileList | File[] | File | null | undefined, check?: boolean): Promise<void>
 
   addByFid(fid: string): void
 
@@ -26,5 +25,4 @@ export default interface RvModelServiceApi {
   setNode(mid: string, node: RvNode): boolean
 
   generateId(): string
-
 }

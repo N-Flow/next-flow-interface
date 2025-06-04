@@ -1,7 +1,4 @@
-
-
 export default interface ShadowAnimationApi {
-
   play(data: any, duration?: number, quickMode?: boolean): void
 
   enable(value: boolean, duration?: number, quickMode?: boolean): void
@@ -15,5 +12,4 @@ export default interface ShadowAnimationApi {
   onlyOnGround(value: boolean, duration?: number, quickMode?: boolean): void
 
   normalBias(value: number, duration?: number, quickMode?: boolean): void
-
 }

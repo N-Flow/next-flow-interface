@@ -1,4 +1,4 @@
-import { SpanProps } from "../interface/base-types"
+import { SpanProps } from '../interface/base-types'
 
 export interface MaterialSymbolProps extends SpanProps {
   size?: string

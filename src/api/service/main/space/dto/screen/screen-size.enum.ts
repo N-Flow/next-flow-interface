@@ -1,4 +1,3 @@
-
 export enum ScreenSize {
   XS = 'XS',
   SM = 'SM',

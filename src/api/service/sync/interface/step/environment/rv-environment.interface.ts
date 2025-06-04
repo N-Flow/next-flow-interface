@@ -1,7 +1,6 @@
-import RvCamera from "@/api/service/sync/interface/step/environment/camera/rv-camera.interface"
+import RvCamera from '@/api/service/sync/interface/step/environment/camera/rv-camera.interface'
 
 export default interface RvEnvironment {
-
   skybox: {
     background: string
   }
@@ -36,5 +35,4 @@ export default interface RvEnvironment {
     density: number
     color: string
   }
-
 }

@@ -1,4 +1,3 @@
-
 export interface RvMaterialTexture {
   basic: {
     albedoTexture: string

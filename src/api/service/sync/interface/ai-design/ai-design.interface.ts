@@ -1,5 +1,3 @@
-
-
 export default interface RvAiDesign {
   cid: string
   dialogue: RvAiDesignDialogue[]
