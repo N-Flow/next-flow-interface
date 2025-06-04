@@ -25,6 +25,34 @@ const tsFile = "*.{ts,tsx,mts,cts}"
 
 const scriptConfig: ConfigArray = tseslint.config([
   {
+    files: [
+      scriptFile,
+      `config/**/${scriptFile}`,
+      `scripts/**/${scriptFile}`,
+      `test/**/${scriptFile}`,
+      `spec/**/${scriptFile}`,
+      `tools/**/${scriptFile}`,
+    ],
+    languageOptions: {
+      globals: globals.node
+    }
+  },
+  {
+    files: [`src/**/${scriptFile}`],
+    languageOptions: {
+      globals: globals.browser
+    }
+  },
+  {
+    files: [`**/${scriptFile}`],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+  {
     ...js.configs.recommended,
     files: [`**/${scriptFile}`],
   },
@@ -45,33 +73,10 @@ const scriptConfig: ConfigArray = tseslint.config([
      files: [`**/${scriptFile}`],
    },
   {
-    files: [
-      scriptFile,
-      `config/**/${scriptFile}`,
-      `scripts/**/${scriptFile}`,
-      `test/**/${scriptFile}`,
-      `spec/**/${scriptFile}`,
-      `tools/**/${scriptFile}`,
-    ],
-    languageOptions: {
-      globals: globals.node
-    }
+    files: [`**/${scriptFile}`],
+    rules: {
+    },
   },
-  {
-    files: [`src/**/${scriptFile}`],
-    languageOptions: {
-      globals: globals.browser
-    }
-  },
-   {
-     files: [`**/${scriptFile}`],
-     languageOptions: {
-       parserOptions: {
-         projectService: true,
-         tsconfigRootDir: import.meta.dirname,
-       },
-     },
-   },
 ])
 
 const cssConfig = defineConfig([
@@ -80,11 +85,12 @@ const cssConfig = defineConfig([
     files: ["**/*.css"],
     language: "css/css",
   }
-])
+]);
 
 const markdownConfig = defineConfig([
   {
     ...markdown.configs.recommended[0],
+    files: ["**/*.md", "**/*.markdown"],
     language: "markdown/gfm",
   },
 ])
@@ -106,12 +112,24 @@ const jsonConfig = defineConfig([
   },
 ])
 
+const customConfig = defineConfig([
+  {
+    files: [`src/**/${scriptFile}`],
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+    },
+  },
+])
+
 const config = [
   ...globalConfig,
   ...scriptConfig,
   ...cssConfig,
   ...markdownConfig,
   ...jsonConfig,
+  ...customConfig,
 ]
+
+// console.log(config)
 
 export default config
