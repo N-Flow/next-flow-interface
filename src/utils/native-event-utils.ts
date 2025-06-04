@@ -2,7 +2,7 @@ import MathUtils from "./math-utils"
 
 export default class NativeEventUtils {
   static getEventPosition(e: MouseEvent | TouchEvent | any): [x: number, y: number] {
-    if (e.type && e.type.includes('touch')) {
+    if (e.type?.includes('touch')) {
       if (e.touches.length) {
         const x = e.touches[0].clientX
         const y = e.touches[0].clientY

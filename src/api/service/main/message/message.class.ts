@@ -1,7 +1,7 @@
 import { MessageType } from "@/api/service/main/message/dto/message-type.type"
 
 export class Message {
-  show: boolean = true
+  show = true
   height = 20
   opacity = 0
 

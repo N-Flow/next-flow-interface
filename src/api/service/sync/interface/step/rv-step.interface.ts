@@ -6,7 +6,7 @@ export default interface RvStep {
   name: string
   sid: string
 
-  attributes: RhineVarMap<any>
+  attributes: RhineVarMap
 
   configuration: RvConfiguration
   environment: RvEnvironment

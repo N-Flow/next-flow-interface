@@ -10,13 +10,13 @@ export default class MenuLine {
 
     public id: string,
     public type: MenuLineType = MenuLineType.BUTTON,
-    public text: string = '',
-    public tip: string = '',
+    public text = '',
+    public tip = '',
     public icon: FunctionComponent | undefined = undefined,
     public view: FunctionComponent | undefined = undefined,
-    public color: string = '',
-    public disabled: boolean = false,
-    public shortcut: string = '',
+    public color = '',
+    public disabled = false,
+    public shortcut = '',
 
     public onClick: ((e: any) => void) = () => {},
     public onMouseOver: ((e: any) => void) = () => {},
@@ -24,7 +24,7 @@ export default class MenuLine {
 
     public closeAllOnClick: boolean = type === MenuLineType.BUTTON,
 
-    public checkboxDefaultValue: boolean = false,
+    public checkboxDefaultValue = false,
     public onCheckboxChange: ((value: any) => void) = () => {},
 
     public sub: ContextMenuCreateOptions | undefined = undefined, // 子菜单项

@@ -3,9 +3,9 @@ import RvAttributes from "../../interface/step/attributes/rv-attributes.interfac
 
 export default interface RvAttributesServiceApi {
 
-  forEach(callback: (attributes: RhineVarMap<any>, sid: string) => void): void
+  forEach(callback: (attributes: RhineVarMap, sid: string) => void): void
 
-  forEachNode(nid: string, callback: (attributes: RhineVarMap<any>, sid: string) => void): void
+  forEachNode(nid: string, callback: (attributes: RhineVarMap, sid: string) => void): void
 
   setToAllStep(nid: string, key: string, value: any): void
 

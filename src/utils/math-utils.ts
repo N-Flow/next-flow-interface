@@ -8,7 +8,7 @@ export default class MathUtils {
     return angle * (Math.PI / 180)
   }
 
-  static approximatelyEqual(n1: number, n2: number, bias: number = 1e-6) {
+  static approximatelyEqual(n1: number, n2: number, bias = 1e-6) {
     return Math.abs(n1 - n2) < bias
   }
 

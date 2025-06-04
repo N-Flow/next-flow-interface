@@ -2,6 +2,6 @@ import {RvBasicType} from "@/api/service/sync/interface/model/config/rv-basic-ty
 
 export default interface RvBasicConfig {
   type: RvBasicType
-  args?: {[key: string]: number}
+  args?: Record<string, number>
   text?: string
 }

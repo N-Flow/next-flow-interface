@@ -1,60 +1,71 @@
-import js from "@eslint/js"
-import globals from "globals"
-import tseslint from "typescript-eslint"
-import unusedImports from "eslint-plugin-unused-imports"
-import json from "@eslint/json"
-import markdown from "@eslint/markdown"
+import js from '@eslint/js';
+import tseslint, {ConfigArray} from "typescript-eslint"
 import { defineConfig } from "eslint/config"
-import type { Linter } from "eslint"
+import globals from "globals"
+import markdown from "@eslint/markdown"
 
-const config: Linter.Config[] = defineConfig([
+const globalConfig = defineConfig([
   {
-    ignores: ["**/tsconfig.json", "**/tsconfig.*.json", ".vscode/**", ".idea/**", "dist/**", "build/**", "node_modules/**"],
-  },
-  {
-    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"],
-    plugins: { js },
-    languageOptions: { globals: globals.browser },
-    extends: ["js/recommended"],
-  },
-  ...tseslint.configs.recommended,
-  {
-    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"],
-    plugins: { "unused-imports": unusedImports },
-    rules: {
-      "semi": ["error", "never"],
-      "@typescript-eslint/no-explicit-any": "warn",
-      "@typescript-eslint/no-unused-vars": "off",
-      "unused-imports/no-unused-imports": "error",
-      "unused-imports/no-unused-vars": [
-        "warn",
-        {
-          "vars": "all",
-          "varsIgnorePattern": "^_",
-          "args": "after-used",
-          "argsIgnorePattern": "^_"
-        },
-      ],
-    },
-  },
-  {
-    files: ["**/*.json"],
-    plugins: { json },
-    language: "json/json",
-    extends: ["json/recommended"],
-  },
-  {
-    files: ["**/*.jsonc", "**/*.jsonc", "tsconfig.json", "tsconfig.*.json"],
-    plugins: { json },
-    language: "json/jsonc",
-    extends: ["json/recommended"],
-  },
-  {
-    files: ["**/*.md"],
-    plugins: { markdown },
-    language: "markdown/gfm",
-    extends: ["markdown/recommended"],
+    ignores: [
+      ".vscode/**",
+      ".idea/**",
+      "dist/**",
+      "build/**",
+      "node_modules/**",
+      ".claude/**",
+      "**/tsconfig.json",
+      "**/tsconfig.*.json",
+    ],
   },
 ])
+
+const scriptConfig: ConfigArray = tseslint.config([
+  {
+    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"],
+    ...js.configs.recommended,
+  },
+  {
+    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"],
+    ...tseslint.configs.recommended[0],
+  },
+  {
+    ...tseslint.configs.recommended[1],
+  },
+  {
+    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"],
+    ...tseslint.configs.recommended[2],
+  },
+  {
+    files: [
+      "*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}",
+      "config/**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}",
+      "scripts/**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}",
+      "test/**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}",
+      "spec/**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}",
+      "tools/**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}",
+    ],
+    languageOptions: {
+      globals: globals.node
+    }
+  },
+  {
+    files: ["src/**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"],
+    languageOptions: {
+      globals: globals.browser
+    }
+  }
+])
+
+const markdownConfig = defineConfig([
+  markdown.configs.recommended,
+])
+
+const config = [
+  ...globalConfig,
+  ...scriptConfig,
+  ...markdownConfig,
+]
+
+console.log(config)
 
 export default config

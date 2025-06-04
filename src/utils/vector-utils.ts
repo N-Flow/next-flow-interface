@@ -60,7 +60,7 @@ export default class VectorUtils {
     return {x: v.x, y: v.y, z: v.z}
   }
 
-  static withRound(v: V3, n: number = 0): V3 {
+  static withRound(v: V3, n = 0): V3 {
     return {x: NumberUtils.roundToX(v.x, n), y: NumberUtils.roundToX(v.y, n), z: NumberUtils.roundToX(v.z, n)}
   }
 
@@ -97,7 +97,7 @@ export default class VectorUtils {
 
   static toArray(v: V3 | V4): number[] {
     if (this.isV4(v)) {
-      return [v.x, v.y, v.z, (v as V4).w]
+      return [v.x, v.y, v.z, (v).w]
     } else {
       return [v.x, v.y, v.z]
     }
@@ -107,9 +107,9 @@ export default class VectorUtils {
     return {x: q.x, y: q.y, z: q.z, w: q.w}
   }
 
-  static toArrayWithRound4(v: V3 | V4, n: number = 0): number[] {
+  static toArrayWithRound4(v: V3 | V4, n = 0): number[] {
     if (this.isV4(v)) {
-      return [NumberUtils.roundToX(v.x, n), NumberUtils.roundToX(v.y, n), NumberUtils.roundToX(v.z, n), NumberUtils.roundToX((v as V4).w, n)]
+      return [NumberUtils.roundToX(v.x, n), NumberUtils.roundToX(v.y, n), NumberUtils.roundToX(v.z, n), NumberUtils.roundToX((v).w, n)]
     } else {
       return [NumberUtils.roundToX(v.x, n), NumberUtils.roundToX(v.y, n), NumberUtils.roundToX(v.z, n)]
     }

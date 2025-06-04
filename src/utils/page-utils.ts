@@ -9,7 +9,7 @@ export default class PageUtils {
     return PageType.VIEWER
   }
 
-  static forceGetSearchParams(key: string, errorMessage: string = '') {
+  static forceGetSearchParams(key: string, errorMessage = '') {
     const params = new URLSearchParams(window.location.search)
     const mt = params.get(key)
     if (!mt) {

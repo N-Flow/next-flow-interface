@@ -10,10 +10,10 @@ export default class ContextMenu {
 
     public id: string,
     public lines: MenuLine[] = [],
-    public showIcon: boolean = false,
-    public x: number = 0,
-    public y: number = 0,
-    public closeOnOutsideClick: boolean = false,
+    public showIcon = false,
+    public x = 0,
+    public y = 0,
+    public closeOnOutsideClick = false,
     public theme?: ThemeColor,
 
     public controller: ContextMenuController | null = null,

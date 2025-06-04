@@ -1,4 +1,4 @@
 
-export type FlexGrowProps = {
+export interface FlexGrowProps {
   value?: number
 }
