@@ -1,6 +1,6 @@
 {
   "name": "oflow-interface",
-  "version": "0.14.6",
+  "version": "0.14.7",
   "description": "Interface package for O FLOW. You can use this package to build your own plugin that can control anything.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -45,6 +45,8 @@
     "@eslint/js": "^9.28.0",
     "@eslint/json": "^0.12.0",
     "@eslint/markdown": "^6.4.0",
+    "@types/bun": "^1.2.15",
+    "@types/node": "^22.15.30",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@typescript-eslint/project-service": "^8.33.1",

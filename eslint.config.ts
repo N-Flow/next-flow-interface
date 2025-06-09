@@ -12,13 +12,16 @@ import { defineConfig } from 'eslint/config'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
 import { importX } from 'eslint-plugin-import-x'
 import globals from 'globals'
-import tseslint, { ConfigArray } from 'typescript-eslint'
+import tseslint, { type ConfigArray } from 'typescript-eslint'
 
-// Configuration
-const ENABLE_TYPE_CHECKED = true // Set to enable project-based type checking
-const ENABLE_FRONTEND = false // Set to enable Next.js, JSX, React, Hooks, and other frontend features
-const ENABLE_STYLESHEET = true // Set to enable CSS, SCSS, SASS and other stylesheet features
-const IGNORE_PRETTIER = true // Set to disable all rules that are unnecessary or might conflict with Prettier
+const options = {
+  ENABLE_TYPE_CHECKED: true, // Set to enable project-based type checking
+  ENABLE_FRONTEND: false, // Set to enable Next.js, JSX, React, Hooks, and other frontend features
+  ENABLE_STYLESHEET: true, // Set to enable CSS, SCSS, SASS and other stylesheet features
+  IGNORE_PRETTIER: true, // Set to disable all rules that are unnecessary or might conflict with Prettier
+}
+
+const { ENABLE_TYPE_CHECKED, ENABLE_FRONTEND, ENABLE_STYLESHEET, IGNORE_PRETTIER } = options
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -36,50 +39,50 @@ const tsFile = '*.{cts,ts,tsx,mts,mtsx}'
 
 const tsConfig = ENABLE_TYPE_CHECKED
   ? [
-      {
-        files: [`**/${scriptFile}`],
-        languageOptions: {
-          parserOptions: {
-            projectService: true,
-            tsconfigRootDir: __dirname,
-          },
+    {
+      files: [`**/${scriptFile}`],
+      languageOptions: {
+        parserOptions: {
+          projectService: true,
+          tsconfigRootDir: __dirname,
         },
       },
-      {
-        ...tseslint.configs.strictTypeChecked[0],
-        files: [`**/${scriptFile}`],
-      },
-      {
-        ...tseslint.configs.strictTypeChecked[1],
-        files: [`**/${tsFile}`],
-      },
-      {
-        ...tseslint.configs.strictTypeChecked[2],
-        files: [`**/${scriptFile}`],
-      },
-      {
-        ...tseslint.configs.stylisticTypeChecked[2],
-        files: [`**/${scriptFile}`],
-      },
-    ]
+    },
+    {
+      ...tseslint.configs.strictTypeChecked[0],
+      files: [`**/${scriptFile}`],
+    },
+    {
+      ...tseslint.configs.strictTypeChecked[1],
+      files: [`**/${tsFile}`],
+    },
+    {
+      ...tseslint.configs.strictTypeChecked[2],
+      files: [`**/${scriptFile}`],
+    },
+    {
+      ...tseslint.configs.stylisticTypeChecked[2],
+      files: [`**/${scriptFile}`],
+    },
+  ]
   : [
-      {
-        ...tseslint.configs.strict[0],
-        files: [`**/${scriptFile}`],
-      },
-      {
-        ...tseslint.configs.strict[1],
-        files: [`**/${tsFile}`],
-      },
-      {
-        ...tseslint.configs.strict[2],
-        files: [`**/${scriptFile}`],
-      },
-      {
-        ...tseslint.configs.stylistic[2],
-        files: [`**/${scriptFile}`],
-      },
-    ]
+    {
+      ...tseslint.configs.strict[0],
+      files: [`**/${scriptFile}`],
+    },
+    {
+      ...tseslint.configs.strict[1],
+      files: [`**/${tsFile}`],
+    },
+    {
+      ...tseslint.configs.strict[2],
+      files: [`**/${scriptFile}`],
+    },
+    {
+      ...tseslint.configs.stylistic[2],
+      files: [`**/${scriptFile}`],
+    },
+  ]
 
 const scriptConfig: ConfigArray = tseslint.config([
   {
@@ -133,9 +136,7 @@ if (ENABLE_FRONTEND) {
   )
 
   for (const nextConfigElement of nextConfig) {
-    if (!nextConfigElement.files) {
-      nextConfigElement.files = [`**/${scriptFile}`]
-    }
+    nextConfigElement.files ??= [`**/${scriptFile}`]
   }
 }
 

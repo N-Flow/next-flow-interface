@@ -2,10 +2,10 @@
 # IDE
 .idea/
 .vscode/
+.cursor/
 
 # AI
 .claude/
-
 
 # dependencies
 /node_modules/
