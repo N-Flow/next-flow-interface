@@ -2,7 +2,7 @@ import { SwitchProps } from 'antd'
 
 export interface AntCheckboxProps extends SwitchProps {
   value: boolean
-  onChange: (value: any) => void
+  onChange: (value: boolean) => void
   className?: string | undefined
   label?: string
 }
