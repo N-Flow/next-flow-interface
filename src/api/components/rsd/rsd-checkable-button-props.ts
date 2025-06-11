@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
 
-import { DivProps } from '@/api/components/interface/base-types'
+import { DivPropsWithoutOnChange } from '@/api/components/interface/base-types'
 
-export interface RsdCheckableButtonProps extends DivProps {
+export interface RsdCheckableButtonProps extends DivPropsWithoutOnChange {
   value: boolean
   onChange: (value: boolean) => void
   label: string

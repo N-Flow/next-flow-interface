@@ -1,6 +1,6 @@
-import { DivProps } from '@/api/components/interface/base-types'
+import { DivPropsWithoutOnChange } from '@/api/components/interface/base-types'
 
-export interface RsdSwitchProps extends DivProps {
+export interface RsdSwitchProps extends DivPropsWithoutOnChange {
   value: boolean
   onChange: (value: boolean) => void
   label: string

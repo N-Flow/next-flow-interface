@@ -1,6 +1,6 @@
-import { DivProps } from '@/api/components/interface/base-types'
+import { DivPropsWithoutOnChange } from '@/api/components/interface/base-types'
 
-export interface RsdNumberProps extends DivProps {
+export interface RsdNumberProps extends DivPropsWithoutOnChange {
   value: number | null
   onChange: (value: number | null) => void
   label: string

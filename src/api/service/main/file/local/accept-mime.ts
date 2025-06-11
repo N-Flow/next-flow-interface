@@ -117,9 +117,16 @@ export async function getMimeByPath(path?: string) {
 
 export async function getMimeByUrl(url?: string) {
   if (url) {
-    const response = await fetch(url),
-      ftr = await fileTypeFromStream(response.body)
-    return ftr?.mime ?? UNKNOWN
+    try {
+      const response = await fetch(url)
+      if (!response.body) {
+        return UNKNOWN
+      }
+      const ftr = await fileTypeFromStream(response.body)
+      return ftr?.mime ?? UNKNOWN
+    } catch (error) {
+      return UNKNOWN
+    }
   }
   return UNKNOWN
 }
@@ -322,81 +329,4 @@ export function isAttach(mime: string = UNKNOWN) {
   return ATTACH_LIST.includes(mime)
 }
 
-// Create a namespace object for backward compatibility
-const AcceptMime = {
-  ANY,
-  UNKNOWN,
-  MESH,
-  LIGHT,
-  CAMERA,
-  TEXTURE,
-  MATERIAL,
-  UV,
-  ANIMATION,
-  GLB,
-  GLTF,
-  STL,
-  OBJ,
-  MP3,
-  WAV,
-  AAC,
-  OGG,
-  FLAC,
-  OPUS,
-  JPG,
-  PNG,
-  GIF,
-  BMP,
-  WebP,
-  SVG,
-  TIFF,
-  ICO,
-  HEIF,
-  AVIF,
-  MP4,
-  WebM,
-  AVI,
-  MPEG,
-  MOV,
-  WMV,
-  FLV,
-  OGV,
-  GP3,
-  MKV,
-  TXT,
-  MARKDOWN,
-  SUPPORT_IMAGE_LIST,
-  SUPPORT_MODEL_LIST,
-  SUPPORT_VIDEO_LIST,
-  SUPPORT_BABYLON_LIST,
-  SUPPORT_AUDIO_LIST,
-  SUPPORT_TEXT_LIST,
-  SUPPORT_ALL_LIST,
-  SUPPORT_FILE_LIST,
-  SUPPORT_RENDER_LIST,
-  SUPPORT_TEXTURE_LIST,
-  ATTACH_LIST,
-  getMimeByBlob,
-  getMimeByPath,
-  getMimeByUrl,
-  getMimeByBuffer,
-  getMimeByStream,
-  getMime,
-  getExtension,
-  isSupport,
-  isSupportFile,
-  isSupportImage,
-  isSupportModel,
-  isSupportVideo,
-  isSupportText,
-  isBabylon,
-  isSupportAudio,
-  isSupportRender,
-  isSupportTexture,
-  isTexture,
-  isMaterial,
-  isUV,
-  isAttach,
-}
-
-export default AcceptMime
+export * as default from './accept-mime'

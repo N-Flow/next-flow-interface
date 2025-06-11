@@ -174,7 +174,7 @@ export interface OfpApi {
       AntCheckbox: FunctionComponent<AntCheckboxProps>
       AntColor: FunctionComponent<AntColorProps>
       AntNumber: FunctionComponent<AntNumberProps>
-      AntSelect: FunctionComponent<AntSelectProps>
+      AntSelect: FunctionComponent<AntSelectProps<unknown>>
       AntSwitch: FunctionComponent<AntSwitchProps>
       AntEmpty: FunctionComponent<AntEmptyProps>
     }
