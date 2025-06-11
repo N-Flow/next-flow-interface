@@ -24,17 +24,17 @@
 
     /* Output */
     "outDir": "./dist",
+    "rootDir": "./src",
     "typeRoots": ["./node_modules/@types", "./src/types"],
 
     "declaration": true,
     "declarationMap": true,
     "emitDeclarationOnly": false,
 
-    "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "eslint.config.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules", "dist", "assets"]
 }

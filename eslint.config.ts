@@ -31,7 +31,12 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 })
 
-const globalConfig = defineConfig([includeIgnoreFile(gitignorePath), { ignores: [] }])
+const globalConfig = defineConfig([
+  includeIgnoreFile(gitignorePath),
+  {
+    ignores: ['eslint.config.{cjs,js,jsx,mjs,mjsx,cts,ts,tsx,mts,mtsx}'],
+  },
+])
 
 const scriptFile = '*.{cjs,js,jsx,mjs,mjsx,cts,ts,tsx,mts,mtsx}'
 const jsFile = '*.{cjs,js,jsx,mjs,mjsx}'
