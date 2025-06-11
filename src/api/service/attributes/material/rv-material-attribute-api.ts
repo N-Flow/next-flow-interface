@@ -17,7 +17,7 @@ export default interface RvMaterialAttributeApi {
 
   generateTexture(
     textureMap?: Map<string, BaseTexture>,
-    material?: any | PBRMaterial | NodeMaterial,
+    material?: PBRMaterial | NodeMaterial,
   ): RvMaterialTexture
 
   generatePBR(material?: PBRMaterial): RvMaterialPBR

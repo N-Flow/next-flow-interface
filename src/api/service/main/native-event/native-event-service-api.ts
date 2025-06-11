@@ -60,7 +60,7 @@ export default interface NativeEventServiceApi {
   unsubscribeKeyDownExceptInput(subscriber: NativeKeyboardEventSubscriber): void
 
   subscribeKeyUpExceptInput(subscriber: NativeKeyboardEventSubscriber): () => void
-  unsubscribeKeyUp(subscriber: NativeKeyboardEventSubscriber): void
+  unsubscribeKeyUpExceptInput(subscriber: NativeKeyboardEventSubscriber): void
 
   // Focus Events
   subscribeFocus(subscriber: NativeFocusEventSubscriber): () => void

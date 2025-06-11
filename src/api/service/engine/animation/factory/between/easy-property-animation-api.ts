@@ -16,10 +16,10 @@ export default interface EasyPropertyAnimationApi {
     type: number,
     node: SupportAnimationTarget,
     keys: string[],
-    to: any,
+    to: unknown,
     duration?: number,
     quickMode?: boolean,
-    from?: any,
+    from?: unknown,
     ease?: boolean,
   ): void
 

@@ -13,7 +13,7 @@ export default interface BasePlugin {
 
   loadApi?: () => void
 
-  data?: any
+  data?: Record<string, unknown>
 
   onInstall?: () => Promise<void>
   onEnable?: () => Promise<void>

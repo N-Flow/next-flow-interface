@@ -2,7 +2,7 @@ import { DivProps } from '../interface/base-types'
 
 export interface RsdInputProps extends DivProps {
   value: string
-  onChange: (value: any) => void
+  onChange: (value: string) => void
   type?: 'text' | 'number' | 'password'
   placeholder?: string
   className?: string

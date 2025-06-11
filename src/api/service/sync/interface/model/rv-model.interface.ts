@@ -6,7 +6,7 @@ export default interface RvModel {
   name: string
   origin: RvModelOrigin
   fid?: string
-  config?: RvBasicConfig | any
+  config?: RvBasicConfig | Record<string, unknown>
   node?: string
   // Node?: RvNode
 }

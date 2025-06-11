@@ -7,7 +7,7 @@ export default interface RvAttributesServiceApi {
 
   forEachNode(nid: string, callback: (attributes: RhineVarMap, sid: string) => void): void
 
-  setToAllStep(nid: string, key: string, value: any): void
+  setToAllStep(nid: string, key: string, value: unknown): void
 
   get(sid: string): RecursiveMap<RvAttributes> | undefined
 

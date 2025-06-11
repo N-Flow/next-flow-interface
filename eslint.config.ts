@@ -39,50 +39,50 @@ const tsFile = '*.{cts,ts,tsx,mts,mtsx}'
 
 const tsConfig = ENABLE_TYPE_CHECKED
   ? [
-    {
-      files: [`**/${scriptFile}`],
-      languageOptions: {
-        parserOptions: {
-          projectService: true,
-          tsconfigRootDir: __dirname,
+      {
+        files: [`**/${scriptFile}`],
+        languageOptions: {
+          parserOptions: {
+            projectService: true,
+            tsconfigRootDir: __dirname,
+          },
         },
       },
-    },
-    {
-      ...tseslint.configs.strictTypeChecked[0],
-      files: [`**/${scriptFile}`],
-    },
-    {
-      ...tseslint.configs.strictTypeChecked[1],
-      files: [`**/${tsFile}`],
-    },
-    {
-      ...tseslint.configs.strictTypeChecked[2],
-      files: [`**/${scriptFile}`],
-    },
-    {
-      ...tseslint.configs.stylisticTypeChecked[2],
-      files: [`**/${scriptFile}`],
-    },
-  ]
+      {
+        ...tseslint.configs.strictTypeChecked[0],
+        files: [`**/${scriptFile}`],
+      },
+      {
+        ...tseslint.configs.strictTypeChecked[1],
+        files: [`**/${tsFile}`],
+      },
+      {
+        ...tseslint.configs.strictTypeChecked[2],
+        files: [`**/${scriptFile}`],
+      },
+      {
+        ...tseslint.configs.stylisticTypeChecked[2],
+        files: [`**/${scriptFile}`],
+      },
+    ]
   : [
-    {
-      ...tseslint.configs.strict[0],
-      files: [`**/${scriptFile}`],
-    },
-    {
-      ...tseslint.configs.strict[1],
-      files: [`**/${tsFile}`],
-    },
-    {
-      ...tseslint.configs.strict[2],
-      files: [`**/${scriptFile}`],
-    },
-    {
-      ...tseslint.configs.stylistic[2],
-      files: [`**/${scriptFile}`],
-    },
-  ]
+      {
+        ...tseslint.configs.strict[0],
+        files: [`**/${scriptFile}`],
+      },
+      {
+        ...tseslint.configs.strict[1],
+        files: [`**/${tsFile}`],
+      },
+      {
+        ...tseslint.configs.strict[2],
+        files: [`**/${scriptFile}`],
+      },
+      {
+        ...tseslint.configs.stylistic[2],
+        files: [`**/${scriptFile}`],
+      },
+    ]
 
 const scriptConfig: ConfigArray = tseslint.config([
   {

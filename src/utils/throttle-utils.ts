@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function throttle<T extends (...args: any[]) => void>(func: T, wait: number): T {
   if (wait === 0) {
     return func
@@ -5,20 +6,24 @@ export default function throttle<T extends (...args: any[]) => void>(func: T, wa
 
   let lastArgs: Parameters<T> | undefined,
     lastExec = 0,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     lastThis: any,
     timeout: ReturnType<typeof setTimeout> | null = null
 
   function execute() {
     lastExec = Date.now()
-    func.apply(lastThis, lastArgs!)
+    if (lastArgs) {
+      func.apply(lastThis, lastArgs)
+    }
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const throttled = function (this: any, ...args: Parameters<T>) {
     const now = Date.now(),
       elapsed = now - lastExec
 
     lastArgs = args
-    lastThis = this // eslint-disable-line @typescript-eslint/no-this-alias
+    lastThis = this as unknown
 
     if (lastExec === 0) {
       setTimeout(execute, 1)

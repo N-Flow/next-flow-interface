@@ -31,22 +31,42 @@ export default class Dialog {
     public inputPlaceholder = '',
     public autoFocus: boolean = enableInput,
     public allowEmpty = false,
-    public onChange: (value: string) => void = () => {},
+    public onChange: (value: string) => void = () => {
+      /* Default input change handler */
+    },
     public onCheck: (value: string) => boolean = () => true,
 
     public enableCloseButton = true,
 
-    public onConfirm: (value: string) => void = () => {},
-    public onCancel: () => void = () => {},
-    public onClose: () => void = () => {},
+    public onConfirm: (value: string) => void = () => {
+      /* Default confirm handler */
+    },
+    public onCancel: () => void = () => {
+      /* Default cancel handler */
+    },
+    public onClose: () => void = () => {
+      /* Default close handler */
+    },
 
-    public onConfirmButtonClick: () => void = () => {},
-    public onCancelButtonClick: () => void = () => {},
-    public onOutsideClick: () => void = () => {},
-    public onCloseButtonClick: () => void = () => {},
+    public onConfirmButtonClick: () => void = () => {
+      /* Default confirm button click handler */
+    },
+    public onCancelButtonClick: () => void = () => {
+      /* Default cancel button click handler */
+    },
+    public onOutsideClick: () => void = () => {
+      /* Default outside click handler */
+    },
+    public onCloseButtonClick: () => void = () => {
+      /* Default close button click handler */
+    },
 
-    public onRender: () => void = () => {},
-    public onEffect: () => () => void = () => () => {},
+    public onRender: () => void = () => {
+      /* Default render handler */
+    },
+    public onEffect: () => () => void = () => () => {
+      /* Default effect cleanup */
+    },
 
     public closeOnConfirm = true,
     public closeOnCancel = true,
@@ -57,7 +77,9 @@ export default class Dialog {
     public controller: DialogController | null = null,
     public inputValue: string = defaultValue,
     public createTime: Date = new Date(),
-    public focusInput: () => void = () => {},
+    public focusInput: () => void = () => {
+      /* Default focus input handler */
+    },
   ) {}
 
   static fromOptions(id: string, options: DialogCreateOptions): Dialog {
@@ -101,5 +123,7 @@ export default class Dialog {
     )
   }
 
-  setHide: (value: boolean) => void = () => {}
+  setHide: (value: boolean) => void = () => {
+    /* Default set hide handler */
+  }
 }

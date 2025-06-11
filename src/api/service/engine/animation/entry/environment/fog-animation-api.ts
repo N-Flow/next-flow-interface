@@ -1,7 +1,11 @@
 import { Color3 } from '@babylonjs/core'
 
 export default interface FogAnimationApi {
-  play(data: any, duration?: number, quickMode?: boolean): void
+  play(
+    data: { enable?: boolean; density?: number; color?: string },
+    duration?: number,
+    quickMode?: boolean,
+  ): void
 
   enableAndDensity(enable: boolean, value: number, duration?: number, quickMode?: boolean): void
 

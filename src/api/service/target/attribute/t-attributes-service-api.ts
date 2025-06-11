@@ -14,7 +14,7 @@ export default interface TAttributesServiceApi {
 
   unsubscribe(subscriber: TAttributesSubscriber): void
 
-  set<T>(path: string | RvPath, value: any): void
+  set(path: string | RvPath, value: unknown): void
 
-  get<T>(path: string | RvPath): T
+  get(path: string | RvPath): unknown
 }

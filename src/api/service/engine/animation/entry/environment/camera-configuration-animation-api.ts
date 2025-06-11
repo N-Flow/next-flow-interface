@@ -1,5 +1,9 @@
 export default interface CameraConfigurationAnimationApi {
-  play(data: any, duration?: number, quickMode?: boolean): void
+  play(
+    data: { distanceMin?: number; distanceMax?: number; fov?: number },
+    duration?: number,
+    quickMode?: boolean,
+  ): void
 
   distanceMin(value: number, duration?: number, quickMode?: boolean): void
 

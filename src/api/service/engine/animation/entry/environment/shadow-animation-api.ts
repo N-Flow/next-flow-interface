@@ -1,5 +1,16 @@
 export default interface ShadowAnimationApi {
-  play(data: any, duration?: number, quickMode?: boolean): void
+  play(
+    data: {
+      enable?: boolean
+      darkness?: number
+      blurOffset?: number
+      blurScale?: number
+      onlyOnGround?: boolean
+      normalBias?: number
+    },
+    duration?: number,
+    quickMode?: boolean,
+  ): void
 
   enable(value: boolean, duration?: number, quickMode?: boolean): void
 

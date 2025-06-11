@@ -6,7 +6,7 @@ export default interface AddLocalDataOption {
   type: LocalDataType
 
   blob?: Blob | null
-  object?: any | null
+  object?: unknown
 
   status?: LocalDataStatus
   progress?: number

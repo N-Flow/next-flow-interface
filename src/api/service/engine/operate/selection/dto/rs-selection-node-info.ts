@@ -1,9 +1,11 @@
+import { Node } from '@babylonjs/core'
+
 import RvModel from '@/api/service/sync/interface/model/rv-model.interface'
 
 export default interface RsSelectionNodeInfo {
   nid: string
   nodeName: string
-  babylonNode: any
+  babylonNode: Node
   uniqueId: number
 
   mid: string

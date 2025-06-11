@@ -19,14 +19,22 @@ export default class MenuLine {
     public disabled = false,
     public shortcut = '',
 
-    public onClick: (e: any) => void = () => {},
-    public onMouseOver: (e: any) => void = () => {},
-    public onMouseOut: (e: any) => void = () => {},
+    public onClick: (e: MouseEvent) => void = () => {
+      /* Default click handler */
+    },
+    public onMouseOver: (e: MouseEvent) => void = () => {
+      /* Default mouse over handler */
+    },
+    public onMouseOut: (e: MouseEvent) => void = () => {
+      /* Default mouse out handler */
+    },
 
     public closeAllOnClick: boolean = type === MenuLineType.BUTTON,
 
     public checkboxDefaultValue = false,
-    public onCheckboxChange: (value: any) => void = () => {},
+    public onCheckboxChange: (value: boolean) => void = () => {
+      /* Default checkbox change handler */
+    },
 
     public sub: ContextMenuCreateOptions | undefined = undefined, // 子菜单项
 

@@ -12,7 +12,7 @@ export default interface HistoryServiceApi {
 
   canRedo(): boolean
 
-  pushState(state: any): void
+  pushState(state: unknown): void
 
   check(operate: string, forceStop?: boolean): void
 

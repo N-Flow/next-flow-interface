@@ -16,5 +16,5 @@ export default interface RvFile {
 
   uploading?: boolean
 
-  extra?: any
+  extra?: Record<string, unknown>
 }

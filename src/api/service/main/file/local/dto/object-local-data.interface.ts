@@ -4,5 +4,5 @@ import { LocalDataType } from '@/api/service/main/file/local/dto/local-data-type
 export default interface ObjectLocalData extends BaseLocalData {
   type: LocalDataType.BLOB
 
-  object: any | null
+  object: unknown
 }

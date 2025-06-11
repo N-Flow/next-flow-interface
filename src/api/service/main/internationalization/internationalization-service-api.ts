@@ -13,7 +13,7 @@ export default interface InternationalizationServiceApi {
 
   getLocaleByString(locale: string): Locale
 
-  loadMessages(locale: Locale): Promise<any>
+  loadMessages(locale: Locale): Promise<Record<string, unknown>>
 
   clearCache(): void
 }

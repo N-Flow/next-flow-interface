@@ -90,7 +90,7 @@ import {
   FirstLoadServiceSubscriber,
 } from './api/service/main/file/first/dto/first-load-service-subscriber.type'
 import FirstLoadServiceApi from './api/service/main/file/first/first-load-service-api'
-import AcceptMime from './api/service/main/file/local/accept-mime'
+import AcceptMimeModule from './api/service/main/file/local/accept-mime'
 import AddLocalDataOption from './api/service/main/file/local/dto/add-local-data-option.interface'
 import BaseLocalData from './api/service/main/file/local/dto/base-local-data.interface'
 import BlobLocalData from './api/service/main/file/local/dto/blob-local-data.interface'

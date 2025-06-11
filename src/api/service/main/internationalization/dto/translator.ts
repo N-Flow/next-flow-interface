@@ -1,1 +1,1 @@
-export type Translator = any
+export type Translator = Record<string, unknown>

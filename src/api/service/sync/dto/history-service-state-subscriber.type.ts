@@ -1,1 +1,1 @@
-export type HistoryServiceStateSubscriber = (state: any) => void
+export type HistoryServiceStateSubscriber = (state: unknown) => void

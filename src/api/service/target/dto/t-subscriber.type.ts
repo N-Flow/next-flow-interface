@@ -5,7 +5,7 @@ import { TChangeType } from './t-change-type.enum'
 export type TSubscriber = (
   type: TChangeType,
   path: RvPath,
-  value: any,
-  oldValue: any,
+  value: unknown,
+  oldValue: unknown,
   sid: string,
 ) => void

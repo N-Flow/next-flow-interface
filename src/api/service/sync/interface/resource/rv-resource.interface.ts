@@ -21,5 +21,5 @@ export default interface RvResource {
   createdAt: number
   updatedAt: number
 
-  extra?: any
+  extra?: Record<string, unknown>
 }

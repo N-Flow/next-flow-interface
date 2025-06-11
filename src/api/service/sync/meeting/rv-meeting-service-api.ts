@@ -19,7 +19,7 @@ export default interface RvMeetingServiceApi {
 
   currentMeeting: StoredRhineVar<RvMeeting> | null
 
-  getRvMeetingById(id: string): any
+  getRvMeetingById(id: string): RvMeeting | undefined
 
   setConfigByCurrentMeeting(): boolean
 

@@ -1,10 +1,10 @@
 import { DivProps } from '@/api/components/interface/base-types'
 
 export interface RsdSelectProps extends DivProps {
-  value: any
-  defaultValue?: any
-  options: { value: any; label: string }[]
-  onChange: (value: any) => void
+  value: string | number
+  defaultValue?: string | number
+  options: { value: string | number; label: string }[]
+  onChange: (value: string | number) => void
   label: string
   className?: string
   theme?: string
