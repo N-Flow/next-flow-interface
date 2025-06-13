@@ -65,6 +65,9 @@ import RsTransformGroundApi from './api/service/engine/render/environment/rs-tra
 import LabelInfo from './api/service/engine/render/label/dto/label-info'
 import { LabelTheme } from './api/service/engine/render/label/dto/label-theme.enum'
 import RsLabelServiceApi from './api/service/engine/render/label/rs-label-service-api'
+import { NodeMaterialChangeListener } from './api/service/engine/render/material/dto/node-material-change-listener.type'
+import { NodeMaterialInfo } from './api/service/engine/render/material/dto/node-material-info.interface'
+import RsNodeMaterialManagerApi from './api/service/engine/render/material/node/rs-node-material-manager-api'
 import NodePair from './api/service/engine/render/model/dto/node-pair.interface'
 import {
   RsModelServiceEventType,
@@ -471,6 +474,9 @@ export type {
   RsEnvironmentApi,
   RsTransformGroundApi,
   RsLabelServiceApi,
+  RsNodeMaterialManagerApi,
+  NodeMaterialInfo,
+  NodeMaterialChangeListener,
 }
 
 export {
