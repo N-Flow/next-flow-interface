@@ -58,6 +58,8 @@ import RsSelectionNodeInfo from './api/service/engine/operate/selection/dto/rs-s
 import RsSelectionState from './api/service/engine/operate/selection/dto/rs-selection-state.interface'
 import { SelectedSubscriber } from './api/service/engine/operate/selection/dto/selected-subscriber.type'
 import RsSelectionServiceApi from './api/service/engine/operate/selection/rs-selection-service-api'
+import RsClickApi from './api/service/engine/render/click/rs-click-api'
+import RsEnvironmentApi from './api/service/engine/render/environment/rs-environment-api'
 import RsEnvironmentServiceApi from './api/service/engine/render/environment/rs-environment-service-api'
 import NodePair from './api/service/engine/render/model/dto/node-pair.interface'
 import {
@@ -462,6 +464,7 @@ export type {
   RsLoopAnimationManagerApi,
   RsAudioServiceApi,
   RsClickApi,
+  RsEnvironmentApi,
 }
 
 export {

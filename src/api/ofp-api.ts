@@ -88,6 +88,7 @@ import type { FunctionComponent } from 'react'
 import RsLoopAnimationManagerApi from '@/api/service/engine/animation/factory/loop/rs-loop-animation-manager-api'
 import RsAudioServiceApi from '@/api/service/engine/audio/rs-audio-service-api'
 import RsClickApi from '@/api/service/engine/render/click/rs-click-api'
+import RsEnvironmentApi from '@/api/service/engine/render/environment/rs-environment-api'
 
 export interface OfpApi {
   services: {
@@ -133,8 +134,10 @@ export interface OfpApi {
 
         easyPropertyAnimation: EasyPropertyAnimationApi
         rsLoopAnimationManager: RsLoopAnimationManagerApi
+      }
+
+      audio: {
         rsAudioService: RsAudioServiceApi
-        rsClick: RsClickApi
       }
 
       operate: {
@@ -144,7 +147,9 @@ export interface OfpApi {
       render: {
         rsNodeService: RsNodeServiceApi
         rsModelService: RsModelServiceApi
+        rsEnvironment: RsEnvironmentApi
         rsEnvironmentService: RsEnvironmentServiceApi
+        rsClick: RsClickApi
       }
 
       rsService: RsServiceApi
