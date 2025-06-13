@@ -62,6 +62,9 @@ import RsClickApi from './api/service/engine/render/click/rs-click-api'
 import RsEnvironmentApi from './api/service/engine/render/environment/rs-environment-api'
 import RsEnvironmentServiceApi from './api/service/engine/render/environment/rs-environment-service-api'
 import RsTransformGroundApi from './api/service/engine/render/environment/rs-transform-ground-api'
+import LabelInfo from './api/service/engine/render/label/dto/label-info'
+import { LabelTheme } from './api/service/engine/render/label/dto/label-theme.enum'
+import RsLabelServiceApi from './api/service/engine/render/label/rs-label-service-api'
 import NodePair from './api/service/engine/render/model/dto/node-pair.interface'
 import {
   RsModelServiceEventType,
@@ -467,6 +470,7 @@ export type {
   RsClickApi,
   RsEnvironmentApi,
   RsTransformGroundApi,
+  RsLabelServiceApi,
 }
 
 export {
@@ -526,4 +530,6 @@ export {
   RsModelServiceEventType,
   FirstLoadModelServiceStatus,
   FirstLoadModelServiceEventType,
+  LabelTheme,
+  LabelInfo,
 }

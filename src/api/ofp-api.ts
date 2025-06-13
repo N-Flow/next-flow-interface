@@ -90,6 +90,7 @@ import RsAudioServiceApi from '@/api/service/engine/audio/rs-audio-service-api'
 import RsClickApi from '@/api/service/engine/render/click/rs-click-api'
 import RsEnvironmentApi from '@/api/service/engine/render/environment/rs-environment-api'
 import RsTransformGroundApi from '@/api/service/engine/render/environment/rs-transform-ground-api'
+import RsLabelServiceApi from '@/api/service/engine/render/label/rs-label-service-api'
 
 export interface OfpApi {
   services: {
@@ -152,6 +153,7 @@ export interface OfpApi {
         rsEnvironmentService: RsEnvironmentServiceApi
         rsTransformGround: RsTransformGroundApi
         rsClick: RsClickApi
+        rsLabelService: RsLabelServiceApi
       }
 
       rsService: RsServiceApi
