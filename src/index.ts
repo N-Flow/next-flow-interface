@@ -61,6 +61,7 @@ import RsSelectionServiceApi from './api/service/engine/operate/selection/rs-sel
 import RsClickApi from './api/service/engine/render/click/rs-click-api'
 import RsEnvironmentApi from './api/service/engine/render/environment/rs-environment-api'
 import RsEnvironmentServiceApi from './api/service/engine/render/environment/rs-environment-service-api'
+import RsTransformGroundApi from './api/service/engine/render/environment/rs-transform-ground-api'
 import NodePair from './api/service/engine/render/model/dto/node-pair.interface'
 import {
   RsModelServiceEventType,
@@ -465,6 +466,7 @@ export type {
   RsAudioServiceApi,
   RsClickApi,
   RsEnvironmentApi,
+  RsTransformGroundApi,
 }
 
 export {

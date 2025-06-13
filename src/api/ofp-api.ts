@@ -89,6 +89,7 @@ import RsLoopAnimationManagerApi from '@/api/service/engine/animation/factory/lo
 import RsAudioServiceApi from '@/api/service/engine/audio/rs-audio-service-api'
 import RsClickApi from '@/api/service/engine/render/click/rs-click-api'
 import RsEnvironmentApi from '@/api/service/engine/render/environment/rs-environment-api'
+import RsTransformGroundApi from '@/api/service/engine/render/environment/rs-transform-ground-api'
 
 export interface OfpApi {
   services: {
@@ -149,6 +150,7 @@ export interface OfpApi {
         rsModelService: RsModelServiceApi
         rsEnvironment: RsEnvironmentApi
         rsEnvironmentService: RsEnvironmentServiceApi
+        rsTransformGround: RsTransformGroundApi
         rsClick: RsClickApi
       }
 
