@@ -86,6 +86,7 @@ import TAttributesServiceApi from './service/target/attribute/t-attributes-servi
 
 import type { FunctionComponent } from 'react'
 import RsLoopAnimationManagerApi from '@/api/service/engine/animation/factory/loop/rs-loop-animation-manager-api'
+import RsAudioServiceApi from '@/api/service/engine/audio/rs-audio-service-api'
 
 export interface OfpApi {
   services: {
@@ -131,6 +132,7 @@ export interface OfpApi {
 
         easyPropertyAnimation: EasyPropertyAnimationApi
         rsLoopAnimationManager: RsLoopAnimationManagerApi
+        rsAudioService: RsAudioServiceApi
       }
 
       operate: {

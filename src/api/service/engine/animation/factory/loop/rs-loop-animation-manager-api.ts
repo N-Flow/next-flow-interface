@@ -23,4 +23,5 @@ export default interface RsLoopAnimationManagerApi {
   makeSpinAnimation(value: number, start: number, name: string, axis: string, fr: number): void
 
   makeQuaternionAnimation(value: number, start: Vector3, name: string, axis: 'x' | 'y' | 'z', fr: number): void
+
 }

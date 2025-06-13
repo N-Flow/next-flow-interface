@@ -51,6 +51,7 @@ import SkyboxAnimationApi from './api/service/engine/animation/entry/environment
 import EasyPropertyAnimationApi from './api/service/engine/animation/factory/between/easy-property-animation-api'
 import { SupportAnimationTarget } from './api/service/engine/animation/factory/dto/support-animation-target.type'
 import RsLoopAnimationManagerApi from './api/service/engine/animation/factory/loop/rs-loop-animation-manager-api'
+import RsAudioServiceApi from './api/service/engine/audio/rs-audio-service-api'
 import HighLightInfo from './api/service/engine/operate/selection/dto/hight-light-info.interface'
 import { LastSubscriber } from './api/service/engine/operate/selection/dto/last-subscriber.type'
 import RsSelectionNodeInfo from './api/service/engine/operate/selection/dto/rs-selection-node-info'
@@ -459,6 +460,7 @@ export type {
   RvMeetingCurrent,
   RvMeetingServiceApi,
   RsLoopAnimationManagerApi,
+  RsAudioServiceApi,
 }
 
 export {
