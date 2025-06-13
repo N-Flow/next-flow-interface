@@ -68,6 +68,7 @@ import RsLabelServiceApi from './api/service/engine/render/label/rs-label-servic
 import { NodeMaterialChangeListener } from './api/service/engine/render/material/dto/node-material-change-listener.type'
 import { NodeMaterialInfo } from './api/service/engine/render/material/dto/node-material-info.interface'
 import RsNodeMaterialManagerApi from './api/service/engine/render/material/node/rs-node-material-manager-api'
+import RsMaterialServiceApi from './api/service/engine/render/material/rs-material-service-api'
 import NodePair from './api/service/engine/render/model/dto/node-pair.interface'
 import {
   RsModelServiceEventType,
@@ -477,6 +478,7 @@ export type {
   RsNodeMaterialManagerApi,
   NodeMaterialInfo,
   NodeMaterialChangeListener,
+  RsMaterialServiceApi,
 }
 
 export {

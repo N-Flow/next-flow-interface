@@ -92,6 +92,7 @@ import RsEnvironmentApi from '@/api/service/engine/render/environment/rs-environ
 import RsTransformGroundApi from '@/api/service/engine/render/environment/rs-transform-ground-api'
 import RsLabelServiceApi from '@/api/service/engine/render/label/rs-label-service-api'
 import RsNodeMaterialManagerApi from '@/api/service/engine/render/material/node/rs-node-material-manager-api'
+import RsMaterialServiceApi from '@/api/service/engine/render/material/rs-material-service-api'
 
 export interface OfpApi {
   services: {
@@ -156,6 +157,7 @@ export interface OfpApi {
         rsClick: RsClickApi
         rsLabelService: RsLabelServiceApi
         rsNodeMaterialManager: RsNodeMaterialManagerApi
+        rsMaterialService: RsMaterialServiceApi
       }
 
       rsService: RsServiceApi
