@@ -85,6 +85,7 @@ import SyncServiceApi from './service/sync/sync-service-api'
 import TAttributesServiceApi from './service/target/attribute/t-attributes-service-api'
 
 import type { FunctionComponent } from 'react'
+import RsLoopAnimationManagerApi from '@/api/service/engine/animation/factory/loop/rs-loop-animation-manager-api'
 
 export interface OfpApi {
   services: {
@@ -129,6 +130,7 @@ export interface OfpApi {
         skyboxAnimation: SkyboxAnimationApi
 
         easyPropertyAnimation: EasyPropertyAnimationApi
+        rsLoopAnimationManager: RsLoopAnimationManagerApi
       }
 
       operate: {
