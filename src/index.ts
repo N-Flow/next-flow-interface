@@ -461,6 +461,7 @@ export type {
   RvMeetingServiceApi,
   RsLoopAnimationManagerApi,
   RsAudioServiceApi,
+  RsClickApi,
 }
 
 export {
