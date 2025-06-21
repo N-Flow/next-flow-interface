@@ -1,7 +1,7 @@
 import { Vector3 } from '@babylonjs/core'
 import { TransformNode } from '@babylonjs/core/Meshes/transformNode'
 
-import { LabelTheme } from '@/api/service/engine/render/label/dto/label-theme.enum'
+import { LabelTheme } from './label-theme.enum'
 
 export default class LabelInfo {
   parentElement: HTMLDivElement | null = null
