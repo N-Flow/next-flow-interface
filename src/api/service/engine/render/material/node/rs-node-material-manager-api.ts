@@ -1,6 +1,6 @@
 import { NodeMaterial } from '@babylonjs/core'
 
-import { NodeMaterialInfo } from '@/api/service/engine/render/material/dto/node-material-info.interface'
+import { NodeMaterialInfo } from '../../material/dto/node-material-info.interface'
 
 export default interface RsNodeMaterialManagerApi {
 
