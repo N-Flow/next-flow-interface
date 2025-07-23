@@ -1,6 +1,6 @@
-import { DivPropsWithoutOnChange } from '../interface/base-types'
+import { DivPropsSimple } from '../interface/base-types'
 
-export interface RsdInputProps extends DivPropsWithoutOnChange {
+export interface RsdInputProps extends DivPropsSimple {
   value: string
   onChange: (value: string) => void
   type?: 'text' | 'number' | 'password'

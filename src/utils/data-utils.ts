@@ -1,6 +1,6 @@
 import { RvPath } from 'rhine-var'
 
-import { PathValueArray } from '@/utils/dto/path-value-array'
+export type PathValueArray<T = unknown> = { path: RvPath; value: T }[]
 
 export function recursPathValue<T>(path: RvPath, value: T): PathValueArray<T> {
   const pvList: PathValueArray<T> = []
