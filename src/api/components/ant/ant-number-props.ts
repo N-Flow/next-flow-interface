@@ -1,8 +1,8 @@
 import { InputNumberProps } from 'antd'
 
-export interface AntNumberProps extends InputNumberProps {
+export interface AntNumberProps extends Omit<InputNumberProps, 'onChange'> {
   value: number | null
-  onChange: (value: string | number | null) => void
+  onChange: (value: number | null) => void
   placeholder?: string
   className?: string
   classNameInner?: string
