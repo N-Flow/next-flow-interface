@@ -1,10 +1,14 @@
-import Page from '@/api/service/main/space/dto/page/page'
-import { ScreenSize } from '@/api/service/main/space/dto/screen/screen-size.enum'
-import Screen from '@/api/service/main/space/dto/screen/screen.interface'
+import { StoredRhineVar } from 'rhine-var'
+
+import RvStep from '../../sync/interface/step/rv-step.interface'
+
+import Page from './dto/page/page'
+import { ScreenSize } from './dto/screen/screen-size.enum'
+import Screen from './dto/screen/screen.interface'
 
 export type StepChangeSubscriber = (
   sid: string,
-  step: unknown,
+  step: StoredRhineVar<RvStep>,
   lastSid: string,
   lastStep: unknown,
 ) => void
