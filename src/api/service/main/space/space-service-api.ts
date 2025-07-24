@@ -10,7 +10,7 @@ export type StepChangeSubscriber = (
   sid: string,
   step: StoredRhineVar<RvStep>,
   lastSid: string,
-  lastStep: unknown,
+  lastStep: RvStep | undefined,
 ) => void
 
 export default interface SpaceServiceApi {
