@@ -17,9 +17,7 @@ type ReactEvent = React.MouseEvent | React.DragEvent | React.TouchEvent | React.
 
 type NativeEvent = MouseEvent | DragEvent | TouchEvent | WheelEvent
 
-export function getEventPosition(
-  e: ReactEvent | NativeEvent,
-): [x: number, y: number] {
+export function getEventPosition(e: ReactEvent | NativeEvent): [x: number, y: number] {
   if (e.type.includes('touch')) {
     const touchEvent = e as TouchEvent | TouchEventTarget
     if (touchEvent.touches.length) {

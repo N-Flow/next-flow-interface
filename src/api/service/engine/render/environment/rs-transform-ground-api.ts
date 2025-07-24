@@ -1,7 +1,6 @@
 import { Mesh, PBRMaterial } from '@babylonjs/core'
 
 export default interface RsTransformGroundApi {
-
   m1: PBRMaterial
 
   m10: PBRMaterial
@@ -27,5 +26,4 @@ export default interface RsTransformGroundApi {
   showGround(): void
 
   freshGround(): void
-
 }

@@ -3,7 +3,6 @@ import { NodeMaterial } from '@babylonjs/core'
 import { NodeMaterialInfo } from '../../material/dto/node-material-info.interface'
 
 export default interface RsNodeMaterialManagerApi {
-
   materials: NodeMaterialInfo[]
 
   has(nid: string): boolean
@@ -18,10 +17,13 @@ export default interface RsNodeMaterialManagerApi {
 
   waitFid(nid: string, fid: string): Promise<void>
 
-  updateNodeMaterialTemplate(nid: string, fid: string, syncStateWhenCreate: boolean): Promise<boolean>
+  updateNodeMaterialTemplate(
+    nid: string,
+    fid: string,
+    syncStateWhenCreate: boolean,
+  ): Promise<boolean>
 
   uploadNodeMaterialTemplate(nid: string, fid: string, material: NodeMaterial): void
 
   nodeMaterialToFile(material: NodeMaterial): File
-
 }

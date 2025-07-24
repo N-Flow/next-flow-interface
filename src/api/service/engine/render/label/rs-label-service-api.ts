@@ -3,9 +3,7 @@ import { TransformNode } from '@babylonjs/core/Meshes/transformNode'
 import LabelInfo from '@/api/service/engine/render/label/dto/label-info'
 import RvLabel from '@/api/service/sync/interface/step/attributes/label/rv-label.interface'
 
-
 export default interface RsLabelServiceApi {
-
   labels: LabelInfo[]
 
   updateClick(nid: string | null | undefined): void
@@ -17,5 +15,4 @@ export default interface RsLabelServiceApi {
   removeLabel(nid: string): void
 
   updateLabelWithNid(nid: string, rvLabel: RvLabel): void
-
 }

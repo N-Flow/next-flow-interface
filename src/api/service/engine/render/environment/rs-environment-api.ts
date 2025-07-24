@@ -5,13 +5,13 @@ import {
   CubeTexture,
   Light,
   ShadowGenerator,
-  TransformNode, Vector3,
+  TransformNode,
+  Vector3,
 } from '@babylonjs/core'
 
 import { V3 } from '@/type/general/vector.type'
 
 export default interface RsEnvironmentApi {
-
   mainCamera: ArcRotateCamera
   rightCamera: ArcRotateCamera
   backCamera: ArcRotateCamera
@@ -48,5 +48,4 @@ export default interface RsEnvironmentApi {
   setBackgroundColor(color: Color3): void
 
   getPositionToCameraDistance(p: V3 | Vector3): number
-
 }
