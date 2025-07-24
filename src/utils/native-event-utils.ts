@@ -1,4 +1,4 @@
-import {MouseEvent, DragEvent, TouchEvent, WheelEvent} from 'react'
+import React from 'react'
 
 import MathUtils from './math-utils'
 
@@ -13,12 +13,14 @@ interface TouchEventTarget {
   stopImmediatePropagation(): void
 }
 
+type ReactEvent = React.MouseEvent | React.DragEvent | React.TouchEvent | React.WheelEvent
+
 type NativeEvent = MouseEvent | DragEvent | TouchEvent | WheelEvent
 
 export function getEventPosition(
-  e: MouseEvent | TouchEvent | TouchEventTarget,
+  e: ReactEvent | NativeEvent,
 ): [x: number, y: number] {
-  if (e.type?.includes('touch')) {
+  if (e.type.includes('touch')) {
     const touchEvent = e as TouchEvent | TouchEventTarget
     if (touchEvent.touches.length) {
       const touch = touchEvent.touches[0]
@@ -36,23 +38,23 @@ export function getEventPosition(
 }
 
 export function getDistanceBetweenEvents(
-  e1: MouseEvent | TouchEvent,
-  e2: MouseEvent | TouchEvent,
+  e1: ReactEvent | NativeEvent,
+  e2: ReactEvent | NativeEvent,
 ): number {
   const [x1, y1] = getEventPosition(e1),
     [x2, y2] = getEventPosition(e2)
   return MathUtils.getDistance(x1, y1, x2, y2)
 }
 
-export function preventDefaultListener(e: NativeEvent): void {
+export function preventDefaultListener(e: ReactEvent): void {
   e.preventDefault()
 }
 
-export function stopPropagationListener(e: NativeEvent): void {
+export function stopPropagationListener(e: ReactEvent): void {
   e.stopPropagation()
 }
 
-export function preventDefaultStopPropagationListener(e: NativeEvent): void {
+export function preventDefaultStopPropagationListener(e: ReactEvent): void {
   e.preventDefault()
   e.stopPropagation()
 }
