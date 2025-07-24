@@ -7,7 +7,7 @@ import { AntSwitchProps } from './api/components/ant/ant-switch-props'
 import ThemeProviderProps from './api/components/ant/theme-provider-props'
 import { FlexGrowProps } from './api/components/dev/flex-grow-props'
 import MainPortalProps from './api/components/dev/main-portal-props'
-import { DivProps, SpanProps } from './api/components/interface/base-types'
+import { DivProps, SpanProps, DivPropsSimple, SpanPropsSimple } from './api/components/interface/base-types'
 import { AnchorProps } from './api/components/normal/anchor-props'
 import { ContextMenuProps } from './api/components/normal/context-menu-props'
 import { DialogProps } from './api/components/normal/dialog-props'
@@ -296,7 +296,9 @@ export type {
   IconPlugin,
   ViewPlugin,
   DivProps,
+  DivPropsSimple,
   SpanProps,
+  SpanPropsSimple,
   AntCheckboxProps,
   AntColorProps,
   AntNumberProps,
