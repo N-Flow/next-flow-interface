@@ -1,5 +1,6 @@
 import { Locale } from '@/api/service/main/internationalization/dto/locale'
-import { Translator } from '@/api/service/main/internationalization/dto/translator'
+
+export type Translator = (key: string) => string
 
 export default interface InternationalizationServiceApi {
   ALL_SUPPORT: Locale[]
@@ -7,7 +8,7 @@ export default interface InternationalizationServiceApi {
 
   current: Locale
 
-  getTranslator(namespace: string, locale: Locale): Promise<Translator>
+  getTranslator(namespace?: string, locale?: Locale): Promise<Translator>
 
   getCurrentLocale(): Locale
 
