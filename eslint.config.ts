@@ -34,96 +34,104 @@ const compat = new FlatCompat({
 const globalConfig = defineConfig([
   includeIgnoreFile(gitignorePath),
   {
-    ignores: ['eslint.config.{cjs,js,jsx,mjs,mjsx,cts,ts,tsx,mts,mtsx}'],
+    ignores: [
+      'bun.lock',
+    ]
   },
 ])
 
-const scriptFile = '*.{cjs,js,jsx,mjs,mjsx,cts,ts,tsx,mts,mtsx}'
-const jsFile = '*.{cjs,js,jsx,mjs,mjsx}'
-const tsFile = '*.{cts,ts,tsx,mts,mtsx}'
+const jsFileExtensions = 'cjs,js,jsx,mjs,mjsx'
+const tsFileExtensions = 'cts,ts,tsx,mts,mtsx'
+const scriptFileExtensions = `${jsFileExtensions},${tsFileExtensions}`
+const allJsFiles = [`**/*.{${jsFileExtensions}}`]
+const allTsFiles = [`**/*.{${tsFileExtensions}}`]
+const allScriptFiles = [`**/*.{${scriptFileExtensions}}`]
 
 const tsConfig = ENABLE_TYPE_CHECKED
   ? [
-      {
-        files: [`**/${scriptFile}`],
-        languageOptions: {
-          parserOptions: {
-            projectService: true,
-            tsconfigRootDir: __dirname,
-          },
+    {
+      ignores: ['eslint.config.ts'],
+    },
+    {
+      files: allScriptFiles,
+      languageOptions: {
+        parserOptions: {
+          projectService: true,
+          tsconfigRootDir: __dirname,
         },
       },
-      {
-        ...tseslint.configs.strictTypeChecked[0],
-        files: [`**/${scriptFile}`],
-      },
-      {
-        ...tseslint.configs.strictTypeChecked[1],
-        files: [`**/${tsFile}`],
-      },
-      {
-        ...tseslint.configs.strictTypeChecked[2],
-        files: [`**/${scriptFile}`],
-      },
-      {
-        ...tseslint.configs.stylisticTypeChecked[2],
-        files: [`**/${scriptFile}`],
-      },
-    ]
+    },
+    {
+      ...tseslint.configs.strictTypeChecked[0],
+      files: allScriptFiles,
+    },
+    {
+      ...tseslint.configs.strictTypeChecked[1],
+      files: allTsFiles,
+    },
+    {
+      ...tseslint.configs.strictTypeChecked[2],
+      files: allScriptFiles,
+    },
+    {
+      ...tseslint.configs.stylisticTypeChecked[2],
+      files: allScriptFiles,
+    },
+  ]
   : [
-      {
-        ...tseslint.configs.strict[0],
-        files: [`**/${scriptFile}`],
-      },
-      {
-        ...tseslint.configs.strict[1],
-        files: [`**/${tsFile}`],
-      },
-      {
-        ...tseslint.configs.strict[2],
-        files: [`**/${scriptFile}`],
-      },
-      {
-        ...tseslint.configs.stylistic[2],
-        files: [`**/${scriptFile}`],
-      },
-    ]
+    {
+      ...tseslint.configs.strict[0],
+      files: allScriptFiles,
+    },
+    {
+      ...tseslint.configs.strict[1],
+      files: allTsFiles,
+    },
+    {
+      ...tseslint.configs.strict[2],
+      files: allScriptFiles,
+    },
+    {
+      ...tseslint.configs.stylistic[2],
+      files: allScriptFiles,
+    },
+  ]
 
 const scriptConfig: ConfigArray = tseslint.config([
   {
     files: [
-      scriptFile,
-      `config/**/${scriptFile}`,
-      `scripts/**/${scriptFile}`,
-      `test/**/${scriptFile}`,
-      `spec/**/${scriptFile}`,
-      `tools/**/${scriptFile}`,
+      `*.{${scriptFileExtensions}}`,
+      `config/**/*.{${scriptFileExtensions}}`,
+      `scripts/**/*.{${scriptFileExtensions}}`,
+      `test/**/*.{${scriptFileExtensions}}`,
+      `spec/**/*.{${scriptFileExtensions}}`,
+      `tools/**/*.{${scriptFileExtensions}}`,
     ],
     languageOptions: {
       globals: globals.node,
     },
   },
   {
-    files: [`src/**/${scriptFile}`],
+    files: [`src/**/*.{${scriptFileExtensions}}`],
     languageOptions: {
       globals: globals.browser,
     },
   },
   {
     ...js.configs.recommended,
-    files: [`**/${scriptFile}`],
+    files: allScriptFiles,
   },
   ...tsConfig,
   {
     ...importX.flatConfigs.recommended,
-    files: [`**/${scriptFile}`],
+    files: allScriptFiles,
   },
   {
     ...importX.flatConfigs.typescript,
-    files: [`**/${scriptFile}`],
+    files: allScriptFiles,
   },
   {
-    files: [`**/${scriptFile}`],
+    files: allScriptFiles,
     languageOptions: {
       parser: tsParser,
       ecmaVersion: 'latest',
@@ -132,16 +140,16 @@ const scriptConfig: ConfigArray = tseslint.config([
   },
 ])
 
-const nextConfig = []
+const frontendConfig = []
 if (ENABLE_FRONTEND) {
-  nextConfig.push(
+  frontendConfig.push(
     ...compat.config({
       extends: ['next/core-web-vitals', 'next/typescript'],
     }),
   )
 
-  for (const nextConfigElement of nextConfig) {
-    nextConfigElement.files ??= [`**/${scriptFile}`]
+  for (const nextConfigElement of frontendConfig) {
+    nextConfigElement.files ??= allScriptFiles
   }
 }
 
@@ -187,12 +195,15 @@ if (IGNORE_PRETTIER) {
   prettierConfig.push(eslintConfigPrettier)
 }
 
+
 const customConfig = defineConfig([
   {
-    files: [`**/${scriptFile}`],
+    files: allScriptFiles,
     rules: {
+      '@typescript-eslint/no-extraneous-class': 'error',
       '@typescript-eslint/no-unnecessary-type-parameters': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-empty-function': 'off',
       'import-x/no-named-as-default-member': 'off',
       'import-x/order': [
         'error',
@@ -216,15 +227,30 @@ const customConfig = defineConfig([
           ],
           pathGroupsExcludedImportTypes: ['builtin'],
           'newlines-between': 'always',
+          'newlines-between-types': 'always',
           distinctGroup: false,
           alphabetize: {
             order: 'asc',
             caseInsensitive: true,
           },
           sortTypesGroup: true,
-          'newlines-between-types': 'always',
         },
       ],
+    },
+  },
+  {
+    files: allScriptFiles,
+    rules: ENABLE_FRONTEND ? {
+      'react-hooks/exhaustive-deps': 'error',
+      '@next/next/no-img-element': 'error',
+    } : {},
+  },
+  {
+    files: ['**/*.css'],
+    language: 'css/css',
+    rules: {
+      'css/no-empty-blocks': 'off',
+      'css/use-baseline': 'off',
     },
   },
 ])
@@ -232,7 +258,7 @@ const customConfig = defineConfig([
 const config = [
   ...globalConfig,
   ...scriptConfig,
-  ...nextConfig,
+  ...frontendConfig,
   ...cssConfig,
   ...markdownConfig,
   ...jsonConfig,
