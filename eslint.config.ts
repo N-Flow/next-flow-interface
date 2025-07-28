@@ -14,14 +14,16 @@ import { importX } from 'eslint-plugin-import-x'
 import globals from 'globals'
 import tseslint, { type ConfigArray } from 'typescript-eslint'
 
-const options = {
-  ENABLE_TYPE_CHECKED: true, // Set to enable project-based type checking
-  ENABLE_FRONTEND: false, // Set to enable Next.js, JSX, React, Hooks, and other frontend features
+const OPTIONS = {
+  ENABLE_SCRIPT: true, // Set to enable typescript javascript file features
+  ENABLE_TYPE_CHECKED: true, // Set to enable type features
+  ENABLE_PROJECT_BASE_TYPE_CHECKED: true, // Set to enable project-based type features
+  ENABLE_FRONTEND: false, // Set to enable Next.js, JSX, React, Reacts Hooks, and other frontend features
+  ENABLE_MARKDOWN: true, // Set to enable markdown file features
+  ENABLE_JSON: true, // Set to enable json file features
   ENABLE_STYLESHEET: true, // Set to enable CSS, SCSS, SASS and other stylesheet features
   IGNORE_PRETTIER: true, // Set to disable all rules that are unnecessary or might conflict with Prettier
 }
-
-const { ENABLE_TYPE_CHECKED, ENABLE_FRONTEND, ENABLE_STYLESHEET, IGNORE_PRETTIER } = options
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -34,9 +36,7 @@ const compat = new FlatCompat({
 const globalConfig = defineConfig([
   includeIgnoreFile(gitignorePath),
   {
-    ignores: [
-      'bun.lock',
-    ]
+    ignores: ['bun.lock'],
   },
 ])
 
@@ -47,8 +47,9 @@ const allJsFiles = [`**/*.{${jsFileExtensions}}`]
 const allTsFiles = [`**/*.{${tsFileExtensions}}`]
 const allScriptFiles = [`**/*.{${scriptFileExtensions}}`]
 
-const tsConfig = ENABLE_TYPE_CHECKED
-  ? [
+const tsConfig: ConfigArray = []
+if (OPTIONS.ENABLE_SCRIPT && OPTIONS.ENABLE_TYPE_CHECKED) {
+  tsConfig.push(...(OPTIONS.ENABLE_PROJECT_BASE_TYPE_CHECKED ? [
     {
       ignores: ['eslint.config.ts'],
     },
@@ -77,8 +78,7 @@ const tsConfig = ENABLE_TYPE_CHECKED
       ...tseslint.configs.stylisticTypeChecked[2],
       files: allScriptFiles,
     },
-  ]
-  : [
+  ] : [
     {
       ...tseslint.configs.strict[0],
       files: allScriptFiles,
@@ -95,67 +95,69 @@ const tsConfig = ENABLE_TYPE_CHECKED
       ...tseslint.configs.stylistic[2],
       files: allScriptFiles,
     },
-  ]
+  ]))
+}
 
-const scriptConfig: ConfigArray = tseslint.config([
-  {
-    files: [
-      `*.{${scriptFileExtensions}}`,
-      `config/**/*.{${scriptFileExtensions}}`,
-      `scripts/**/*.{${scriptFileExtensions}}`,
-      `test/**/*.{${scriptFileExtensions}}`,
-      `spec/**/*.{${scriptFileExtensions}}`,
-      `tools/**/*.{${scriptFileExtensions}}`,
-    ],
-    languageOptions: {
-      globals: globals.node,
+const scriptConfig: ConfigArray = []
+if (OPTIONS.ENABLE_SCRIPT) {
+  scriptConfig.push(...tseslint.config([
+    {
+      files: [
+        `*.{${scriptFileExtensions}}`,
+        `config/**/*.{${scriptFileExtensions}}`,
+        `scripts/**/*.{${scriptFileExtensions}}`,
+        `test/**/*.{${scriptFileExtensions}}`,
+        `spec/**/*.{${scriptFileExtensions}}`,
+        `tools/**/*.{${scriptFileExtensions}}`,
+      ],
+      languageOptions: {
+        globals: globals.node,
+      },
     },
-  },
-  {
-    files: [`src/**/*.{${scriptFileExtensions}}`],
-    languageOptions: {
-      globals: globals.browser,
+    {
+      files: [`src/**/*.{${scriptFileExtensions}}`],
+      languageOptions: {
+        globals: globals.browser,
+      },
     },
-  },
-  {
-    ...js.configs.recommended,
-    files: allScriptFiles,
-  },
-  ...tsConfig,
-  {
-    ...importX.flatConfigs.recommended,
-    files: allScriptFiles,
-  },
-  {
-    ...importX.flatConfigs.typescript,
-    files: allScriptFiles,
-  },
-  {
-    files: allScriptFiles,
-    languageOptions: {
-      parser: tsParser,
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+    {
+      ...js.configs.recommended,
+      files: allScriptFiles,
     },
-  },
-])
+    ...tsConfig,
+    {
+      ...importX.flatConfigs.recommended,
+      files: allScriptFiles,
+    },
+    {
+      ...importX.flatConfigs.typescript,
+      files: allScriptFiles,
+    },
+    {
+      files: allScriptFiles,
+      languageOptions: {
+        parser: tsParser,
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
+    },
+  ]))
+}
 
-const frontendConfig = []
-if (ENABLE_FRONTEND) {
+const frontendConfig: ConfigArray = []
+if (OPTIONS.ENABLE_FRONTEND) {
   frontendConfig.push(
     ...compat.config({
       extends: ['next/core-web-vitals', 'next/typescript'],
     }),
   )
-
   for (const nextConfigElement of frontendConfig) {
     nextConfigElement.files ??= allScriptFiles
   }
 }
 
 const cssConfig = []
-
-if (ENABLE_STYLESHEET) {
+if (OPTIONS.ENABLE_STYLESHEET) {
   cssConfig.push(
     ...defineConfig([
       {
@@ -167,36 +169,40 @@ if (ENABLE_STYLESHEET) {
   )
 }
 
-const markdownConfig = defineConfig([
-  {
-    ...markdown.configs.recommended[0],
-    files: ['**/*.md', '**/*.markdown'],
-    language: 'markdown/gfm',
-  },
-])
+const markdownConfig: ConfigArray = []
+if (OPTIONS.ENABLE_MARKDOWN) {
+  markdownConfig.push(...defineConfig([
+    {
+      ...markdown.configs.recommended[0],
+      files: ['**/*.md', '**/*.markdown'],
+      language: 'markdown/gfm',
+    },
+  ]))
+}
 
-const jsonConfig = defineConfig([
-  {
-    ...json.configs.recommended,
-    files: ['**/*.json'],
-    ignores: ['**/tsconfig.json', '**/tsconfig.*.json'],
-    language: 'json/json',
-  },
-  {
-    ...json.configs.recommended,
-    files: ['**/*.jsonc', '**/*.json5', '**/tsconfig.json', '**/tsconfig.*.json'],
-    language: 'json/jsonc',
-  },
-])
+const jsonConfig: ConfigArray = []
+if (OPTIONS.ENABLE_JSON) {
+  jsonConfig.push(...defineConfig([
+    {
+      ...json.configs.recommended,
+      files: ['**/*.json'],
+      ignores: ['**/tsconfig.json', '**/tsconfig.*.json'],
+      language: 'json/json',
+    },
+    {
+      ...json.configs.recommended,
+      files: ['**/*.jsonc', '**/*.json5', '**/tsconfig.json', '**/tsconfig.*.json'],
+      language: 'json/jsonc',
+    },
+  ]))
+}
 
-const prettierConfig = []
-
-if (IGNORE_PRETTIER) {
+const prettierConfig: ConfigArray = []
+if (OPTIONS.IGNORE_PRETTIER) {
   prettierConfig.push(eslintConfigPrettier)
 }
 
-
-const customConfig = defineConfig([
+const customConfig: ConfigArray = defineConfig([
   {
     files: allScriptFiles,
     rules: {
@@ -240,10 +246,12 @@ const customConfig = defineConfig([
   },
   {
     files: allScriptFiles,
-    rules: ENABLE_FRONTEND ? {
-      'react-hooks/exhaustive-deps': 'error',
-      '@next/next/no-img-element': 'error',
-    } : {},
+    rules: OPTIONS.ENABLE_FRONTEND
+      ? {
+        'react-hooks/exhaustive-deps': 'error',
+        '@next/next/no-img-element': 'error',
+      }
+      : {},
   },
   {
     files: ['**/*.css'],
