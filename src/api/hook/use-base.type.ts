@@ -1,10 +1,9 @@
 import { RvPath } from 'rhine-var'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type UseBase = <T = any>(
+export type UseBase = <T = unknown>(
   path?: string,
 ) => {
   state: T
-  set: (key: string | RvPath, value: T) => void
+  set: (key: string | RvPath, value: unknown) => void
   check: (key: string | RvPath) => void
 }

@@ -1,13 +1,12 @@
 import { SelectProps } from 'antd'
-import { BaseOptionType, DefaultOptionType } from 'antd/es/select'
+import { DefaultOptionType } from 'antd/es/select'
 import { MouseEventHandler } from 'react'
 
 export interface AntSelectProps<
   ValueType,
-  OptionType extends BaseOptionType | DefaultOptionType = DefaultOptionType,
-> extends SelectProps<ValueType, OptionType> {
+> extends SelectProps<ValueType> {
   value?: ValueType
-  onChange?: (value: ValueType, option?: OptionType | OptionType[]) => void
+  onChange?: (value: ValueType, option?: DefaultOptionType | DefaultOptionType[]) => void
   showSearch?: boolean
   onClick?: MouseEventHandler<HTMLDivElement>
   className?: string
@@ -15,5 +14,5 @@ export interface AntSelectProps<
   placeholder?: string
   optionFilterProp?: string
   size?: 'small' | 'middle' | 'large' | undefined
-  options?: OptionType[]
+  options?: DefaultOptionType[]
 }

@@ -1,9 +1,9 @@
 import { RvPath } from 'rhine-var'
 
-export type UseTAttributes = (path?: string) => {
+export type UseTAttributes = <T = unknown>(path?: string) => {
   sid: string
   nid: string
-  state: Record<string, unknown> | null
+  state: T | null
   set: (key: string | RvPath, value: unknown) => void
   check: (key: string | RvPath) => void
 }

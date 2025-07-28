@@ -191,6 +191,7 @@ const customConfig = defineConfig([
   {
     files: [`**/${scriptFile}`],
     rules: {
+      '@typescript-eslint/no-unnecessary-type-parameters': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
       'import-x/no-named-as-default-member': 'off',
       'import-x/order': [

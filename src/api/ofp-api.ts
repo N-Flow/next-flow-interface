@@ -235,7 +235,7 @@ export interface OfpApi {
   }
 
   styles: {
-    rss: Record<string, unknown>
+    rss: Record<string, string>
   }
 
   utils: {
