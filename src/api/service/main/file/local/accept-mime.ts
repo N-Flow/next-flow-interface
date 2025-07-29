@@ -116,17 +116,25 @@ export async function getMimeByPath(path?: string) {
 }
 
 export async function getMimeByUrl(url?: string) {
-  if (url) {
-    try {
-      const response = await fetch(url)
-      if (!response.body) {
-        return UNKNOWN
-      }
-      const ftr = await fileTypeFromStream(response.body)
-      return ftr?.mime ?? UNKNOWN
-    } catch (error) {
+  if (!url) {
+    return UNKNOWN
+  }
+  try {
+    const response = await fetch(url)
+    if (!response.body) {
       return UNKNOWN
     }
+    const ftr = await fileTypeFromStream(response.body)
+    if (ftr?.mime) return ftr.mime
+
+    // 如果链接含有后缀，根据后缀返回mime字符串
+    const urlObj = new URL(url)
+    const pathname = urlObj.pathname
+    if (pathname.includes('.')) {
+      return await getMimeByPath(pathname)
+    }
+  } catch (e) {
+    console.error('getMimeByUrl', e)
   }
   return UNKNOWN
 }

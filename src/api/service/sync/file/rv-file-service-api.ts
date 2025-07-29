@@ -1,4 +1,4 @@
-import { RecursiveMap, RecursiveObject } from 'rhine-var'
+import { RecursiveMap, StoredRhineVar } from 'rhine-var'
 
 import { RvFileServiceSubscriber } from '@/api/service/sync/file/dto/rv-file-service-subscriber.type'
 import RvFile from '@/api/service/sync/interface/file/rv-file.interface'
@@ -14,14 +14,14 @@ export default interface RvFileServiceApi {
    *
    * @param fid  文件的 fid
    */
-  get(fid: string): RecursiveObject<RvFile> | undefined
+  get(fid: string): StoredRhineVar<RvFile> | undefined
 
   /**
    * 通过 url 获取文件 不存在则返回 undefined
    *
    * @param url  文件的 url
    */
-  getByUrl(url: string): RecursiveObject<RvFile> | undefined
+  getByUrl(url: string): StoredRhineVar<RvFile> | undefined
 
   /**
    * 是否存在某个文件
@@ -42,7 +42,16 @@ export default interface RvFileServiceApi {
    *
    * @param file  文件内容
    */
-  add(file: RvFile): void
+  add(file: RvFile): Promise<StoredRhineVar<RvFile> | null>
+
+  /**
+   * 通过url添加一个文件。
+   *
+   * 若该地址对应的文件已存在，则直接返回已存在的文件。
+   *
+   * @param url  URL
+   */
+  addByUrl(url: string): Promise<StoredRhineVar<RvFile> | null>
 
   /**
    * 移除一个文件

@@ -106,28 +106,40 @@ export async function isSameFile(
 }
 
 export async function getFileInfo(url: string): Promise<{ name: string; size: number }> {
+  // console.log('getFileInfo', url)
+
   // Send HEAD request
-  const response = await fetch(url, { method: 'HEAD' })
-  if (!response.ok) {
-    throw new Error(`Request failed with status: ${response.status.toString()}`)
+  const headResponse = await fetch(url, { method: 'HEAD' })
+
+  if (!headResponse.ok) {
+    throw new Error(`HEAD request failed with status: ${String(headResponse.status)}`)
   }
 
-  // Get file size
-  const sizeHeader = response.headers.get('Content-Length')
-  if (!sizeHeader) {
-    throw new Error('Unable to get file size')
-  }
-  const size = parseInt(sizeHeader, 10)
-  if (isNaN(size)) {
-    throw new Error('Invalid file size')
+  const sizeHeader = headResponse.headers.get('Content-Length')
+  let size: number
+
+  if (sizeHeader) {
+    size = parseInt(sizeHeader, 10)
+    if (isNaN(size)) {
+      throw new Error('Invalid file size from header')
+    }
+  } else {
+    // fallback: GET the file to calculate size manually
+    const getResponse = await fetch(url)
+    if (!getResponse.ok) {
+      throw new Error(`GET request failed with status: ${String(getResponse.status)}`)
+    }
+    const blob = await getResponse.blob()
+    size = blob.size
   }
 
   // Extract filename from URL
-  const urlObj = new URL(url),
-    filename = urlObj.pathname.split('/').pop() ?? 'unknown'
+  const urlObj = new URL(url)
+  const name = urlObj.pathname.split('/').pop() ?? 'unknown'
 
-  return { name: filename, size }
+  return { name, size }
 }
+
 
 // Create a namespace object for backward compatibility
 const FileUtils = {
