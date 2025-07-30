@@ -74,6 +74,7 @@ import { NodeMaterialChangeListener } from './api/service/engine/render/material
 import { NodeMaterialInfo } from './api/service/engine/render/material/dto/node-material-info.interface'
 import RsNodeMaterialManagerApi from './api/service/engine/render/material/node/rs-node-material-manager-api'
 import RsMaterialServiceApi from './api/service/engine/render/material/rs-material-service-api'
+import RsSeparateServiceApi from './api/service/engine/render/material/separate/rs-separate-service-api'
 import NodePair from './api/service/engine/render/model/dto/node-pair.interface'
 import {
   RsModelServiceEventType,
@@ -413,6 +414,7 @@ export type {
   RsModelServiceApi,
   RsModel,
   RsModelServiceSubscriber,
+  RsSeparateServiceApi,
   FirstLoadModelServiceSubscriber,
   FirstLoadModelServiceApi,
   RvAttributes,

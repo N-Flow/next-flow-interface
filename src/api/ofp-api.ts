@@ -93,6 +93,8 @@ import SyncServiceApi from './service/sync/sync-service-api'
 import TAttributesServiceApi from './service/target/attribute/t-attributes-service-api'
 
 import type { FunctionComponent } from 'react'
+import RsSeparateServiceApi
+  from '@/api/service/engine/render/material/separate/rs-separate-service-api'
 
 export interface OfpApi {
   services: {
@@ -158,6 +160,7 @@ export interface OfpApi {
         rsLabelService: RsLabelServiceApi
         rsNodeMaterialManager: RsNodeMaterialManagerApi
         rsMaterialService: RsMaterialServiceApi
+        rsSeparateService: RsSeparateServiceApi
       }
 
       rsService: RsServiceApi
