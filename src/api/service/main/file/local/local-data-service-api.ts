@@ -15,11 +15,11 @@ export default interface LocalDataServiceApi {
 
   remove(fid: string): boolean
 
-  add(localData: AddLocalDataOption): boolean
+  add(localData: AddLocalDataOption): LocalData
 
   load(fid: string, url: string): Promise<LocalData>
 
-  loadByFile(fid: string, file: File): void
+  loadByFile(fid: string, file: File): LocalData
 
   pause(fid: string): boolean // 暂不支持
 
@@ -27,9 +27,9 @@ export default interface LocalDataServiceApi {
 
   cancel(fid: string): boolean // 暂不支持
 
-  getUrl(fid: string): string
+  getLocalUrl(fid: string): string
 
-  releaseUrl(fid: string): boolean
+  releaseLocalUrl(fid: string): boolean
 
   subscribe(subscriber: LocalDataServiceSubscriber): () => void
 

@@ -1,13 +1,7 @@
 import { LocalDataStatus } from '@/api/service/main/file/local/dto/local-data-status.enum'
-import { LocalDataType } from '@/api/service/main/file/local/dto/local-data-type.enum'
+import { LocalData } from './local-data.type'
 
-export default interface AddLocalDataOption {
-  fid: string
-  type: LocalDataType
-
-  blob?: Blob | null
-  object?: unknown
-
+export default interface AddLocalDataOptionInterface extends Omit<LocalData, 'status' | 'progress'> {
   status?: LocalDataStatus
   progress?: number
 }

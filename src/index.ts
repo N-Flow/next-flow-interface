@@ -109,8 +109,6 @@ import {
 import FirstLoadServiceApi from './api/service/main/file/first/first-load-service-api'
 import AcceptMime from './api/service/main/file/local/accept-mime'
 import AddLocalDataOption from './api/service/main/file/local/dto/add-local-data-option.interface'
-import BaseLocalData from './api/service/main/file/local/dto/base-local-data.interface'
-import BlobLocalData from './api/service/main/file/local/dto/blob-local-data.interface'
 import {
   LocalDataServiceEventType,
   LocalDataServiceSubscriber,
@@ -118,7 +116,6 @@ import {
 import { LocalDataStatus } from './api/service/main/file/local/dto/local-data-status.enum'
 import { LocalDataType } from './api/service/main/file/local/dto/local-data-type.enum'
 import { LocalData } from './api/service/main/file/local/dto/local-data.type'
-import ObjectLocalData from './api/service/main/file/local/dto/object-local-data.interface'
 import LocalDataServiceApi from './api/service/main/file/local/local-data-service-api'
 import { OssUploadInstanceStatus } from './api/service/main/file/oss/dto/oss-upload-instance-status.enum'
 import OssUploadInstance from './api/service/main/file/oss/dto/oss-upload-instance.interface'
@@ -378,9 +375,6 @@ export type {
   LocalDataServiceApi,
   LocalData,
   AddLocalDataOption,
-  BaseLocalData,
-  BlobLocalData,
-  ObjectLocalData,
   OssUploadServiceApi,
   OssUploadServiceSubscriber,
   OssUploadInstance,
