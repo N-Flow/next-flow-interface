@@ -17,9 +17,11 @@ export default interface LocalDataServiceApi {
 
   add(localData: AddLocalDataOption): LocalData
 
-  load(fid: string, url: string): Promise<LocalData>
+  load(fid: string, url: string, mime?: string): Promise<LocalData>
 
-  loadByFile(fid: string, file: File): LocalData
+  loadByFile(fid: string, file: File, mime?: string): Promise<LocalData>
+
+  processAfterLoad(localData: LocalData, mime?: string): Promise<void>
 
   pause(fid: string): boolean // 暂不支持
 
