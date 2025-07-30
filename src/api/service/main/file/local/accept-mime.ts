@@ -49,6 +49,8 @@ export const OGV = 'video/ogg'
 export const GP3 = 'video/3gpp'
 export const MKV = 'video/x-matroska'
 
+export const JSON = 'application/json'
+
 export const TXT = 'text/plain'
 export const MARKDOWN = 'text/markdown'
 
@@ -64,6 +66,8 @@ export const SUPPORT_AUDIO_LIST = [MP3, WAV]
 
 export const SUPPORT_TEXT_LIST = [TXT]
 
+export const SUPPORT_JSON_LIST = [JSON]
+
 export const SUPPORT_ALL_LIST = [
   ...SUPPORT_IMAGE_LIST,
   ...SUPPORT_MODEL_LIST,
@@ -71,6 +75,7 @@ export const SUPPORT_ALL_LIST = [
   ...SUPPORT_BABYLON_LIST,
   ...SUPPORT_AUDIO_LIST,
   ...SUPPORT_TEXT_LIST,
+  ...SUPPORT_JSON_LIST,
 ]
 
 export const SUPPORT_FILE_LIST = [
@@ -79,6 +84,7 @@ export const SUPPORT_FILE_LIST = [
   ...SUPPORT_VIDEO_LIST,
   ...SUPPORT_AUDIO_LIST,
   ...SUPPORT_TEXT_LIST,
+  ...SUPPORT_JSON_LIST,
 ]
 
 export const SUPPORT_RENDER_LIST = [
@@ -255,6 +261,16 @@ export function isSupportText(mime: string = UNKNOWN) {
     return false
   }
   return SUPPORT_TEXT_LIST.includes(mime)
+}
+
+export function isSupportJson(mime: string = UNKNOWN) {
+  if (mime == ANY) {
+    return true
+  }
+  if (mime == UNKNOWN) {
+    return false
+  }
+  return SUPPORT_JSON_LIST.includes(mime)
 }
 
 export function isBabylon(mime: string = UNKNOWN) {

@@ -21,7 +21,7 @@ export default interface LocalDataServiceApi {
 
   loadByFile(fid: string, file: File, mime?: string): Promise<LocalData>
 
-  processAfterLoad(localData: LocalData, mime?: string): Promise<void>
+  processAfterLoad(localData: LocalData): Promise<boolean>
 
   pause(fid: string): boolean // 暂不支持
 

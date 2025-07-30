@@ -1,10 +1,13 @@
+import { BaseTexture, Material } from '@babylonjs/core'
+
 import { LocalDataStatus } from '@/api/service/main/file/local/dto/local-data-status.enum'
 import { LocalDataType } from '@/api/service/main/file/local/dto/local-data-type.enum'
-import { BaseTexture } from '@babylonjs/core'
 
 export interface LocalData {
   fid: string
+
   type: LocalDataType
+  mime: string
 
   status: LocalDataStatus
   progress: number
@@ -14,5 +17,7 @@ export interface LocalData {
   text?: string
   json?: unknown
   texture?: BaseTexture
+  material?: Material
+  uv?: unknown
   object?: unknown
 }
