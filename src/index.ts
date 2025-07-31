@@ -39,7 +39,7 @@ import { UseBase } from './api/hook/use-base.type'
 import { UseStepOptions } from './api/hook/use-step-options.type'
 import { UseTAttributes } from './api/hook/use-t-attributes.type'
 import { UseTStep } from './api/hook/use-t-step.type'
-import { OfpApi } from './api/ofp-api'
+import { NfpApi } from './api/nfp-api'
 import RvLoopAttributeApi from './api/service/attributes/animation/loop/rv-loop-attribute-api'
 import RvNativeAttributeApi from './api/service/attributes/animation/native/rv-native-attribute-api'
 import RvCodeAttributeApi from './api/service/attributes/code/rv-code-attribute-api'
@@ -281,7 +281,7 @@ import UrlUtils from './utils/url-utils'
 import VectorUtils from './utils/vector-utils'
 
 export type {
-  OfpApi,
+  NfpApi,
   Translator,
   Meeting,
   BasePluginConfig,

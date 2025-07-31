@@ -96,7 +96,7 @@ import type { FunctionComponent } from 'react'
 import RsSeparateServiceApi
   from '@/api/service/engine/render/material/separate/rs-separate-service-api'
 
-export interface OfpApi {
+export interface NfpApi {
   services: {
     attributes: {
       rvLocationAttribute: RvLocationAttributeApi
