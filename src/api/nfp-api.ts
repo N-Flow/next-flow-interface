@@ -29,6 +29,8 @@ import RsTransformGroundApi from '@/api/service/engine/render/environment/rs-tra
 import RsLabelServiceApi from '@/api/service/engine/render/label/rs-label-service-api'
 import RsNodeMaterialManagerApi from '@/api/service/engine/render/material/node/rs-node-material-manager-api'
 import RsMaterialServiceApi from '@/api/service/engine/render/material/rs-material-service-api'
+import RsSeparateServiceApi
+  from '@/api/service/engine/render/material/separate/rs-separate-service-api'
 import FirstLoadModelServiceApi from '@/api/service/engine/render/model/first/first-load-model-service-api'
 import RsModelServiceApi from '@/api/service/engine/render/model/rs-model-service-api'
 import RsServiceApi from '@/api/service/engine/rs-service-api'
@@ -93,8 +95,6 @@ import SyncServiceApi from './service/sync/sync-service-api'
 import TAttributesServiceApi from './service/target/attribute/t-attributes-service-api'
 
 import type { FunctionComponent } from 'react'
-import RsSeparateServiceApi
-  from '@/api/service/engine/render/material/separate/rs-separate-service-api'
 
 export interface NfpApi {
   services: {

@@ -28,7 +28,7 @@
     "typeRoots": ["./node_modules/@types", "./src/types"],
 
     "declaration": true,
-    "declarationMap": true,
+    "declarationMap": false,
     "emitDeclarationOnly": false,
 
     "paths": {
