@@ -352,5 +352,3 @@ export function isAttach(mime: string = UNKNOWN) {
   }
   return ATTACH_LIST.includes(mime)
 }
-
-export * as default from './accept-mime'
