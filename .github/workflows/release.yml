@@ -53,7 +53,7 @@ jobs:
         with:
           tag_name: v${{ needs.Version.outputs.current_version }}
           release_name: v${{ needs.Version.outputs.current_version }}
-          body: 'Install: https://www.npmjs.com/package/nflow-interface'
+          body: 'Install: https://www.npmjs.com/package/next-flow-interface'
           draft: false
           prerelease: false
 
@@ -121,7 +121,7 @@ jobs:
         run: |
           sudo apt-get install -y jq
           cp package.json package.json.bak
-          jq '.name = "@N-FLOW/\(.name)" | .repository.url = "git+https://github.com/N-FLOW/rhine-var.git"' package.json > package.json.tmp
+          jq '.name = "@NEXT-FLOW/\(.name)" | .repository.url = "git+https://github.com/rhineai/rhine-var.git"' package.json > package.json.tmp
           mv package.json.tmp package.json
           jq empty package.json
 
@@ -132,7 +132,7 @@ jobs:
 
       - name: Configure Github NPM Registry
         run: |
-          npm config set @N-FLOW:registry=https://npm.pkg.github.com
+          npm config set @NEXT-FLOW:registry=https://npm.pkg.github.com
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
 
       - name: Publish to Github
