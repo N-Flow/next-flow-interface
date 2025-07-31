@@ -140,7 +140,6 @@ export async function getFileInfo(url: string): Promise<{ name: string; size: nu
   return { name, size }
 }
 
-
 // Create a namespace object for backward compatibility
 const FileUtils = {
   to3n,

@@ -49,99 +49,105 @@ const allScriptFiles = [`**/*.{${scriptFileExtensions}}`]
 
 const tsConfig: ConfigArray = []
 if (OPTIONS.ENABLE_SCRIPT && OPTIONS.ENABLE_TYPE_CHECKED) {
-  tsConfig.push(...(OPTIONS.ENABLE_PROJECT_BASE_TYPE_CHECKED ? [
-    {
-      ignores: ['eslint.config.ts'],
-    },
-    {
-      files: allScriptFiles,
-      languageOptions: {
-        parserOptions: {
-          projectService: true,
-          tsconfigRootDir: __dirname,
-        },
-      },
-    },
-    {
-      ...tseslint.configs.strictTypeChecked[0],
-      files: allScriptFiles,
-    },
-    {
-      ...tseslint.configs.strictTypeChecked[1],
-      files: allTsFiles,
-    },
-    {
-      ...tseslint.configs.strictTypeChecked[2],
-      files: allScriptFiles,
-    },
-    {
-      ...tseslint.configs.stylisticTypeChecked[2],
-      files: allScriptFiles,
-    },
-  ] : [
-    {
-      ...tseslint.configs.strict[0],
-      files: allScriptFiles,
-    },
-    {
-      ...tseslint.configs.strict[1],
-      files: allTsFiles,
-    },
-    {
-      ...tseslint.configs.strict[2],
-      files: allScriptFiles,
-    },
-    {
-      ...tseslint.configs.stylistic[2],
-      files: allScriptFiles,
-    },
-  ]))
+  tsConfig.push(
+    ...(OPTIONS.ENABLE_PROJECT_BASE_TYPE_CHECKED
+      ? [
+          {
+            ignores: ['eslint.config.ts'],
+          },
+          {
+            files: allScriptFiles,
+            languageOptions: {
+              parserOptions: {
+                projectService: true,
+                tsconfigRootDir: __dirname,
+              },
+            },
+          },
+          {
+            ...tseslint.configs.strictTypeChecked[0],
+            files: allScriptFiles,
+          },
+          {
+            ...tseslint.configs.strictTypeChecked[1],
+            files: allTsFiles,
+          },
+          {
+            ...tseslint.configs.strictTypeChecked[2],
+            files: allScriptFiles,
+          },
+          {
+            ...tseslint.configs.stylisticTypeChecked[2],
+            files: allScriptFiles,
+          },
+        ]
+      : [
+          {
+            ...tseslint.configs.strict[0],
+            files: allScriptFiles,
+          },
+          {
+            ...tseslint.configs.strict[1],
+            files: allTsFiles,
+          },
+          {
+            ...tseslint.configs.strict[2],
+            files: allScriptFiles,
+          },
+          {
+            ...tseslint.configs.stylistic[2],
+            files: allScriptFiles,
+          },
+        ]),
+  )
 }
 
 const scriptConfig: ConfigArray = []
 if (OPTIONS.ENABLE_SCRIPT) {
-  scriptConfig.push(...tseslint.config([
-    {
-      files: [
-        `*.{${scriptFileExtensions}}`,
-        `config/**/*.{${scriptFileExtensions}}`,
-        `scripts/**/*.{${scriptFileExtensions}}`,
-        `test/**/*.{${scriptFileExtensions}}`,
-        `spec/**/*.{${scriptFileExtensions}}`,
-        `tools/**/*.{${scriptFileExtensions}}`,
-      ],
-      languageOptions: {
-        globals: globals.node,
+  scriptConfig.push(
+    ...tseslint.config([
+      {
+        files: [
+          `*.{${scriptFileExtensions}}`,
+          `config/**/*.{${scriptFileExtensions}}`,
+          `scripts/**/*.{${scriptFileExtensions}}`,
+          `test/**/*.{${scriptFileExtensions}}`,
+          `spec/**/*.{${scriptFileExtensions}}`,
+          `tools/**/*.{${scriptFileExtensions}}`,
+        ],
+        languageOptions: {
+          globals: globals.node,
+        },
       },
-    },
-    {
-      files: [`src/**/*.{${scriptFileExtensions}}`],
-      languageOptions: {
-        globals: globals.browser,
+      {
+        files: [`src/**/*.{${scriptFileExtensions}}`],
+        languageOptions: {
+          globals: globals.browser,
+        },
       },
-    },
-    {
-      ...js.configs.recommended,
-      files: allScriptFiles,
-    },
-    ...tsConfig,
-    {
-      ...importX.flatConfigs.recommended,
-      files: allScriptFiles,
-    },
-    {
-      ...importX.flatConfigs.typescript,
-      files: allScriptFiles,
-    },
-    {
-      files: allScriptFiles,
-      languageOptions: {
-        parser: tsParser,
-        ecmaVersion: 'latest',
-        sourceType: 'module',
+      {
+        ...js.configs.recommended,
+        files: allScriptFiles,
       },
-    },
-  ]))
+      ...tsConfig,
+      {
+        ...importX.flatConfigs.recommended,
+        files: allScriptFiles,
+      },
+      {
+        ...importX.flatConfigs.typescript,
+        files: allScriptFiles,
+      },
+      {
+        files: allScriptFiles,
+        languageOptions: {
+          parser: tsParser,
+          ecmaVersion: 'latest',
+          sourceType: 'module',
+        },
+      },
+    ]),
+  )
 }
 
 const frontendConfig: ConfigArray = []
@@ -171,30 +177,34 @@ if (OPTIONS.ENABLE_STYLESHEET) {
 
 const markdownConfig: ConfigArray = []
 if (OPTIONS.ENABLE_MARKDOWN) {
-  markdownConfig.push(...defineConfig([
-    {
-      ...markdown.configs.recommended[0],
-      files: ['**/*.md', '**/*.markdown'],
-      language: 'markdown/gfm',
-    },
-  ]))
+  markdownConfig.push(
+    ...defineConfig([
+      {
+        ...markdown.configs.recommended[0],
+        files: ['**/*.md', '**/*.markdown'],
+        language: 'markdown/gfm',
+      },
+    ]),
+  )
 }
 
 const jsonConfig: ConfigArray = []
 if (OPTIONS.ENABLE_JSON) {
-  jsonConfig.push(...defineConfig([
-    {
-      ...json.configs.recommended,
-      files: ['**/*.json'],
-      ignores: ['**/tsconfig.json', '**/tsconfig.*.json'],
-      language: 'json/json',
-    },
-    {
-      ...json.configs.recommended,
-      files: ['**/*.jsonc', '**/*.json5', '**/tsconfig.json', '**/tsconfig.*.json'],
-      language: 'json/jsonc',
-    },
-  ]))
+  jsonConfig.push(
+    ...defineConfig([
+      {
+        ...json.configs.recommended,
+        files: ['**/*.json'],
+        ignores: ['**/tsconfig.json', '**/tsconfig.*.json'],
+        language: 'json/json',
+      },
+      {
+        ...json.configs.recommended,
+        files: ['**/*.jsonc', '**/*.json5', '**/tsconfig.json', '**/tsconfig.*.json'],
+        language: 'json/jsonc',
+      },
+    ]),
+  )
 }
 
 const prettierConfig: ConfigArray = []
@@ -248,9 +258,9 @@ const customConfig: ConfigArray = defineConfig([
     files: allScriptFiles,
     rules: OPTIONS.ENABLE_FRONTEND
       ? {
-        'react-hooks/exhaustive-deps': 'error',
-        '@next/next/no-img-element': 'error',
-      }
+          'react-hooks/exhaustive-deps': 'error',
+          '@next/next/no-img-element': 'error',
+        }
       : {},
   },
   {
