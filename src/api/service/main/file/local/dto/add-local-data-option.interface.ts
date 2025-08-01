@@ -1,4 +1,5 @@
 import { LocalDataStatus } from '@/api/service/main/file/local/dto/local-data-status.enum'
+
 import { LocalData } from './local-data.type'
 
 export default interface AddLocalDataOptionInterface
