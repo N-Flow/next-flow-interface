@@ -22,7 +22,7 @@ export default interface RvModelServiceApi {
 
   hasNode(mid: string): boolean
 
-  setNode(mid: string, node: RvNode): boolean
+  setNode(mid: string, node: string): boolean
 
   generateId(): string
 }

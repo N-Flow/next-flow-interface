@@ -14,7 +14,7 @@ export default interface NativeEventServiceApi {
   subscribeClick(subscriber: NativeMouseEventSubscriber): () => void
   unsubscribeClick(subscriber: NativeMouseEventSubscriber): void
 
-  subscriberContextMenu(subscriber: NativeMouseEventSubscriber): () => void
+  subscribeContextMenu(subscriber: NativeMouseEventSubscriber): () => void
   unsubscribeContextMenu(subscriber: NativeMouseEventSubscriber): void
 
   subscribeDoubleClick(subscriber: NativeMouseEventSubscriber): () => void

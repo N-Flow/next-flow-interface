@@ -1,13 +1,14 @@
 {
   "name": "next-flow-interface",
-  "version": "0.15.2",
+  "version": "0.15.3",
   "description": "Interface package for NEXT FlOW. You can use this package to build your own plugin that can control anything.",
-  "main": "dist/index.js",
+  "type": "module",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "watch": "tsup src/index.ts --dts --sourcemap --watch",
+    "watch": "tsup src/index.ts --dts --format esm --sourcemap --watch",
     "test": "echo All tests passed.",
-    "build": "tsup src/index.ts --dts --minify terser",
+    "build": "tsup src/index.ts --dts --format esm --minify terser --clean",
     "type:check": "tsc --noEmit",
     "lint": "eslint --fix .",
     "lint:check": "eslint .",

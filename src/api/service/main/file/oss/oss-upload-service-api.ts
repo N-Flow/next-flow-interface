@@ -4,7 +4,7 @@ import { OssUploadServiceSubscriber } from '@/api/service/main/file/oss/dto/oss-
 export default interface OssUploadServiceApi {
   instances: Map<string, OssUploadInstance>
 
-  upload(file: File, fid?: string, mime?: string, hash?: string): OssUploadInstance
+  upload(file: File, fid?: string, mime?: string, hash?: string): Promise<void>
 
   pause(fid: string): boolean
 

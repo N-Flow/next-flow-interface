@@ -8,7 +8,7 @@ export default interface RsLabelServiceApi {
 
   updateClick(nid: string | null | undefined): void
 
-  getLabel(nid: string): LabelInfo | undefined
+  getLabel(nid: string): LabelInfo | null
 
   ensureLabel(nid: string, node: TransformNode | null): LabelInfo
 
