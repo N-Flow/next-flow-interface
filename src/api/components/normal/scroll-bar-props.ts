@@ -1,8 +1,6 @@
-import { ReactNode } from 'react'
+import { HTMLAttributes, ReactNode } from 'react'
 
-import { DivProps } from '@/api/components/interface/base-types'
-
-export interface ScrollBarProps extends DivProps {
+export interface ScrollBarProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children'> {
   children: ReactNode | undefined
   className?: string
   drawer?: boolean
