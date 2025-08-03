@@ -264,6 +264,7 @@ import { PluginType } from './plugin/dto/plugin-type.enum'
 import { PluginViewProps } from './plugin/dto/plugin-view-props.interface'
 import IconPlugin from './plugin/icon-plugin'
 import ViewPlugin from './plugin/view-plugin'
+import { C3, C4 } from './type/general/color.type'
 import { V2, V3, V4 } from './type/general/vector.type'
 import CryptoUtils from './utils/crypto-utils'
 import DataUtils from './utils/data-utils'
@@ -485,6 +486,8 @@ export type {
   NodeMaterialChangeListener,
   RsMaterialServiceApi,
   RvNodeMaterialAnalyzerApi,
+  C3,
+  C4,
 }
 
 export {
