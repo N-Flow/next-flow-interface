@@ -239,6 +239,7 @@ import RvCamera from './api/service/sync/interface/step/environment/camera/rv-ca
 import RvEnvironment from './api/service/sync/interface/step/environment/rv-environment.interface'
 import RvStep from './api/service/sync/interface/step/rv-step.interface'
 import RvVersion from './api/service/sync/interface/version/rv-version.interface'
+import RvNodeMaterialAnalyzerApi from './api/service/sync/material/node/rv-node-material-analyzer-api'
 import RvMeetingServiceApi from './api/service/sync/meeting/rv-meeting-service-api'
 import RvModelServiceApi from './api/service/sync/model/rv-model-service-api'
 import {
@@ -483,6 +484,7 @@ export type {
   NodeMaterialInfo,
   NodeMaterialChangeListener,
   RsMaterialServiceApi,
+  RvNodeMaterialAnalyzerApi,
 }
 
 export {

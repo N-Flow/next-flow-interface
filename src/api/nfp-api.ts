@@ -94,6 +94,8 @@ import SyncServiceApi from './service/sync/sync-service-api'
 import TAttributesServiceApi from './service/target/attribute/t-attributes-service-api'
 
 import type { FunctionComponent } from 'react'
+import RvNodeMaterialAnalyzerApi
+  from '@/api/service/sync/material/node/rv-node-material-analyzer-api'
 
 export interface NfpApi {
   services: {
@@ -174,6 +176,7 @@ export interface NfpApi {
       rvResourceService: RvResourceServiceApi
       rvModelService: RvModelServiceApi
       rvAttributesService: RvAttributesServiceApi
+      rvNodeMaterialAnalyzer: RvNodeMaterialAnalyzerApi
     }
 
     target: {
