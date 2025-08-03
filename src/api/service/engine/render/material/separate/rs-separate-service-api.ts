@@ -5,5 +5,5 @@ import RvMaterial from '../../../../sync/interface/step/attributes/material/rv-m
 export default interface RsSeparateServiceApi {
   get(nid: string, node?: Node): Promise<Material | null>
 
-  getWithEnsureData(nid: string, rvMaterial: RvMaterial, node?: Node): Promise<Material | null>
+  getWithEnsureType(nid: string, rvMaterial: RvMaterial, node?: Node): Promise<Material | null>
 }
