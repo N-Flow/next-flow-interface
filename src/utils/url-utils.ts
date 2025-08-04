@@ -46,6 +46,22 @@ export async function trySetClipboard(url: string) {
   }
 }
 
+export function extractFilenameFromUrl(url: string, includeExtension = true): string {
+  try {
+    const urlObj = new URL(url)
+    const pathname = urlObj.pathname
+    const filename = pathname.split('/').pop() ?? ''
+    
+    if (!includeExtension && filename.includes('.')) {
+      return filename.substring(0, filename.lastIndexOf('.'))
+    }
+    
+    return filename
+  } catch {
+    return ''
+  }
+}
+
 // Create a namespace object for backward compatibility
 const UrlUtils = {
   getParam,
@@ -54,6 +70,7 @@ const UrlUtils = {
   copyCurrentUrlToClipboard,
   copyText,
   trySetClipboard,
+  extractFilenameFromUrl,
 }
 
 export default UrlUtils

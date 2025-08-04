@@ -8,7 +8,7 @@ export default interface RvModelServiceApi {
 
   uploadMulti(fileList: FileList | File[] | File | null | undefined, check?: boolean): Promise<void>
 
-  addByFid(fid: string): void
+  addByFid(fid: string): string
 
   get(mid: string): RecursiveObject<RvModel> | undefined
 
@@ -16,7 +16,7 @@ export default interface RvModelServiceApi {
 
   hasFid(fid: string): boolean
 
-  add(model: RvModel): void
+  add(model: RvModel): string
 
   remove(mid: string): boolean
 
