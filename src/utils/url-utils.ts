@@ -51,11 +51,11 @@ export function extractFilenameFromUrl(url: string, includeExtension = true): st
     const urlObj = new URL(url)
     const pathname = urlObj.pathname
     const filename = pathname.split('/').pop() ?? ''
-    
+
     if (!includeExtension && filename.includes('.')) {
       return filename.substring(0, filename.lastIndexOf('.'))
     }
-    
+
     return filename
   } catch {
     return ''

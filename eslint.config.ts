@@ -14,7 +14,6 @@ import { importX } from 'eslint-plugin-import-x'
 import globals from 'globals'
 import tseslint, { type ConfigArray } from 'typescript-eslint'
 
-
 const OPTIONS = {
   ENABLE_SCRIPT: true, // Set to enable typescript javascript file features
   ENABLE_TYPE_CHECKED: true, // Set to enable type features
@@ -54,53 +53,53 @@ if (OPTIONS.ENABLE_SCRIPT && OPTIONS.ENABLE_TYPE_CHECKED) {
   tsConfig.push(
     ...(OPTIONS.ENABLE_PROJECT_BASE_TYPE_CHECKED
       ? [
-        {
-          ignores: ['eslint.config.ts'],
-        },
-        {
-          files: allScriptFiles,
-          languageOptions: {
-            parserOptions: {
-              projectService: true,
-              tsconfigRootDir: __dirname,
+          {
+            ignores: ['eslint.config.ts'],
+          },
+          {
+            files: allScriptFiles,
+            languageOptions: {
+              parserOptions: {
+                projectService: true,
+                tsconfigRootDir: __dirname,
+              },
             },
           },
-        },
-        {
-          ...tseslint.configs.strictTypeChecked[0],
-          files: allScriptFiles,
-        },
-        {
-          ...tseslint.configs.strictTypeChecked[1],
-          files: allTsFiles,
-        },
-        {
-          ...tseslint.configs.strictTypeChecked[2],
-          files: allScriptFiles,
-        },
-        {
-          ...tseslint.configs.stylisticTypeChecked[2],
-          files: allScriptFiles,
-        },
-      ]
+          {
+            ...tseslint.configs.strictTypeChecked[0],
+            files: allScriptFiles,
+          },
+          {
+            ...tseslint.configs.strictTypeChecked[1],
+            files: allTsFiles,
+          },
+          {
+            ...tseslint.configs.strictTypeChecked[2],
+            files: allScriptFiles,
+          },
+          {
+            ...tseslint.configs.stylisticTypeChecked[2],
+            files: allScriptFiles,
+          },
+        ]
       : [
-        {
-          ...tseslint.configs.strict[0],
-          files: allScriptFiles,
-        },
-        {
-          ...tseslint.configs.strict[1],
-          files: allTsFiles,
-        },
-        {
-          ...tseslint.configs.strict[2],
-          files: allScriptFiles,
-        },
-        {
-          ...tseslint.configs.stylistic[2],
-          files: allScriptFiles,
-        },
-      ]),
+          {
+            ...tseslint.configs.strict[0],
+            files: allScriptFiles,
+          },
+          {
+            ...tseslint.configs.strict[1],
+            files: allTsFiles,
+          },
+          {
+            ...tseslint.configs.strict[2],
+            files: allScriptFiles,
+          },
+          {
+            ...tseslint.configs.stylistic[2],
+            files: allScriptFiles,
+          },
+        ]),
   )
 }
 
@@ -162,10 +161,7 @@ if (OPTIONS.ENABLE_FRONTEND) {
     )
   } else {
     frontendConfig.push(
-      ...compat.extends(
-        'plugin:react/recommended',
-        'plugin:react-hooks/recommended'
-      ),
+      ...compat.extends('plugin:react/recommended', 'plugin:react-hooks/recommended'),
     )
   }
   for (const nextConfigElement of frontendConfig) {
@@ -269,15 +265,20 @@ const customConfig: ConfigArray = defineConfig([
   },
   {
     files: allScriptFiles,
-    rules: OPTIONS.ENABLE_FRONTEND ? {
-      'react-hooks/exhaustive-deps': 'error',
-    } : {},
+    rules: OPTIONS.ENABLE_FRONTEND
+      ? {
+          'react-hooks/exhaustive-deps': 'error',
+        }
+      : {},
   },
   {
     files: allScriptFiles,
-    rules: (OPTIONS.ENABLE_FRONTEND && OPTIONS.ENABLE_NEXT) ? {
-      '@next/next/no-img-element': 'error',
-    } : {},
+    rules:
+      OPTIONS.ENABLE_FRONTEND && OPTIONS.ENABLE_NEXT
+        ? {
+            '@next/next/no-img-element': 'error',
+          }
+        : {},
   },
   {
     files: ['**/*.css'],

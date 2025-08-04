@@ -1,4 +1,3 @@
-
 export interface C3 {
   r: number
   g: number

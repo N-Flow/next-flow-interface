@@ -3,12 +3,11 @@ import { DynamicTexture, Texture } from '@babylonjs/core'
 import { TextureInfo } from '@/api/service/engine/render/material/dto/texture-info.interface'
 
 export default interface RsTextureServiceApi {
-
   get(fid: string): TextureInfo | null
 
-  getWhiteTexture():DynamicTexture
+  getWhiteTexture(): DynamicTexture
 
-  getBlackTexture():DynamicTexture
+  getBlackTexture(): DynamicTexture
 
   add(fid: string): Promise<TextureInfo | null>
 
@@ -17,5 +16,4 @@ export default interface RsTextureServiceApi {
   pushTexture(fid: string, texture: Texture, url: string): TextureInfo
 
   remove(fid: string): void
-
 }

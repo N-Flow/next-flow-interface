@@ -44,8 +44,7 @@ import ResourceServiceApi from '@/api/service/main/resource/resource-service-api
 import ThemeServiceApi from '@/api/service/main/theme/theme-service-api'
 import RvFileServiceApi from '@/api/service/sync/file/rv-file-service-api'
 import RvGlobalServiceApi from '@/api/service/sync/global/rv-global-service-api'
-import RvNodeMaterialAnalyzerApi
-  from '@/api/service/sync/material/node/rv-node-material-analyzer-api'
+import RvNodeMaterialAnalyzerApi from '@/api/service/sync/material/node/rv-node-material-analyzer-api'
 import RvAttributesServiceApi from '@/api/service/sync/step/attributes/rv-attributes-service-api'
 import RvStepServiceApi from '@/api/service/sync/step/rv-step-service-api'
 import TStepServiceApi from '@/api/service/target/step/t-step-service-api'
