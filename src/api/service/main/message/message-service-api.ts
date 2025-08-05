@@ -20,5 +20,5 @@ export default interface MessageServiceApi {
     duration: number,
   ) => void
 
-  show: (text: string, type: MessageType, duration: number) => void
+  show: (text: string, type: MessageType, duration?: number) => void
 }

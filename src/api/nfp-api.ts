@@ -34,6 +34,7 @@ import RsTextureServiceApi from '@/api/service/engine/render/material/texture/rs
 import FirstLoadModelServiceApi from '@/api/service/engine/render/model/first/first-load-model-service-api'
 import RsModelServiceApi from '@/api/service/engine/render/model/rs-model-service-api'
 import RsServiceApi from '@/api/service/engine/rs-service-api'
+import ContextMenuServiceApi from '@/api/service/main/context-menu/context-menu-service-api'
 import DialogServiceApi from '@/api/service/main/dialog/dialog-service-api'
 import FirstLoadServiceApi from '@/api/service/main/file/first/first-load-service-api'
 import OssUploadServiceApi from '@/api/service/main/file/oss/oss-upload-service-api'
@@ -127,6 +128,7 @@ export interface NfpApi {
       firstLoadModelService: FirstLoadModelServiceApi
       pluginContainerService: PluginContainerServiceApi
       sceneService: sceneServiceApi
+      contextMenuService: ContextMenuServiceApi
     }
 
     engine: {
