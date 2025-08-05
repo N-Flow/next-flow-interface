@@ -8,4 +8,6 @@ export default interface RvLabelAttributeApi {
   generate(): RvLabel
 
   ensure(nid: string): boolean
+
+  get(sid: string, nid: string): RvLabel | undefined
 }
