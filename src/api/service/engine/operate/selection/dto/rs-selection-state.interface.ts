@@ -6,4 +6,15 @@ export default interface RsSelectionState {
   selected: RsSelectionNodeInfo[]
   last: RsSelectionNodeInfo | null
   branchMode: boolean
+  materialInfo: RsSelectionMaterialInfo
 }
+
+export interface RsSelectionMaterialInfo {
+  allNumber: number
+  supportEditMaterialNumber: number
+  hasGeometryNumber: number
+  hasOtherMaterialNumber: number
+  hasChildrenNumber: number
+  isAbstractMeshNumber: number
+}
+

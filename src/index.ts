@@ -60,7 +60,9 @@ import RsAudioServiceApi from './api/service/engine/audio/rs-audio-service-api'
 import HighLightInfo from './api/service/engine/operate/selection/dto/hight-light-info.interface'
 import { LastSubscriber } from './api/service/engine/operate/selection/dto/last-subscriber.type'
 import RsSelectionNodeInfo from './api/service/engine/operate/selection/dto/rs-selection-node-info'
-import RsSelectionState from './api/service/engine/operate/selection/dto/rs-selection-state.interface'
+import RsSelectionState, {
+  RsSelectionMaterialInfo,
+} from './api/service/engine/operate/selection/dto/rs-selection-state.interface'
 import { SelectedSubscriber } from './api/service/engine/operate/selection/dto/selected-subscriber.type'
 import RsSelectionServiceApi from './api/service/engine/operate/selection/rs-selection-service-api'
 import RsClickApi from './api/service/engine/render/click/rs-click-api'
@@ -492,6 +494,7 @@ export type {
   C4,
   TextureInfo,
   RsTextureServiceApi,
+  RsSelectionMaterialInfo,
 }
 
 export {
