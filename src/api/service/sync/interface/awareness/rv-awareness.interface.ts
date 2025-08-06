@@ -8,22 +8,33 @@ export interface RvAwarenessUser {
   uuid: string
 }
 
+export interface RvAwarenessDevice {
+  platform: string
+}
+
 export interface RvAwarenessClick {
   position: V3
   time: number
 }
 
-export default interface RvAwareness {
-  clientId: string
+export interface RvAwarenessState {
   timestamp: number
-  user: RvAwarenessUser
-  state: {
-    targetStepId: string
-    meetingId: string
-    targetNodes: string[]
-    camera: RvCameraLocation
-    cursor: V3 | null
-    drawers: string[]
-    clicks: RvAwarenessClick[]
+  sid: string
+  mid: string
+  selected: string[]
+  camera: RvCameraLocation
+  clicks: RvAwarenessClick[]
+  window: {
+    innerWidth: number
+    innerHeight: number
   }
+  cursor: V3
+  openedDrawers: string[]
+}
+
+export default interface RvAwareness {
+  clientId: number
+  user: RvAwarenessUser
+  device: RvAwarenessDevice
+  state: RvAwarenessState
 }

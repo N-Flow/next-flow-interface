@@ -43,6 +43,7 @@ import NativeEventServiceApi from '@/api/service/main/native-event/native-event-
 import PluginContainerServiceApi from '@/api/service/main/plugin/plugin-container-service-api'
 import ResourceServiceApi from '@/api/service/main/resource/resource-service-api'
 import ThemeServiceApi from '@/api/service/main/theme/theme-service-api'
+import AwarenessServiceApi from '@/api/service/sync/awareness/awareness-service-api'
 import RvFileServiceApi from '@/api/service/sync/file/rv-file-service-api'
 import RvGlobalServiceApi from '@/api/service/sync/global/rv-global-service-api'
 import RvNodeMaterialAnalyzerApi from '@/api/service/sync/material/node/rv-node-material-analyzer-api'
@@ -90,7 +91,7 @@ import sceneServiceApi from './service/main/scene/scene-service-api'
 import SpaceServiceApi from './service/main/space/space-service-api'
 import StatusServiceApi from './service/main/status/status-service-api'
 import UserServiceApi from './service/main/user/user-service-api'
-import HistoryServiceApi from './service/sync/history-service-api'
+import HistoryServiceApi from './service/sync/history/history-service-api'
 import RvModelServiceApi from './service/sync/model/rv-model-service-api'
 import RvResourceServiceApi from './service/sync/resource/rv-resource-service-api'
 import SyncServiceApi from './service/sync/sync-service-api'
@@ -172,6 +173,7 @@ export interface NfpApi {
 
     sync: {
       syncService: SyncServiceApi
+      awarenessService: AwarenessServiceApi
       historyService: HistoryServiceApi
       rvGlobalService: RvGlobalServiceApi
       rvStepService: RvStepServiceApi

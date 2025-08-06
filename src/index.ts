@@ -185,6 +185,9 @@ import ThemeServiceApi from './api/service/main/theme/theme-service-api'
 import UserAuth from './api/service/main/user/dto/user-auth.interface'
 import UserInfo from './api/service/main/user/dto/user-info.interface'
 import UserServiceApi from './api/service/main/user/user-service-api'
+import AwarenessServiceApi, {
+  AwarenessChangeSubscriber,
+} from './api/service/sync/awareness/awareness-service-api'
 import { HistoryServiceStateSubscriber } from './api/service/sync/dto/history-service-state-subscriber.type'
 import {
   HistoryServiceEventType,
@@ -196,9 +199,11 @@ import {
 } from './api/service/sync/file/dto/rv-file-service-subscriber.type'
 import RvFileServiceApi from './api/service/sync/file/rv-file-service-api'
 import RvGlobalServiceApi from './api/service/sync/global/rv-global-service-api'
-import HistoryServiceApi from './api/service/sync/history-service-api'
+import HistoryServiceApi from './api/service/sync/history/history-service-api'
 import RvAwareness, {
   RvAwarenessClick,
+  RvAwarenessDevice,
+  RvAwarenessState,
   RvAwarenessUser,
 } from './api/service/sync/interface/awareness/rv-awareness.interface'
 import { RvFileType } from './api/service/sync/interface/file/rv-file-type.enum'
@@ -456,6 +461,8 @@ export type {
   RvAwarenessUser,
   RvAwarenessClick,
   RvAwareness,
+  RvAwarenessDevice,
+  RvAwarenessState,
   FogAnimationApi,
   GroundAnimationApi,
   LightAnimationApi,
@@ -495,6 +502,8 @@ export type {
   TextureInfo,
   RsTextureServiceApi,
   RsSelectionMaterialInfo,
+  AwarenessServiceApi,
+  AwarenessChangeSubscriber,
 }
 
 export {
