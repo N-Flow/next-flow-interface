@@ -17,24 +17,21 @@ export interface RvAwarenessClick {
   time: number
 }
 
-export interface RvAwarenessState {
-  timestamp: number
-  sid: string
-  mid: string
-  selected: string[]
-  camera: RvCameraLocation
-  clicks: RvAwarenessClick[]
-  window: {
-    innerWidth: number
-    innerHeight: number
-  }
-  cursor: V3
-  openedDrawers: string[]
+export interface RvAwarenessWindow {
+  innerWidth: number
+  innerHeight: number
 }
 
 export default interface RvAwareness {
   clientId: number
   user: RvAwarenessUser
   device: RvAwarenessDevice
-  state: RvAwarenessState
+  sid: string
+  mid: string
+  selected: string[]
+  camera: RvCameraLocation
+  clicks: RvAwarenessClick[]
+  window: RvAwarenessWindow
+  cursor: V3
+  openedDrawers: string[]
 }

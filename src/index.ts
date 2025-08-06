@@ -203,7 +203,7 @@ import HistoryServiceApi from './api/service/sync/history/history-service-api'
 import RvAwareness, {
   RvAwarenessClick,
   RvAwarenessDevice,
-  RvAwarenessState,
+  RvAwarenessWindow,
   RvAwarenessUser,
 } from './api/service/sync/interface/awareness/rv-awareness.interface'
 import { RvFileType } from './api/service/sync/interface/file/rv-file-type.enum'
@@ -462,7 +462,7 @@ export type {
   RvAwarenessClick,
   RvAwareness,
   RvAwarenessDevice,
-  RvAwarenessState,
+  RvAwarenessWindow,
   FogAnimationApi,
   GroundAnimationApi,
   LightAnimationApi,

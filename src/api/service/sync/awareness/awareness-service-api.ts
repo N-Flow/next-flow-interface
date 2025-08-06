@@ -1,6 +1,4 @@
-import RvAwareness, {
-  RvAwarenessState,
-} from '@/api/service/sync/interface/awareness/rv-awareness.interface'
+import RvAwareness from '@/api/service/sync/interface/awareness/rv-awareness.interface'
 
 export type AwarenessChangeSubscriber = (allAwareness: Map<number, RvAwareness>) => void
 
@@ -12,6 +10,6 @@ export default interface AwarenessServiceApi {
 
   states: Map<number, RvAwareness>
 
-  getCurrentRvAwarenessState(): RvAwarenessState
+  getCurrentRvAwareness(): RvAwareness
 
 }
