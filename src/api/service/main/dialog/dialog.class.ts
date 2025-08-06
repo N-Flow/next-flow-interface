@@ -6,6 +6,12 @@ import { ThemeColor } from '../theme/dto/theme-color.enum'
 
 import DialogController from './dto/dialog-controller.interface'
 
+export enum DialogContentAlign {
+  LEFT = 'LEFT',
+  CENTER = 'CENTER',
+  RIGHT = 'RIGHT',
+}
+
 export default class Dialog {
   constructor(
     public options: DialogCreateOptions,
@@ -14,6 +20,7 @@ export default class Dialog {
     public title = '',
     public titleIcon: FunctionComponent | undefined = undefined,
     public content = '',
+    public contentAlign: DialogContentAlign = DialogContentAlign.LEFT,
     public contentView: FunctionComponent | undefined = undefined,
     public icon: FunctionComponent | undefined = undefined,
     public view: FunctionComponent | undefined = undefined,
@@ -89,6 +96,7 @@ export default class Dialog {
       options.title,
       options.titleIcon,
       options.content,
+      options.contentAlign,
       options.contentView,
       options.icon,
       options.view,

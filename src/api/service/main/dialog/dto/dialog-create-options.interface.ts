@@ -2,11 +2,14 @@ import { FunctionComponent } from 'react'
 
 import { ThemeColor } from '@/api/service/main/theme/dto/theme-color.enum'
 
+import { DialogContentAlign } from '../dialog.class'
+
 export default interface DialogCreateOptions {
   id?: string // 对话框的唯一id
   title?: string // 标题
   titleIcon?: FunctionComponent // 标题左侧图标
   content?: string // 内容
+  contentAlign?: DialogContentAlign // 内容对齐方式 默认为 'LEFT'
   contentView?: FunctionComponent // 中间视图
   icon?: FunctionComponent // 图标
   view?: FunctionComponent // 视图 全屏于整个对话框
