@@ -15,8 +15,6 @@ export default interface RsTransformGroundApi {
     enableOnEditorMode: boolean
   }
 
-  freshUsageInfo(): void
-
   initMaterial(): void
 
   createGround(): void
