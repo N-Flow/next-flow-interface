@@ -51,6 +51,8 @@ export const MKV = 'video/x-matroska'
 
 export const JSON = 'application/json'
 
+export const NF = 'nextflow/sync'
+
 export const TXT = 'text/plain'
 export const MARKDOWN = 'text/markdown'
 
@@ -67,6 +69,8 @@ export const SUPPORT_AUDIO_LIST = [MP3, WAV]
 export const SUPPORT_TEXT_LIST = [TXT]
 
 export const SUPPORT_JSON_LIST = [JSON]
+
+export const SUPPORT_NEXTFLOW_LIST = [NF]
 
 export const SUPPORT_ALL_LIST = [
   ...SUPPORT_IMAGE_LIST,
