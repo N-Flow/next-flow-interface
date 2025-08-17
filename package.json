@@ -1,6 +1,6 @@
 {
   "name": "next-flow-interface",
-  "version": "0.16.12",
+  "version": "0.17.3",
   "description": "Interface package for NEXT FlOW. You can use this package to build your own plugin that can control anything.",
   "type": "module",
   "module": "dist/index.js",
@@ -40,7 +40,7 @@
     "LICENSE"
   ],
   "devDependencies": {
-    "@babylonjs/core": "7.41.1",
+    "@babylonjs/core": "8.23.1",
     "@eslint/compat": "^1.2.9",
     "@eslint/css": "^0.8.1",
     "@eslint/js": "^9.28.0",
@@ -75,7 +75,7 @@
     "valtio": "2.1.3"
   },
   "peerDependencies": {
-    "@babylonjs/core": "7.41.1",
+    "@babylonjs/core": "8.23.1",
     "antd": "5.24.1",
     "brotli-wasm": "^3.0.1",
     "clsx": "2.1.1",
