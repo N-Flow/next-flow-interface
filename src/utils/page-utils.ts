@@ -13,23 +13,15 @@ export function getPageTypeBySpaceText(space: string): PageType {
   return PageType.VIEWER
 }
 
-export function forceGetSearchParams(key: string, errorMessage = '') {
-  const params = new URLSearchParams(window.location.search),
-    mt = params.get(key)
-  if (!mt) {
-    if (errorMessage) {
-      console.error(errorMessage, mt)
-    }
-    window.location.href = '/not-found'
-    return ''
-  }
-  return mt
+export function getSearchParams(key: string) {
+  const params = new URLSearchParams(window.location.search)
+  return params.get(key) ?? undefined
 }
 
 // Create a namespace object for backward compatibility
 const PageUtils = {
   getPageTypeBySpaceText,
-  forceGetSearchParams,
+  getSearchParams,
 }
 
 export default PageUtils
