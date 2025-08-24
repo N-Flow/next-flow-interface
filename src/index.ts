@@ -161,7 +161,7 @@ import { PluginFrom } from './api/service/main/plugin/dto/plugin-from.enum'
 import { PluginServiceSubscriber } from './api/service/main/plugin/dto/plugin-service-subscriber.type'
 import PluginState from './api/service/main/plugin/dto/plugin-state.interface'
 import PluginConnectorApi from './api/service/main/plugin/plugin-connector-api'
-import PluginContainerServiceApi from './api/service/main/plugin/plugin-container-service-api'
+import PluginContainerServiceApi, { PluginInformation } from './api/service/main/plugin/plugin-container-service-api'
 import PluginServiceApi from './api/service/main/plugin/plugin-service-api'
 import ModulePreloaderApi from './api/service/main/preloader/module-preloader-api'
 import FileData from './api/service/main/resource/dto/file-data.interface'
@@ -314,6 +314,7 @@ export type {
   DivPropsSimple,
   SpanProps,
   SpanPropsSimple,
+  PluginInformation,
   AntCheckboxProps,
   AntColorProps,
   AntNumberProps,
