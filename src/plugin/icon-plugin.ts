@@ -1,5 +1,3 @@
-import { FunctionComponent, MouseEvent } from 'react'
-
 import { ThemeColor } from '@/api/service/main/theme/dto/theme-color.enum'
 
 import BasePlugin from './base-plugin'
@@ -13,7 +11,7 @@ export default interface IconPlugin extends BasePlugin {
 
   open: boolean
 
-  icon: FunctionComponent
+  icon: string
 
   onEnabledChange?: (value: boolean, e: MouseEvent) => void
   onIconClick?: (e: MouseEvent) => void
