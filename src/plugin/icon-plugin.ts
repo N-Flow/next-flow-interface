@@ -11,7 +11,7 @@ export default interface IconPlugin extends BasePlugin {
 
   open: boolean
 
-  icon: string
+  icon: () => string
 
   onEnabledChange?: (value: boolean, e: MouseEvent) => void
   onIconClick?: (e: MouseEvent) => void
