@@ -7,7 +7,6 @@ import IconPlugin from '@/plugin/icon-plugin'
 export interface PluginInformation {
   plugin: BasePlugin
   root?: Root
-  iconRoot?: Root
   iconButton?: HTMLSpanElement
 }
 
