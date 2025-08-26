@@ -1,6 +1,6 @@
 {
   "name": "next-flow-interface",
-  "version": "0.17.9",
+  "version": "0.17.10",
   "description": "Interface package for NEXT FlOW. You can use this package to build your own plugin that can control anything.",
   "type": "module",
   "module": "dist/index.js",
@@ -81,8 +81,8 @@
     "clsx": "2.1.1",
     "file-type": "^20.4.1",
     "mime": "^4.0.7",
-    "react": "19.1.0-canary-ff628334-20250205",
-    "react-dom": "19.1.0-canary-ff628334-20250205",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
     "valtio": "2.1.3"
   },
   "dependencies": {
