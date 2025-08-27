@@ -11,7 +11,6 @@ export default interface DrawerPlugin extends IconPlugin {
   drawer: MixView<PluginViewProps>
 
   onRender?: () => void
-  onEffect?: () => () => void
 
   onTitleClick?: () => void
   onTitleContextMenu?: () => void

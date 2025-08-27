@@ -10,5 +10,4 @@ export default interface DialogPlugin extends IconPlugin {
   view: MixView<PluginViewProps>
 
   onRender?: () => void
-  onEffect?: () => () => void
 }
