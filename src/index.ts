@@ -161,7 +161,9 @@ import { PluginFrom } from './api/service/main/plugin/dto/plugin-from.enum'
 import { PluginServiceSubscriber } from './api/service/main/plugin/dto/plugin-service-subscriber.type'
 import PluginState from './api/service/main/plugin/dto/plugin-state.interface'
 import PluginConnectorApi from './api/service/main/plugin/plugin-connector-api'
-import PluginContainerServiceApi, { PluginInformation } from './api/service/main/plugin/plugin-container-service-api'
+import PluginContainerServiceApi, {
+  PluginInformation,
+} from './api/service/main/plugin/plugin-container-service-api'
 import PluginServiceApi from './api/service/main/plugin/plugin-service-api'
 import ModulePreloaderApi from './api/service/main/preloader/module-preloader-api'
 import FileData from './api/service/main/resource/dto/file-data.interface'
@@ -269,12 +271,14 @@ import BasePlugin from './plugin/base-plugin'
 import DialogPlugin from './plugin/dialog-plugin'
 import DrawerPlugin from './plugin/drawer-plugin'
 import { IconPluginPosition } from './plugin/dto/icon-plugin-position.enum'
+import { IconViewProps } from './plugin/dto/icon-view-props.interface'
 import { PluginType } from './plugin/dto/plugin-type.enum'
 import { PluginViewProps } from './plugin/dto/plugin-view-props.interface'
 import IconPlugin from './plugin/icon-plugin'
 import ViewPlugin from './plugin/view-plugin'
 import { C3, C4 } from './type/general/color.type'
 import { V2, V3, V4 } from './type/general/vector.type'
+import { MixView } from './type/view/mix-view'
 import CryptoUtils from './utils/crypto-utils'
 import DataUtils from './utils/data-utils'
 import FileUtils from './utils/file-utils'
@@ -298,6 +302,8 @@ export type {
   BasePluginConfig,
   PluginState,
   SpaceServiceApi,
+  MixView,
+  IconViewProps,
   Page,
   Screen,
   StepChangeSubscriber,

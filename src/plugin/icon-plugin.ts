@@ -1,4 +1,6 @@
 import { ThemeColor } from '@/api/service/main/theme/dto/theme-color.enum'
+import { IconViewProps } from '@/plugin/dto/icon-view-props.interface'
+import { MixView } from '@/type/view/mix-view'
 
 import BasePlugin from './base-plugin'
 import { IconPluginPosition } from './dto/icon-plugin-position.enum'
@@ -11,7 +13,7 @@ export default interface IconPlugin extends BasePlugin {
 
   open: boolean
 
-  icon: () => string
+  icon: MixView<IconViewProps>
 
   onEnabledChange?: (value: boolean, e: MouseEvent) => void
   onIconClick?: (e: MouseEvent) => void

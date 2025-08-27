@@ -21,5 +21,5 @@ export default interface PluginContainerServiceApi {
 
   closePlugin(plugin: IconPlugin): boolean
 
-  closePluginByPosition(position: IconPluginPosition): boolean
+  closeDrawerPluginByPosition(position: IconPluginPosition): boolean
 }
