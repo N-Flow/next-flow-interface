@@ -8,4 +8,6 @@ export default interface SyncServiceApi {
   clientId: number
 
   generateId(prefix: string): string
+
+  reset(): boolean
 }

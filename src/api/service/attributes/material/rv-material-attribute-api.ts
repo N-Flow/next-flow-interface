@@ -13,6 +13,8 @@ export default interface RvMaterialAttributeApi {
 
   defaultNodeValue: RvMaterialNode
 
+  defaultTextureValue: RvMaterialTexture
+
   defaultValue: RvMaterial
 
   generateTexture(

@@ -9,3 +9,5 @@ export default interface RsServiceApi {
     rendering: boolean
   }
 }
+
+export type SceneFunction = () => Scene

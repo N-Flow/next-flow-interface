@@ -21,6 +21,7 @@ import SkyboxAnimationApi from '@/api/service/engine/animation/entry/environment
 import EasyPropertyAnimationApi from '@/api/service/engine/animation/factory/between/easy-property-animation-api'
 import RsLoopAnimationManagerApi from '@/api/service/engine/animation/factory/loop/rs-loop-animation-manager-api'
 import RsAudioServiceApi from '@/api/service/engine/audio/rs-audio-service-api'
+import RsSelectionApi from '@/api/service/engine/operate/selection/rs-selection-api'
 import RsSelectionServiceApi from '@/api/service/engine/operate/selection/rs-selection-service-api'
 import RsClickApi from '@/api/service/engine/render/click/rs-click-api'
 import RsEnvironmentApi from '@/api/service/engine/render/environment/rs-environment-api'
@@ -33,7 +34,7 @@ import RsSeparateServiceApi from '@/api/service/engine/render/material/separate/
 import RsTextureServiceApi from '@/api/service/engine/render/material/texture/rs-texture-service-api'
 import FirstLoadModelServiceApi from '@/api/service/engine/render/model/first/first-load-model-service-api'
 import RsModelServiceApi from '@/api/service/engine/render/model/rs-model-service-api'
-import RsServiceApi from '@/api/service/engine/rs-service-api'
+import RsServiceApi, { SceneFunction } from '@/api/service/engine/rs-service-api'
 import ContextMenuServiceApi from '@/api/service/main/context-menu/context-menu-service-api'
 import DialogServiceApi from '@/api/service/main/dialog/dialog-service-api'
 import FirstLoadServiceApi from '@/api/service/main/file/first/first-load-service-api'
@@ -152,6 +153,7 @@ export interface NfpApi {
 
       operate: {
         rsSelectionService: RsSelectionServiceApi
+        rsSelection: RsSelectionApi
       }
 
       render: {
@@ -169,6 +171,7 @@ export interface NfpApi {
       }
 
       rsService: RsServiceApi
+      scene: SceneFunction
     }
 
     sync: {

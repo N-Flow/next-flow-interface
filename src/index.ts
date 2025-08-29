@@ -64,6 +64,7 @@ import RsSelectionState, {
   RsSelectionMaterialInfo,
 } from './api/service/engine/operate/selection/dto/rs-selection-state.interface'
 import { SelectedSubscriber } from './api/service/engine/operate/selection/dto/selected-subscriber.type'
+import RsSelectionApi from './api/service/engine/operate/selection/rs-selection-api'
 import RsSelectionServiceApi from './api/service/engine/operate/selection/rs-selection-service-api'
 import RsClickApi from './api/service/engine/render/click/rs-click-api'
 import RsEnvironmentApi from './api/service/engine/render/environment/rs-environment-api'
@@ -94,7 +95,7 @@ import {
 import FirstLoadModelServiceApi from './api/service/engine/render/model/first/first-load-model-service-api'
 import RsModelServiceApi from './api/service/engine/render/model/rs-model-service-api'
 import RsNodeServiceApi from './api/service/engine/render/model/rs-node-service-api'
-import RsServiceApi from './api/service/engine/rs-service-api'
+import RsServiceApi, { SceneFunction } from './api/service/engine/rs-service-api'
 import ContextMenuServiceApi from './api/service/main/context-menu/context-menu-service-api'
 import ContextMenu from './api/service/main/context-menu/context-menu.class'
 import { ContextMenuController } from './api/service/main/context-menu/dto/context-menu-controller.interface'
@@ -511,6 +512,8 @@ export type {
   RsSelectionMaterialInfo,
   AwarenessServiceApi,
   AwarenessChangeSubscriber,
+  SceneFunction,
+  RsSelectionApi,
 }
 
 export {
