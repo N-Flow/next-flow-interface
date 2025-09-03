@@ -132,6 +132,7 @@ import {
 import OssUploadServiceApi from './api/service/main/file/oss/oss-upload-service-api'
 import { Locale } from './api/service/main/internationalization/dto/locale'
 import InternationalizationServiceApi, {
+  NamespaceSubscriber,
   Translator,
 } from './api/service/main/internationalization/internationalization-service-api'
 import Meeting from './api/service/main/meeting/dto/meeting'
@@ -350,6 +351,7 @@ export type {
   RsdTitleProps,
   ThemeProviderProps,
   InternationalizationServiceApi,
+  NamespaceSubscriber,
   UserAuth,
   UserInfo,
   UserServiceApi,
