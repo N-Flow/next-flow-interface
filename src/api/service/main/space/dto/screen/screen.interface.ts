@@ -9,6 +9,5 @@ export default interface Screen {
 
   focusMode: FocusMode
 
-  babylonConsoleLoaded: boolean
   showBabylonConsole: boolean
 }
