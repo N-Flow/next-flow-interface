@@ -36,7 +36,7 @@ import RsSeparateServiceApi from '@/api/service/engine/render/material/separate/
 import RsTextureServiceApi from '@/api/service/engine/render/material/texture/rs-texture-service-api'
 import FirstLoadModelServiceApi from '@/api/service/engine/render/model/first/first-load-model-service-api'
 import RsModelServiceApi from '@/api/service/engine/render/model/rs-model-service-api'
-import RsServiceApi, { SceneFunction } from '@/api/service/engine/rs-service-api'
+import RsServiceApi from '@/api/service/engine/rs-service-api'
 import ContextMenuServiceApi from '@/api/service/main/context-menu/context-menu-service-api'
 import DialogServiceApi from '@/api/service/main/dialog/dialog-service-api'
 import FirstLoadServiceApi from '@/api/service/main/file/first/first-load-service-api'
@@ -89,7 +89,6 @@ import LocalDataServiceApi from './service/main/file/local/local-data-service-ap
 import InternationalizationServiceApi from './service/main/internationalization/internationalization-service-api'
 import MeetingServiceApi from './service/main/meeting/meeting-service-api'
 import PluginServiceApi from './service/main/plugin/plugin-service-api'
-import ModulePreloaderApi from './service/main/preloader/module-preloader-api'
 import sceneServiceApi from './service/main/scene/scene-service-api'
 import SpaceServiceApi from './service/main/space/space-service-api'
 import StatusServiceApi from './service/main/status/status-service-api'
@@ -121,7 +120,6 @@ export interface NfpApi {
       internationalizationService: InternationalizationServiceApi
       userService: UserServiceApi
       meetingService: MeetingServiceApi
-      modulePreloader: ModulePreloaderApi
       messageService: MessageServiceApi
       localDataService: LocalDataServiceApi
       ossUploadService: OssUploadServiceApi
@@ -173,7 +171,6 @@ export interface NfpApi {
       }
 
       rsService: RsServiceApi
-      scene: SceneFunction
     }
 
     sync: {

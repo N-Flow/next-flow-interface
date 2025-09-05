@@ -97,7 +97,7 @@ import {
 import FirstLoadModelServiceApi from './api/service/engine/render/model/first/first-load-model-service-api'
 import RsModelServiceApi from './api/service/engine/render/model/rs-model-service-api'
 import RsNodeServiceApi from './api/service/engine/render/model/rs-node-service-api'
-import RsServiceApi, { SceneFunction } from './api/service/engine/rs-service-api'
+import RsServiceApi from './api/service/engine/rs-service-api'
 import ContextMenuServiceApi from './api/service/main/context-menu/context-menu-service-api'
 import ContextMenu from './api/service/main/context-menu/context-menu.class'
 import { ContextMenuController } from './api/service/main/context-menu/dto/context-menu-controller.interface'
@@ -169,7 +169,6 @@ import PluginContainerServiceApi, {
   PluginInformation,
 } from './api/service/main/plugin/plugin-container-service-api'
 import PluginServiceApi from './api/service/main/plugin/plugin-service-api'
-import ModulePreloaderApi from './api/service/main/preloader/module-preloader-api'
 import FileData from './api/service/main/resource/dto/file-data.interface'
 import ResourceServiceApi from './api/service/main/resource/resource-service-api'
 import SceneServiceApi from './api/service/main/scene/scene-service-api'
@@ -358,7 +357,6 @@ export type {
   UserInfo,
   UserServiceApi,
   MeetingServiceApi,
-  ModulePreloaderApi,
   SyncServiceApi,
   FlexGrowProps,
   RvGlobalServiceApi,
@@ -517,7 +515,6 @@ export type {
   RsSelectionMaterialInfo,
   AwarenessServiceApi,
   AwarenessChangeSubscriber,
-  SceneFunction,
   RsSelectionApi,
   InternationalizationProviderProps,
 }
