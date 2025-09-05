@@ -6,6 +6,7 @@ import { AntSelectProps } from './api/components/ant/ant-select-props'
 import { AntSwitchProps } from './api/components/ant/ant-switch-props'
 import ThemeProviderProps from './api/components/ant/theme-provider-props'
 import { FlexGrowProps } from './api/components/dev/flex-grow-props'
+import InternationalizationProviderProps from './api/components/dev/internationalization-provider-props'
 import MainPortalProps from './api/components/dev/main-portal-props'
 import {
   DivProps,
@@ -39,6 +40,7 @@ import { UseBase } from './api/hook/use-base.type'
 import { UseStepOptions } from './api/hook/use-step-options.type'
 import { UseTAttributes } from './api/hook/use-t-attributes.type'
 import { UseTStep } from './api/hook/use-t-step.type'
+import { UseTranslations } from './api/hook/use-translations.type'
 import { NfpApi } from './api/nfp-api'
 import RvLoopAttributeApi from './api/service/attributes/animation/loop/rv-loop-attribute-api'
 import RvNativeAttributeApi from './api/service/attributes/animation/native/rv-native-attribute-api'
@@ -451,6 +453,7 @@ export type {
   UseTStep,
   UseTAttributes,
   UseStepOptions,
+  UseTranslations,
   V2,
   V3,
   V4,
@@ -516,6 +519,7 @@ export type {
   AwarenessChangeSubscriber,
   SceneFunction,
   RsSelectionApi,
+  InternationalizationProviderProps,
 }
 
 export {

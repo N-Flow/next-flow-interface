@@ -1,10 +1,12 @@
 import { AntEmptyProps } from '@/api/components/ant/ant-empty-props'
+import InternationalizationProviderProps from '@/api/components/dev/internationalization-provider-props'
 import MainPortalProps from '@/api/components/dev/main-portal-props'
 import { MaterialSymbolProps } from '@/api/components/normal/material-symbol-props'
 import ResourcePreviewProps from '@/api/components/normal/resource-preview-props'
 import { UseBase } from '@/api/hook/use-base.type'
 import { UseStepOptions } from '@/api/hook/use-step-options.type'
 import { UseTStep } from '@/api/hook/use-t-step.type'
+import { UseTranslations } from '@/api/hook/use-translations.type'
 import RvLoopAttributeApi from '@/api/service/attributes/animation/loop/rv-loop-attribute-api'
 import RvNativeAttributeApi from '@/api/service/attributes/animation/native/rv-native-attribute-api'
 import RvCodeAttributeApi from '@/api/service/attributes/code/rv-code-attribute-api'
@@ -198,6 +200,7 @@ export interface NfpApi {
     useTStep: UseTStep
     useTAttributes: UseTAttributes
     useStepOptions: UseStepOptions
+    useTranslations: UseTranslations
   }
 
   components: {
@@ -244,6 +247,7 @@ export interface NfpApi {
     dev: {
       FlexGrow: FunctionComponent<FlexGrowProps>
       MainPortal: FunctionComponent<MainPortalProps>
+      InternationalizationProvider: FunctionComponent<InternationalizationProviderProps>
     }
   }
 
