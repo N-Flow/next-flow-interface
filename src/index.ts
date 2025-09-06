@@ -36,6 +36,9 @@ import { RsdNumberProps } from './api/components/rsd/rsd-number-props'
 import { RsdSelectProps } from './api/components/rsd/rsd-select-props'
 import { RsdSwitchProps } from './api/components/rsd/rsd-switch-props'
 import { RsdTitleProps } from './api/components/rsd/rsd-title-props'
+import DomNotFoundError from './api/error/dom-not-found.error'
+import NotFoundError from './api/error/not-found.error'
+import StaticClassInstantiationError from './api/error/static-class-instantiation.error'
 import { UseBase } from './api/hook/use-base.type'
 import { UseStepOptions } from './api/hook/use-step-options.type'
 import { UseTAttributes } from './api/hook/use-t-attributes.type'
@@ -579,4 +582,7 @@ export {
   LabelTheme,
   LabelInfo,
   DialogContentAlign,
+  DomNotFoundError,
+  NotFoundError,
+  StaticClassInstantiationError,
 }
