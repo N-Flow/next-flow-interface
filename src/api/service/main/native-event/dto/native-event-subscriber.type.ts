@@ -1,13 +1,3 @@
-import {
-  DragEvent,
-  FocusEvent,
-  KeyboardEvent,
-  MouseEvent,
-  PointerEvent,
-  UIEvent,
-  WheelEvent,
-} from 'react'
-
 export type NativeMouseEventSubscriber = (e: MouseEvent) => void
 
 export type NativeDragEventSubscriber = (e: DragEvent) => void

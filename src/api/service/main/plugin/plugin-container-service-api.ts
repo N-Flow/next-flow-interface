@@ -17,9 +17,9 @@ export default interface PluginContainerServiceApi {
 
   removePlugin(plugin: BasePlugin): void
 
-  openPlugin(plugin: IconPlugin): boolean
+  openPlugin(plugin: IconPlugin): Promise<boolean>
 
-  closePlugin(plugin: IconPlugin): boolean
+  closePlugin(plugin: IconPlugin): Promise<boolean>
 
-  closeDrawerPluginByPosition(position: IconPluginPosition): boolean
+  closeDrawerPluginByPosition(position: IconPluginPosition): Promise<boolean>
 }
