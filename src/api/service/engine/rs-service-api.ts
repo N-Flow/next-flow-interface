@@ -1,9 +1,9 @@
-import { Engine, Scene, WebXRDefaultExperience } from '@babylonjs/core'
+import { Engine, Scene, WebGPUEngine, WebXRDefaultExperience } from '@babylonjs/core'
 
 export default interface RsServiceApi {
   canvas: HTMLCanvasElement | undefined
   scene: Scene | undefined
-  engine: Engine | undefined
+  engine: Engine | WebGPUEngine | undefined
 
   experience: WebXRDefaultExperience | null
 
