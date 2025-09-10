@@ -10,4 +10,10 @@ export default interface RsServiceApi {
   state: {
     rendering: boolean
   }
+
+  isSupportWebXR(): boolean
+
+  isWebXRInitialized(): boolean
+
+  enterVR(onInitialize: () => void): Promise<void>
 }
