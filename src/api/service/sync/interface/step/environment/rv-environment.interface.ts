@@ -13,8 +13,7 @@ export default interface RvEnvironment {
 
   ground: {
     opacityRate: number
-    diffuseColor: string
-    emissiveColor: string
+    baseColor: string
     enableOnViewerMode: boolean
     enableOnEditorMode: boolean
   }
