@@ -2,7 +2,7 @@ import { MeetingStatus } from '@/api/service/main/meeting/dto/meeting-status'
 import { ShareMode } from '@/api/service/main/meeting/dto/share-mode'
 
 export interface RvMeetingCurrent {
-  presenter: string
+  presenterId: number
   state: {
     personNumber: number
   }
@@ -11,7 +11,7 @@ export interface RvMeetingCurrent {
     clickShareMode: ShareMode
     cursorShareMode: ShareMode
   }
-  visitors: string[]
+  visitors: number[]
 }
 
 export interface RvMeetingStatistic {
