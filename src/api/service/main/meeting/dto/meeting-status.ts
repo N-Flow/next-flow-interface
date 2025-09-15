@@ -1,8 +1,7 @@
 export enum MeetingStatus {
-  NONE = 'NONE',
-  WAITING = 'WAITING',
+  PENDING = 'PENDING',
   PROGRESSING = 'PROGRESSING',
   ENDED = 'ENDED',
-  REMOVED = 'REMOVED',
+  CANCELED = 'CANCELED',
   BANNED = 'BANNED',
 }

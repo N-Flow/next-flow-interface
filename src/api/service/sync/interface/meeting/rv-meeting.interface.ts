@@ -15,14 +15,16 @@ export interface RvMeetingCurrent {
 }
 
 export interface RvMeetingStatistic {
-  total: number
+  people: {
+    total: number
+  }
 }
 
 export default interface RvMeeting {
   meetingId: string
   status: MeetingStatus
   startTime: number
-  endTime: number
-  current?: RvMeetingCurrent
-  statistic?: RvMeetingStatistic
+  current: RvMeetingCurrent
+  statistic: RvMeetingStatistic
+  endTime?: number
 }

@@ -140,7 +140,7 @@ import InternationalizationServiceApi, {
   NamespaceSubscriber,
   Translator,
 } from './api/service/main/internationalization/internationalization-service-api'
-import Meeting from './api/service/main/meeting/dto/meeting'
+import MeetingState from './api/service/main/meeting/dto/meeting-state'
 import { MeetingStatus } from './api/service/main/meeting/dto/meeting-status'
 import { ShareMode } from './api/service/main/meeting/dto/share-mode'
 import MeetingServiceApi from './api/service/main/meeting/meeting-service-api'
@@ -304,7 +304,7 @@ import VectorUtils from './utils/vector-utils'
 export type {
   NfpApi,
   Translator,
-  Meeting,
+  MeetingState,
   BasePluginConfig,
   PluginState,
   SpaceServiceApi,

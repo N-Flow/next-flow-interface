@@ -1,10 +1,13 @@
 import { MeetingStatus } from './meeting-status'
 import { ShareMode } from './share-mode'
 
-export default interface Meeting {
+export default interface MeetingState {
   mid: string
   presenterId: number
   status: MeetingStatus
+
+  startTime: number
+  people: number
 
   allFollow: boolean
   clickShareMode: ShareMode
