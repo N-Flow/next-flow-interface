@@ -27,7 +27,7 @@ export default interface RvAwareness {
   user: RvAwarenessUser
   device: RvAwarenessDevice
   sid: string
-  mid: string
+  meetingId: string
   selected: string[]
   camera: RvCameraLocation
   clicks: RvAwarenessClick[]

@@ -21,8 +21,6 @@ export default interface RvMeetingServiceApi {
 
   getRvMeetingById(id: string): StoredRhineVar<RvMeeting> | null
 
-  setConfigByCurrentMeeting(): boolean
-
   generateId(): string
 
   removeAllMeetings(): void

@@ -2,7 +2,7 @@ import { MeetingStatus } from './meeting-status'
 import { ShareMode } from './share-mode'
 
 export default interface MeetingState {
-  mid: string
+  meetingId: string
   presenterId: number
   status: MeetingStatus
 

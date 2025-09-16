@@ -19,9 +19,6 @@ export default interface MeetingServiceApi {
   // 会议中 且 身份为观众 且 实际镜头状态为不跟随
   isUnfollowingVisitor(): boolean
 
-  // 设置会议本地配置信息
-  setConfigInfo(allFollow: boolean, clickShareMode: ShareMode, cursorShareMode: ShareMode): void
-
   // 获取邀请链接
   getInvitationLink(): string
 }
