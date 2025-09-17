@@ -7,9 +7,9 @@ export default interface MeetingState {
   status: MeetingStatus
 
   startTime: number
-  people: number
+  peopleCount: number
 
-  allFollow: boolean
+  forceFollow: boolean
   clickShareMode: ShareMode
   cursorShareMode: ShareMode
 

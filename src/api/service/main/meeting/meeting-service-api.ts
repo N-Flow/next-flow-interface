@@ -1,5 +1,4 @@
 import MeetingState from '@/api/service/main/meeting/dto/meeting-state'
-import { ShareMode } from '@/api/service/main/meeting/dto/share-mode'
 
 export default interface MeetingServiceApi {
   state: MeetingState

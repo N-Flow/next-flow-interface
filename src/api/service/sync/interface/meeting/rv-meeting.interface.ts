@@ -4,10 +4,10 @@ import { ShareMode } from '@/api/service/main/meeting/dto/share-mode'
 export interface RvMeetingCurrent {
   presenterId: number
   state: {
-    personNumber: number
+    peopleCount: number
   }
   config: {
-    allFollow: boolean
+    forceFollow: boolean
     clickShareMode: ShareMode
     cursorShareMode: ShareMode
   }
