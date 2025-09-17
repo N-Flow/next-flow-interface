@@ -194,6 +194,7 @@ import UserAuth from './api/service/main/user/dto/user-auth.interface'
 import UserInfo from './api/service/main/user/dto/user-info.interface'
 import UserServiceApi from './api/service/main/user/user-service-api'
 import AwarenessServiceApi, {
+  AwarenessChanges,
   AwarenessChangeSubscriber,
 } from './api/service/sync/awareness/awareness-service-api'
 import { HistoryServiceStateSubscriber } from './api/service/sync/dto/history-service-state-subscriber.type'
@@ -307,6 +308,7 @@ export type {
   MeetingState,
   BasePluginConfig,
   PluginState,
+  AwarenessChanges,
   SpaceServiceApi,
   MixView,
   IconViewProps,

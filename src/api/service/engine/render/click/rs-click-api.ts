@@ -1,7 +1,7 @@
 import { V3 } from '@/type/general/vector.type'
 
 export default interface RsClickApi {
-  simplifyDoneList(): void
+  simplifyDoneList(delay: number): void
 
-  show(position: V3, color: string, timestamp: number, id?: string): void
+  show(position: V3, color: string, timestamp: number, duration?: number, id?: string): void
 }
