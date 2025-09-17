@@ -14,7 +14,7 @@ export interface RvAwarenessDevice {
 
 export interface RvAwarenessClick {
   position: V3
-  time: number
+  timestamp: number
 }
 
 export interface RvAwarenessWindow {
