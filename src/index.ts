@@ -108,7 +108,7 @@ import { ContextMenuCreateOptions } from './api/service/main/context-menu/dto/co
 import { MenuLineCreateOptions } from './api/service/main/context-menu/dto/menu-line-create-options.interface'
 import { MenuLineType } from './api/service/main/context-menu/dto/menu-line-type.enum'
 import MenuLine from './api/service/main/context-menu/menu-line.class'
-import DialogServiceApi from './api/service/main/dialog/dialog-service-api'
+import DialogServiceApi, { DialogRenderer } from './api/service/main/dialog/dialog-service-api'
 import Dialog, { DialogContentAlign } from './api/service/main/dialog/dialog.class'
 import DialogCreateOptions from './api/service/main/dialog/dto/dialog-create-options.interface'
 import { FirstLoadServiceStatus } from './api/service/main/file/first/dto/first-load-service-status.enum'
@@ -336,6 +336,7 @@ export type {
   AntEmptyProps,
   AnchorProps,
   ContextMenuProps,
+  DialogRenderer,
   FileProgressBarProps,
   ProgressBarProps,
   UploadButtonAndListProps,
