@@ -110,7 +110,6 @@ import { MenuLineType } from './api/service/main/context-menu/dto/menu-line-type
 import MenuLine from './api/service/main/context-menu/menu-line.class'
 import DialogServiceApi from './api/service/main/dialog/dialog-service-api'
 import Dialog, { DialogContentAlign } from './api/service/main/dialog/dialog.class'
-import DialogController from './api/service/main/dialog/dto/dialog-controller.interface'
 import DialogCreateOptions from './api/service/main/dialog/dto/dialog-create-options.interface'
 import { FirstLoadServiceStatus } from './api/service/main/file/first/dto/first-load-service-status.enum'
 import {
@@ -388,7 +387,6 @@ export type {
   MessageServiceApi,
   MessageType,
   MessageState,
-  DialogController,
   DialogServiceApi,
   DialogCreateOptions,
   RvSeparate,

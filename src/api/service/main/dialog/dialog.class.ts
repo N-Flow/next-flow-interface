@@ -4,8 +4,6 @@ import DialogCreateOptions from '@/api/service/main/dialog/dto/dialog-create-opt
 
 import { ThemeColor } from '../theme/dto/theme-color.enum'
 
-import DialogController from './dto/dialog-controller.interface'
-
 export enum DialogContentAlign {
   LEFT = 'LEFT',
   CENTER = 'CENTER',
@@ -81,7 +79,6 @@ export default class Dialog {
     public closeOnCloseButtonClick = true,
     public alignButton = true,
 
-    public controller: DialogController | null = null,
     public inputValue: string = defaultValue,
     public createTime: Date = new Date(),
     public focusInput: () => void = () => {
