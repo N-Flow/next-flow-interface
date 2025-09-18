@@ -7,12 +7,12 @@ import { DialogContentAlign } from '../dialog.class'
 export default interface DialogCreateOptions {
   id?: string // 对话框的唯一id
   title?: string // 标题
-  titleIcon?: FunctionComponent // 标题左侧图标
+  titleIcon?: FunctionComponent | string // 标题左侧图标
   content?: string // 内容
   contentAlign?: DialogContentAlign // 内容对齐方式 默认为 'LEFT'
-  contentView?: FunctionComponent // 中间视图
-  icon?: FunctionComponent // 图标
-  view?: FunctionComponent // 视图 全屏于整个对话框
+  contentView?: FunctionComponent | string // 中间视图
+  icon?: FunctionComponent | string // 图标
+  view?: FunctionComponent | string // 视图 全屏于整个对话框
   theme?: ThemeColor
   leftMode?: boolean // 左对齐模式
   className?: string // 对话框框体 类名

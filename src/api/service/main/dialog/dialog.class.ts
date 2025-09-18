@@ -16,12 +16,12 @@ export default class Dialog {
 
     public id: string,
     public title = '',
-    public titleIcon: FunctionComponent | undefined = undefined,
+    public titleIcon: FunctionComponent | string | undefined = undefined,
     public content = '',
     public contentAlign: DialogContentAlign = DialogContentAlign.LEFT,
-    public contentView: FunctionComponent | undefined = undefined,
-    public icon: FunctionComponent | undefined = undefined,
-    public view: FunctionComponent | undefined = undefined,
+    public contentView: FunctionComponent | string | undefined = undefined,
+    public icon: FunctionComponent | string | undefined = undefined,
+    public view: FunctionComponent | string | undefined = undefined,
 
     public theme: ThemeColor = ThemeColor.BLUE,
     public leftMode = false,
@@ -84,6 +84,7 @@ export default class Dialog {
     public focusInput: () => void = () => {
       /* Default focus input handler */
     },
+    public elements: Map<string, HTMLElement> = new Map(),
   ) {}
 
   static fromOptions(id: string, options: DialogCreateOptions): Dialog {
