@@ -22,6 +22,8 @@ export default interface ResourceServiceApi {
     fidList?: string[],
   ): void
 
+  addByOssUrl(ossUrl: string, name?: string, fid?: string, check?: boolean): Promise<string>
+
   generateDescribeAndPreview(file: File): Promise<[string, File | null]>
 
   generatePreviewFile(img: HTMLImageElement | HTMLVideoElement, name: string): Promise<File>
