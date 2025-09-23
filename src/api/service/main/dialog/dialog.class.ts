@@ -77,7 +77,7 @@ export default class Dialog {
     public closeOnCancel = true,
     public closeOnOutsideClick = false,
     public closeOnCloseButtonClick = true,
-    public alignButton = true,
+    public alignButton = false,
 
     public inputValue: string = defaultValue,
     public createTime: Date = new Date(),
