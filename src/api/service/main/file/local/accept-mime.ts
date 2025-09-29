@@ -7,6 +7,7 @@ export const ANY = '*/*'
 
 export const UNKNOWN = 'unknown/unknown'
 
+export const SCENE = 'babylonjs/scene'
 export const MESH = 'babylonjs/mesh'
 export const LIGHT = 'babylonjs/light'
 export const CAMERA = 'babylonjs/camera'
@@ -58,11 +59,11 @@ export const MARKDOWN = 'text/markdown'
 
 export const SUPPORT_IMAGE_LIST = [JPG, PNG]
 
-export const SUPPORT_MODEL_LIST = [GLB, GLTF, STL, OBJ]
+export const SUPPORT_MODEL_LIST = [SCENE, GLB, GLTF, STL, OBJ]
 
 export const SUPPORT_VIDEO_LIST = [MP4]
 
-export const SUPPORT_BABYLON_LIST = [MESH, LIGHT, CAMERA, TEXTURE, MATERIAL, UV, ANIMATION]
+export const SUPPORT_BABYLON_LIST = [SCENE, MESH, LIGHT, CAMERA, TEXTURE, MATERIAL, UV, ANIMATION]
 
 export const SUPPORT_AUDIO_LIST = [MP3, WAV]
 
@@ -104,6 +105,11 @@ export const ATTACH_LIST = [TEXTURE, MATERIAL, UV]
 
 export async function getMimeByBlob(object?: File | Blob) {
   if (object && object instanceof Blob) {
+    if (object instanceof File) {
+      if (object.name.endsWith('.babylon')) {
+        return SCENE
+      }
+    }
     const ftr = await fileTypeFromBlob(object)
     if (!ftr) {
       if (object instanceof File) {
@@ -119,6 +125,9 @@ export async function getMimeByBlob(object?: File | Blob) {
 
 export async function getMimeByPath(path?: string) {
   if (path) {
+    if (path.endsWith('.babylon')) {
+      return SCENE
+    }
     const mime = (await import('mime')).default
     return mime.getType(path) ?? UNKNOWN
   }
@@ -128,6 +137,9 @@ export async function getMimeByPath(path?: string) {
 export async function getMimeByUrl(url?: string) {
   if (!url) {
     return UNKNOWN
+  }
+  if (url.endsWith('.babylon')) {
+    return SCENE
   }
   try {
     const response = await fetch(url)
@@ -197,6 +209,9 @@ export async function getMime(
 }
 
 export async function getExtension(mime: string = UNKNOWN) {
+  if (mime === SCENE) {
+    return 'babylon'
+  }
   if (isBabylon(mime) || isAttach(mime)) {
     return mime
   }
