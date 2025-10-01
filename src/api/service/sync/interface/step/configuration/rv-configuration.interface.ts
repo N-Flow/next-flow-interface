@@ -2,10 +2,11 @@ import { ThemeBackground } from '@/api/service/main/theme/dto/theme-background.e
 import RvAudio from '@/api/service/sync/interface/step/configuration/audio-info/rv-audio.interface'
 
 export default interface RvConfiguration {
-  description: {
-    collapseDefault: boolean
-    enable: boolean
-    text: string
+  information: {
+    collapseDescription: boolean
+    description: string
+    favorite: boolean
+    group: string
   }
   interval: {
     enable: boolean
