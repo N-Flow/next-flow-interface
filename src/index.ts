@@ -227,6 +227,7 @@ import { RvBasicType } from './api/service/sync/interface/model/config/rv-basic-
 import RvNode from './api/service/sync/interface/model/node/rv-node.interface'
 import { RvModelOrigin } from './api/service/sync/interface/model/rv-model-origin.enum'
 import RvModel from './api/service/sync/interface/model/rv-model.interface'
+import RvPlugin, { VersionPoint } from './api/service/sync/interface/plugin/rv-plugin.interface'
 import { RvAttachType } from './api/service/sync/interface/resource/rv-attach-type.enum'
 import { RvResourceType } from './api/service/sync/interface/resource/rv-resource-type.enum'
 import RvResource from './api/service/sync/interface/resource/rv-resource.interface'
@@ -470,6 +471,7 @@ export type {
   RvLoop,
   RvLoopAttributeApi,
   RvNative,
+  RvPlugin,
   RvNativeAttributeApi,
   CameraConfigurationAnimationApi,
   CameraLocationAnimationApi,
@@ -561,6 +563,8 @@ export {
   LocalDataType,
   OssUploadInstanceStatus,
   OssUploadServiceEventType,
+  VersionPoint,
+  DefaultLevel,
   RvFileType,
   RvAttachType,
   RvFileServiceEventType,
