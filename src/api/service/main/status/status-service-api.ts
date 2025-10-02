@@ -44,13 +44,13 @@ export default interface StatusServiceApi {
 
   waitAllInitialized(): Promise<boolean>
 
-  subscribePluginLoaded(subscriber: StatusChangeSubscriber): () => void
+  subscribePluginInstalled(subscriber: StatusChangeSubscriber): () => void
 
-  unsubscribePluginLoaded(subscriber: StatusChangeSubscriber): void
+  unsubscribePluginInstalled(subscriber: StatusChangeSubscriber): void
 
-  afterPluginLoaded(subscriber: StatusChangeSubscriber): void
+  afterPluginInstalled(subscriber: StatusChangeSubscriber): void
 
-  waitPluginLoaded(): Promise<boolean>
+  waitPluginInstalled(): Promise<boolean>
 
   subscribeFileLoaded(subscriber: StatusChangeSubscriber): () => void
 

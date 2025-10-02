@@ -4,9 +4,11 @@ export default interface Status {
   SyncInitialized: boolean
   RsInitialized: boolean
   AllInitialized: boolean
-  PluginLoaded: boolean
+  PluginInstalled: boolean
+  PluginPreLoaded: boolean
   FileLoaded: boolean
   ModelLoaded: boolean
+  PluginPreRendered: boolean
   Rendered: boolean
   Shown: boolean
 }
