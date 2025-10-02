@@ -8,6 +8,7 @@ export default interface RvPlugin {
 }
 
 export enum PluginDefaultLevel {
+  NONE = 'NONE',
   ADD = 'ADD',
   ENABLE = 'ENABLE',
   OPEN = 'OPEN',
@@ -15,5 +16,6 @@ export enum PluginDefaultLevel {
 
 export enum VersionPoint {
   LATEST_STABLE = 'LATEST_STABLE',
+  LATEST_NIGHTLY = 'LATEST_NIGHTLY',
   LATEST_CANARY = 'LATEST_CANARY',
 }
