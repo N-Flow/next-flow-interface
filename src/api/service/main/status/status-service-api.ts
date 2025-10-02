@@ -52,6 +52,14 @@ export default interface StatusServiceApi {
 
   waitPluginInstalled(): Promise<boolean>
 
+  subscribePluginPreLoaded(subscriber: StatusChangeSubscriber): () => void
+
+  unsubscribePluginPreLoaded(subscriber: StatusChangeSubscriber): void
+
+  afterPluginPreLoaded(subscriber: StatusChangeSubscriber): void
+
+  waitPluginPreLoaded(): Promise<boolean>
+
   subscribeFileLoaded(subscriber: StatusChangeSubscriber): () => void
 
   unsubscribeFileLoaded(subscriber: StatusChangeSubscriber): void
@@ -67,6 +75,14 @@ export default interface StatusServiceApi {
   afterModelLoaded(subscriber: StatusChangeSubscriber): void
 
   waitModelLoaded(): Promise<boolean>
+
+  subscribePluginPreRendered(subscriber: StatusChangeSubscriber): () => void
+
+  unsubscribePluginPreRendered(subscriber: StatusChangeSubscriber): void
+
+  afterPluginPreRendered(subscriber: StatusChangeSubscriber): void
+
+  waitPluginPreRendered(): Promise<boolean>
 
   subscribeRendered(subscriber: StatusChangeSubscriber): () => void
 
