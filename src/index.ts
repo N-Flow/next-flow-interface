@@ -228,7 +228,7 @@ import RvNode from './api/service/sync/interface/model/node/rv-node.interface'
 import { RvModelOrigin } from './api/service/sync/interface/model/rv-model-origin.enum'
 import RvModel from './api/service/sync/interface/model/rv-model.interface'
 import RvPlugin, {
-  PluginDefaultLevel,
+  EnableLevel,
   VersionPoint,
 } from './api/service/sync/interface/plugin/rv-plugin.interface'
 import { RvAttachType } from './api/service/sync/interface/resource/rv-attach-type.enum'
@@ -567,7 +567,7 @@ export {
   OssUploadInstanceStatus,
   OssUploadServiceEventType,
   VersionPoint,
-  PluginDefaultLevel,
+  EnableLevel,
   RvFileType,
   RvAttachType,
   RvFileServiceEventType,
