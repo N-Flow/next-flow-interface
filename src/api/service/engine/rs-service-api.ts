@@ -7,9 +7,7 @@ export default interface RsServiceApi {
 
   experience: WebXRDefaultExperience | null
 
-  state: {
-    rendering: boolean
-  }
+  rendering: boolean
 
   isSupportWebXR(): boolean
 
