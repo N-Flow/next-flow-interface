@@ -2,12 +2,12 @@ export default interface RvPlugin {
   id: string
   version: string | VersionPoint
   default: {
-    viewer: DefaultLevel
-    editor: DefaultLevel
+    viewer: PluginDefaultLevel
+    editor: PluginDefaultLevel
   }
 }
 
-export enum DefaultLevel {
+export enum PluginDefaultLevel {
   ADD = 'ADD',
   ENABLE = 'ENABLE',
   OPEN = 'OPEN',
