@@ -16,6 +16,14 @@ export default interface PluginServiceApi {
    */
   plugins: Map<string, PluginState>
 
+  createPreLoadedHook(id: string): void
+
+  completePreLoadedHook(id: string): void
+
+  createPreRenderedHook(id: string): void
+
+  completePreRenderedHook(id: string): void
+
   /**
    * 获取插件状态
    *
