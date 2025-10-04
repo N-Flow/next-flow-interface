@@ -15,7 +15,6 @@ import {
   SpanPropsSimple,
 } from './api/components/interface/base-types'
 import { AnchorProps } from './api/components/normal/anchor-props'
-import { ContextMenuProps } from './api/components/normal/context-menu-props'
 import { FileProgressBarProps } from './api/components/normal/file-progress-bar-props'
 import { MaterialSymbolProps } from './api/components/normal/material-symbol-props'
 import { ProgressBarProps } from './api/components/normal/progress-bar-props'
@@ -338,7 +337,6 @@ export type {
   AntSelectProps,
   AntEmptyProps,
   AnchorProps,
-  ContextMenuProps,
   FileProgressBarProps,
   ProgressBarProps,
   UploadButtonAndListProps,
