@@ -5,15 +5,8 @@ import DialogCreateOptions from '@/api/service/main/dialog/dto/dialog-create-opt
 import { ThemeBackground } from '@/api/service/main/theme/dto/theme-background.enum'
 import { ThemeColor } from '@/api/service/main/theme/dto/theme-color.enum'
 
-export interface DialogRenderer {
-  open: (dialog: Dialog) => Promise<boolean>
-  close: (dialog: Dialog) => Promise<boolean>
-}
-
 export default interface DialogServiceApi {
   dialogs: Dialog[]
-
-  renderer: DialogRenderer | null
 
   /**
    * 创建对话框 最全面的对话框创建方法

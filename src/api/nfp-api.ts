@@ -65,7 +65,6 @@ import ThemeProviderProps from './components/ant/theme-provider-props'
 import { FlexGrowProps } from './components/dev/flex-grow-props'
 import { SpanProps } from './components/interface/base-types'
 import { AnchorProps } from './components/normal/anchor-props'
-import { DialogProps } from './components/normal/dialog-props'
 import { FileProgressBarProps } from './components/normal/file-progress-bar-props'
 import { ProgressBarProps } from './components/normal/progress-bar-props'
 import { ScrollBarProps } from './components/normal/scroll-bar-props'
@@ -218,7 +217,6 @@ export interface NfpApi {
       ProgressBar: FunctionComponent<ProgressBarProps>
       UploadButtonAndList: FunctionComponent<UploadButtonAndListProps>
       ScrollBar: FunctionComponent<ScrollBarProps>
-      Dialog: FunctionComponent<DialogProps>
       MaterialSymbol: FunctionComponent<MaterialSymbolProps>
       ResourcePreview: FunctionComponent<ResourcePreviewProps>
     }
