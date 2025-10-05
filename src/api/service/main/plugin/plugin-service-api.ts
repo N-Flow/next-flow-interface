@@ -5,6 +5,7 @@ import { PluginEventType } from '@/api/service/main/plugin/dto/plugin-event-type
 import { PluginServiceSubscriber } from '@/api/service/main/plugin/dto/plugin-service-subscriber.type'
 import PluginState from '@/api/service/main/plugin/dto/plugin-state.interface'
 import BasePlugin from '@/plugin/base-plugin'
+import { PluginType } from '@/plugin/dto/plugin-type.enum'
 
 export default interface PluginServiceApi {
   /**
@@ -123,4 +124,10 @@ export default interface PluginServiceApi {
   waitInstall(id: string): Promise<void>
 
   waitEnable(id: string): Promise<void>
+
+  isOpenablePlugin(type: PluginType): boolean
+
+  isSideBarPlugin(type: PluginType): boolean
+
+  isViewPlugin(type: PluginType): boolean
 }
