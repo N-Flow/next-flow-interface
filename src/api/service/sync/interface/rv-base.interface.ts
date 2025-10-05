@@ -1,15 +1,14 @@
-import RvFile from '@/api/service/sync/interface/file/rv-file.interface'
-import RvHistory from '@/api/service/sync/interface/history/RvHistory.interface'
-import RvMeeting from '@/api/service/sync/interface/meeting/rv-meeting.interface'
-import RvModel from '@/api/service/sync/interface/model/rv-model.interface'
-import RvPlugin from '@/api/service/sync/interface/plugin/rv-plugin.interface'
-import RvResource from '@/api/service/sync/interface/resource/rv-resource.interface'
-import RvVersion from '@/api/service/sync/interface/version/rv-version.interface'
-
+import RvFile from './file/rv-file.interface'
 import RvGlobal from './global/rv-global.interface'
+import RvHistory from './history/RvHistory.interface'
+import RvMeeting from './meeting/rv-meeting.interface'
+import RvModel from './model/rv-model.interface'
+import RvPlugin from './plugin/rv-plugin'
+import RvResource from './resource/rv-resource.interface'
 import RvSceneNode from './scene/rv-scene-node.interface'
 import RvSeparate from './separate/rv-separate.interface'
 import RvStep from './step/rv-step.interface'
+import RvVersion from './version/rv-version.interface'
 
 import type { RhineVarArray, RhineVarMap } from 'rhine-var'
 
@@ -18,7 +17,7 @@ export default interface RvBase {
   order: RhineVarArray<string>
   steps: RhineVarMap<RvStep>
 
-  plugins: RhineVarMap<RvPlugin>
+  plugin: RvPlugin
 
   files: RhineVarMap<RvFile>
   resources: RhineVarMap<RvResource>

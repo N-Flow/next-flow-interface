@@ -225,10 +225,12 @@ import { RvBasicType } from './api/service/sync/interface/model/config/rv-basic-
 import RvNode from './api/service/sync/interface/model/node/rv-node.interface'
 import { RvModelOrigin } from './api/service/sync/interface/model/rv-model-origin.enum'
 import RvModel from './api/service/sync/interface/model/rv-model.interface'
-import RvPlugin, {
+import RvPlugin from './api/service/sync/interface/plugin/rv-plugin'
+import RvPluginConfig, {
   EnableLevel,
   VersionPoint,
-} from './api/service/sync/interface/plugin/rv-plugin.interface'
+} from './api/service/sync/interface/plugin/rv-plugin-config.interface'
+import RvPluginDebug from './api/service/sync/interface/plugin/rv-plugin-debug'
 import { RvAttachType } from './api/service/sync/interface/resource/rv-attach-type.enum'
 import { RvResourceType } from './api/service/sync/interface/resource/rv-resource-type.enum'
 import RvResource from './api/service/sync/interface/resource/rv-resource.interface'
@@ -470,6 +472,8 @@ export type {
   RvLoopAttributeApi,
   RvNative,
   RvPlugin,
+  RvPluginConfig,
+  RvPluginDebug,
   RvNativeAttributeApi,
   CameraConfigurationAnimationApi,
   CameraLocationAnimationApi,

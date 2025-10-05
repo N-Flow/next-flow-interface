@@ -1,4 +1,4 @@
-export default interface RvPlugin {
+export default interface RvPluginConfig {
   version: string | VersionPoint
   enable: {
     viewer: EnableLevel
