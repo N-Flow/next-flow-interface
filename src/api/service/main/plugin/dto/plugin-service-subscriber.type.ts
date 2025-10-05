@@ -4,7 +4,7 @@ import PluginState from './plugin-state.interface'
 /**
  * 插件服务订阅者
  *
+ * @param id 插件id
  * @param type 事件类型
- * @param plugin 插件状态
  */
-export type PluginServiceSubscriber = (type: PluginEventType, plugin?: PluginState) => void
+export type PluginServiceSubscriber = (id: string, type: PluginEventType) => void

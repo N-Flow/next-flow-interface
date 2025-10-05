@@ -1,6 +1,7 @@
 import BuiltInPluginConfig from '@/api/service/main/plugin/dto/built-in-plugin-config.interface'
 import ExternalPluginConfig from '@/api/service/main/plugin/dto/external-plugin-config.interface'
 import { PluginConfig } from '@/api/service/main/plugin/dto/plugin-config.type'
+import { PluginEventType } from '@/api/service/main/plugin/dto/plugin-event-type.enum'
 import { PluginServiceSubscriber } from '@/api/service/main/plugin/dto/plugin-service-subscriber.type'
 import PluginState from '@/api/service/main/plugin/dto/plugin-state.interface'
 import BasePlugin from '@/plugin/base-plugin'
@@ -57,11 +58,6 @@ export default interface PluginServiceApi {
   add(config: PluginConfig): Promise<void>
 
   /**
-   * 添加所有官方插件
-   */
-  addOfficialPlugins(): Promise<void>
-
-  /**
    * 添加外部插件
    *
    * @param config
@@ -97,6 +93,20 @@ export default interface PluginServiceApi {
   enable(id: string): Promise<void>
 
   /**
+   * 打开插件 (侧栏中的可开启项)
+   *
+   * @param id  插件 ID
+   */
+  open(id: string): Promise<void>
+
+  /**
+   * 关闭插件
+   *
+   * @param id  插件 ID
+   */
+  close(id: string): Promise<void>
+
+  /**
    * 禁用插件
    *
    * @param id  插件 ID
@@ -109,4 +119,8 @@ export default interface PluginServiceApi {
    * @param id  插件 ID
    */
   uninstall(id: string): Promise<void>
+
+  waitInstall(id: string): Promise<void>
+
+  waitEnable(id: string): Promise<void>
 }
