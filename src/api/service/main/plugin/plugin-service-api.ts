@@ -1,7 +1,4 @@
-import BuiltInPluginConfig from '@/api/service/main/plugin/dto/built-in-plugin-config.interface'
-import ExternalPluginConfig from '@/api/service/main/plugin/dto/external-plugin-config.interface'
 import { PluginConfig } from '@/api/service/main/plugin/dto/plugin-config.type'
-import { PluginEventType } from '@/api/service/main/plugin/dto/plugin-event-type.enum'
 import { PluginServiceSubscriber } from '@/api/service/main/plugin/dto/plugin-service-subscriber.type'
 import PluginState from '@/api/service/main/plugin/dto/plugin-state.interface'
 import BasePlugin from '@/plugin/base-plugin'
@@ -57,27 +54,6 @@ export default interface PluginServiceApi {
    * @param config  插件配置
    */
   add(config: PluginConfig): Promise<void>
-
-  /**
-   * 添加外部插件
-   *
-   * @param config
-   */
-  addExternal(config: ExternalPluginConfig): Promise<void>
-
-  /**
-   * 添加内置插件
-   *
-   * @param config
-   */
-  addBuiltIn(config: BuiltInPluginConfig): void
-
-  /**
-   * 调试插件 对接插件项目的dev模式 进行自动热重载
-   *
-   * @param config  插件配置
-   */
-  debug(config: ExternalPluginConfig): void
 
   /**
    * 安装插件

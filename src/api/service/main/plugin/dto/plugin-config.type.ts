@@ -1,5 +1,21 @@
-import ExternalPluginConfig from '@/api/service/main/plugin/dto/external-plugin-config.interface'
+import { FunctionComponent } from 'react'
 
-import BuiltInPluginConfig from './built-in-plugin-config.interface'
+export interface PluginConfig {
+  id: string
 
-export type PluginConfig = BuiltInPluginConfig | ExternalPluginConfig
+  url: string
+
+  official?: boolean
+  necessary?: boolean
+  private?: boolean
+
+  css?: boolean | string
+  debug?: string
+
+  information: {
+    name: string
+    icon?: FunctionComponent | string
+    version?: string
+    description?: string
+  }
+}

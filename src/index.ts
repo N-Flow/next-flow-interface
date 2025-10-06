@@ -156,12 +156,8 @@ import {
   NativeWheelEventSubscriber,
 } from './api/service/main/native-event/dto/native-event-subscriber.type'
 import NativeEventServiceApi from './api/service/main/native-event/native-event-service-api'
-import BasePluginConfig from './api/service/main/plugin/dto/base-plugin-config.interface'
-import BuiltInPluginConfig from './api/service/main/plugin/dto/built-in-plugin-config.interface'
-import ExternalPluginConfig from './api/service/main/plugin/dto/external-plugin-config.interface'
 import { PluginConfig } from './api/service/main/plugin/dto/plugin-config.type'
 import { PluginEventType } from './api/service/main/plugin/dto/plugin-event-type.enum'
-import { PluginFrom } from './api/service/main/plugin/dto/plugin-from.enum'
 import { PluginServiceSubscriber } from './api/service/main/plugin/dto/plugin-service-subscriber.type'
 import PluginState from './api/service/main/plugin/dto/plugin-state.interface'
 import PluginConnectorApi from './api/service/main/plugin/plugin-connector-api'
@@ -309,7 +305,6 @@ export type {
   NfpApi,
   Translator,
   MeetingState,
-  BasePluginConfig,
   PluginState,
   AwarenessChanges,
   SpaceServiceApi,
@@ -367,8 +362,6 @@ export type {
   FlexGrowProps,
   RvGlobalServiceApi,
   HistoryServiceApi,
-  BuiltInPluginConfig,
-  ExternalPluginConfig,
   RvBase,
   RvGlobal,
   RvStep,
@@ -558,7 +551,6 @@ export {
   Dialog,
   RvPresetType,
   RvMaterialType,
-  PluginFrom,
   RvModelOrigin,
   PluginEventType,
   LocalDataStatus,
