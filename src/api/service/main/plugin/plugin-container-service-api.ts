@@ -13,7 +13,7 @@ export interface PluginInformation {
 export default interface PluginContainerServiceApi {
   plugins: Map<string, PluginInformation>
 
-  addPlugin(plugin: BasePlugin): Promise<void>
+  addPlugin(plugin: BasePlugin): void
 
   removePlugin(plugin: BasePlugin): void
 
