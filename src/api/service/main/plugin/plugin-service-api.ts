@@ -53,7 +53,7 @@ export default interface PluginServiceApi {
    *
    * @param config  插件配置
    */
-  add(config: PluginConfig): Promise<void>
+  add(config: PluginConfig): Promise<boolean>
 
   /**
    * 安装插件
