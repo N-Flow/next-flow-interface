@@ -1,7 +1,7 @@
 export default interface RvPluginDebug {
   id: string
   name: string
-  enabled: boolean
+  enable: boolean
   url: string
   hmr: string
 }
