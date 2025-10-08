@@ -10,7 +10,6 @@ export interface PluginConfig {
   private?: boolean
 
   css?: boolean | string
-  debug?: string
 
   information: {
     name: string
