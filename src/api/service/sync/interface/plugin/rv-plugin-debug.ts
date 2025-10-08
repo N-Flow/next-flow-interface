@@ -1,4 +1,4 @@
 export default interface RvPluginDebug {
-  port: number
-  debugPort: number
+  url: string
+  hmr: string
 }
