@@ -1,5 +1,4 @@
 import { PluginEventType } from './plugin-event-type.enum'
-import PluginState from './plugin-state.interface'
 
 /**
  * 插件服务订阅者

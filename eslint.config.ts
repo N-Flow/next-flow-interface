@@ -11,6 +11,7 @@ import tsParser from '@typescript-eslint/parser'
 import { defineConfig } from 'eslint/config'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
 import { importX } from 'eslint-plugin-import-x'
+import unusedImports from 'eslint-plugin-unused-imports'
 import globals from 'globals'
 import tseslint, { type ConfigArray } from 'typescript-eslint'
 
@@ -138,6 +139,22 @@ if (OPTIONS.ENABLE_SCRIPT) {
       {
         ...importX.flatConfigs.typescript,
         files: allScriptFiles,
+      },
+      {
+        files: allScriptFiles,
+        plugins: {
+          'unused-imports': unusedImports,
+        },
+        rules: {
+          'unused-imports/no-unused-imports': 'error',
+          'unused-imports/no-unused-vars': [
+            'error',
+            {
+              vars: 'all',
+              args: 'after-used',
+            },
+          ],
+        },
       },
       {
         files: allScriptFiles,

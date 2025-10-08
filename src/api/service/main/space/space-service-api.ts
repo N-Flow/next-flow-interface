@@ -26,7 +26,6 @@ export default interface SpaceServiceApi {
 
   setScreenSize(size: ScreenSize): void
 
-
   isEditorPage(type?: PageType): boolean
 
   isBoxMode(mode?: PageMode): boolean

@@ -1,8 +1,6 @@
 import RsSelectionNodeInfo from './dto/rs-selection-node-info'
 
-
 export default interface RsSelectionApi {
-
   set(nid: string): void
 
   add(nid: string): void
@@ -14,5 +12,4 @@ export default interface RsSelectionApi {
   has(nid: string): boolean
 
   get(nid: string): RsSelectionNodeInfo | null
-
 }

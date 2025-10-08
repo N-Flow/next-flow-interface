@@ -17,4 +17,3 @@ export interface RsSelectionMaterialInfo {
   hasChildrenNumber: number
   isAbstractMeshNumber: number
 }
-
