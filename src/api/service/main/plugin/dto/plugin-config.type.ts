@@ -9,7 +9,7 @@ export interface PluginConfig {
   necessary?: boolean
   private?: boolean
 
-  css?: boolean | string
+  css?: boolean
 
   information: {
     name: string

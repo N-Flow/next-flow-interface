@@ -4,4 +4,5 @@ export default interface RvPluginDebug {
   enable: boolean
   url: string
   hmr: string
+  css: boolean
 }
