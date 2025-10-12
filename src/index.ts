@@ -134,9 +134,11 @@ import {
 import OssUploadServiceApi from './api/service/main/file/oss/oss-upload-service-api'
 import { Locale } from './api/service/main/internationalization/dto/locale'
 import InternationalizationServiceApi, {
+  Messages,
   NamespaceSubscriber,
   Translator,
 } from './api/service/main/internationalization/internationalization-service-api'
+import { MessageLoader } from './api/service/main/internationalization/message-loader.type'
 import MeetingState from './api/service/main/meeting/dto/meeting-state'
 import { MeetingStatus } from './api/service/main/meeting/dto/meeting-status'
 import { ShareMode } from './api/service/main/meeting/dto/share-mode'
@@ -518,6 +520,8 @@ export type {
   AwarenessChangeSubscriber,
   RsSelectionApi,
   InternationalizationProviderProps,
+  Messages,
+  MessageLoader,
 }
 
 export {

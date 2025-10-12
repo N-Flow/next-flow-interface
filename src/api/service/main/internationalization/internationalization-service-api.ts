@@ -1,8 +1,13 @@
 import { Locale } from '@/api/service/main/internationalization/dto/locale'
+import { MessageLoader } from '@/api/service/main/internationalization/message-loader.type'
 
 export type Translator = (key: string) => string
 
 export type NamespaceSubscriber = (namespaces: string[]) => void
+
+export interface Messages {
+  [key: string]: Messages | string
+}
 
 export default interface InternationalizationServiceApi {
   // 全部支持的语言
@@ -13,11 +18,13 @@ export default interface InternationalizationServiceApi {
   // 当前的语言
   locale: Locale
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  messages: Record<string, any>
+  messages: Messages
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  load(messages: Record<string, any>): void
+  // 直接导入多语言
+  load(messages: Messages): Promise<boolean>
+
+  // 应用多语言导入器
+  applyLoader(loader: MessageLoader): Promise<boolean>
 
   // 获取翻译器，wait为true则自动等待对应namespace加载成功
   getTranslator(namespace?: string, wait?: boolean): Promise<Translator>
