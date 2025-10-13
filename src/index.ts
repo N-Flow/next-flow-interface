@@ -72,7 +72,6 @@ import RsSelectionServiceApi from './api/service/engine/operate/selection/rs-sel
 import RsClickApi from './api/service/engine/render/click/rs-click-api'
 import RsEnvironmentApi from './api/service/engine/render/environment/rs-environment-api'
 import RsEnvironmentServiceApi from './api/service/engine/render/environment/rs-environment-service-api'
-import RsTransformGroundApi from './api/service/engine/render/environment/rs-transform-ground-api'
 import LabelInfo from './api/service/engine/render/label/dto/label-info'
 import { LabelTheme } from './api/service/engine/render/label/dto/label-theme.enum'
 import RsLabelServiceApi from './api/service/engine/render/label/rs-label-service-api'
@@ -504,7 +503,6 @@ export type {
   RsAudioServiceApi,
   RsClickApi,
   RsEnvironmentApi,
-  RsTransformGroundApi,
   RsLabelServiceApi,
   RsNodeMaterialManagerApi,
   NodeMaterialInfo,

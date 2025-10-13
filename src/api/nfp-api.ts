@@ -28,7 +28,6 @@ import RsSelectionServiceApi from '@/api/service/engine/operate/selection/rs-sel
 import RsClickApi from '@/api/service/engine/render/click/rs-click-api'
 import RsEnvironmentApi from '@/api/service/engine/render/environment/rs-environment-api'
 import RsEnvironmentServiceApi from '@/api/service/engine/render/environment/rs-environment-service-api'
-import RsTransformGroundApi from '@/api/service/engine/render/environment/rs-transform-ground-api'
 import RsLabelServiceApi from '@/api/service/engine/render/label/rs-label-service-api'
 import RsNodeMaterialManagerApi from '@/api/service/engine/render/material/node/rs-node-material-manager-api'
 import RsMaterialServiceApi from '@/api/service/engine/render/material/rs-material-service-api'
@@ -161,7 +160,6 @@ export interface NfpApi {
         rsEnvironment: RsEnvironmentApi
         rsEnvironmentService: RsEnvironmentServiceApi
         rsTextureService: RsTextureServiceApi
-        rsTransformGround: RsTransformGroundApi
         rsClick: RsClickApi
         rsLabelService: RsLabelServiceApi
         rsNodeMaterialManager: RsNodeMaterialManagerApi

@@ -1,5 +1,4 @@
 import { Locale } from '@/api/service/main/internationalization/dto/locale'
-import { MessageLoader } from '@/api/service/main/internationalization/message-loader.type'
 
 export type Translator = (key: string) => string
 
@@ -22,10 +21,7 @@ export default interface InternationalizationServiceApi {
   messages: MessageTree
 
   // 直接导入多语言
-  load(messages: MessageTree): boolean
-
-  // 应用多语言导入器
-  applyLoader(loader: MessageLoader): Promise<boolean>
+  load(messages: MessageTree): Promise<boolean>
 
   // 获取翻译器，wait为true则自动等待对应namespace加载成功
   getTranslator(namespace?: string, wait?: boolean): Promise<Translator>
