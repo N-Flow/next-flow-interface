@@ -1,6 +1,6 @@
 {
   "name": "next-flow-interface",
-  "version": "0.19.6",
+  "version": "0.19.7",
   "description": "Interface package for NEXT FlOW. You can use this package to build your own plugin that can control anything.",
   "type": "module",
   "module": "dist/index.js",
