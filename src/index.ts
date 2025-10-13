@@ -134,7 +134,7 @@ import {
 import OssUploadServiceApi from './api/service/main/file/oss/oss-upload-service-api'
 import { Locale } from './api/service/main/internationalization/dto/locale'
 import InternationalizationServiceApi, {
-  Messages,
+  MessageTree,
   NamespaceSubscriber,
   Translator,
 } from './api/service/main/internationalization/internationalization-service-api'
@@ -520,7 +520,7 @@ export type {
   AwarenessChangeSubscriber,
   RsSelectionApi,
   InternationalizationProviderProps,
-  Messages,
+  MessageTree,
   MessageLoader,
 }
 

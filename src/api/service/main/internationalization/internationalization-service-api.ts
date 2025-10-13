@@ -5,8 +5,9 @@ export type Translator = (key: string) => string
 
 export type NamespaceSubscriber = (namespaces: string[]) => void
 
-export interface Messages {
-  [key: string]: Messages | string
+export type MessageLeaf = string
+export interface MessageTree {
+  [key: string]: MessageTree | MessageLeaf
 }
 
 export default interface InternationalizationServiceApi {
@@ -18,10 +19,10 @@ export default interface InternationalizationServiceApi {
   // 当前的语言
   locale: Locale
 
-  messages: Messages
+  messages: MessageTree
 
   // 直接导入多语言
-  load(messages: Messages): Promise<boolean>
+  load(messages: MessageTree): boolean
 
   // 应用多语言导入器
   applyLoader(loader: MessageLoader): Promise<boolean>
