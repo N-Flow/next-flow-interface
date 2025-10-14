@@ -45,7 +45,7 @@ const globalConfig = defineConfig([
 const jsFileExtensions = 'cjs,js,jsx,mjs,mjsx'
 const tsFileExtensions = 'cts,ts,tsx,mts,mtsx'
 const scriptFileExtensions = `${jsFileExtensions},${tsFileExtensions}`
-const allJsFiles = [`**/*.{${jsFileExtensions}}`]
+const allJsFiles = [`**/*.{${jsFileExtensions}}`] // eslint-disable-line unused-imports/no-unused-vars
 const allTsFiles = [`**/*.{${tsFileExtensions}}`]
 const allScriptFiles = [`**/*.{${scriptFileExtensions}}`]
 
@@ -135,25 +135,33 @@ if (OPTIONS.ENABLE_SCRIPT) {
       {
         ...importX.flatConfigs.recommended,
         files: allScriptFiles,
+        settings: {
+          'import-x/resolver': {
+            typescript: {
+              alwaysTryTypes: true,
+              project: './tsconfig.json',
+            },
+            node: true,
+          },
+        },
       },
       {
         ...importX.flatConfigs.typescript,
         files: allScriptFiles,
+        settings: {
+          'import-x/resolver': {
+            typescript: {
+              alwaysTryTypes: true,
+              project: './tsconfig.json',
+            },
+            node: true,
+          },
+        },
       },
       {
         files: allScriptFiles,
         plugins: {
           'unused-imports': unusedImports,
-        },
-        rules: {
-          'unused-imports/no-unused-imports': 'error',
-          'unused-imports/no-unused-vars': [
-            'error',
-            {
-              vars: 'all',
-              args: 'after-used',
-            },
-          ],
         },
       },
       {
@@ -245,6 +253,7 @@ const customConfig: ConfigArray = defineConfig([
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-empty-function': 'off',
       '@typescript-eslint/require-await': 'off',
+      'import-x/no-anonymous-default-export': 'error',
       'import-x/no-named-as-default': 'error',
       'import-x/no-named-as-default-member': 'off',
       'import-x/order': [
@@ -278,6 +287,14 @@ const customConfig: ConfigArray = defineConfig([
           sortTypesGroup: true,
         },
       ],
+      'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-vars': [
+        'off',
+        {
+          vars: 'all',
+          args: 'after-used',
+        },
+      ],
     },
   },
   {
@@ -307,7 +324,7 @@ const customConfig: ConfigArray = defineConfig([
   },
 ])
 
-const config = [
+const config: ConfigArray = [
   ...globalConfig,
   ...scriptConfig,
   ...frontendConfig,
