@@ -1,4 +1,5 @@
 import { Locale } from '@/api/service/main/internationalization/dto/locale'
+import { Translator } from '@/api/service/main/internationalization/internationalization-service-api'
 import { ThemeColor } from '@/api/service/main/theme/dto/theme-color.enum'
 
 import { PluginType } from './dto/plugin-type.enum'
@@ -8,6 +9,9 @@ export default interface BasePlugin {
   name: string // 插件项目名
   version: string
   description: string
+
+  namespace: string
+  intl: Translator
 
   type: PluginType
   theme: ThemeColor
