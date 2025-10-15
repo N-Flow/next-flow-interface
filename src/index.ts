@@ -156,7 +156,9 @@ import {
   NativeUIEventSubscriber,
   NativeWheelEventSubscriber,
 } from './api/service/main/native-event/dto/native-event-subscriber.type'
-import NativeEventServiceApi from './api/service/main/native-event/native-event-service-api'
+import NativeEventServiceApi, {
+  NativeEventSubscribeOption,
+} from './api/service/main/native-event/native-event-service-api'
 import { PluginConfig } from './api/service/main/plugin/dto/plugin-config.type'
 import { PluginEventType } from './api/service/main/plugin/dto/plugin-event-type.enum'
 import { PluginServiceSubscriber } from './api/service/main/plugin/dto/plugin-service-subscriber.type'
@@ -520,6 +522,7 @@ export type {
   InternationalizationProviderProps,
   MessageTree,
   MessageLoader,
+  NativeEventSubscribeOption,
 }
 
 export {
