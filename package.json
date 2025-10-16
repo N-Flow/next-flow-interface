@@ -6,9 +6,9 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "watch": "tsup src/index.ts --dts --format esm --sourcemap --watch",
+    "watch": "vite build --watch",
     "test": "echo All tests passed.",
-    "build": "tsup src/index.ts --dts --format esm --minify terser --clean",
+    "build": "vite build",
     "type:check": "tsc --noEmit",
     "lint": "eslint --fix .",
     "lint:check": "eslint .",
@@ -79,10 +79,11 @@
     "react": "19.1.1",
     "react-dom": "19.1.1",
     "terser": "^5.43.1",
-    "tsup": "^8.5.0",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.39.1",
-    "valtio": "2.1.7"
+    "valtio": "2.1.7",
+    "vite": "^7.1.10",
+    "vite-plugin-dts": "^4.5.4"
   },
   "peerDependencies": {
     "@babylonjs/core": "8.26.2",
