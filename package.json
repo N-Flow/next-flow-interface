@@ -61,6 +61,7 @@
     "@types/react": "19.1.1",
     "@types/react-dom": "19.1.1",
     "@typescript-eslint/project-service": "^8.39.1",
+    "ajv": "^8.17.1",
     "antd": "5.27.0",
     "brotli-wasm": "^3.0.1",
     "clsx": "2.1.1",

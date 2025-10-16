@@ -13,7 +13,18 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['lit', 'react', 'react-dom', '@lit/react'],
+      external: [
+        '@babylonjs/core',
+        'antd',
+        'brotli-wasm',
+        'clsx',
+        'file-type',
+        'mime',
+        'react',
+        'react-dom',
+        'valtio',
+        'rhine-var',
+      ],
       output: {
         preserveModules: false,
         compact: true,
@@ -22,14 +33,18 @@ export default defineConfig({
       plugins: [],
     },
     minify: true,
-    sourcemap: false,
+    sourcemap: true,
     outDir: 'dist',
     emptyOutDir: true,
   },
   esbuild: {
     legalComments: 'none',
   },
-  plugins: [dts()],
+  plugins: [
+    dts({
+      rollupTypes: true,
+    }),
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
