@@ -7,8 +7,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "watch": "vite build --watch",
-    "test": "echo All tests passed.",
     "build": "vite build",
+    "test": "echo All tests passed.",
     "type:check": "tsc --noEmit",
     "lint": "eslint --fix .",
     "lint:check": "eslint .",

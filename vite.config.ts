@@ -3,6 +3,8 @@ import path, { resolve } from 'path'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 
+const isWatch = process.argv.includes('--watch')
+
 export default defineConfig({
   build: {
     lib: {
@@ -28,12 +30,12 @@ export default defineConfig({
       output: {
         preserveModules: false,
         compact: true,
-        sourcemap: false,
+        sourcemap: isWatch,
       },
       plugins: [],
     },
-    minify: true,
-    sourcemap: true,
+    minify: !isWatch,
+    sourcemap: isWatch,
     outDir: 'dist',
     emptyOutDir: true,
   },
@@ -42,7 +44,7 @@ export default defineConfig({
   },
   plugins: [
     dts({
-      rollupTypes: true,
+      rollupTypes: !isWatch,
     }),
   ],
   resolve: {
