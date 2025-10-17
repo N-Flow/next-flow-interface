@@ -1,5 +1,5 @@
-import { ThemeColor } from '@/api/service/main/theme/dto/theme-color.enum'
 import { IconViewProps } from '@/plugin/dto/icon-view-props.interface'
+import { ThemeColor } from '@/service/main/theme/dto/theme-color.enum'
 import { MixView } from '@/type/view/mix-view'
 
 import BasePlugin from './base-plugin'

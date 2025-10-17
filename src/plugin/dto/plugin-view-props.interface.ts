@@ -1,4 +1,4 @@
-import { DivProps } from '@/api/components/interface/base-types'
+import { DivProps } from '@/components/interface/base-types'
 import DialogPlugin from '@/plugin/dialog-plugin'
 import ViewPlugin from '@/plugin/view-plugin'
 

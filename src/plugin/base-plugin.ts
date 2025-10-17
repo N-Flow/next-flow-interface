@@ -1,5 +1,5 @@
-import { Locale } from '@/api/service/main/internationalization/dto/locale'
-import { ThemeColor } from '@/api/service/main/theme/dto/theme-color.enum'
+import { Locale } from '@/service/main/internationalization/dto/locale'
+import { ThemeColor } from '@/service/main/theme/dto/theme-color.enum'
 
 import { PluginType } from './dto/plugin-type.enum'
 

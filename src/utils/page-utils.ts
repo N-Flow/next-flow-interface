@@ -1,4 +1,4 @@
-import { PageType } from '../api/service/main/space/dto/page/page-type.enum'
+import { PageType } from '../service/main/space/dto/page/page-type.enum'
 
 export function getPageTypeBySpaceText(space: string): PageType {
   if (space === 'space') {

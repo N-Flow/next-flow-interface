@@ -10,7 +10,7 @@ export default defineConfig({
     lib: {
       entry: {
         index: resolve(__dirname, 'src/index.ts'),
-        'instance/index': resolve(__dirname, 'src/instance/index.ts'),
+        'api/index': resolve(__dirname, 'src/api/index.ts'),
       },
       formats: ['es'],
     },
@@ -44,7 +44,7 @@ export default defineConfig({
   },
   plugins: [
     dts({
-      rollupTypes: !isWatch,
+      rollupTypes: false,
     }),
   ],
   resolve: {

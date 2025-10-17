@@ -1,0 +1,30 @@
+import { MeetingStatus } from '@/service/main/meeting/dto/meeting-status'
+import { ShareMode } from '@/service/main/meeting/dto/share-mode'
+
+export interface RvMeetingCurrent {
+  presenterId: number
+  state: {
+    peopleCount: number
+  }
+  config: {
+    forceFollow: boolean
+    clickShareMode: ShareMode
+    cursorShareMode: ShareMode
+  }
+  visitors: number[]
+}
+
+export interface RvMeetingStatistic {
+  people: {
+    total: number
+  }
+}
+
+export default interface RvMeeting {
+  meetingId: string
+  status: MeetingStatus
+  startTime: number
+  current: RvMeetingCurrent
+  statistic: RvMeetingStatistic
+  endTime?: number
+}
