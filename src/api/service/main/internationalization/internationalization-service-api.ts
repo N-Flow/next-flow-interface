@@ -1,6 +1,6 @@
 import { Locale } from '@/api/service/main/internationalization/dto/locale'
 
-export type Translator = (key: string) => string
+export type Translator = (strings: TemplateStringsArray, ...values: unknown[]) => string
 
 export type NamespaceSubscriber = (namespaces: string[]) => void
 
@@ -24,10 +24,10 @@ export default interface InternationalizationServiceApi {
   load(messages: MessageTree): Promise<boolean>
 
   // 获取翻译器
-  getTranslator(namespace?: string): Translator
+  createTranslator(namespace?: string): Translator
 
   // 等待对应namespace加载成功 并获取翻译
-  getTranslatorWithWait(namespace?: string): Promise<Translator>
+  createTranslatorWithWait(namespace?: string): Promise<Translator>
 
   // 监听messages变化
   subscribe(subscriber: NamespaceSubscriber): () => void
