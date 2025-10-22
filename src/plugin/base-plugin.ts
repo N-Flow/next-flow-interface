@@ -1,4 +1,5 @@
 import { Locale } from '@/service/main/internationalization/dto/locale'
+import { MessageTree } from '@/service/main/internationalization/internationalization-service-api'
 import { ThemeColor } from '@/service/main/theme/dto/theme-color.enum'
 
 import { PluginType } from './dto/plugin-type.enum'
@@ -17,8 +18,7 @@ export default interface BasePlugin {
 
   data?: Record<string, unknown>
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  messages?: Record<Locale, Record<string, any>> | string
+  messages?: Record<Locale, MessageTree>
 
   onInstall?: () => Promise<void>
   onEnable?: () => Promise<void>
