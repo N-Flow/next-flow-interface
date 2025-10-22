@@ -21,7 +21,7 @@ export default interface InternationalizationServiceApi {
   messages: MessageTree
 
   // 直接导入多语言
-  load(messages: MessageTree): Promise<boolean>
+  load(messages: MessageTree): boolean
 
   // 获取翻译器
   createTranslator(namespace?: string): Translator

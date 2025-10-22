@@ -33,7 +33,7 @@ import { UseBase } from '@/hook/use-base.type'
 import { UseStepOptions } from '@/hook/use-step-options.type'
 import { UseTAttributes } from '@/hook/use-t-attributes.type'
 import { UseTStep } from '@/hook/use-t-step.type'
-import { UseTranslations } from '@/hook/use-translations.type'
+import { UseTranslator } from '@/hook/use-translator.type'
 import RvLoopAttributeApi from '@/service/attributes/animation/loop/rv-loop-attribute-api'
 import RvNativeAttributeApi from '@/service/attributes/animation/native/rv-native-attribute-api'
 import RvCodeAttributeApi from '@/service/attributes/code/rv-code-attribute-api'
@@ -172,7 +172,7 @@ export let useBase: UseBase
 export let useTStep: UseTStep
 export let useTAttributes: UseTAttributes
 export let useStepOptions: UseStepOptions
-export let useTranslations: UseTranslations
+export let useTranslator: UseTranslator
 
 export let ThemeProvider: FunctionComponent<ThemeProviderProps>
 export let AntCheckbox: FunctionComponent<AntCheckboxProps>
