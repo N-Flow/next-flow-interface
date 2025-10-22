@@ -33,6 +33,7 @@ export default interface RvPluginDebug {
   css: string
   messages: {
     path: string
+    namespace: string
     support: Locale[]
     default: Locale
   }
