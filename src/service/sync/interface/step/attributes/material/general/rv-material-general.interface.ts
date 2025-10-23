@@ -2,6 +2,7 @@ import { RvMaterialType } from '@/service/sync/interface/step/attributes/materia
 
 export interface RvMaterialGeneral {
   type: RvMaterialType
+  show: boolean
   isPickable: boolean
   visibility: number
   receiveShadows: boolean
