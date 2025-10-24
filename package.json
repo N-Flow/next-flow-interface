@@ -19,12 +19,12 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/n-flow/next-flow-interface.git"
+    "url": "https://github.com/N-Flow/next-flow-interface.git"
   },
   "bugs": {
-    "url": "https://github.com/n-flow/next-flow-interface/issues"
+    "url": "https://github.com/N-Flow/next-flow-interface/issues"
   },
-  "homepage": "https://github.com/n-flow/next-flow-interface#readme",
+  "homepage": "https://github.com/N-Flow/next-flow-interface#readme",
   "keywords": [
     "NEXT FLOW",
     "3D Showcase",
