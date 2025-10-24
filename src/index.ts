@@ -259,6 +259,7 @@ import { RvMaterialPBR } from './service/sync/interface/step/attributes/material
 import { RvPresetType } from './service/sync/interface/step/attributes/material/preset/rv-preset-type.enum'
 import RvMaterial from './service/sync/interface/step/attributes/material/rv-material.interface'
 import { RvMaterialTexture } from './service/sync/interface/step/attributes/material/texture/rv-material-texture.interface'
+import RvNodeConfiguration from './service/sync/interface/step/attributes/node/rv-node-configuration.interface'
 import RvAttributes from './service/sync/interface/step/attributes/rv-attributes.interface'
 import RvAudio from './service/sync/interface/step/configuration/audio-info/rv-audio.interface'
 import RvConfiguration from './service/sync/interface/step/configuration/rv-configuration.interface'
@@ -521,6 +522,7 @@ export type {
   MessageTree,
   MessageLoader,
   NativeEventSubscribeOption,
+  RvNodeConfiguration,
 }
 
 export {

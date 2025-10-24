@@ -1,3 +1,4 @@
+import RvAttributes from '@/service/sync/interface/step/attributes/rv-attributes.interface'
 import RvConfiguration from '@/service/sync/interface/step/configuration/rv-configuration.interface'
 import RvEnvironment from '@/service/sync/interface/step/environment/rv-environment.interface'
 
@@ -7,7 +8,7 @@ export default interface RvStep {
   name: string
   sid: string
 
-  attributes: RhineVarMap
+  attributes: RhineVarMap<RvAttributes>
 
   configuration: RvConfiguration
   environment: RvEnvironment
