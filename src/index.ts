@@ -57,6 +57,7 @@ import RvCodeAttributeApi from './service/attributes/code/rv-code-attribute-api'
 import RvLabelAttributeApi from './service/attributes/label/rv-label-attribute-api'
 import RvLocationAttributeApi from './service/attributes/location/rv-location-attribute-api'
 import RvMaterialAttributeApi from './service/attributes/material/rv-material-attribute-api'
+import RvNodeConfigurationAttributeApi from './service/attributes/node/rv-node-configuration-attribute-api'
 import CameraConfigurationAnimationApi from './service/engine/animation/entry/environment/camera-configuration-animation-api'
 import CameraLocationAnimationApi from './service/engine/animation/entry/environment/camera-location-animation-api'
 import FogAnimationApi from './service/engine/animation/entry/environment/fog-animation-api'
@@ -523,6 +524,7 @@ export type {
   MessageLoader,
   NativeEventSubscribeOption,
   RvNodeConfiguration,
+  RvNodeConfigurationAttributeApi,
 }
 
 export {
