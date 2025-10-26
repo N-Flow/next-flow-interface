@@ -53,11 +53,11 @@ import IconPlugin from './plugin/icon-plugin'
 import ViewPlugin from './plugin/view-plugin'
 import RvLoopAttributeApi from './service/attributes/animation/loop/rv-loop-attribute-api'
 import RvNativeAttributeApi from './service/attributes/animation/native/rv-native-attribute-api'
+import RvBasicAttributeApi from './service/attributes/basic/rv-basic-attribute-api'
 import RvCodeAttributeApi from './service/attributes/code/rv-code-attribute-api'
 import RvLabelAttributeApi from './service/attributes/label/rv-label-attribute-api'
 import RvLocationAttributeApi from './service/attributes/location/rv-location-attribute-api'
 import RvMaterialAttributeApi from './service/attributes/material/rv-material-attribute-api'
-import RvNodeConfigurationAttributeApi from './service/attributes/node/rv-node-configuration-attribute-api'
 import CameraConfigurationAnimationApi from './service/engine/animation/entry/environment/camera-configuration-animation-api'
 import CameraLocationAnimationApi from './service/engine/animation/entry/environment/camera-location-animation-api'
 import FogAnimationApi from './service/engine/animation/entry/environment/fog-animation-api'
@@ -247,6 +247,7 @@ import RvSceneNode from './service/sync/interface/scene/rv-scene-node.interface'
 import RvSeparate from './service/sync/interface/separate/rv-separate.interface'
 import RvLoop from './service/sync/interface/step/attributes/animation/loop/rv-loop.interface'
 import RvNative from './service/sync/interface/step/attributes/animation/native/rv-native.interface'
+import RvBasic from './service/sync/interface/step/attributes/basic/rv-basic.interface'
 import RvCode from './service/sync/interface/step/attributes/code/rv-code.interface'
 import RvLabel from './service/sync/interface/step/attributes/label/rv-label.interface'
 import RvLocation from './service/sync/interface/step/attributes/location/rv-location.interface'
@@ -260,7 +261,6 @@ import { RvMaterialPBR } from './service/sync/interface/step/attributes/material
 import { RvPresetType } from './service/sync/interface/step/attributes/material/preset/rv-preset-type.enum'
 import RvMaterial from './service/sync/interface/step/attributes/material/rv-material.interface'
 import { RvMaterialTexture } from './service/sync/interface/step/attributes/material/texture/rv-material-texture.interface'
-import RvNodeConfiguration from './service/sync/interface/step/attributes/node/rv-node-configuration.interface'
 import RvAttributes from './service/sync/interface/step/attributes/rv-attributes.interface'
 import RvAudio from './service/sync/interface/step/configuration/audio-info/rv-audio.interface'
 import RvConfiguration from './service/sync/interface/step/configuration/rv-configuration.interface'
@@ -523,8 +523,8 @@ export type {
   MessageTree,
   MessageLoader,
   NativeEventSubscribeOption,
-  RvNodeConfiguration,
-  RvNodeConfigurationAttributeApi,
+  RvBasic,
+  RvBasicAttributeApi,
 }
 
 export {
