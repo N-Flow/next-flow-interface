@@ -10,7 +10,7 @@ import {
 } from '@/service/main/native-event/dto/native-event-subscriber.type'
 
 export interface NativeEventSubscribeOption {
-  self?: boolean
+  canvasOnly?: boolean
   once?: boolean
   capture?: boolean
 }
