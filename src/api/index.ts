@@ -104,7 +104,7 @@ export let rvLoopAttribute: RvLoopAttributeApi
 export let rvNativeAttribute: RvNativeAttributeApi
 export let rvCodeAttribute: RvCodeAttributeApi
 export let rvMaterialAttribute: RvMaterialAttributeApi
-export let rvNodeConfigurationAttribute: RvBasicAttributeApi
+export let rvBasicAttribute: RvBasicAttributeApi
 
 export let spaceService: SpaceServiceApi
 export let statusService: StatusServiceApi

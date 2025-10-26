@@ -6,7 +6,7 @@ import RvLocation from '@/service/sync/interface/step/attributes/location/rv-loc
 import RvMaterial from '@/service/sync/interface/step/attributes/material/rv-material.interface'
 
 export default interface RvAttributes {
-  node?: RvBasic
+  basic?: RvBasic
   location?: RvLocation
   material?: RvMaterial
   label?: RvLabel
