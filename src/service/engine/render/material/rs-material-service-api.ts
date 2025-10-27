@@ -15,18 +15,13 @@ export default interface RsMaterialServiceApi {
   ): void
 
   updateGeneralMaterialSingle(
-    mesh: AbstractMesh,
+    material: PBRMaterial,
     path: RvPath,
     value: unknown,
     rvGeneral: RvMaterialGeneral,
   ): void
 
-  updatePBRMaterialSingle(
-    mesh: AbstractMesh,
-    material: PBRMaterial,
-    path: RvPath,
-    value: unknown,
-  ): void
+  updatePBRMaterialSingle(material: PBRMaterial, path: RvPath, value: unknown): void
 
   updateNodeMaterialSingle(
     material: NodeMaterial,
