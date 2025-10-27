@@ -252,7 +252,7 @@ import RvBasic from './service/sync/interface/step/attributes/basic/rv-basic.int
 import RvCode from './service/sync/interface/step/attributes/code/rv-code.interface'
 import RvLabel from './service/sync/interface/step/attributes/label/rv-label.interface'
 import RvLocation from './service/sync/interface/step/attributes/location/rv-location.interface'
-import { RvMaterialGeneral } from './service/sync/interface/step/attributes/material/general/rv-material-general.interface'
+import { RvMaterialGeneral, TransparencyMode } from './service/sync/interface/step/attributes/material/general/rv-material-general.interface'
 import { RvMaterialType } from './service/sync/interface/step/attributes/material/general/rv-material-type.enum'
 import {
   RvMaterialNode,
@@ -556,6 +556,7 @@ export {
   TimeUtils,
   UrlUtils,
   DataUtils,
+  TransparencyMode,
   Message,
   Dialog,
   RvPresetType,
