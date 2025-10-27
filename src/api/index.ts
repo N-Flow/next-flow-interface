@@ -9,6 +9,7 @@ import { FlexGrowProps } from '@/components/dev/flex-grow-props'
 import InternationalizationProviderProps from '@/components/dev/internationalization-provider-props'
 import MainPortalProps from '@/components/dev/main-portal-props'
 import { SpanProps } from '@/components/interface/base-types'
+import { AdvancedButtonProps } from '@/components/normal/advanced-button-props'
 import { AnchorProps } from '@/components/normal/anchor-props'
 import { FileProgressBarProps } from '@/components/normal/file-progress-bar-props'
 import { MaterialSymbolProps } from '@/components/normal/material-symbol-props'
@@ -184,6 +185,7 @@ export let AntSelect: FunctionComponent<AntSelectProps<unknown>>
 export let AntSwitch: FunctionComponent<AntSwitchProps>
 export let AntEmpty: FunctionComponent<AntEmptyProps>
 
+export let AdvancedButton: FunctionComponent<AdvancedButtonProps>
 export let Anchor: FunctionComponent<AnchorProps>
 export let DrawerLoading: FunctionComponent<SpanProps>
 export let FileProgressBar: FunctionComponent<FileProgressBarProps>
