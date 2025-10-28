@@ -12,7 +12,6 @@ import { SpanProps } from '@/components/interface/base-types'
 import { AnchorProps } from '@/components/normal/anchor-props'
 import { FileProgressBarProps } from '@/components/normal/file-progress-bar-props'
 import { MaterialSymbolProps } from '@/components/normal/material-symbol-props'
-import { PrimaryButtonProps } from '@/components/normal/primary-button-props'
 import { ProgressBarProps } from '@/components/normal/progress-bar-props'
 import ResourcePreviewProps from '@/components/normal/resource-preview-props'
 import { ScrollBarProps } from '@/components/normal/scroll-bar-props'
@@ -185,7 +184,6 @@ export let AntSelect: FunctionComponent<AntSelectProps<unknown>>
 export let AntSwitch: FunctionComponent<AntSwitchProps>
 export let AntEmpty: FunctionComponent<AntEmptyProps>
 
-export let PrimaryButton: FunctionComponent<PrimaryButtonProps>
 export let Anchor: FunctionComponent<AnchorProps>
 export let DrawerLoading: FunctionComponent<SpanProps>
 export let FileProgressBar: FunctionComponent<FileProgressBarProps>
