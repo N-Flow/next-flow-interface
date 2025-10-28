@@ -14,7 +14,6 @@ import {
   DivPropsSimple,
   SpanPropsSimple,
 } from './components/interface/base-types'
-import { PrimaryButtonProps } from './components/normal/primary-button-props'
 import { AnchorProps } from './components/normal/anchor-props'
 import { FileProgressBarProps } from './components/normal/file-progress-bar-props'
 import { MaterialSymbolProps } from './components/normal/material-symbol-props'
@@ -526,7 +525,6 @@ export type {
   NativeEventSubscribeOption,
   RvBasic,
   RvBasicAttributeApi,
-  PrimaryButtonProps,
 }
 
 export {
