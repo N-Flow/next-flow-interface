@@ -1,4 +1,4 @@
-import { RvMaterialType } from '@/service/sync/interface/step/attributes/material/general/rv-material-type.enum'
+import { RvMaterialType } from './rv-material-type.enum'
 
 export enum TransparencyMode {
   OPAQUE = 'OPAQUE',
