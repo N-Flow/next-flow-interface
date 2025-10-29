@@ -121,7 +121,7 @@ jobs:
         run: |
           sudo apt-get install -y jq
           cp package.json package.json.bak
-          jq '.name = "@NEXT-FLOW/\(.name)" | .repository.url = "git+https://github.com/rhineai/rhine-var.git"' package.json > package.json.tmp
+          jq '.name = "@N-Flow/\(.name)" | .repository.url = "git+https://github.com/N-Flow/next-flow-interface.git"' package.json > package.json.tmp
           mv package.json.tmp package.json
           jq empty package.json
 
@@ -132,7 +132,7 @@ jobs:
 
       - name: Configure Github NPM Registry
         run: |
-          npm config set @NEXT-FLOW:registry=https://npm.pkg.github.com
+          npm config set @N-Flow:registry=https://npm.pkg.github.com
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
 
       - name: Publish to Github
