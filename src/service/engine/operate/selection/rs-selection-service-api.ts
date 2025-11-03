@@ -8,6 +8,8 @@ export default interface RsSelectionServiceApi {
 
   changeBranchMode(value?: boolean, message?: boolean): void
 
+  toAllChildren(log?: boolean): boolean
+
   click: (nid?: string, ctrl?: boolean) => void
 
   set: (nid: string) => void
