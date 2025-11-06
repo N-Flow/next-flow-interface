@@ -9,7 +9,7 @@ export default interface RvAttributesServiceApi {
 
   setToAllStep(nid: string, key: string, value: unknown): void
 
-  get(sid: string): RecursiveMap<RvAttributes> | undefined
+  getMap(sid?: string): RecursiveMap<RvAttributes> | undefined
 
-  getNode(sid: string, nid: string): StoredRhineVar<RvAttributes> | undefined
+  get(nid: string, sid?: string): StoredRhineVar<RvAttributes> | undefined
 }
