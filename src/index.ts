@@ -41,7 +41,6 @@ import { UseBase } from './hook/use-base.type'
 import { UseStepOptions } from './hook/use-step-options.type'
 import { UseTAttributes } from './hook/use-t-attributes.type'
 import { UseTStep } from './hook/use-t-step.type'
-import { UseTranslator } from './hook/use-translator.type'
 import BasePlugin from './plugin/base-plugin'
 import DialogPlugin from './plugin/dialog-plugin'
 import DrawerPlugin from './plugin/drawer-plugin'
@@ -144,7 +143,7 @@ import { Locale } from './service/main/internationalization/dto/locale'
 import InternationalizationServiceApi, {
   MessageTree,
   NamespaceSubscriber,
-  Translator,
+  Intl,
 } from './service/main/internationalization/internationalization-service-api'
 import { MessageLoader } from './service/main/internationalization/message-loader.type'
 import MeetingState from './service/main/meeting/dto/meeting-state'
@@ -306,7 +305,7 @@ import UrlUtils from './utils/url-utils'
 import VectorUtils from './utils/vector-utils'
 
 export type {
-  Translator,
+  Intl,
   MeetingState,
   PluginState,
   AwarenessChanges,
@@ -452,7 +451,6 @@ export type {
   UseTStep,
   UseTAttributes,
   UseStepOptions,
-  UseTranslator,
   V2,
   V3,
   V4,

@@ -1,6 +1,6 @@
 import { Locale } from '@/service/main/internationalization/dto/locale'
 
-export type Translator = (strings: TemplateStringsArray, ...values: unknown[]) => string
+export type Intl = (strings: TemplateStringsArray, ...values: unknown[]) => string
 
 export type NamespaceSubscriber = (namespaces: string[]) => void
 
@@ -24,10 +24,19 @@ export default interface InternationalizationServiceApi {
   load(messages: MessageTree): boolean
 
   // 获取翻译器
-  createTranslator(namespace?: string): Translator
+  createIntl(namespace?: string): Intl
+
+  // 是否存在对应namespace的缓存
+  hasIntlCached(namespace?: string): boolean
+
+  // 删除对应namespace的缓存
+  deleteIntlCached(namespace?: string): boolean
+
+  // 清除对应namespace的缓存
+  clearIntlCached(namespace?: string): void
 
   // 等待对应namespace加载成功 并获取翻译
-  createTranslatorWithWait(namespace?: string): Promise<Translator>
+  createIntlWithWait(namespace?: string): Promise<Intl>
 
   // 监听messages变化
   subscribe(subscriber: NamespaceSubscriber): () => void

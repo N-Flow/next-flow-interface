@@ -1,5 +1,5 @@
 import { Locale } from '@/service/main/internationalization/dto/locale'
-import { MessageTree } from '@/service/main/internationalization/internationalization-service-api'
+import { Intl, MessageTree } from '@/service/main/internationalization/internationalization-service-api'
 import { ThemeColor } from '@/service/main/theme/dto/theme-color.enum'
 
 import { PluginType } from './dto/plugin-type.enum'
@@ -9,6 +9,8 @@ export default interface BasePlugin {
   version: string
 
   namespace: string
+  intl?: Intl
+  createIntl: (namespace: string) => Intl
 
   name: string // 插件项目名
   description: string
