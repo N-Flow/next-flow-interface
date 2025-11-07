@@ -33,6 +33,7 @@ import { RsdNumberListProps } from './components/rsd/rsd-number-list-props'
 import { RsdNumberProps } from './components/rsd/rsd-number-props'
 import { RsdSelectProps } from './components/rsd/rsd-select-props'
 import { RsdSwitchProps } from './components/rsd/rsd-switch-props'
+import { RsdTargetInfoProps } from './components/rsd/rsd-target-info-props'
 import { RsdTitleProps } from './components/rsd/rsd-title-props'
 import DomNotFoundError from './error/dom-not-found.error'
 import NotFoundError from './error/not-found.error'
@@ -524,6 +525,7 @@ export type {
   NativeEventSubscribeOption,
   RvBasic,
   RvBasicAttributeApi,
+  RsdTargetInfoProps,
 }
 
 export {

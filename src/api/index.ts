@@ -28,6 +28,7 @@ import { RsdNumberListProps } from '@/components/rsd/rsd-number-list-props'
 import { RsdNumberProps } from '@/components/rsd/rsd-number-props'
 import { RsdSelectProps } from '@/components/rsd/rsd-select-props'
 import { RsdSwitchProps } from '@/components/rsd/rsd-switch-props'
+import { RsdTargetInfoProps } from '@/components/rsd/rsd-target-info-props'
 import { RsdTitleProps } from '@/components/rsd/rsd-title-props'
 import { UseBase } from '@/hook/use-base.type'
 import { UseStepOptions } from '@/hook/use-step-options.type'
@@ -203,6 +204,7 @@ export let RsdNumber: FunctionComponent<RsdNumberProps>
 export let RsdNumberList: FunctionComponent<RsdNumberListProps>
 export let RsdSwitch: FunctionComponent<RsdSwitchProps>
 export let RsdTextarea: FunctionComponent<RsdInputProps>
+export let RsdTargetInfo: FunctionComponent<RsdTargetInfoProps>
 export let RsdTitle: FunctionComponent<RsdTitleProps>
 
 export let FlexGrow: FunctionComponent<FlexGrowProps>
