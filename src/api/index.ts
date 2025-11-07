@@ -50,7 +50,6 @@ import SkyboxAnimationApi from '@/service/engine/animation/entry/environment/sky
 import EasyPropertyAnimationApi from '@/service/engine/animation/factory/between/easy-property-animation-api'
 import RsLoopAnimationManagerApi from '@/service/engine/animation/factory/loop/rs-loop-animation-manager-api'
 import RsAudioServiceApi from '@/service/engine/audio/rs-audio-service-api'
-import RsSelectionApi from '@/service/engine/operate/selection/rs-selection-api'
 import RsSelectionServiceApi from '@/service/engine/operate/selection/rs-selection-service-api'
 import RsClickApi from '@/service/engine/render/click/rs-click-api'
 import RsEnvironmentApi from '@/service/engine/render/environment/rs-environment-api'
@@ -139,7 +138,6 @@ export let rsLoopAnimationManager: RsLoopAnimationManagerApi
 export let rsAudioService: RsAudioServiceApi
 
 export let rsSelectionService: RsSelectionServiceApi
-export let rsSelection: RsSelectionApi
 
 export let rsNodeService: RsNodeServiceApi
 export let rsModelService: RsModelServiceApi

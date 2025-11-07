@@ -75,7 +75,6 @@ import RsSelectionState, {
   RsSelectionMaterialInfo,
 } from './service/engine/operate/selection/dto/rs-selection-state.interface'
 import { SelectedSubscriber } from './service/engine/operate/selection/dto/selected-subscriber.type'
-import RsSelectionApi from './service/engine/operate/selection/rs-selection-api'
 import RsSelectionServiceApi from './service/engine/operate/selection/rs-selection-service-api'
 import RsClickApi from './service/engine/render/click/rs-click-api'
 import RsEnvironmentApi from './service/engine/render/environment/rs-environment-api'
@@ -250,7 +249,10 @@ import RvBasic from './service/sync/interface/step/attributes/basic/rv-basic.int
 import RvCode from './service/sync/interface/step/attributes/code/rv-code.interface'
 import RvLabel from './service/sync/interface/step/attributes/label/rv-label.interface'
 import RvLocation from './service/sync/interface/step/attributes/location/rv-location.interface'
-import { RvMaterialGeneral, TransparencyMode } from './service/sync/interface/step/attributes/material/general/rv-material-general.interface'
+import {
+  RvMaterialGeneral,
+  TransparencyMode,
+} from './service/sync/interface/step/attributes/material/general/rv-material-general.interface'
 import { RvMaterialType } from './service/sync/interface/step/attributes/material/general/rv-material-type.enum'
 import {
   RvMaterialNode,
@@ -516,7 +518,6 @@ export type {
   RsSelectionMaterialInfo,
   AwarenessServiceApi,
   AwarenessChangeSubscriber,
-  RsSelectionApi,
   InternationalizationProviderProps,
   MessageTree,
   MessageLoader,
