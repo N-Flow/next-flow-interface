@@ -15,6 +15,7 @@ import {
   SpanPropsSimple,
 } from './components/interface/base-types'
 import { AnchorProps } from './components/normal/anchor-props'
+import { BatchApplyProps } from './components/normal/batch-apply-props'
 import { FileProgressBarProps } from './components/normal/file-progress-bar-props'
 import { MaterialSymbolProps } from './components/normal/material-symbol-props'
 import { ProgressBarProps } from './components/normal/progress-bar-props'
@@ -526,6 +527,7 @@ export type {
   RvBasic,
   RvBasicAttributeApi,
   RsdTargetInfoProps,
+  BatchApplyProps,
 }
 
 export {

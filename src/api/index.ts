@@ -10,6 +10,7 @@ import InternationalizationProviderProps from '@/components/dev/internationaliza
 import MainPortalProps from '@/components/dev/main-portal-props'
 import { SpanProps } from '@/components/interface/base-types'
 import { AnchorProps } from '@/components/normal/anchor-props'
+import { BatchApplyProps } from '@/components/normal/batch-apply-props'
 import { FileProgressBarProps } from '@/components/normal/file-progress-bar-props'
 import { MaterialSymbolProps } from '@/components/normal/material-symbol-props'
 import { ProgressBarProps } from '@/components/normal/progress-bar-props'
@@ -182,6 +183,7 @@ export let AntSwitch: FunctionComponent<AntSwitchProps>
 export let AntEmpty: FunctionComponent<AntEmptyProps>
 
 export let Anchor: FunctionComponent<AnchorProps>
+export let BatchApply: FunctionComponent<BatchApplyProps>
 export let DrawerLoading: FunctionComponent<SpanProps>
 export let FileProgressBar: FunctionComponent<FileProgressBarProps>
 export let ProgressBar: FunctionComponent<ProgressBarProps>
