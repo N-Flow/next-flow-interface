@@ -4,5 +4,5 @@ import { RsSelectionMaterialInfo } from '@/service/engine/operate/selection/dto/
 export type UseAllSelectedInfo = () => {
   selected: RsSelectionNodeInfo[]
   materialInfo: RsSelectionMaterialInfo
-  last: RsSelectionNodeInfo
+  last: RsSelectionNodeInfo | null
 }
