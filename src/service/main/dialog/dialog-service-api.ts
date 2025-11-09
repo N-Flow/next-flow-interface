@@ -29,10 +29,10 @@ export default interface DialogServiceApi {
   confirm(
     options: {
       title: string
-      titleIcon: FunctionComponent
+      titleIcon?: FunctionComponent | string
       content?: string
-      contentView?: FunctionComponent
-      icon?: FunctionComponent
+      contentView?: FunctionComponent | string
+      icon?: FunctionComponent | string
       confirmText?: string
       cancelText?: string
       theme?: ThemeColor
@@ -44,6 +44,7 @@ export default interface DialogServiceApi {
       onCancel?: () => void
       onClose?: () => void
       closeOnOutsideClick?: boolean
+      enableCloseButton?: boolean
     },
     show?: boolean,
   ): Promise<boolean>
@@ -59,10 +60,10 @@ export default interface DialogServiceApi {
   input(
     options: {
       title: string
-      titleIcon: FunctionComponent
+      titleIcon?: FunctionComponent | string
       content?: string
-      contentView?: FunctionComponent
-      icon?: FunctionComponent
+      contentView?: FunctionComponent | string
+      icon?: FunctionComponent | string
       theme?: ThemeColor
       leftMode?: boolean
       className?: string
@@ -79,6 +80,7 @@ export default interface DialogServiceApi {
       onCancel?: () => void
       onClose?: () => void
       closeOnOutsideClick?: boolean
+      enableCloseButton?: boolean
     },
     show?: boolean,
   ): Promise<string | undefined>
