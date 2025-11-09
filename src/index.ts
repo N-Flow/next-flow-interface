@@ -39,7 +39,11 @@ import { RsdTitleProps } from './components/rsd/rsd-title-props'
 import DomNotFoundError from './error/dom-not-found.error'
 import NotFoundError from './error/not-found.error'
 import StaticClassInstantiationError from './error/static-class-instantiation.error'
+import {  UseAllSelectedInfo } from './hook/use-all-selected-info.type'
 import { UseBase } from './hook/use-base.type'
+import { UseLastSelectedInfo } from './hook/use-last-selected-info.type'
+import { UseSelectedInfo } from './hook/use-selected-info.type'
+import { UseSelectedMaterialInfo } from './hook/use-selected-material-info.type'
 import { UseStepOptions } from './hook/use-step-options.type'
 import { UseTAttributes } from './hook/use-t-attributes.type'
 import { UseTStep } from './hook/use-t-step.type'
@@ -528,6 +532,10 @@ export type {
   RvBasicAttributeApi,
   RsdTargetInfoProps,
   BatchApplyProps,
+  UseAllSelectedInfo,
+  UseLastSelectedInfo,
+  UseSelectedInfo,
+  UseSelectedMaterialInfo,
 }
 
 export {

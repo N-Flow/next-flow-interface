@@ -31,7 +31,11 @@ import { RsdSelectProps } from '@/components/rsd/rsd-select-props'
 import { RsdSwitchProps } from '@/components/rsd/rsd-switch-props'
 import { RsdTargetInfoProps } from '@/components/rsd/rsd-target-info-props'
 import { RsdTitleProps } from '@/components/rsd/rsd-title-props'
+import { UseAllSelectedInfo } from '@/hook/use-all-selected-info.type'
 import { UseBase } from '@/hook/use-base.type'
+import { UseLastSelectedInfo } from '@/hook/use-last-selected-info.type'
+import { UseSelectedInfo } from '@/hook/use-selected-info.type'
+import { UseSelectedMaterialInfo } from '@/hook/use-selected-material-info.type'
 import { UseStepOptions } from '@/hook/use-step-options.type'
 import { UseTAttributes } from '@/hook/use-t-attributes.type'
 import { UseTStep } from '@/hook/use-t-step.type'
@@ -169,7 +173,11 @@ export let rvNodeMaterialAnalyzer: RvNodeMaterialAnalyzerApi
 export let tStepService: TStepServiceApi
 export let tAttributesService: TAttributesServiceApi
 
+export let useAllSelectedInfo: UseAllSelectedInfo
 export let useBase: UseBase
+export let useLastSelectedInfo:UseLastSelectedInfo
+export let useSelectedInfo: UseSelectedInfo
+export let useSelectedMaterialInfo: UseSelectedMaterialInfo
 export let useTStep: UseTStep
 export let useTAttributes: UseTAttributes
 export let useStepOptions: UseStepOptions
