@@ -39,7 +39,7 @@ import { RsdTitleProps } from './components/rsd/rsd-title-props'
 import DomNotFoundError from './error/dom-not-found.error'
 import NotFoundError from './error/not-found.error'
 import StaticClassInstantiationError from './error/static-class-instantiation.error'
-import {  UseAllSelectedInfo } from './hook/use-all-selected-info.type'
+import { UseAllSelectedInfo } from './hook/use-all-selected-info.type'
 import { UseBase } from './hook/use-base.type'
 import { UseLastSelectedInfo } from './hook/use-last-selected-info.type'
 import { UseSelectedInfo } from './hook/use-selected-info.type'
@@ -111,6 +111,10 @@ import FirstLoadModelServiceApi from './service/engine/render/model/first/first-
 import RsModelServiceApi from './service/engine/render/model/rs-model-service-api'
 import RsNodeServiceApi from './service/engine/render/model/rs-node-service-api'
 import RsServiceApi from './service/engine/rs-service-api'
+import BatchApplyServiceApi, {
+  BatchApplyDown,
+  BatchApplySubscriber,
+} from './service/main/batch/batch-apply-service-api'
 import ContextMenuServiceApi from './service/main/context-menu/context-menu-service-api'
 import ContextMenu from './service/main/context-menu/context-menu.class'
 import { ContextMenuController } from './service/main/context-menu/dto/context-menu-controller.interface'
@@ -536,6 +540,9 @@ export type {
   UseLastSelectedInfo,
   UseSelectedInfo,
   UseSelectedMaterialInfo,
+  BatchApplyServiceApi,
+  BatchApplySubscriber,
+  BatchApplyDown,
 }
 
 export {

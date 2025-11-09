@@ -69,6 +69,7 @@ import FirstLoadModelServiceApi from '@/service/engine/render/model/first/first-
 import RsModelServiceApi from '@/service/engine/render/model/rs-model-service-api'
 import RsNodeServiceApi from '@/service/engine/render/model/rs-node-service-api'
 import RsServiceApi from '@/service/engine/rs-service-api'
+import BatchApplyServiceApi from '@/service/main/batch/batch-apply-service-api'
 import ContextMenuServiceApi from '@/service/main/context-menu/context-menu-service-api'
 import DialogServiceApi from '@/service/main/dialog/dialog-service-api'
 import FirstLoadServiceApi from '@/service/main/file/first/first-load-service-api'
@@ -129,6 +130,7 @@ export let firstLoadModelService: FirstLoadModelServiceApi
 export let pluginContainerService: PluginContainerServiceApi
 export let sceneService: SceneServiceApi
 export let contextMenuService: ContextMenuServiceApi
+export let batchApplyService: BatchApplyServiceApi
 
 export let cameraConfigurationAnimation: CameraConfigurationAnimationApi
 export let cameraLocationAnimation: CameraLocationAnimationApi
@@ -175,7 +177,7 @@ export let tAttributesService: TAttributesServiceApi
 
 export let useAllSelectedInfo: UseAllSelectedInfo
 export let useBase: UseBase
-export let useLastSelectedInfo:UseLastSelectedInfo
+export let useLastSelectedInfo: UseLastSelectedInfo
 export let useSelectedInfo: UseSelectedInfo
 export let useSelectedMaterialInfo: UseSelectedMaterialInfo
 export let useTStep: UseTStep
