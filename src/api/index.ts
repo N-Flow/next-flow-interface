@@ -70,6 +70,7 @@ import RsModelServiceApi from '@/service/engine/render/model/rs-model-service-ap
 import RsNodeServiceApi from '@/service/engine/render/model/rs-node-service-api'
 import RsServiceApi from '@/service/engine/rs-service-api'
 import BatchApplyServiceApi from '@/service/main/batch/batch-apply-service-api'
+import { ShowAttributeContextMenu } from '@/service/main/context-menu/attribute/show-attribute-context-menu.type'
 import ContextMenuServiceApi from '@/service/main/context-menu/context-menu-service-api'
 import DialogServiceApi from '@/service/main/dialog/dialog-service-api'
 import FirstLoadServiceApi from '@/service/main/file/first/first-load-service-api'
@@ -174,6 +175,8 @@ export let rvNodeMaterialAnalyzer: RvNodeMaterialAnalyzerApi
 
 export let tStepService: TStepServiceApi
 export let tAttributesService: TAttributesServiceApi
+
+export let showAttributeContextMenu: ShowAttributeContextMenu<unknown>
 
 export let useAllSelectedInfo: UseAllSelectedInfo
 export let useBase: UseBase

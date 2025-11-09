@@ -115,6 +115,10 @@ import BatchApplyServiceApi, {
   BatchApplyDown,
   BatchApplySubscriber,
 } from './service/main/batch/batch-apply-service-api'
+import {
+  ShowAttributeContextMenu,
+  ShowAttributeContextMenuOptions,
+} from './service/main/context-menu/attribute/show-attribute-context-menu.type'
 import ContextMenuServiceApi from './service/main/context-menu/context-menu-service-api'
 import ContextMenu from './service/main/context-menu/context-menu.class'
 import { ContextMenuController } from './service/main/context-menu/dto/context-menu-controller.interface'
@@ -543,6 +547,8 @@ export type {
   BatchApplyServiceApi,
   BatchApplySubscriber,
   BatchApplyDown,
+  ShowAttributeContextMenu,
+  ShowAttributeContextMenuOptions,
 }
 
 export {
