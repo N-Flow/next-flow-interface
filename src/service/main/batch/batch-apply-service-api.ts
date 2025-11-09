@@ -12,6 +12,12 @@ export default interface BatchApplyServiceApi {
 
   down: BatchApplyDown
 
+  selectAll(): void
+
+  unselectAll(): void
+
+  isAllSelected(): boolean
+
   subscribe(subscriber: BatchApplySubscriber): () => void
 
   unsubscribe(subscriber: BatchApplySubscriber): void
