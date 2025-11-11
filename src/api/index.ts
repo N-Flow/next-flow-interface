@@ -16,6 +16,7 @@ import { MaterialSymbolProps } from '@/components/normal/material-symbol-props'
 import { ProgressBarProps } from '@/components/normal/progress-bar-props'
 import ResourcePreviewProps from '@/components/normal/resource-preview-props'
 import { ScrollBarProps } from '@/components/normal/scroll-bar-props'
+import StepBlockSelectProps from '@/components/normal/step-block-select-props'
 import { UploadButtonAndListProps } from '@/components/normal/upload-button-and-list-props'
 import { RsdButtonProps } from '@/components/rsd/rsd-button-props'
 import { RsdCheckableButtonProps } from '@/components/rsd/rsd-checkable-button-props'
@@ -204,6 +205,7 @@ export let UploadButtonAndList: FunctionComponent<UploadButtonAndListProps>
 export let ScrollBar: FunctionComponent<ScrollBarProps>
 export let MaterialSymbol: FunctionComponent<MaterialSymbolProps>
 export let ResourcePreview: FunctionComponent<ResourcePreviewProps>
+export let StepBlockSelect: FunctionComponent<StepBlockSelectProps>
 
 export let RsdButton: FunctionComponent<RsdButtonProps>
 export let RsdCheckableButton: FunctionComponent<RsdCheckableButtonProps>

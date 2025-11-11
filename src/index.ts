@@ -21,6 +21,7 @@ import { MaterialSymbolProps } from './components/normal/material-symbol-props'
 import { ProgressBarProps } from './components/normal/progress-bar-props'
 import ResourcePreviewProps from './components/normal/resource-preview-props'
 import { ScrollBarProps } from './components/normal/scroll-bar-props'
+import StepBlockSelectProps from './components/normal/step-block-select-props'
 import { UploadButtonAndListProps } from './components/normal/upload-button-and-list-props'
 import { RsdButtonProps } from './components/rsd/rsd-button-props'
 import { RsdCheckableButtonProps } from './components/rsd/rsd-checkable-button-props'
@@ -112,7 +113,6 @@ import RsModelServiceApi from './service/engine/render/model/rs-model-service-ap
 import RsNodeServiceApi from './service/engine/render/model/rs-node-service-api'
 import RsServiceApi from './service/engine/rs-service-api'
 import BatchApplyServiceApi, {
-  BatchApplyDown,
   BatchApplySubscriber,
 } from './service/main/batch/batch-apply-service-api'
 import {
@@ -546,9 +546,9 @@ export type {
   UseSelectedMaterialInfo,
   BatchApplyServiceApi,
   BatchApplySubscriber,
-  BatchApplyDown,
   ShowAttributeContextMenu,
   ShowAttributeContextMenuOptions,
+  StepBlockSelectProps,
 }
 
 export {

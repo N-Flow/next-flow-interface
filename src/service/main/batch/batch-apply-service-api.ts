@@ -5,17 +5,8 @@ import RvStep from '@/service/sync/interface/step/rv-step.interface'
 
 export type BatchApplySubscriber = (selected: string[]) => void
 
-export interface BatchApplyDown {
-  sid: string
-  index: number
-  selected: string[]
-  value: boolean
-}
-
 export default interface BatchApplyServiceApi {
   selected: string[]
-
-  down: BatchApplyDown
 
   selectAll(): void
 
