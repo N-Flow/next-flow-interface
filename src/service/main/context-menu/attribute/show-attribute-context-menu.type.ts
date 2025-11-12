@@ -2,6 +2,7 @@ import { MouseEvent } from 'react'
 
 export interface ShowAttributeContextMenuOptions<T> {
   event: MouseEvent
+  label?: string
   getValue?: () => T
   copy?: (value: T) => void
   batchApply?: (value: T) => void
