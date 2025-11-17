@@ -10,5 +10,15 @@ export interface RvSceneNodeWithRelatedInfo extends RvSceneNode {
 export default interface RvSceneServiceApi {
   scene: RecursiveMap<RvSceneNode>
 
+  isDescendant(nid: string, from: string): boolean
+
+  isAncestor(nid: string, of: string): boolean
+
+  isParent(nid: string, of: string): boolean
+
+  isChild(nid: string, of: string): boolean
+
+  move(nid: string, newParent?: string): void
+
   getSortedRvSceneNodeWithRelatedInfoList(): RvSceneNodeWithRelatedInfo[]
 }
