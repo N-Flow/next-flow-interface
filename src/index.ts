@@ -292,6 +292,9 @@ import {
   RvResourceServiceSubscriber,
 } from './service/sync/resource/dto/rv-resource-service-subscriber.type'
 import RvResourceServiceApi from './service/sync/resource/rv-resource-service-api'
+import RvSceneServiceApi, {
+  RvSceneNodeWithRelatedInfo,
+} from './service/sync/scene/rv-scene-service-api'
 import RvAttributesServiceApi from './service/sync/step/attributes/rv-attributes-service-api'
 import { StepOptions } from './service/sync/step/dto/step-options.type'
 import RvStepServiceApi from './service/sync/step/rv-step-service-api'
@@ -473,6 +476,8 @@ export type {
   RvAttributesServiceApi,
   RvLocationAttributeApi,
   RsNodeServiceApi,
+  RvSceneNodeWithRelatedInfo,
+  RvSceneServiceApi,
   NodePair,
   RvLabel,
   RvLabelAttributeApi,

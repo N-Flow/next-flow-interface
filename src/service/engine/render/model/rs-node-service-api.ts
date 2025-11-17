@@ -5,9 +5,9 @@ import NodePair from '@/service/engine/render/model/dto/node-pair.interface'
 export default interface RsNodeServiceApi {
   nodePairs: NodePair[]
 
-  getInfoMapByNid(nid: string): NodePair | null
+  getNodePairByNid(nid: string): NodePair | null
 
-  getInfoMapByUniqueId(uniqueId: number): NodePair | null
+  getNodePairByUniqueId(uniqueId: number): NodePair | null
 
   getNodeByNid(nid: string): Node | null
 

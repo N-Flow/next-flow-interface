@@ -22,7 +22,7 @@ export default interface RvBase {
   files: RhineVarMap<RvFile>
   resources: RhineVarMap<RvResource>
 
-  scene: RvSceneNode
+  scene: RhineVarMap<RvSceneNode>
 
   models: RhineVarMap<RvModel>
   separate: RvSeparate
