@@ -10,5 +10,5 @@ export interface RvSceneNodeWithRelatedInfo extends RvSceneNode {
 export default interface RvSceneServiceApi {
   scene: RecursiveMap<RvSceneNode>
 
-  getRvSceneNodeWithRelatedInfoList(): RvSceneNodeWithRelatedInfo[]
+  getSortedRvSceneNodeWithRelatedInfoList(): RvSceneNodeWithRelatedInfo[]
 }
