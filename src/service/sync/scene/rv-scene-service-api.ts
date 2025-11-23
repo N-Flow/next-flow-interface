@@ -7,10 +7,6 @@ export interface RvSceneNodeWithRelatedInfo extends RvSceneNode {
   parents: string[] // 从近到远
 }
 
-export type NodeSubscriber = (nid: string) => void
-
-export type NodeMoveSubscriber = (nid: string, from: string, to: string) => void
-
 export default interface RvSceneServiceApi {
   scene: RecursiveMap<RvSceneNode>
 
@@ -23,14 +19,6 @@ export default interface RvSceneServiceApi {
   isChild(nid: string, of: string): boolean
 
   move(nid: string, newParent?: string): void
-
-  subscribeNode(subscriber: NodeSubscriber): () => void
-
-  unsubscribeNode(subscriber: NodeSubscriber): void
-
-  subscribeNodeMove(subscriber: NodeMoveSubscriber): () => void
-
-  unsubscribeNodeMove(subscriber: NodeMoveSubscriber): void
 
   getSortedRvSceneNodeWithRelatedInfoList(): RvSceneNodeWithRelatedInfo[]
 }
