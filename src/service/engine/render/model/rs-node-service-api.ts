@@ -3,8 +3,6 @@ import { Node } from '@babylonjs/core'
 import NodePair from '@/service/engine/render/model/dto/node-pair.interface'
 
 export default interface RsNodeServiceApi {
-  nodePairs: NodePair[]
-
   getNodePairByNid(nid: string): NodePair | null
 
   getNodePairByUniqueId(uniqueId: number): NodePair | null
