@@ -18,5 +18,9 @@ export default interface TAttributesServiceApi {
 
   multiSet<T>(path: string | RvPath, value: T): void
 
+  check<T>(path: string | RvPath): void
+
+  multiCheck<T>(path: string | RvPath): void
+
   get<T>(path: string | RvPath): T | null
 }
