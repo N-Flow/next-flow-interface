@@ -1,3 +1,5 @@
+import RvNodeServiceApi from '@/service/sync/step/node/rv-node-service-api'
+
 import { AntCheckboxProps } from './components/ant/ant-checkbox-props'
 import { AntColorProps } from './components/ant/ant-color-props'
 import { AntEmptyProps } from './components/ant/ant-empty-props'
@@ -295,7 +297,6 @@ import RvResourceServiceApi from './service/sync/resource/rv-resource-service-ap
 import RvSceneServiceApi, {
   RvSceneNodeWithRelatedInfo,
 } from './service/sync/scene/rv-scene-service-api'
-import RvNodeServiceApi from './service/sync/step/attributes/rv-node-service-api'
 import { StepOptions } from './service/sync/step/dto/step-options.type'
 import RvStepServiceApi from './service/sync/step/rv-step-service-api'
 import SyncServiceApi from './service/sync/sync-service-api'
