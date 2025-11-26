@@ -89,6 +89,7 @@ import SpaceServiceApi from '@/service/main/space/space-service-api'
 import StatusServiceApi from '@/service/main/status/status-service-api'
 import ThemeServiceApi from '@/service/main/theme/theme-service-api'
 import UserServiceApi from '@/service/main/user/user-service-api'
+import AttributeServiceApi from '@/service/sync/attribute/attribute-service-api'
 import AwarenessServiceApi from '@/service/sync/awareness/awareness-service-api'
 import RvFileServiceApi from '@/service/sync/file/rv-file-service-api'
 import RvGlobalServiceApi from '@/service/sync/global/rv-global-service-api'
@@ -166,6 +167,7 @@ export let rsService: RsServiceApi
 export let syncService: SyncServiceApi
 export let historyService: HistoryServiceApi
 export let awarenessService: AwarenessServiceApi
+export let attributeService: AttributeServiceApi
 
 export let rvGlobalService: RvGlobalServiceApi
 export let rvStepService: RvStepServiceApi
