@@ -97,7 +97,7 @@ import RvNodeMaterialAnalyzerApi from '@/service/sync/material/node/rv-node-mate
 import RvModelServiceApi from '@/service/sync/model/rv-model-service-api'
 import RvResourceServiceApi from '@/service/sync/resource/rv-resource-service-api'
 import RvSceneServiceApi from '@/service/sync/scene/rv-scene-service-api'
-import RvAttributesServiceApi from '@/service/sync/step/attributes/rv-attributes-service-api'
+import RvNodeServiceApi from '@/service/sync/step/attributes/rv-node-service-api'
 import RvStepServiceApi from '@/service/sync/step/rv-step-service-api'
 import SyncServiceApi from '@/service/sync/sync-service-api'
 import TAttributesServiceApi from '@/service/target/attribute/t-attributes-service-api'
@@ -173,7 +173,7 @@ export let rvFileService: RvFileServiceApi
 export let rvResourceService: RvResourceServiceApi
 export let rvSceneService: RvSceneServiceApi
 export let rvModelService: RvModelServiceApi
-export let rvAttributesService: RvAttributesServiceApi
+export let rvNodeService: RvNodeServiceApi
 export let rvNodeMaterialAnalyzer: RvNodeMaterialAnalyzerApi
 
 export let tStepService: TStepServiceApi

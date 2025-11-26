@@ -242,7 +242,7 @@ import RvMeeting, {
 } from './service/sync/interface/meeting/rv-meeting.interface'
 import RvBasicConfig from './service/sync/interface/model/config/rv-basic-config.interface'
 import { RvBasicType } from './service/sync/interface/model/config/rv-basic-type.enum'
-import RvNode from './service/sync/interface/model/node/rv-node.interface'
+import RvModelNode from './service/sync/interface/model/node/rv-model-node.interface'
 import { RvModelOrigin } from './service/sync/interface/model/rv-model-origin.enum'
 import RvModel from './service/sync/interface/model/rv-model.interface'
 import RvPlugin from './service/sync/interface/plugin/rv-plugin'
@@ -276,7 +276,7 @@ import { RvMaterialPBR } from './service/sync/interface/step/attributes/material
 import { RvPresetType } from './service/sync/interface/step/attributes/material/preset/rv-preset-type.enum'
 import RvMaterial from './service/sync/interface/step/attributes/material/rv-material.interface'
 import { RvMaterialTexture } from './service/sync/interface/step/attributes/material/texture/rv-material-texture.interface'
-import RvAttributes from './service/sync/interface/step/attributes/rv-attributes.interface'
+import RvNode from './service/sync/interface/step/attributes/rv-node.interface'
 import RvAudio from './service/sync/interface/step/configuration/audio-info/rv-audio.interface'
 import RvConfiguration from './service/sync/interface/step/configuration/rv-configuration.interface'
 import RvCameraLocation from './service/sync/interface/step/environment/camera/location/rv-camera-location.interface'
@@ -295,7 +295,7 @@ import RvResourceServiceApi from './service/sync/resource/rv-resource-service-ap
 import RvSceneServiceApi, {
   RvSceneNodeWithRelatedInfo,
 } from './service/sync/scene/rv-scene-service-api'
-import RvAttributesServiceApi from './service/sync/step/attributes/rv-attributes-service-api'
+import RvNodeServiceApi from './service/sync/step/attributes/rv-node-service-api'
 import { StepOptions } from './service/sync/step/dto/step-options.type'
 import RvStepServiceApi from './service/sync/step/rv-step-service-api'
 import SyncServiceApi from './service/sync/sync-service-api'
@@ -448,7 +448,7 @@ export type {
   ThemeState,
   ThemeServiceApi,
   RvSceneNode,
-  RvNode,
+  RvModelNode,
   RvBasicConfig,
   NativeDragEventSubscriber,
   RsModelServiceApi,
@@ -457,7 +457,7 @@ export type {
   RsSeparateServiceApi,
   FirstLoadModelServiceSubscriber,
   FirstLoadModelServiceApi,
-  RvAttributes,
+  RvNode,
   RvLocation,
   RvMaterial,
   RsSelectionServiceApi,
@@ -473,7 +473,7 @@ export type {
   V2,
   V3,
   V4,
-  RvAttributesServiceApi,
+  RvNodeServiceApi,
   RvLocationAttributeApi,
   RsNodeServiceApi,
   RvSceneNodeWithRelatedInfo,
