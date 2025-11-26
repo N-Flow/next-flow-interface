@@ -1,3 +1,6 @@
+import { IAttribute } from '@/service/sync/attribute/dto/instance/attribute.interface'
+import IBaseAttribute from '@/service/sync/attribute/dto/instance/base-attribute.interface'
+import INodeAttribute from '@/service/sync/attribute/dto/instance/node-attribute.interface'
 import RvNodeServiceApi from '@/service/sync/step/node/rv-node-service-api'
 
 import { AntCheckboxProps } from './components/ant/ant-checkbox-props'
@@ -212,6 +215,8 @@ import ThemeServiceApi from './service/main/theme/theme-service-api'
 import UserAuth from './service/main/user/dto/user-auth.interface'
 import UserInfo from './service/main/user/dto/user-info.interface'
 import UserServiceApi from './service/main/user/user-service-api'
+import AttributeServiceApi from './service/sync/attribute/attribute-service-api'
+import { AttributeType } from './service/sync/attribute/dto/attribute-type.enum'
 import AwarenessServiceApi, {
   AwarenessChanges,
   AwarenessChangeSubscriber,
@@ -325,6 +330,10 @@ import UrlUtils from './utils/url-utils'
 import VectorUtils from './utils/vector-utils'
 
 export type {
+  AttributeServiceApi,
+  IBaseAttribute,
+  INodeAttribute,
+  IAttribute,
   Intl,
   MeetingState,
   PluginState,
@@ -558,8 +567,9 @@ export type {
 }
 
 export {
-  AcceptMime,
+  AttributeType,
   Locale,
+  AcceptMime,
   MeetingStatus,
   ShareMode,
   PageMode,
