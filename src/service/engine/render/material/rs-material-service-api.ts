@@ -1,9 +1,9 @@
 import { AbstractMesh, NodeMaterial, PBRMaterial } from '@babylonjs/core'
 import { RvPath } from 'rhine-var'
 
-import { RvMaterialGeneral } from '@/service/sync/interface/step/attributes/material/general/rv-material-general.interface'
-import { RvMaterialNodeInput } from '@/service/sync/interface/step/attributes/material/node/rv-material-node.interface'
-import RvMaterial from '@/service/sync/interface/step/attributes/material/rv-material.interface'
+import { RvMaterialGeneral } from '@/service/sync/interface/step/node/material/general/rv-material-general.interface'
+import { RvMaterialNodeInput } from '@/service/sync/interface/step/node/material/node/rv-material-node.interface'
+import RvMaterial from '@/service/sync/interface/step/node/material/rv-material.interface'
 
 export default interface RsMaterialServiceApi {
   updateMaterial(

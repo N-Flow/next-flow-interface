@@ -1,7 +1,7 @@
 import { TransformNode, Vector3 } from '@babylonjs/core'
 
-import RvLoop from '@/service/sync/interface/step/attributes/animation/loop/rv-loop.interface'
-import RvLocation from '@/service/sync/interface/step/attributes/location/rv-location.interface'
+import RvLoop from '@/service/sync/interface/step/node/animation/loop/rv-loop.interface'
+import RvLocation from '@/service/sync/interface/step/node/location/rv-location.interface'
 
 export default interface RsLoopAnimationManagerApi {
   state: { enableInEditorMode: boolean }

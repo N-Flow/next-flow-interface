@@ -1,6 +1,6 @@
 import { StoredRhineVar } from 'rhine-var'
 
-import RvMaterial from '@/service/sync/interface/step/attributes/material/rv-material.interface'
+import RvMaterial from '@/service/sync/interface/step/node/material/rv-material.interface'
 
 export default interface RvNodeMaterialAnalyzerApi {
   /**

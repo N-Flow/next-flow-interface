@@ -1,7 +1,7 @@
 import { TransformNode } from '@babylonjs/core/Meshes/transformNode'
 
 import LabelInfo from '@/service/engine/render/label/dto/label-info'
-import RvLabel from '@/service/sync/interface/step/attributes/label/rv-label.interface'
+import RvLabel from '@/service/sync/interface/step/node/label/rv-label.interface'
 
 export default interface RsLabelServiceApi {
   labels: LabelInfo[]

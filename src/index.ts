@@ -1,6 +1,22 @@
 import { IAttribute } from '@/service/sync/attribute/dto/instance/attribute.interface'
 import IBaseAttribute from '@/service/sync/attribute/dto/instance/base-attribute.interface'
 import INodeAttribute from '@/service/sync/attribute/dto/instance/node-attribute.interface'
+import RvLoop from '@/service/sync/interface/step/node/animation/loop/rv-loop.interface'
+import RvNative from '@/service/sync/interface/step/node/animation/native/rv-native.interface'
+import RvBasic from '@/service/sync/interface/step/node/basic/rv-basic.interface'
+import RvCode from '@/service/sync/interface/step/node/code/rv-code.interface'
+import RvLabel from '@/service/sync/interface/step/node/label/rv-label.interface'
+import RvLocation from '@/service/sync/interface/step/node/location/rv-location.interface'
+import {
+  RvMaterialGeneral,
+  TransparencyMode,
+} from '@/service/sync/interface/step/node/material/general/rv-material-general.interface'
+import { RvMaterialType } from '@/service/sync/interface/step/node/material/general/rv-material-type.enum'
+import {
+  RvMaterialNode,
+  RvMaterialNodeInput,
+} from '@/service/sync/interface/step/node/material/node/rv-material-node.interface'
+import { RvMaterialPBR } from '@/service/sync/interface/step/node/material/pbr/rv-material-pbr.interface'
 import RvNodeServiceApi from '@/service/sync/step/node/rv-node-service-api'
 
 import { AntCheckboxProps } from './components/ant/ant-checkbox-props'
@@ -264,31 +280,17 @@ import RvResource from './service/sync/interface/resource/rv-resource.interface'
 import RvBase from './service/sync/interface/rv-base.interface'
 import RvSceneNode from './service/sync/interface/scene/rv-scene-node.interface'
 import RvSeparate from './service/sync/interface/separate/rv-separate.interface'
-import RvLoop from './service/sync/interface/step/attributes/animation/loop/rv-loop.interface'
-import RvNative from './service/sync/interface/step/attributes/animation/native/rv-native.interface'
-import RvBasic from './service/sync/interface/step/attributes/basic/rv-basic.interface'
-import RvCode from './service/sync/interface/step/attributes/code/rv-code.interface'
-import RvLabel from './service/sync/interface/step/attributes/label/rv-label.interface'
-import RvLocation from './service/sync/interface/step/attributes/location/rv-location.interface'
-import {
-  RvMaterialGeneral,
-  TransparencyMode,
-} from './service/sync/interface/step/attributes/material/general/rv-material-general.interface'
-import { RvMaterialType } from './service/sync/interface/step/attributes/material/general/rv-material-type.enum'
-import {
-  RvMaterialNode,
-  RvMaterialNodeInput,
-} from './service/sync/interface/step/attributes/material/node/rv-material-node.interface'
-import { RvMaterialPBR } from './service/sync/interface/step/attributes/material/pbr/rv-material-pbr.interface'
-import { RvPresetType } from './service/sync/interface/step/attributes/material/preset/rv-preset-type.enum'
-import RvMaterial from './service/sync/interface/step/attributes/material/rv-material.interface'
-import { RvMaterialTexture } from './service/sync/interface/step/attributes/material/texture/rv-material-texture.interface'
-import RvNode from './service/sync/interface/step/attributes/rv-node.interface'
+import { RvPresetType } from '@/service/sync/interface/step/node/material/preset/rv-preset-type.enum'
+
 import RvAudio from './service/sync/interface/step/configuration/audio-info/rv-audio.interface'
 import RvConfiguration from './service/sync/interface/step/configuration/rv-configuration.interface'
 import RvCameraLocation from './service/sync/interface/step/environment/camera/location/rv-camera-location.interface'
 import RvCamera from './service/sync/interface/step/environment/camera/rv-camera.interface'
 import RvEnvironment from './service/sync/interface/step/environment/rv-environment.interface'
+import RvMaterial from './service/sync/interface/step/node/material/rv-material.interface'
+import { RvMaterialTexture } from '@/service/sync/interface/step/node/material/texture/rv-material-texture.interface'
+
+import RvNode from './service/sync/interface/step/node/rv-node.interface'
 import RvStep from './service/sync/interface/step/rv-step.interface'
 import RvVersion from './service/sync/interface/version/rv-version.interface'
 import RvNodeMaterialAnalyzerApi from './service/sync/material/node/rv-node-material-analyzer-api'

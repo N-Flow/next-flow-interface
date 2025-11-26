@@ -1,6 +1,6 @@
 import { StoredRhineVar } from 'rhine-var'
 
-import RvNode from '@/service/sync/interface/step/attributes/rv-node.interface'
+import RvNode from '@/service/sync/interface/step/node/rv-node.interface'
 import RvStep from '@/service/sync/interface/step/rv-step.interface'
 
 export type BatchApplySubscriber = (selected: string[]) => void

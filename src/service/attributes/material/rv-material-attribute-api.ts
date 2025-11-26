@@ -1,10 +1,9 @@
 import { BaseTexture, NodeMaterial, PBRMaterial } from '@babylonjs/core'
 
-import RvMaterial from '@/service/sync/interface/step/attributes/material/rv-material.interface'
-
-import { RvMaterialNode } from '../../sync/interface/step/attributes/material/node/rv-material-node.interface'
-import { RvMaterialPBR } from '../../sync/interface/step/attributes/material/pbr/rv-material-pbr.interface'
-import { RvMaterialTexture } from '../../sync/interface/step/attributes/material/texture/rv-material-texture.interface'
+import { RvMaterialNode } from '@/service/sync/interface/step/node/material/node/rv-material-node.interface'
+import { RvMaterialPBR } from '@/service/sync/interface/step/node/material/pbr/rv-material-pbr.interface'
+import RvMaterial from '@/service/sync/interface/step/node/material/rv-material.interface'
+import { RvMaterialTexture } from '@/service/sync/interface/step/node/material/texture/rv-material-texture.interface'
 
 export default interface RvMaterialAttributeApi {
   key: string

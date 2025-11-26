@@ -1,4 +1,4 @@
-import RvNative from '@/service/sync/interface/step/attributes/animation/native/rv-native.interface'
+import RvNative from '@/service/sync/interface/step/node/animation/native/rv-native.interface'
 
 export default interface RvNativeAttributeApi {
   key: string

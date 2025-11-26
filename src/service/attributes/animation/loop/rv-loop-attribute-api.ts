@@ -1,4 +1,4 @@
-import RvLoop from '@/service/sync/interface/step/attributes/animation/loop/rv-loop.interface'
+import RvLoop from '@/service/sync/interface/step/node/animation/loop/rv-loop.interface'
 
 export default interface RvLoopAttributeApi {
   key: string

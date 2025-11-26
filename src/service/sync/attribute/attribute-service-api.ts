@@ -10,7 +10,7 @@ import IStepAttribute from '@/service/sync/attribute/dto/instance/step-attribute
  * 属性服务 API 接口
  *
  * 负责管理和注册所有类型的属性（Node、Step、Global）
- * 提供属性的注册、查询、黑名单管理等功能
+ * 提供属性的注册、查询、内置属性黑名单管理等功能
  */
 export default interface AttributeServiceApi {
   /**

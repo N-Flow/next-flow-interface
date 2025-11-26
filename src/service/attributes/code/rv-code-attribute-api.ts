@@ -1,4 +1,4 @@
-import RvCode from '@/service/sync/interface/step/attributes/code/rv-code.interface'
+import RvCode from '@/service/sync/interface/step/node/code/rv-code.interface'
 
 export default interface RvCodeAttributeApi {
   key: string
