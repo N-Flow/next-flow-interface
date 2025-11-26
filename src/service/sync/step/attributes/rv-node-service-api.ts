@@ -12,7 +12,7 @@ export default interface RvNodeServiceApi {
 
   setToAllStep(nid: string, key: string, value: unknown): void
 
-  getAll(sid?: string): RecursiveMap<RvNode> | undefined
+  getMap(sid?: string): RecursiveMap<RvNode> | undefined
 
   get(nid: string, sid?: string): StoredRhineVar<RvNode> | undefined
 }
