@@ -1,18 +1,16 @@
 import { RvPath, StoredRhineVar } from 'rhine-var'
 
 import RvNode from '@/service/sync/interface/step/attributes/rv-node.interface'
-import { TAttributesSubscriber } from '@/service/target/dto/t-attributes-subscriber.type'
+import { TNodeSubscriber } from '@/service/target/dto/t-attributes-subscriber.type'
 
-export default interface TAttributesServiceApi {
+export default interface TNodeServiceApi {
   sid: string
 
   nid: string
 
   state: StoredRhineVar<RvNode> | null
 
-  subscribe(subscriber: TAttributesSubscriber): () => void
-
-  unsubscribe(subscriber: TAttributesSubscriber): void
+  get<T>(path: string | RvPath): T | null
 
   set<T>(path: string | RvPath, value: T): void
 
@@ -22,5 +20,7 @@ export default interface TAttributesServiceApi {
 
   multiCheck<T>(path: string | RvPath): void
 
-  get<T>(path: string | RvPath): T | null
+  subscribe(subscriber: TNodeSubscriber): () => void
+
+  unsubscribe(subscriber: TNodeSubscriber): void
 }

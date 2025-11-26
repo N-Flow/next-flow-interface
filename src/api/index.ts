@@ -38,7 +38,7 @@ import { UseLastSelectedInfo } from '@/hook/use-last-selected-info.type'
 import { UseSelectedInfo } from '@/hook/use-selected-info.type'
 import { UseSelectedMaterialInfo } from '@/hook/use-selected-material-info.type'
 import { UseStepOptions } from '@/hook/use-step-options.type'
-import { UseTAttributes } from '@/hook/use-t-attributes.type'
+import { UseTNode } from '@/hook/use-t-node.type'
 import { UseTStep } from '@/hook/use-t-step.type'
 import RvLoopAttributeApi from '@/service/attributes/animation/loop/rv-loop-attribute-api'
 import RvNativeAttributeApi from '@/service/attributes/animation/native/rv-native-attribute-api'
@@ -100,8 +100,8 @@ import RvSceneServiceApi from '@/service/sync/scene/rv-scene-service-api'
 import RvNodeServiceApi from '@/service/sync/step/node/rv-node-service-api'
 import RvStepServiceApi from '@/service/sync/step/rv-step-service-api'
 import SyncServiceApi from '@/service/sync/sync-service-api'
-import TAttributesServiceApi from '@/service/target/attribute/t-attributes-service-api'
-import TStepServiceApi from '@/service/target/step/t-step-service-api'
+import TNodeServiceApi from '@/service/target/t-node-service-api'
+import TStepServiceApi from '@/service/target/t-step-service-api'
 import { MaterialSymbolOptions } from '@/utils/material-symbol-utils'
 
 import type { FunctionComponent } from 'react'
@@ -177,7 +177,7 @@ export let rvNodeService: RvNodeServiceApi
 export let rvNodeMaterialAnalyzer: RvNodeMaterialAnalyzerApi
 
 export let tStepService: TStepServiceApi
-export let tAttributesService: TAttributesServiceApi
+export let tNodeService: TNodeServiceApi
 
 export let showAttributeContextMenu: ShowAttributeContextMenu<unknown>
 
@@ -187,7 +187,7 @@ export let useLastSelectedInfo: UseLastSelectedInfo
 export let useSelectedInfo: UseSelectedInfo
 export let useSelectedMaterialInfo: UseSelectedMaterialInfo
 export let useTStep: UseTStep
-export let useTAttributes: UseTAttributes
+export let useTNode: UseTNode
 export let useStepOptions: UseStepOptions
 
 export let ThemeProvider: FunctionComponent<ThemeProviderProps>

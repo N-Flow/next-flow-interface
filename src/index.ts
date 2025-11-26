@@ -48,7 +48,7 @@ import { UseLastSelectedInfo } from './hook/use-last-selected-info.type'
 import { UseSelectedInfo } from './hook/use-selected-info.type'
 import { UseSelectedMaterialInfo } from './hook/use-selected-material-info.type'
 import { UseStepOptions } from './hook/use-step-options.type'
-import { UseTAttributes } from './hook/use-t-attributes.type'
+import { UseTNode } from './hook/use-t-node.type'
 import { UseTStep } from './hook/use-t-step.type'
 import BasePlugin from './plugin/base-plugin'
 import DialogPlugin from './plugin/dialog-plugin'
@@ -300,11 +300,11 @@ import RvSceneServiceApi, {
 import { StepOptions } from './service/sync/step/dto/step-options.type'
 import RvStepServiceApi from './service/sync/step/rv-step-service-api'
 import SyncServiceApi from './service/sync/sync-service-api'
-import TAttributesServiceApi from './service/target/attribute/t-attributes-service-api'
-import { TAttributesSubscriber } from './service/target/dto/t-attributes-subscriber.type'
+import { TNodeSubscriber } from './service/target/dto/t-attributes-subscriber.type'
 import { TChangeType } from './service/target/dto/t-change-type.enum'
-import { TSubscriber } from './service/target/dto/t-subscriber.type'
-import TStepServiceApi from './service/target/step/t-step-service-api'
+import { TStepSubscriber } from './service/target/dto/t-step-subscriber.type'
+import TNodeServiceApi from './service/target/t-node-service-api'
+import TStepServiceApi from './service/target/t-step-service-api'
 import { C3, C4 } from './type/general/color.type'
 import { V2, V3, V4 } from './type/general/vector.type'
 import { MixView } from './type/view/mix-view'
@@ -395,10 +395,10 @@ export type {
   RvVersion,
   RvStepServiceApi,
   RvModel,
+  TStepSubscriber,
+  TNodeSubscriber,
   TStepServiceApi,
-  TSubscriber,
-  TAttributesSubscriber,
-  TAttributesServiceApi,
+  TNodeServiceApi,
   StepOptions,
   PluginViewProps,
   MessageServiceApi,
@@ -469,7 +469,7 @@ export type {
   RsSelectionState,
   UseBase,
   UseTStep,
-  UseTAttributes,
+  UseTNode,
   UseStepOptions,
   V2,
   V3,

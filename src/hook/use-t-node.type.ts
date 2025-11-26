@@ -1,7 +1,7 @@
 import { RvPath } from 'rhine-var'
 
-export type UseTAttributes = <T = unknown>(
-  path?: string,
+export type UseTNode = <T = unknown>(
+  path?: string | RvPath,
 ) => {
   sid: string
   nid: string
