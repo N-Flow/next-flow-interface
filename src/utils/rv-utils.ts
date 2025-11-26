@@ -56,7 +56,7 @@ export function setByRvPath(source: StoredRhineVar, path: string | RvPath, value
 }
 
 // 检查两段路径是否完全重叠，长度可不同，开头相同。指从开头开始每一项比较，直到有一方结束，是否全部相同
-export function checkRvPathOverlay(from: RvPath | string, target: RvPath | string) {
+export function checkRvPathOverlay(from: RvPath | string, target: RvPath | string): boolean {
   const fromPath = ensureRvPath(from)
   const targetPath = ensureRvPath(target)
   const n = fromPath.length > targetPath.length ? targetPath.length : fromPath.length
@@ -68,6 +68,37 @@ export function checkRvPathOverlay(from: RvPath | string, target: RvPath | strin
   return true
 }
 
+export function checkAnyRvPathOverlay(
+  from: RvPath | string,
+  targetList: (RvPath | string)[],
+): boolean {
+  const fromPath = ensureRvPath(from)
+  return targetList.some((target) => checkRvPathOverlay(fromPath, target))
+}
+
+// 检查两段路径是否完全相同
+export function checkRvPathSame(from: RvPath | string, target: RvPath | string): boolean {
+  const fromPath = ensureRvPath(from)
+  const targetPath = ensureRvPath(target)
+  if (fromPath.length !== targetPath.length) {
+    return false
+  }
+  for (let i = 0; i < fromPath.length; i++) {
+    if (fromPath[i] !== targetPath[i]) {
+      return false
+    }
+  }
+  return true
+}
+
+export function checkAnyRvPathSame(
+  from: RvPath | string,
+  targetList: (RvPath | string)[],
+): boolean {
+  const fromPath = ensureRvPath(from)
+  return targetList.some((target) => checkRvPathSame(fromPath, target))
+}
+
 // Create a namespace object for backward compatibility
 const RvUtils = {
   makeRvPath,
@@ -76,7 +107,10 @@ const RvUtils = {
   ensureRvPathString,
   getByRvPath,
   setByRvPath,
+  checkRvPathSame,
+  checkAnyRvPathSame,
   checkRvPathOverlay,
+  checkAnyRvPathOverlay,
 }
 
 export default RvUtils
