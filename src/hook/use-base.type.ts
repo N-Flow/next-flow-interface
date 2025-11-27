@@ -5,5 +5,5 @@ export type UseBase = <T = unknown>(
 ) => {
   state: T
   set: (key: string | RvPath, value: unknown) => void
-  check: (key: string | RvPath) => void
+  mark: (key: string | RvPath) => void
 }

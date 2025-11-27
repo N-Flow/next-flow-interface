@@ -8,6 +8,6 @@ export type UseTNode = <T = unknown>(
   state: T | null
   set: (key: string | RvPath, value: unknown) => void
   multiSet: (key: string | RvPath, value: unknown) => void
-  check: (key: string | RvPath) => void
-  multiCheck: (key: string | RvPath) => void
+  mark: (key: string | RvPath) => void
+  multiMark: (key: string | RvPath) => void
 }

@@ -16,9 +16,9 @@ export default interface TNodeServiceApi {
 
   multiSet<T>(path: string | RvPath, value: T): void
 
-  check<T>(path: string | RvPath): void
+  mark<T>(path: string | RvPath): void
 
-  multiCheck<T>(path: string | RvPath): void
+  multiMark<T>(path: string | RvPath): void
 
   subscribe(subscriber: TNodeSubscriber): () => void
 
