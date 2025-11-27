@@ -37,6 +37,9 @@ export default interface RvNodeServiceApi {
   // 遍历每个Step中的指定的一个Node
   forEach(callback: (node: StoredRhineVar<RvNode>, sid: string) => void, nid: string): void
 
+  // 遍历每个Step中的指定的多个Node
+  forEachMulti(callback: (nodes: Map<string, RvNode>, sid: string) => void, nidList: string[]): void
+
   // 遍历每个Step中的所有Node
   forEachMap(callback: (nodes: RecursiveMap<RvNode>, sid: string) => void): void
 
