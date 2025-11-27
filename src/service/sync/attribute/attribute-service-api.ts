@@ -41,17 +41,20 @@ export default interface AttributeServiceApi {
   /**
    * 已注册的 Node 类型属性列表
    */
-  nodeAttributes: INodeAttribute[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  nodeAttributes: INodeAttribute<any>[]
 
   /**
    * 已注册的 Step 类型属性列表
    */
-  stepAttributes: IStepAttribute[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  stepAttributes: IStepAttribute<any>[]
 
   /**
    * 已注册的 Global 类型属性列表
    */
-  globalAttributes: IGlobalAttribute[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  globalAttributes: IGlobalAttribute<any>[]
 
   /**
    * 注册属性
@@ -64,7 +67,7 @@ export default interface AttributeServiceApi {
    * @throws 如果路径与已注册的路径冲突
    * @throws 如果属性类型与实例类型不匹配
    */
-  register(attribute: IAttribute): void
+  register<T extends object = never>(attribute: IAttribute<T>): void
 
   /**
    * 通过路径精确匹配获取属性
@@ -73,7 +76,10 @@ export default interface AttributeServiceApi {
    * @param path - 属性路径，支持 RvPath 数组或字符串格式
    * @returns 匹配的属性实例，未找到返回 undefined
    */
-  get(type: AttributeType, path: RvPath | string): IAttribute | undefined
+  get<T extends object = never>(
+    type: AttributeType,
+    path: RvPath | string,
+  ): IAttribute<T> | undefined
 
   /**
    * 通过路径获取 NodeAttribute
@@ -81,7 +87,7 @@ export default interface AttributeServiceApi {
    * @param path - 属性路径，支持 RvPath 数组或字符串格式
    * @returns 匹配的 NodeAttribute 实例，未找到返回 undefined
    */
-  getNodeAttribute(path: RvPath | string): INodeAttribute | undefined
+  getNodeAttribute<T extends object = never>(path: RvPath | string): INodeAttribute<T> | undefined
 
   /**
    * 通过路径获取 StepAttribute
@@ -89,7 +95,7 @@ export default interface AttributeServiceApi {
    * @param path - 属性路径，支持 RvPath 数组或字符串格式
    * @returns 匹配的 StepAttribute 实例，未找到返回 undefined
    */
-  getStepAttribute(path: RvPath | string): IStepAttribute | undefined
+  getStepAttribute<T extends object = never>(path: RvPath | string): IStepAttribute<T> | undefined
 
   /**
    * 通过路径获取 GlobalAttribute
@@ -97,7 +103,9 @@ export default interface AttributeServiceApi {
    * @param path - 属性路径，支持 RvPath 数组或字符串格式
    * @returns 匹配的 GlobalAttribute 实例，未找到返回 undefined
    */
-  getGlobalAttribute(path: RvPath | string): IGlobalAttribute | undefined
+  getGlobalAttribute<T extends object = never>(
+    path: RvPath | string,
+  ): IGlobalAttribute<T> | undefined
 
   /**
    * 根据类型获取属性列表
@@ -105,7 +113,8 @@ export default interface AttributeServiceApi {
    * @param type - 属性类型，不传入时返回所有类型的属性
    * @returns 属性列表
    */
-  getList(type?: AttributeType): IAttribute[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  getList(type?: AttributeType): IAttribute<any>[]
 
   /**
    * 检查路径是否与已注册的属性路径冲突

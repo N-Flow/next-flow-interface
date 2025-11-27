@@ -70,10 +70,7 @@ export class RvUtils {
    * @example
    * RvUtils.getByRvPath({ a: { b: 1 } }, "a.b") // 1
    */
-  static getByRvPath<T = unknown>(
-    source: StoredRhineVar | Record<string | number, unknown>,
-    path: string | RvPath,
-  ): T | undefined {
+  static getByRvPath<T = unknown>(source: StoredRhineVar, path: string | RvPath): T | undefined {
     const resolvedPath = RvUtils.ensureRvPath(path)
     let obj: unknown = source
     for (const key of resolvedPath) {
