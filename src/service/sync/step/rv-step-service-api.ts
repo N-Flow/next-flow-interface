@@ -16,13 +16,15 @@ export default interface RvStepServiceApi {
 
   remove(sid: string): boolean
 
+  forEach(callback: (rvStep: StoredRhineVar<RvStep>, sid: string) => void): void
+
   getStepOptions(withDisable?: boolean): StepOptions
 
   getStepIndex(sid: string): number
 
   getStepByIndex(index: number): StoredRhineVar<RvStep> | undefined
 
-  getCurrentStep(): StoredRhineVar<RvStep> | undefined
+  getCurrentStep(): StoredRhineVar<RvStep>
 
   generateId(): string
 }
