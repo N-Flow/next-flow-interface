@@ -1,6 +1,7 @@
-import { IAttribute } from '@/service/sync/attribute/dto/instance/attribute.interface'
-import IBaseAttribute from '@/service/sync/attribute/dto/instance/base-attribute.interface'
-import INodeAttribute from '@/service/sync/attribute/dto/instance/node-attribute.interface'
+import { IAttribute } from '@/service/sync/attribute/instance/attribute.interface'
+import IBaseAttribute from '@/service/sync/attribute/instance/base-attribute.interface'
+import INodeAttribute from '@/service/sync/attribute/instance/node-attribute.interface'
+import { TChangeType } from '@/service/sync/attribute/service/dto/t-change-type.enum'
 import RvLoop from '@/service/sync/interface/step/node/animation/loop/rv-loop.interface'
 import RvNative from '@/service/sync/interface/step/node/animation/native/rv-native.interface'
 import RvBasic from '@/service/sync/interface/step/node/basic/rv-basic.interface'
@@ -236,9 +237,18 @@ import UserInfo from './service/main/user/dto/user-info.interface'
 import UserServiceApi from './service/main/user/user-service-api'
 import AttributeServiceApi from './service/sync/attribute/attribute-service-api'
 import { AttributeType } from './service/sync/attribute/dto/attribute-type.enum'
+import TMultiNodeServiceApi, {
+  TMultiNodeSubscriber,
+} from './service/sync/attribute/service/t-multi-node-service-api'
+import TNodeServiceApi, {
+  TNodeSubscriber,
+} from './service/sync/attribute/service/t-node-service-api'
+import TStepServiceApi, {
+  TStepSubscriber,
+} from './service/sync/attribute/service/t-step-service-api'
 import ITNodeAttribute, {
   TNodeAttributeSubscriber,
-} from './service/sync/attribute/dto/target/t-node-attribute.interface'
+} from './service/sync/attribute/target/t-node-attribute.interface'
 import AwarenessServiceApi, {
   AwarenessChanges,
   AwarenessChangeSubscriber,
@@ -309,12 +319,6 @@ import RvSceneServiceApi, {
 import { StepOptions } from './service/sync/step/dto/step-options.type'
 import RvStepServiceApi from './service/sync/step/rv-step-service-api'
 import SyncServiceApi from './service/sync/sync-service-api'
-import { TNodeSubscriber } from './service/target/dto/t-attributes-subscriber.type'
-import { TChangeType } from './service/target/dto/t-change-type.enum'
-import { TStepSubscriber } from './service/target/dto/t-step-subscriber.type'
-import TMultiNodeServiceApi from './service/target/t-multi-node-service-api'
-import TNodeServiceApi from './service/target/t-node-service-api'
-import TStepServiceApi from './service/target/t-step-service-api'
 import { C3, C4 } from './type/general/color.type'
 import { V2, V3, V4 } from './type/general/vector.type'
 import { MixView } from './type/view/mix-view'
@@ -411,6 +415,7 @@ export type {
   RvModel,
   TStepSubscriber,
   TNodeSubscriber,
+  TMultiNodeSubscriber,
   TStepServiceApi,
   TNodeServiceApi,
   StepOptions,

@@ -1,7 +1,7 @@
 import { RvPath, StoredRhineVar } from 'rhine-var'
 
+import { TChangeType } from '@/service/sync/attribute/service/dto/t-change-type.enum'
 import RvStep from '@/service/sync/interface/step/rv-step.interface'
-import { TChangeType } from '@/service/target/dto/t-change-type.enum'
 
 export type TStepSubscriber = (
   type: TChangeType,

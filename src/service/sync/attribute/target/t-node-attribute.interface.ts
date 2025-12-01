@@ -1,9 +1,8 @@
 import { RecursiveCrossRhineVar, RvPath, StoredRhineVar } from 'rhine-var'
 
-import { TChangeType } from '@/service/target/dto/t-change-type.enum'
-import TMultiNodeServiceApi from '@/service/target/t-multi-node-service-api'
-
-import INodeAttribute from '../instance/node-attribute.interface'
+import INodeAttribute from '@/service/sync/attribute/instance/node-attribute.interface'
+import { TChangeType } from '@/service/sync/attribute/service/dto/t-change-type.enum'
+import TMultiNodeServiceApi from '@/service/sync/attribute/service/t-multi-node-service-api'
 
 export type TNodeAttributeSubscriber<T extends object = never> = (
   type: TChangeType,

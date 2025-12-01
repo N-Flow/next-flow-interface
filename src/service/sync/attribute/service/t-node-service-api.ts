@@ -1,7 +1,7 @@
 import { RvPath, StoredRhineVar } from 'rhine-var'
 
+import { TChangeType } from '@/service/sync/attribute/service/dto/t-change-type.enum'
 import RvNode from '@/service/sync/interface/step/node/rv-node.interface'
-import { TChangeType } from '@/service/target/dto/t-change-type.enum'
 
 export type TNodeSubscriber = (
   type: TChangeType,

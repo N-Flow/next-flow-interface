@@ -1,12 +1,12 @@
 import { RvPath } from 'rhine-var'
 
 import { AttributeType } from '@/service/sync/attribute/dto/attribute-type.enum'
-import { IAttribute } from '@/service/sync/attribute/dto/instance/attribute.interface'
-import IGlobalAttribute from '@/service/sync/attribute/dto/instance/global-attribute.interface'
-import INodeAttribute from '@/service/sync/attribute/dto/instance/node-attribute.interface'
-import IStepAttribute from '@/service/sync/attribute/dto/instance/step-attribute.interface'
+import { IAttribute } from '@/service/sync/attribute/instance/attribute.interface'
+import IGlobalAttribute from '@/service/sync/attribute/instance/global-attribute.interface'
+import INodeAttribute from '@/service/sync/attribute/instance/node-attribute.interface'
+import IStepAttribute from '@/service/sync/attribute/instance/step-attribute.interface'
 
-import ITNodeAttribute from './dto/target/t-node-attribute.interface'
+import ITNodeAttribute from './target/t-node-attribute.interface'
 
 /**
  * 属性服务 API 接口
@@ -96,7 +96,6 @@ export default interface AttributeServiceApi {
    * @returns 匹配的 NodeAttribute 实例，未找到返回 undefined
    */
   getNodeAttribute<T extends object = never>(path: RvPath | string): INodeAttribute<T> | undefined
-
 
   /**
    * 通过路径获取 TNodeAttribute

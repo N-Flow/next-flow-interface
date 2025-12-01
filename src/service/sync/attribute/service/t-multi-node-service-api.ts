@@ -1,7 +1,6 @@
-import { RvPath, StoredRhineVar } from 'rhine-var'
+import { RvPath } from 'rhine-var'
 
-import RvNode from '@/service/sync/interface/step/node/rv-node.interface'
-import { TChangeType } from '@/service/target/dto/t-change-type.enum'
+import { TChangeType } from '@/service/sync/attribute/service/dto/t-change-type.enum'
 
 export type TMultiNodeSubscriber = (
   type: TChangeType,
@@ -10,7 +9,7 @@ export type TMultiNodeSubscriber = (
   oldValue: unknown,
   sid: string,
   nid: string,
-  rvNode: StoredRhineVar<RvNode> | null,
+  nidList: string[],
 ) => void
 
 export default interface TMultiNodeServiceApi {
@@ -19,8 +18,6 @@ export default interface TMultiNodeServiceApi {
   nid: string
 
   nidList: string[]
-
-  state: Map<string, StoredRhineVar<RvNode>>
 
   subscribe(subscriber: TMultiNodeSubscriber): () => void
 
