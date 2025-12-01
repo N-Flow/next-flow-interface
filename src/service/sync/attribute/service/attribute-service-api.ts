@@ -6,7 +6,8 @@ import IGlobalAttribute from '@/service/sync/attribute/instance/global-attribute
 import INodeAttribute from '@/service/sync/attribute/instance/node-attribute.interface'
 import IStepAttribute from '@/service/sync/attribute/instance/step-attribute.interface'
 
-import ITNodeAttribute from '../target/t-node-attribute.interface'
+import ITargetNodeAttribute from '../target/target-node-attribute.interface'
+import ITargetStepAttribute from '../target/target-step-attribute.interface'
 
 /**
  * 属性服务 API 接口
@@ -59,10 +60,16 @@ export default interface AttributeServiceApi {
   globalAttributes: IGlobalAttribute<any>[]
 
   /**
-   * 已注册的 TNode 类型属性列表
+   * 已注册的 TargetNode 类型属性列表
    */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  tNodeAttributes: ITNodeAttribute<any>[]
+  targetNodeAttributes: ITargetNodeAttribute<any>[]
+
+  /**
+   * 已注册的 TargetStep 类型属性列表
+   */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  targetStepAttributes: ITargetStepAttribute<any>[]
 
   /**
    * 注册属性
@@ -98,12 +105,14 @@ export default interface AttributeServiceApi {
   getNodeAttribute<T extends object = never>(path: RvPath | string): INodeAttribute<T> | undefined
 
   /**
-   * 通过路径获取 TNodeAttribute
+   * 通过路径获取 TargetNodeAttribute
    *
    * @param path - 属性路径，支持 RvPath 数组或字符串格式
-   * @returns 匹配的 TNodeAttribute 实例，未找到返回 undefined
+   * @returns 匹配的 TargetNodeAttribute 实例，未找到返回 undefined
    */
-  getTNodeAttribute<T extends object = never>(path: RvPath | string): ITNodeAttribute<T> | undefined
+  getTargetNodeAttribute<T extends object = never>(
+    path: RvPath | string,
+  ): ITargetNodeAttribute<T> | undefined
 
   /**
    * 通过路径获取 StepAttribute

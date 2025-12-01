@@ -1,6 +1,6 @@
 import { RvPath } from 'rhine-var'
 
-export type UseTNode = <T = unknown>(
+export type UseTargetNode = <T = unknown>(
   path?: string | RvPath,
 ) => {
   sid: string

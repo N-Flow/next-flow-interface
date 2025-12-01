@@ -1,6 +1,6 @@
 import { RvPath } from 'rhine-var'
 
-export type UseTStep = <T = unknown>(
+export type UseTargetStep = <T = unknown>(
   path?: string | RvPath,
 ) => {
   sid: string

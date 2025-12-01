@@ -2,7 +2,7 @@ import { RvPath } from 'rhine-var'
 
 import { TChangeType } from '@/service/sync/attribute/service/dto/t-change-type.enum'
 
-export type TMultiNodeSubscriber = (
+export type TargetMultiNodeSubscriber = (
   type: TChangeType,
   path: RvPath,
   value: unknown,
@@ -12,14 +12,14 @@ export type TMultiNodeSubscriber = (
   nidList: string[],
 ) => void
 
-export default interface TMultiNodeServiceApi {
+export default interface TargetMultiNodeServiceApi {
   sid: string
 
   nid: string
 
   nidList: string[]
 
-  subscribe(subscriber: TMultiNodeSubscriber): () => void
+  subscribe(subscriber: TargetMultiNodeSubscriber): () => void
 
-  unsubscribe(subscriber: TMultiNodeSubscriber): void
+  unsubscribe(subscriber: TargetMultiNodeSubscriber): void
 }

@@ -38,9 +38,9 @@ import { UseLastSelectedInfo } from '@/hook/use-last-selected-info.type'
 import { UseSelectedInfo } from '@/hook/use-selected-info.type'
 import { UseSelectedMaterialInfo } from '@/hook/use-selected-material-info.type'
 import { UseStepOptions } from '@/hook/use-step-options.type'
-import { UseTNodeAttribute } from '@/hook/use-t-node-attribute.type'
-import { UseTNode } from '@/hook/use-t-node.type'
-import { UseTStep } from '@/hook/use-t-step.type'
+import { UseTargetNodeAttribute } from '@/hook/use-t-node-attribute.type'
+import { UseTargetNode } from '@/hook/use-t-node.type'
+import { UseTargetStep } from '@/hook/use-t-step.type'
 import RvLoopAttributeApi from '@/service/attributes/animation/loop/rv-loop-attribute-api'
 import RvNativeAttributeApi from '@/service/attributes/animation/native/rv-native-attribute-api'
 import RvBasicAttributeApi from '@/service/attributes/basic/rv-basic-attribute-api'
@@ -91,9 +91,9 @@ import StatusServiceApi from '@/service/main/status/status-service-api'
 import ThemeServiceApi from '@/service/main/theme/theme-service-api'
 import UserServiceApi from '@/service/main/user/user-service-api'
 import AttributeServiceApi from '@/service/sync/attribute/service/attribute-service-api'
-import TMultiNodeServiceApi from '@/service/sync/attribute/service/t-multi-node-service-api'
-import TNodeServiceApi from '@/service/sync/attribute/service/t-node-service-api'
-import TStepServiceApi from '@/service/sync/attribute/service/t-step-service-api'
+import TargetMultiNodeServiceApi from '@/service/sync/attribute/service/t-multi-node-service-api'
+import TargetNodeServiceApi from '@/service/sync/attribute/service/t-node-service-api'
+import TargetStepServiceApi from '@/service/sync/attribute/service/t-step-service-api'
 import AwarenessServiceApi from '@/service/sync/awareness/awareness-service-api'
 import RvFileServiceApi from '@/service/sync/file/rv-file-service-api'
 import RvGlobalServiceApi from '@/service/sync/global/rv-global-service-api'
@@ -180,9 +180,9 @@ export let rvModelService: RvModelServiceApi
 export let rvNodeService: RvNodeServiceApi
 export let rvNodeMaterialAnalyzer: RvNodeMaterialAnalyzerApi
 
-export let tMultiNodeService: TMultiNodeServiceApi
-export let tStepService: TStepServiceApi
-export let tNodeService: TNodeServiceApi
+export let tMultiNodeService: TargetMultiNodeServiceApi
+export let tStepService: TargetStepServiceApi
+export let targetNodeService: TargetNodeServiceApi
 
 export let showAttributeContextMenu: ShowAttributeContextMenu<unknown>
 
@@ -191,9 +191,9 @@ export let useBase: UseBase
 export let useLastSelectedInfo: UseLastSelectedInfo
 export let useSelectedInfo: UseSelectedInfo
 export let useSelectedMaterialInfo: UseSelectedMaterialInfo
-export let useTStep: UseTStep
-export let useTNode: UseTNode
-export let useTNodeAttribute: UseTNodeAttribute
+export let useTargetStep: UseTargetStep
+export let useTargetNode: UseTargetNode
+export let useTargetNodeAttribute: UseTargetNodeAttribute
 export let useStepOptions: UseStepOptions
 
 export let ThemeProvider: FunctionComponent<ThemeProviderProps>

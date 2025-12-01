@@ -70,9 +70,9 @@ import { UseLastSelectedInfo } from './hook/use-last-selected-info.type'
 import { UseSelectedInfo } from './hook/use-selected-info.type'
 import { UseSelectedMaterialInfo } from './hook/use-selected-material-info.type'
 import { UseStepOptions } from './hook/use-step-options.type'
-import { UseTNodeAttribute } from './hook/use-t-node-attribute.type'
-import { UseTNode } from './hook/use-t-node.type'
-import { UseTStep } from './hook/use-t-step.type'
+import { UseTargetNodeAttribute } from './hook/use-t-node-attribute.type'
+import { UseTargetNode } from './hook/use-t-node.type'
+import { UseTargetStep } from './hook/use-t-step.type'
 import BasePlugin from './plugin/base-plugin'
 import DialogPlugin from './plugin/dialog-plugin'
 import DrawerPlugin from './plugin/drawer-plugin'
@@ -236,19 +236,24 @@ import UserAuth from './service/main/user/dto/user-auth.interface'
 import UserInfo from './service/main/user/dto/user-info.interface'
 import UserServiceApi from './service/main/user/user-service-api'
 import { AttributeType } from './service/sync/attribute/dto/attribute-type.enum'
+import IGlobalAttribute from './service/sync/attribute/instance/global-attribute.interface'
+import IStepAttribute from './service/sync/attribute/instance/step-attribute.interface'
 import AttributeServiceApi from './service/sync/attribute/service/attribute-service-api'
-import TMultiNodeServiceApi, {
-  TMultiNodeSubscriber,
+import TargetMultiNodeServiceApi, {
+  TargetMultiNodeSubscriber,
 } from './service/sync/attribute/service/t-multi-node-service-api'
-import TNodeServiceApi, {
-  TNodeSubscriber,
+import TargetNodeServiceApi, {
+  TargetNodeSubscriber,
 } from './service/sync/attribute/service/t-node-service-api'
-import TStepServiceApi, {
-  TStepSubscriber,
+import TargetStepServiceApi, {
+  TargetStepSubscriber,
 } from './service/sync/attribute/service/t-step-service-api'
-import ITNodeAttribute, {
-  TNodeAttributeSubscriber,
-} from './service/sync/attribute/target/t-node-attribute.interface'
+import ITargetNodeAttribute, {
+  TargetNodeAttributeSubscriber,
+} from './service/sync/attribute/target/target-node-attribute.interface'
+import ITargetStepAttribute, {
+  TargetStepAttributeSubscriber,
+} from './service/sync/attribute/target/target-step-attribute.interface'
 import AwarenessServiceApi, {
   AwarenessChanges,
   AwarenessChangeSubscriber,
@@ -341,8 +346,12 @@ import VectorUtils from './utils/vector-utils'
 export type {
   AttributeServiceApi,
   IBaseAttribute,
+  IStepAttribute,
   INodeAttribute,
+  IGlobalAttribute,
   IAttribute,
+  TargetStepAttributeSubscriber,
+  ITargetStepAttribute,
   Intl,
   MeetingState,
   PluginState,
@@ -413,11 +422,11 @@ export type {
   RvVersion,
   RvStepServiceApi,
   RvModel,
-  TStepSubscriber,
-  TNodeSubscriber,
-  TMultiNodeSubscriber,
-  TStepServiceApi,
-  TNodeServiceApi,
+  TargetStepSubscriber,
+  TargetNodeSubscriber,
+  TargetMultiNodeSubscriber,
+  TargetStepServiceApi,
+  TargetNodeServiceApi,
   StepOptions,
   PluginViewProps,
   MessageServiceApi,
@@ -487,8 +496,8 @@ export type {
   LastSubscriber,
   RsSelectionState,
   UseBase,
-  UseTStep,
-  UseTNode,
+  UseTargetStep,
+  UseTargetNode,
   UseStepOptions,
   V2,
   V3,
@@ -574,10 +583,10 @@ export type {
   ShowAttributeContextMenu,
   ShowAttributeContextMenuOptions,
   StepBlockSelectProps,
-  TMultiNodeServiceApi,
-  UseTNodeAttribute,
-  ITNodeAttribute,
-  TNodeAttributeSubscriber,
+  TargetMultiNodeServiceApi,
+  UseTargetNodeAttribute,
+  ITargetNodeAttribute,
+  TargetNodeAttributeSubscriber,
 }
 
 export {
