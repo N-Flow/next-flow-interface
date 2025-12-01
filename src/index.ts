@@ -236,7 +236,9 @@ import UserInfo from './service/main/user/dto/user-info.interface'
 import UserServiceApi from './service/main/user/user-service-api'
 import AttributeServiceApi from './service/sync/attribute/attribute-service-api'
 import { AttributeType } from './service/sync/attribute/dto/attribute-type.enum'
-import ITNodeAttribute from './service/sync/attribute/dto/target/t-node-attribute.interface'
+import ITNodeAttribute, {
+  TNodeAttributeSubscriber,
+} from './service/sync/attribute/dto/target/t-node-attribute.interface'
 import AwarenessServiceApi, {
   AwarenessChanges,
   AwarenessChangeSubscriber,
@@ -570,6 +572,7 @@ export type {
   TMultiNodeServiceApi,
   UseTNodeAttribute,
   ITNodeAttribute,
+  TNodeAttributeSubscriber,
 }
 
 export {
