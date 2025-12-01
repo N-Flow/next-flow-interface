@@ -122,6 +122,20 @@ export class RvUtils {
     return true
   }
 
+  static checkRvPathStartWith(from: RvPath | string, target: RvPath | string): boolean {
+    const fromPath = RvUtils.ensureRvPath(from)
+    const targetPath = RvUtils.ensureRvPath(target)
+    if (fromPath.length < targetPath.length) {
+      return false
+    }
+    for (let i = 0; i < fromPath.length; i++) {
+      if (targetPath[i] != fromPath[i]) {
+        return false
+      }
+    }
+    return true
+  }
+
   /**
    * 检查路径是否与目标列表中的任意路径重叠
    * @param from - 要检查的路径
