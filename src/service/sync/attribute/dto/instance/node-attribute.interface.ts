@@ -15,7 +15,7 @@ export default interface INodeAttribute<T extends object = never> extends IBaseA
 
   mark(sid: string, nid: string, path: string | RvPath): void
 
-  multiMark(path: RvPath, sidList: string[], nidList: string[]): void
+  multiMark(sidList: string[], nidList: string[], path: string | RvPath): void
 
   get(sid: string, nid: string): StoredRhineVar<T> | undefined
 
