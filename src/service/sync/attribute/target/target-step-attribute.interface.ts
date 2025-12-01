@@ -1,8 +1,9 @@
 import { RecursiveCrossRhineVar, RvPath, StoredRhineVar } from 'rhine-var'
 
-import INodeAttribute from '@/service/sync/attribute/instance/node-attribute.interface'
 import { TChangeType } from '@/service/sync/attribute/service/dto/t-change-type.enum'
-import TargetMultiNodeServiceApi from '@/service/sync/attribute/service/t-multi-node-service-api'
+import TargetStepServiceApi from '@/service/sync/attribute/service/t-step-service-api'
+
+import IStepAttribute from '../instance/step-attribute.interface'
 
 export type TargetStepAttributeSubscriber<T extends object = never> = (
   type: TChangeType,
@@ -13,8 +14,8 @@ export type TargetStepAttributeSubscriber<T extends object = never> = (
 ) => void
 
 export default interface ITargetStepAttribute<T extends object = never> {
-  attribute: INodeAttribute<T>
-  tMultiNodeService: TargetMultiNodeServiceApi
+  attribute: IStepAttribute<T>
+  targetStepService: TargetStepServiceApi
   readonly path: RvPath
   readonly sid: string
   readonly sidList: string[]
@@ -28,7 +29,7 @@ export default interface ITargetStepAttribute<T extends object = never> {
   multiGet(sidList?: string[]): Map<string, Map<string, StoredRhineVar<T>>>
   set(path: string | RvPath, value: unknown, sid?: string): void
   multiSet(path: string | RvPath, value: unknown, sidList?: string[]): void
-  read(sid?: string): StoredRhineVar<T> | T | undefined
+  read(sid?: string): StoredRhineVar<T> | T
   multiRead(sidList?: string[]): Map<string, Map<string, StoredRhineVar<T> | T>>
   edit(path: string | RvPath, value: unknown, sid?: string): void
   multiEdit(path: string | RvPath, value: unknown, sidList?: string[]): void

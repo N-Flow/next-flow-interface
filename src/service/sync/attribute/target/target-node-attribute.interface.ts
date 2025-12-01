@@ -15,7 +15,7 @@ export type TargetNodeAttributeSubscriber<T extends object = never> = (
 
 export default interface ITargetNodeAttribute<T extends object = never> {
   attribute: INodeAttribute<T>
-  tMultiNodeService: TargetMultiNodeServiceApi
+  targetMultiNodeService: TargetMultiNodeServiceApi
   readonly path: RvPath
   readonly sid: string
   readonly sidList: string[]
@@ -31,7 +31,7 @@ export default interface ITargetNodeAttribute<T extends object = never> {
   multiGet(sidList?: string[], nidList?: string[]): Map<string, Map<string, StoredRhineVar<T>>>
   set(path: string | RvPath, value: unknown, sid?: string, nid?: string): void
   multiSet(path: string | RvPath, value: unknown, sidList?: string[], nidList?: string[]): void
-  read(sid?: string, nid?: string): StoredRhineVar<T> | T | undefined
+  read(sid?: string, nid?: string): StoredRhineVar<T> | T
   multiRead(sidList?: string[], nidList?: string[]): Map<string, Map<string, StoredRhineVar<T> | T>>
   edit(path: string | RvPath, value: unknown, sid?: string, nid?: string): void
   multiEdit(path: string | RvPath, value: unknown, sidList?: string[], nidList?: string[]): void
