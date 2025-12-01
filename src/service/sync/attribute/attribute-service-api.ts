@@ -6,6 +6,8 @@ import IGlobalAttribute from '@/service/sync/attribute/dto/instance/global-attri
 import INodeAttribute from '@/service/sync/attribute/dto/instance/node-attribute.interface'
 import IStepAttribute from '@/service/sync/attribute/dto/instance/step-attribute.interface'
 
+import ITNodeAttribute from './dto/target/t-node-attribute.interface'
+
 /**
  * 属性服务 API 接口
  *
@@ -57,6 +59,12 @@ export default interface AttributeServiceApi {
   globalAttributes: IGlobalAttribute<any>[]
 
   /**
+   * 已注册的 TNode 类型属性列表
+   */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  tNodeAttributes: ITNodeAttribute<any>[]
+
+  /**
    * 注册属性
    *
    * 将属性实例注册到对应的属性列表中
@@ -88,6 +96,15 @@ export default interface AttributeServiceApi {
    * @returns 匹配的 NodeAttribute 实例，未找到返回 undefined
    */
   getNodeAttribute<T extends object = never>(path: RvPath | string): INodeAttribute<T> | undefined
+
+
+  /**
+   * 通过路径获取 TNodeAttribute
+   *
+   * @param path - 属性路径，支持 RvPath 数组或字符串格式
+   * @returns 匹配的 TNodeAttribute 实例，未找到返回 undefined
+   */
+  getTNodeAttribute<T extends object = never>(path: RvPath | string): ITNodeAttribute<T> | undefined
 
   /**
    * 通过路径获取 StepAttribute

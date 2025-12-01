@@ -1,0 +1,42 @@
+import { RecursiveCrossRhineVar, RvPath, StoredRhineVar } from 'rhine-var'
+
+import { TChangeType } from '@/service/target/dto/t-change-type.enum'
+import TMultiNodeServiceApi from '@/service/target/t-multi-node-service-api'
+
+import INodeAttribute from '../instance/node-attribute.interface'
+
+export type TNodeAttributeSubscriber<T extends object = never> = (
+  type: TChangeType,
+  path: RvPath,
+  value: unknown,
+  oldValue: unknown,
+  sid: string,
+  nid: string,
+  rvNode: StoredRhineVar<T> | null,
+) => void
+
+export default interface ITNodeAttribute<T extends object = never> {
+  attribute: INodeAttribute<T>
+  tMultiNodeService: TMultiNodeServiceApi
+  path(): RvPath
+  sid(): string
+  sidList(): string[]
+  nid(): string
+  nidList(): string[]
+  initialize(nid: string): void
+  isInitialize(nid: string): boolean
+  multiInitialize(nidList: string[]): void
+  isAllInitialized(nidList: string[]): boolean
+  mark(path: string | RvPath, sid: string, nid: string): void
+  multiMark(path: string | RvPath, sidList: string[], nidList: string[]): void
+  get(sid: string, nid: string): RecursiveCrossRhineVar<T> | undefined
+  multiGet(sidList: string[], nidList: string[]): Map<string, Map<string, StoredRhineVar<T>>>
+  set(path: string | RvPath, value: unknown, sid: string, nid: string): void
+  multiSet(path: string | RvPath, value: unknown, sidList: string[], nidList: string[]): void
+  read(sid: string, nid: string): StoredRhineVar<T> | T | undefined
+  multiRead(sidList: string[], nidList: string[]): Map<string, Map<string, StoredRhineVar<T> | T>>
+  edit(path: string | RvPath, value: unknown, sid: string, nid: string): void
+  multiEdit(path: string | RvPath, value: unknown, sidList: string[], nidList: string[]): void
+  subscribe(subscriber: TNodeAttributeSubscriber<T>): () => void
+  unsubscribe(subscriber: TNodeAttributeSubscriber<T>): void
+}

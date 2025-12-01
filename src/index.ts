@@ -17,6 +17,8 @@ import {
   RvMaterialNodeInput,
 } from '@/service/sync/interface/step/node/material/node/rv-material-node.interface'
 import { RvMaterialPBR } from '@/service/sync/interface/step/node/material/pbr/rv-material-pbr.interface'
+import { RvPresetType } from '@/service/sync/interface/step/node/material/preset/rv-preset-type.enum'
+import { RvMaterialTexture } from '@/service/sync/interface/step/node/material/texture/rv-material-texture.interface'
 import RvNodeServiceApi from '@/service/sync/step/node/rv-node-service-api'
 
 import { AntCheckboxProps } from './components/ant/ant-checkbox-props'
@@ -67,6 +69,7 @@ import { UseLastSelectedInfo } from './hook/use-last-selected-info.type'
 import { UseSelectedInfo } from './hook/use-selected-info.type'
 import { UseSelectedMaterialInfo } from './hook/use-selected-material-info.type'
 import { UseStepOptions } from './hook/use-step-options.type'
+import { UseTNodeAttribute } from './hook/use-t-node-attribute.type'
 import { UseTNode } from './hook/use-t-node.type'
 import { UseTStep } from './hook/use-t-step.type'
 import BasePlugin from './plugin/base-plugin'
@@ -233,6 +236,7 @@ import UserInfo from './service/main/user/dto/user-info.interface'
 import UserServiceApi from './service/main/user/user-service-api'
 import AttributeServiceApi from './service/sync/attribute/attribute-service-api'
 import { AttributeType } from './service/sync/attribute/dto/attribute-type.enum'
+import ITNodeAttribute from './service/sync/attribute/dto/target/t-node-attribute.interface'
 import AwarenessServiceApi, {
   AwarenessChanges,
   AwarenessChangeSubscriber,
@@ -280,16 +284,12 @@ import RvResource from './service/sync/interface/resource/rv-resource.interface'
 import RvBase from './service/sync/interface/rv-base.interface'
 import RvSceneNode from './service/sync/interface/scene/rv-scene-node.interface'
 import RvSeparate from './service/sync/interface/separate/rv-separate.interface'
-import { RvPresetType } from '@/service/sync/interface/step/node/material/preset/rv-preset-type.enum'
-
 import RvAudio from './service/sync/interface/step/configuration/audio-info/rv-audio.interface'
 import RvConfiguration from './service/sync/interface/step/configuration/rv-configuration.interface'
 import RvCameraLocation from './service/sync/interface/step/environment/camera/location/rv-camera-location.interface'
 import RvCamera from './service/sync/interface/step/environment/camera/rv-camera.interface'
 import RvEnvironment from './service/sync/interface/step/environment/rv-environment.interface'
 import RvMaterial from './service/sync/interface/step/node/material/rv-material.interface'
-import { RvMaterialTexture } from '@/service/sync/interface/step/node/material/texture/rv-material-texture.interface'
-
 import RvNode from './service/sync/interface/step/node/rv-node.interface'
 import RvStep from './service/sync/interface/step/rv-step.interface'
 import RvVersion from './service/sync/interface/version/rv-version.interface'
@@ -310,6 +310,7 @@ import SyncServiceApi from './service/sync/sync-service-api'
 import { TNodeSubscriber } from './service/target/dto/t-attributes-subscriber.type'
 import { TChangeType } from './service/target/dto/t-change-type.enum'
 import { TStepSubscriber } from './service/target/dto/t-step-subscriber.type'
+import TMultiNodeServiceApi from './service/target/t-multi-node-service-api'
 import TNodeServiceApi from './service/target/t-node-service-api'
 import TStepServiceApi from './service/target/t-step-service-api'
 import { C3, C4 } from './type/general/color.type'
@@ -566,6 +567,9 @@ export type {
   ShowAttributeContextMenu,
   ShowAttributeContextMenuOptions,
   StepBlockSelectProps,
+  TMultiNodeServiceApi,
+  UseTNodeAttribute,
+  ITNodeAttribute,
 }
 
 export {
