@@ -12,6 +12,9 @@ export default interface RvNodeServiceApi {
   // 获取指定 RvNode
   get(nid: string, sid?: string): StoredRhineVar<RvNode> | undefined
 
+  // 获取多个 RvNode
+  multiGet(sidList: string[], nidList: string[]): Map<string, Map<string, StoredRhineVar<RvNode>>>
+
   // 获取当前 Step 下的所有 RvNode 的 Map
   getCurrentMap(): RecursiveMap<RvNode>
 
