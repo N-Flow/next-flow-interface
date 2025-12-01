@@ -11,6 +11,7 @@ export type TargetNodeAttributeSubscriber<T extends object = never> = (
   oldValue: unknown,
   sid: string,
   nid: string,
+  nidList: string[],
 ) => void
 
 export default interface ITargetNodeAttribute<T extends object = never> {
