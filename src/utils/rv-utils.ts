@@ -1,4 +1,4 @@
-import { RvPath, StoredRhineVar } from 'rhine-var'
+import { EventType, RvPath, StoredRhineVar } from 'rhine-var'
 
 /**
  * RvPath 路径工具类
@@ -180,6 +180,10 @@ export class RvUtils {
   static checkAnyRvPathSame(from: RvPath | string, targetList: (RvPath | string)[]): boolean {
     const fromPath = RvUtils.ensureRvPath(from)
     return targetList.some((target) => RvUtils.checkRvPathSame(fromPath, target))
+  }
+
+  static isChangeEventType(type: EventType) {
+    return type == EventType.ADD || type == EventType.UPDATE || type == EventType.DELETE
   }
 }
 
