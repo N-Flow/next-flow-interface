@@ -25,7 +25,11 @@ export default interface INodeAttribute<T extends object = never> extends IBaseA
 
   multiSet(sidList: string[], nidList: string[], path: string | RvPath, value: unknown): void
 
-  read(sid: string, nid: string): StoredRhineVar<T> | T | undefined
+  read(sid: string, nid: string): StoredRhineVar<T> | T
+
+  multiRead(sidList: string[], nidList: string[]): Map<string, Map<string, StoredRhineVar<T> | T>>
 
   edit(sid: string, nid: string, path: string | RvPath, value: unknown): void
+
+  multiEdit(sidList: string[], nidList: string[], path: string | RvPath, value: unknown): void
 }
