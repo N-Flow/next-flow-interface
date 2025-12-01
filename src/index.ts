@@ -235,8 +235,8 @@ import ThemeServiceApi from './service/main/theme/theme-service-api'
 import UserAuth from './service/main/user/dto/user-auth.interface'
 import UserInfo from './service/main/user/dto/user-info.interface'
 import UserServiceApi from './service/main/user/user-service-api'
-import AttributeServiceApi from './service/sync/attribute/attribute-service-api'
 import { AttributeType } from './service/sync/attribute/dto/attribute-type.enum'
+import AttributeServiceApi from './service/sync/attribute/service/attribute-service-api'
 import TMultiNodeServiceApi, {
   TMultiNodeSubscriber,
 } from './service/sync/attribute/service/t-multi-node-service-api'

@@ -6,7 +6,7 @@ import IGlobalAttribute from '@/service/sync/attribute/instance/global-attribute
 import INodeAttribute from '@/service/sync/attribute/instance/node-attribute.interface'
 import IStepAttribute from '@/service/sync/attribute/instance/step-attribute.interface'
 
-import ITNodeAttribute from './target/t-node-attribute.interface'
+import ITNodeAttribute from '../target/t-node-attribute.interface'
 
 /**
  * 属性服务 API 接口
