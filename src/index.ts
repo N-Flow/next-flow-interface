@@ -70,9 +70,9 @@ import { UseLastSelectedInfo } from './hook/use-last-selected-info.type'
 import { UseSelectedInfo } from './hook/use-selected-info.type'
 import { UseSelectedMaterialInfo } from './hook/use-selected-material-info.type'
 import { UseStepOptions } from './hook/use-step-options.type'
-import { UseTargetNodeAttribute } from './hook/use-t-node-attribute.type'
-import { UseTargetNode } from './hook/use-t-node.type'
-import { UseTargetStep } from './hook/use-t-step.type'
+import { UseTargetNodeAttribute } from './hook/use-target-node-attribute.type'
+import { UseTargetNode } from './hook/use-target-node.type'
+import { UseTargetStep } from './hook/use-target-step.type'
 import BasePlugin from './plugin/base-plugin'
 import DialogPlugin from './plugin/dialog-plugin'
 import DrawerPlugin from './plugin/drawer-plugin'
@@ -241,13 +241,13 @@ import IStepAttribute from './service/sync/attribute/instance/step-attribute.int
 import AttributeServiceApi from './service/sync/attribute/service/attribute-service-api'
 import TargetMultiNodeServiceApi, {
   TargetMultiNodeSubscriber,
-} from './service/sync/attribute/service/t-multi-node-service-api'
+} from './service/sync/attribute/service/target-multi-node-service-api'
 import TargetNodeServiceApi, {
   TargetNodeSubscriber,
-} from './service/sync/attribute/service/t-node-service-api'
+} from './service/sync/attribute/service/target-node-service-api'
 import TargetStepServiceApi, {
   TargetStepSubscriber,
-} from './service/sync/attribute/service/t-step-service-api'
+} from './service/sync/attribute/service/target-step-service-api'
 import ITargetNodeAttribute, {
   TargetNodeAttributeSubscriber,
 } from './service/sync/attribute/target/target-node-attribute.interface'

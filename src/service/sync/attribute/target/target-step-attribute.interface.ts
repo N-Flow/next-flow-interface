@@ -1,7 +1,7 @@
 import { RecursiveCrossRhineVar, RvPath, StoredRhineVar } from 'rhine-var'
 
 import { TChangeType } from '@/service/sync/attribute/service/dto/t-change-type.enum'
-import TargetStepServiceApi from '@/service/sync/attribute/service/t-step-service-api'
+import TargetStepServiceApi from '@/service/sync/attribute/service/target-step-service-api'
 
 import IStepAttribute from '../instance/step-attribute.interface'
 
