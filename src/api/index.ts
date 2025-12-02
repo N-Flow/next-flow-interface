@@ -180,9 +180,9 @@ export let rvModelService: RvModelServiceApi
 export let rvNodeService: RvNodeServiceApi
 export let rvNodeMaterialAnalyzer: RvNodeMaterialAnalyzerApi
 
-export let tMultiNodeService: TargetMultiNodeServiceApi
-export let tStepService: TargetStepServiceApi
+export let targetMultiNodeService: TargetMultiNodeServiceApi
 export let targetNodeService: TargetNodeServiceApi
+export let targetStepService: TargetStepServiceApi
 
 export let showAttributeContextMenu: ShowAttributeContextMenu<unknown>
 
