@@ -182,7 +182,8 @@ export class RvUtils {
     return targetList.some((target) => RvUtils.checkRvPathSame(fromPath, target))
   }
 
-  static isChangeEventType(type: EventType) {
+  static isChangeEventType(type: EventType | string) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison
     return type == EventType.ADD || type == EventType.UPDATE || type == EventType.DELETE
   }
 }

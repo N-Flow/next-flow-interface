@@ -1,7 +1,17 @@
 import { RvPath, StoredRhineVar } from 'rhine-var'
 
 import IBaseAttribute from '@/service/sync/attribute/instance/base-attribute.interface'
-import { TargetNodeAttributeSubscriber } from '@/service/sync/attribute/target/target-node-attribute.interface'
+import { TChangeType } from '@/service/sync/attribute/service/dto/t-change-type.enum'
+
+export type NodeAttributeTargetSubscriber<T extends object = never> = (
+  type: TChangeType,
+  path: RvPath,
+  value: unknown,
+  oldValue: unknown,
+  sid: string,
+  nid: string,
+  nidList: string[],
+) => void
 
 export default interface INodeAttribute<T extends object = never> extends IBaseAttribute<T> {
   generate(sid?: string, nid?: string): T
@@ -46,7 +56,7 @@ export default interface INodeAttribute<T extends object = never> extends IBaseA
 
   readonly targetNidList: string[]
 
-  subscribe(subscriber: TargetNodeAttributeSubscriber<T>): () => void
+  subscribeTarget(subscriber: NodeAttributeTargetSubscriber<T>): () => void
 
-  unsubscribe(subscriber: TargetNodeAttributeSubscriber<T>): void
+  unsubscribeTarget(subscriber: NodeAttributeTargetSubscriber<T>): void
 }

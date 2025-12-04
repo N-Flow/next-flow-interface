@@ -1,6 +1,8 @@
 import { IAttribute } from '@/service/sync/attribute/instance/attribute.interface'
 import IBaseAttribute from '@/service/sync/attribute/instance/base-attribute.interface'
-import INodeAttribute from '@/service/sync/attribute/instance/node-attribute.interface'
+import INodeAttribute, {
+  NodeAttributeTargetSubscriber,
+} from '@/service/sync/attribute/instance/node-attribute.interface'
 import { TChangeType } from '@/service/sync/attribute/service/dto/t-change-type.enum'
 import RvLoop from '@/service/sync/interface/step/node/animation/loop/rv-loop.interface'
 import RvNative from '@/service/sync/interface/step/node/animation/native/rv-native.interface'
@@ -248,12 +250,6 @@ import TargetNodeServiceApi, {
 import TargetStepServiceApi, {
   TargetStepSubscriber,
 } from './service/sync/attribute/service/target-step-service-api'
-import ITargetNodeAttribute, {
-  TargetNodeAttributeSubscriber,
-} from './service/sync/attribute/target/target-node-attribute.interface'
-import ITargetStepAttribute, {
-  TargetStepAttributeSubscriber,
-} from './service/sync/attribute/target/target-step-attribute.interface'
 import AwarenessServiceApi, {
   AwarenessChanges,
   AwarenessChangeSubscriber,
@@ -350,8 +346,6 @@ export type {
   INodeAttribute,
   IGlobalAttribute,
   IAttribute,
-  TargetStepAttributeSubscriber,
-  ITargetStepAttribute,
   Intl,
   MeetingState,
   PluginState,
@@ -585,8 +579,7 @@ export type {
   StepBlockSelectProps,
   TargetMultiNodeServiceApi,
   UseTargetNodeAttribute,
-  ITargetNodeAttribute,
-  TargetNodeAttributeSubscriber,
+  NodeAttributeTargetSubscriber,
 }
 
 export {

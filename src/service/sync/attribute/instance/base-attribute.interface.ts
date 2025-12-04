@@ -7,9 +7,7 @@ export default interface IBaseAttribute<T extends object = never> {
 
   path: RvPath
 
-  defaultValue?: T
-
-  getPath(): RvPath
+  defaultValue: T
 
   getPathString(): string
 

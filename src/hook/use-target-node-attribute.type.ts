@@ -1,8 +1,8 @@
 import { RecursiveCrossRhineVar, RvPath, StoredRhineVar } from 'rhine-var'
 
-import TargetNodeAttribute, {
-  TargetNodeAttributeSubscriber,
-} from '@/service/sync/attribute/target/target-node-attribute.interface'
+import INodeAttribute, {
+  NodeAttributeTargetSubscriber,
+} from '@/service/sync/attribute/instance/node-attribute.interface'
 
 export type UseTargetNodeAttribute = <T extends object = never>(
   path: string | RvPath,
@@ -13,9 +13,9 @@ export type UseTargetNodeAttribute = <T extends object = never>(
   sidList: string[]
   nid: string
   nidList: string[]
-  targetNodeAttribute: TargetNodeAttribute<T>
+  NodeAttribute: INodeAttribute<T>
   initialize(nid?: string): void
-  isInitialize(nid?: string): boolean
+  isInitialized(nid?: string): boolean
   multiInitialize(nidList?: string[]): void
   isAllInitialized(nidList?: string[]): boolean
   mark(path: string | RvPath, sid?: string, nid?: string): void
@@ -28,6 +28,6 @@ export type UseTargetNodeAttribute = <T extends object = never>(
   multiRead(sidList?: string[], nidList?: string[]): Map<string, Map<string, StoredRhineVar<T> | T>>
   edit(path: string | RvPath, value: unknown, sid?: string, nid?: string): void
   multiEdit(path: string | RvPath, value: unknown, sidList?: string[], nidList?: string[]): void
-  subscribe(subscriber: TargetNodeAttributeSubscriber<T>): () => void
-  unsubscribe(subscriber: TargetNodeAttributeSubscriber<T>): void
+  subscribe(subscriber: NodeAttributeTargetSubscriber<T>): () => void
+  unsubscribe(subscriber: NodeAttributeTargetSubscriber<T>): void
 }
