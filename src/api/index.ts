@@ -33,6 +33,7 @@ import { RsdSwitchProps } from '@/components/rsd/rsd-switch-props'
 import { RsdTargetInfoProps } from '@/components/rsd/rsd-target-info-props'
 import { RsdTitleProps } from '@/components/rsd/rsd-title-props'
 import { UseAllSelectedInfo } from '@/hook/use-all-selected-info.type'
+import { UseGlobalAttribute } from '@/hook/use-global-attribute.type'
 import { UseGlobal } from '@/hook/use-global.type'
 import { UseLastSelectedInfo } from '@/hook/use-last-selected-info.type'
 import { UseSelectedInfo } from '@/hook/use-selected-info.type'
@@ -40,6 +41,7 @@ import { UseSelectedMaterialInfo } from '@/hook/use-selected-material-info.type'
 import { UseStepOptions } from '@/hook/use-step-options.type'
 import { UseTargetNodeAttribute } from '@/hook/use-target-node-attribute.type'
 import { UseTargetNode } from '@/hook/use-target-node.type'
+import { UseTargetStepAttribute } from '@/hook/use-target-step-attribute.type'
 import { UseTargetStep } from '@/hook/use-target-step.type'
 import RvLoopAttributeApi from '@/service/attributes/animation/loop/rv-loop-attribute-api'
 import RvNativeAttributeApi from '@/service/attributes/animation/native/rv-native-attribute-api'
@@ -187,14 +189,16 @@ export let targetStepService: TargetStepServiceApi
 export let showAttributeContextMenu: ShowAttributeContextMenu<unknown>
 
 export let useAllSelectedInfo: UseAllSelectedInfo
-export let useBase: UseGlobal
+export let useStepOptions: UseStepOptions
 export let useLastSelectedInfo: UseLastSelectedInfo
 export let useSelectedInfo: UseSelectedInfo
 export let useSelectedMaterialInfo: UseSelectedMaterialInfo
+export let useGlobal: UseGlobal
+export let useGlobalAttribute: UseGlobalAttribute
 export let useTargetStep: UseTargetStep
+export let useTargetStepAttribute: UseTargetStepAttribute
 export let useTargetNode: UseTargetNode
 export let useTargetNodeAttribute: UseTargetNodeAttribute
-export let useStepOptions: UseStepOptions
 
 export let ThemeProvider: FunctionComponent<ThemeProviderProps>
 export let AntCheckbox: FunctionComponent<AntCheckboxProps>
