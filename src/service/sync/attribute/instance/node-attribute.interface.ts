@@ -1,35 +1,52 @@
 import { RvPath, StoredRhineVar } from 'rhine-var'
 
 import IBaseAttribute from '@/service/sync/attribute/instance/base-attribute.interface'
+import { TargetNodeAttributeSubscriber } from '@/service/sync/attribute/target/target-node-attribute.interface'
 
 export default interface INodeAttribute<T extends object = never> extends IBaseAttribute<T> {
-  generate(sid: string, nid: string): T
+  generate(sid?: string, nid?: string): T
 
-  initialize(nid: string): void
+  initialize(nid?: string): void
 
-  isInitialized(nid: string): boolean
+  isInitialized(nid?: string): boolean
 
-  multiInitialize(nidList: string[]): void
+  multiInitialize(nidList?: string[]): void
 
-  isAllInitialized(nidList: string[]): boolean
+  isAllInitialized(nidList?: string[]): boolean
 
-  mark(sid: string, nid: string, path: string | RvPath): void
+  mark(path: string | RvPath, sid?: string, nid?: string): void
 
-  multiMark(sidList: string[], nidList: string[], path: string | RvPath): void
+  multiMark(path: string | RvPath, sidList?: string[], nidList?: string[]): void
 
-  get(sid: string, nid: string): StoredRhineVar<T> | undefined
+  get(sid?: string, nid?: string): StoredRhineVar<T> | undefined
 
-  multiGet(sidList: string[], nidList: string[]): Map<string, Map<string, StoredRhineVar<T>>>
+  multiGet(sidList?: string[], nidList?: string[]): Map<string, Map<string, StoredRhineVar<T>>>
 
-  set(sid: string, nid: string, path: string | RvPath, value: unknown): void
+  set(path: string | RvPath, value: unknown, sid?: string, nid?: string): void
 
-  multiSet(sidList: string[], nidList: string[], path: string | RvPath, value: unknown): void
+  multiSet(path: string | RvPath, value: unknown, sidList?: string[], nidList?: string[]): void
 
-  read(sid: string, nid: string): StoredRhineVar<T> | T
+  read(sid?: string, nid?: string): StoredRhineVar<T> | T
 
-  multiRead(sidList: string[], nidList: string[]): Map<string, Map<string, StoredRhineVar<T> | T>>
+  multiRead(sidList?: string[], nidList?: string[]): Map<string, Map<string, StoredRhineVar<T> | T>>
 
-  edit(sid: string, nid: string, path: string | RvPath, value: unknown): void
+  edit(path: string | RvPath, value: unknown, sid?: string, nid?: string): void
 
-  multiEdit(sidList: string[], nidList: string[], path: string | RvPath, value: unknown): void
+  multiEdit(path: string | RvPath, value: unknown, sidList?: string[], nidList?: string[]): void
+
+  editMany(list: [string | RvPath, unknown][], sid?: string, nid?: string): void
+
+  multiEditMany(list: [string | RvPath, unknown][], sidList?: string[], nidList?: string[]): void
+
+  readonly targetSid: string
+
+  readonly targetSidList: string[]
+
+  readonly targetNid: string
+
+  readonly targetNidList: string[]
+
+  subscribe(subscriber: TargetNodeAttributeSubscriber<T>): () => void
+
+  unsubscribe(subscriber: TargetNodeAttributeSubscriber<T>): void
 }
