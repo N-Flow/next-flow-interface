@@ -67,13 +67,15 @@ import DomNotFoundError from './error/dom-not-found.error'
 import NotFoundError from './error/not-found.error'
 import StaticClassInstantiationError from './error/static-class-instantiation.error'
 import { UseAllSelectedInfo } from './hook/use-all-selected-info.type'
-import { UseBase } from './hook/use-base.type'
+import { UseGlobalAttribute } from './hook/use-global-attribute.type'
+import { UseGlobal } from './hook/use-global.type'
 import { UseLastSelectedInfo } from './hook/use-last-selected-info.type'
 import { UseSelectedInfo } from './hook/use-selected-info.type'
 import { UseSelectedMaterialInfo } from './hook/use-selected-material-info.type'
 import { UseStepOptions } from './hook/use-step-options.type'
 import { UseTargetNodeAttribute } from './hook/use-target-node-attribute.type'
 import { UseTargetNode } from './hook/use-target-node.type'
+import { UseTargetStepAttribute } from './hook/use-target-step-attribute.type'
 import { UseTargetStep } from './hook/use-target-step.type'
 import BasePlugin from './plugin/base-plugin'
 import DialogPlugin from './plugin/dialog-plugin'
@@ -238,8 +240,12 @@ import UserAuth from './service/main/user/dto/user-auth.interface'
 import UserInfo from './service/main/user/dto/user-info.interface'
 import UserServiceApi from './service/main/user/user-service-api'
 import { AttributeType } from './service/sync/attribute/dto/attribute-type.enum'
-import IGlobalAttribute from './service/sync/attribute/instance/global-attribute.interface'
-import IStepAttribute from './service/sync/attribute/instance/step-attribute.interface'
+import IGlobalAttribute, {
+  GlobalAttributeSubscriber,
+} from './service/sync/attribute/instance/global-attribute.interface'
+import IStepAttribute, {
+  StepAttributeTargetSubscriber,
+} from './service/sync/attribute/instance/step-attribute.interface'
 import AttributeServiceApi from './service/sync/attribute/service/attribute-service-api'
 import TargetMultiNodeServiceApi, {
   TargetMultiNodeSubscriber,
@@ -340,12 +346,6 @@ import UrlUtils from './utils/url-utils'
 import VectorUtils from './utils/vector-utils'
 
 export type {
-  AttributeServiceApi,
-  IBaseAttribute,
-  IStepAttribute,
-  INodeAttribute,
-  IGlobalAttribute,
-  IAttribute,
   Intl,
   MeetingState,
   PluginState,
@@ -489,9 +489,6 @@ export type {
   SelectedSubscriber,
   LastSubscriber,
   RsSelectionState,
-  UseBase,
-  UseTargetStep,
-  UseTargetNode,
   UseStepOptions,
   V2,
   V3,
@@ -578,7 +575,20 @@ export type {
   ShowAttributeContextMenuOptions,
   StepBlockSelectProps,
   TargetMultiNodeServiceApi,
+  UseGlobal,
+  UseGlobalAttribute,
+  UseTargetStep,
+  UseTargetStepAttribute,
+  UseTargetNode,
   UseTargetNodeAttribute,
+  AttributeServiceApi,
+  IAttribute,
+  IBaseAttribute,
+  IGlobalAttribute,
+  GlobalAttributeSubscriber,
+  IStepAttribute,
+  StepAttributeTargetSubscriber,
+  INodeAttribute,
   NodeAttributeTargetSubscriber,
 }
 
