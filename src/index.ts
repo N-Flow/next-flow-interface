@@ -241,7 +241,7 @@ import UserInfo from './service/main/user/dto/user-info.interface'
 import UserServiceApi from './service/main/user/user-service-api'
 import { AttributeType } from './service/sync/attribute/dto/attribute-type.enum'
 import IGlobalAttribute, {
-  GlobalAttributeTargetSubscriber,
+  GlobalAttributeSubscriber,
 } from './service/sync/attribute/instance/global-attribute.interface'
 import IStepAttribute, {
   StepAttributeTargetSubscriber,
@@ -585,7 +585,7 @@ export type {
   IAttribute,
   IBaseAttribute,
   IGlobalAttribute,
-  GlobalAttributeTargetSubscriber,
+  GlobalAttributeSubscriber,
   IStepAttribute,
   StepAttributeTargetSubscriber,
   INodeAttribute,

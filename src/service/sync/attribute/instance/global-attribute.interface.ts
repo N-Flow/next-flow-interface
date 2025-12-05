@@ -2,7 +2,7 @@ import { EventType, RvPath, StoredRhineVar } from 'rhine-var'
 
 import IBaseAttribute from '@/service/sync/attribute/instance/base-attribute.interface'
 
-export type GlobalAttributeTargetSubscriber<T> = (
+export type GlobalAttributeSubscriber<T> = (
   type: EventType,
   path: RvPath,
   value: unknown,
@@ -28,7 +28,7 @@ export default interface IGlobalAttribute<T extends object = never> extends IBas
 
   editMany(list: [string | RvPath, unknown][]): void
 
-  subscribe(subscriber: GlobalAttributeTargetSubscriber<T>): () => void
+  subscribe(subscriber: GlobalAttributeSubscriber<T>): () => void
 
-  unsubscribe(subscriber: GlobalAttributeTargetSubscriber<T>): void
+  unsubscribe(subscriber: GlobalAttributeSubscriber<T>): void
 }
