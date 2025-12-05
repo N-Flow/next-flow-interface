@@ -12,7 +12,9 @@ export type StepAttributeTargetSubscriber<T extends object = never> = (
 ) => void
 
 export default interface IStepAttribute<T extends object = never> extends IBaseAttribute<T> {
-  generate(sid: string): T
+  generate(sid?: string): T
+
+  multiGenerate(sidList?: string[]): Map<string, T>
 
   initialize(): void
 

@@ -16,6 +16,8 @@ export type NodeAttributeTargetSubscriber<T extends object = never> = (
 export default interface INodeAttribute<T extends object = never> extends IBaseAttribute<T> {
   generate(sid?: string, nid?: string): T
 
+  multiGenerate(sidList?: string[], nidList?: string[]): Map<string, Map<string, T>>
+
   initialize(nid?: string): void
 
   isInitialized(nid?: string): boolean
