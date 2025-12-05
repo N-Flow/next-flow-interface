@@ -1,7 +1,7 @@
 import { RecursiveCrossRhineVar, RvPath, StoredRhineVar } from 'rhine-var'
 
 import IGlobalAttribute, {
-  GlobalAttributeSubscriber,
+  GlobalAttributeTargetSubscriber,
 } from '@/service/sync/attribute/instance/global-attribute.interface'
 
 export type UseGlobalAttribute = <T extends object = never>(
@@ -18,6 +18,6 @@ export type UseGlobalAttribute = <T extends object = never>(
   read(): StoredRhineVar<T> | T | undefined
   edit(path: string | RvPath, value: unknown): void
   editMany(list: [string | RvPath, unknown][]): void
-  subscribe(subscriber: GlobalAttributeSubscriber<T>): () => void
-  unsubscribe(subscriber: GlobalAttributeSubscriber<T>): void
+  subscribe(subscriber: GlobalAttributeTargetSubscriber<T>): () => void
+  unsubscribe(subscriber: GlobalAttributeTargetSubscriber<T>): void
 }
