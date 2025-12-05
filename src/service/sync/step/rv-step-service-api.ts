@@ -10,6 +10,8 @@ export default interface RvStepServiceApi {
 
   get(sid: string): RecursiveObject<RvStep> | undefined
 
+  multiGet(sidList?: string[]): Map<string, StoredRhineVar<RvStep>>
+
   add(from?: string, index?: number): string
 
   move(sid: string, to: number): boolean
